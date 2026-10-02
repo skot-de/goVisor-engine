@@ -98,7 +98,27 @@ const PREVIEW_COOKIE = "gv_preview";
  *                               Aufheben von `noindex` — beides bewusst nicht jetzt, sondern
  *                               Svens Entscheidung. Die Route traegt ihre eigene Ratenbremse.
  */
-const OFFEN = ["/login", "/auth", "/api/health", "/onboarding", "/start", "/t", "/api/wer", "/api/entity-verify", "/api/impressum", "/api/entity-search",
+/**
+ * GROUNDING PAGE — die Faktenseite fuer KI-Systeme und ihre Begleitdateien.
+ *
+ * Sie muss durch BEIDE Tore: durch die Coming-Soon-Sperre (sonst sieht ein Crawler die
+ * schwarze Seite) UND durch die Anmeldepflicht (sonst landet er auf `/login`). Deshalb
+ * steht sie in `OFFEN` und zusaetzlich in der Ausnahmekette von `BLACKOUT`.
+ *
+ * ⚠ GENAU HIER LIEGT DER SINN DER SEITE ODER IHR TOTALVERLUST. Eine Faktenseite, die
+ * hinter der Sperre liegt, ist kein halbes Ergebnis — sie ist gar keins: das Modell, das
+ * sie zitieren soll, bekommt eine leere schwarze Seite mit `noindex` und lernt daraus,
+ * dass unter dieser Adresse nichts steht. Gebaut und nicht verdrahtet ist bei goVisor die
+ * haeufigste Fehlerklasse; bei dieser Seite ist sie die teuerste.
+ *
+ * ⚠ `/llms.txt` GEHOERT DAZU, obwohl es eine statische Datei ist. Der Matcher unten
+ * nimmt nur Bilder aus — `.txt` laeuft durch die Middleware und bekaeme sonst die
+ * schwarze Seite mit `content-type: text/html`. Dieselbe Falle wie bei `robots.txt`,
+ * die weiter oben schon einmal zugeschlagen hat.
+ */
+const GROUNDING = ["/fakten", "/llms.txt"];
+
+const OFFEN = [...GROUNDING, "/login", "/auth", "/api/health", "/onboarding", "/start", "/t", "/api/wer", "/api/entity-verify", "/api/impressum", "/api/entity-search",
                      "/api/entity-group", "/api/outreach-firma", "/api/calendar",
                      "/ausschreibung", "/api/ausschreibung",
                      "/robots.txt", "/sitemap.xml", "/api/alerts/run"];
@@ -109,6 +129,11 @@ function istOffen(pfad: string): boolean {
   // jeden Fremden auf die Anmeldemaske.
   if (pfad === "/") return true;
   return OFFEN.some((o) => pfad === o || pfad.startsWith(o + "/"));
+}
+
+/** Gehoert der Pfad zur oeffentlichen Faktenseite? Eine Stelle, zwei Tore. */
+function istGrounding(pfad: string): boolean {
+  return GROUNDING.some((o) => pfad === o || pfad.startsWith(o + "/"));
 }
 
 function istIntern(pfad: string): boolean {
@@ -241,10 +266,16 @@ export async function middleware(request: NextRequest) {
     // ein Scheduler, der eine schwarze HTML-Seite bekommt, meldet keinen Fehler. Er laeuft
     // jeden Morgen, bekommt 200, und niemand erfaehrt, dass nichts passiert ist. Verraten
     // wird nichts — ohne CRON_SECRET antwortet die Route mit 503, mit falschem mit 403.
+    // Die Grounding Page muss ebenfalls durch den Vorhang — und zwar aus dem staerksten
+    // Grund von allen: sie existiert AUSSCHLIESSLICH, um von aussen gelesen zu werden.
+    // Hinter der Sperre waere sie eine schwarze Seite mit `noindex`, und das Modell, das
+    // sie zitieren soll, lernte daraus, dass es unter dieser Adresse nichts gibt.
+    // Verraten wird nichts: auf der Seite steht nur, was wir ohnehin oeffentlich sagen.
     if (!unlocked && !vorhangAuf && !pfad.startsWith("/auth/") && pfad !== "/api/health"
         && !pfad.startsWith("/api/calendar/")
         && pfad !== "/robots.txt" && pfad !== "/sitemap.xml"
-        && pfad !== "/api/alerts/run")
+        && pfad !== "/api/alerts/run"
+        && !istGrounding(pfad))
       return blackPage(pfad);
     // Schlüssel gültig → volle App; bei frischem ?preview den Cookie setzen (Folgeseiten ohne Query).
     const { response: res, email } = await updateSession(request);

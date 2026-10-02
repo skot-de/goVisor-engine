@@ -21,6 +21,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const jetzt = new Date();
   const basis: MetadataRoute.Sitemap = [
     { url: `${SEITE}/`, lastModified: jetzt, changeFrequency: "daily", priority: 1 },
+    // ⚠ DIE GROUNDING PAGE GEHOERT HIERHER, und zwar weit oben. Sie ist die einzige
+    // Seite, deren Zweck AUSSCHLIESSLICH darin besteht, von aussen gelesen und zitiert
+    // zu werden. Eine Faktenseite, die kein Abrufer findet, ist keine.
+    { url: `${SEITE}/fakten`, lastModified: jetzt, changeFrequency: "weekly", priority: 0.9 },
     { url: `${SEITE}/start`, lastModified: jetzt, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SEITE}/login`, lastModified: jetzt, changeFrequency: "yearly", priority: 0.3 },
   ];

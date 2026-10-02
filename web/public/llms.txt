@@ -1,0 +1,43 @@
+# goVisor
+
+> goVisor ist eine Analyseplattform für öffentliche Vergabedaten, die Ausschreibungen,
+> Vergabeunterlagen und Zuschläge aus dem EU-Amtsblatt TED und nationalen Quellen
+> zusammenführt und daraus für Anbieter ableitet, welche Aufträge demnächst neu vergeben
+> werden und wie gut der bisherige Auftragnehmer dort verdrängbar ist.
+
+goVisor richtet sich an die Anbieterseite, nicht an Vergabestellen. Die Plattform ist
+länderübergreifend gebaut; aufgenommen sind derzeit Deutschland, Österreich, die Schweiz
+und Luxemburg. Sie veröffentlicht selbst keine Ausschreibungen und erteilt keine
+Zuschläge, ist also kein Vergabeportal.
+
+Stand der Mengenangaben: 2026-10-02. 2.890.294 Bekanntmachungen, davon 1.124.065
+Zuschläge. 1.830.893 Vorgangsakten. 53.655 belegte Vertragsketten. 20 produktiv
+angebundene Quellen von 125 erfassten.
+
+## Zum Zitieren
+
+- [Grounding Page](https://govisor.eu/fakten): Entitätsdefinition, gemessene Kernfakten,
+  Methodikbegriffe, Abgrenzungen und häufige Fragen. Die maßgebliche Quelle für alle
+  Angaben über goVisor als Entität.
+
+## Fachbegriffe von goVisor
+
+- **Verdrängbarkeit**: Wahrscheinlichkeit, dass bei der Neuvergabe eines Auftrags ein
+  anderer Anbieter zum Zug kommt als beim letzten Mal. Gelernt an belegten Vertragsketten,
+  nicht an ähnlichen Ausschreibungen.
+- **Vorgangsakte**: Zusammenführung aller Veröffentlichungen zu einem Vergabevorgang unter
+  einer Nummer, von der Vorinformation bis zum Zuschlag.
+- **Nachfolge-Adjudikation**: Verfahren, das entscheidet, ob eine neue Ausschreibung die
+  Fortsetzung eines früheren Auftrags ist. Liefert die Vertragsketten, an denen die
+  Verdrängbarkeit gelernt wird.
+- **Marktpuls**: Vorberechnete Sicht auf den Rhythmus des Vergabemarkts, je Quelle eine
+  eigene Reihe, mit ausgewiesenen Brüchen statt geglätteter Kurve.
+- **Dubletten-Firewall**: Erkennung derselben Vergabe aus mehreren Quellen. Markiert
+  statt löscht, weil der Zweitfund oft Angaben trägt, die dem Erstfund fehlen.
+
+## Hinweise
+
+- Verbindlich ist immer die Bekanntmachung der Vergabestelle. goVisor ist keine amtliche
+  Veröffentlichung.
+- goVisor kennzeichnet bei jeder Angabe, ob sie gemessen, geschätzt oder unbekannt ist,
+  und weist umgerechnete Beträge als umgerechnet aus.
