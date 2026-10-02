@@ -22,11 +22,16 @@ export const ANBIETER = {
   ustIdNr: "DE462604620",
 
   /* ⚠ FUER EINE UG IST DIE REGISTEREINTRAGUNG PFLICHTANGABE (§ 5 Abs. 1 Nr. 4 DDG).
-   * Ohne Registergericht und Nummer ist das Impressum unvollstaendig. Beides steht nicht
-   * im Repo und wurde nicht mitgeteilt; es ist der Handelsregisterauszug, der es sagt.
-   * Solange hier `null` steht, meldet sich der Test. */
+   *
+   * Die Nummer hat Sven am 2026-10-02 genannt. Das REGISTERGERICHT steht noch aus, und es
+   * wird hier nicht erschlossen: fuer eine Firma mit Sitz in Hamm liegt „Amtsgericht Hamm"
+   * nahe, aber in Nordrhein-Westfalen sind die Registergerichte konzentriert, und welches
+   * Amtsgericht ein bestimmtes Register fuehrt, ergibt sich aus der Zustaendigkeits-
+   * verordnung und nicht aus der Postanschrift. Naheliegend ist keine Messung, und auf
+   * einer Pflichtseite ist eine naheliegende Angabe genau so falsch wie eine geratene. Es
+   * steht im Handelsregisterauszug; eine Zeile genuegt, sobald jemand nachgesehen hat. */
   registergericht: null as string | null,
-  registernummer: null as string | null,
+  registernummer: "HRB 12177",
 
   /* ⚠ EINE ELEKTRONISCHE KONTAKTMOEGLICHKEIT IST PFLICHT (§ 5 Abs. 1 Nr. 2 DDG) — eine
    * Adresse, die eine schnelle Kontaktaufnahme erlaubt. Die persoenliche Mailadresse des
