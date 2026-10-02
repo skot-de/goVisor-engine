@@ -40,7 +40,17 @@ const EMPFAENGER = [
   {
     name: "Supabase",
     zweck: "Datenbank und Anmeldeverwaltung (Konto, Profil, gespeicherte Einstellungen)",
-    ort: "Vereinigte Staaten",
+    // ⚠ UNGEPRUEFT, UND DAS IST MEIN FEHLER (2026-10-02). Hier stand von Anfang an
+    // „Vereinigte Staaten", ohne dass ich es gemessen hatte — ich habe es von den beiden
+    // anderen Empfaengern uebernommen. Tatsaechlich ist Vertragspartner die Supabase Pte.
+    // Ltd. (Singapur), und der SERVERSTANDORT haengt an der Projektregion, die beim
+    // Anlegen gewaehlt wurde; liegt sie in Frankfurt, gibt es fuer die Datenbank gar
+    // keine Drittlandsuebermittlung. Der Hostname steht hinter Cloudflare-Anycast, aus
+    // dem DNS ist die Region also nicht ablesbar. Sie steht im Supabase-Dashboard unter
+    // Project Settings, General, Region. Bis sie bestaetigt ist, bleibt die Angabe
+    // vorsichtig: eine zu weit gefasste Drittlandsangabe ist nicht falsch im Sinne eines
+    // Verstosses, aber sie ist auch nicht gemessen, und das soll hier dastehen.
+    ort: "Region nach Projekteinstellung, Vertragspartner Supabase Pte. Ltd., Singapur",
   },
   {
     name: "Vercel",
@@ -266,8 +276,8 @@ export default function DatenschutzSeite() {
 
           <h2>12. Übermittlung in Drittländer</h2>
           <p>
-            Die unter Punkt 11 genannten Dienstleister verarbeiten Daten auch in den
-            Vereinigten Staaten. Die Übermittlung erfolgt auf Grundlage der
+            Soweit die unter Punkt 11 genannten Dienstleister Daten ausserhalb der
+            Europäischen Union verarbeiten, erfolgt die Übermittlung auf Grundlage der
             Standardvertragsklauseln der Europäischen Kommission oder, soweit der jeweilige
             Anbieter zertifiziert ist, auf Grundlage des Angemessenheitsbeschlusses zum
             EU-US Data Privacy Framework.
