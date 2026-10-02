@@ -76,16 +76,16 @@ Erzeuger meldet das.
 <!-- ZAHLEN:bestand -->
 | | DE | AT | CH | LU | gesamt |
 |---|---:|---:|---:|---:|---:|
-| Bekanntmachungen | 2.299.806 | 424.330 | 125.927 | 38.548 | **2.888.611** |
-| Zuschläge | 824.907 | 231.586 | 53.716 | 13.372 | **1.123.581** |
-| Vorgangsakten | 1.431.195 | 298.215 | 75.133 | 25.216 | **1.829.759** |
+| Bekanntmachungen | 2.301.205 | 424.373 | 126.157 | 38.559 | **2.890.294** |
+| Zuschläge | 825.298 | 231.604 | 53.788 | 13.375 | **1.124.065** |
+| Vorgangsakten | 1.432.183 | 298.239 | 75.247 | 25.224 | **1.830.893** |
 | Bestand ab | 2004-01-02 | ⚠ Datenfehler | 2016-08-09 | 2004-01-02 | |
 
 ⚠ AT trägt als frühestes `publication_date` einen Wert vor 1993. Das ist ein Parserfehler, kein Bestand — er ist zu klären, bevor diese Tabelle öffentlich wird.
 
 Quellen-Registry (`govisor/sources.py`): **125** Einträge.
 
-*Gemessen am 2026-10-01 von `scripts/zahlen_nachziehen.py`. Nicht von Hand ändern — der nächste Lauf überschreibt es.*
+*Gemessen am 2026-10-02 von `scripts/zahlen_nachziehen.py`. Nicht von Hand ändern — der nächste Lauf überschreibt es.*
 <!-- /ZAHLEN:bestand -->
 
 
