@@ -1965,7 +1965,7 @@ function renderChecklistBlock(a, l){
         <button class="btn btn-p btn-sm" data-clkombi='${esc(kombi)}'>${tk("Kopieren &amp; speichern")}</button></span></div></div>`;
     return `<article class="item" data-clitem="${it._i}">
       <div class="ih"><button class="dchk" data-clchk="${it._i}">✓</button>
-        <button class="cl-satz" data-clopen="${it._i}">${esc(satz)}${wert}${vgl}</button>
+        <button class="cl-satz" data-clopen="${it._i}" aria-expanded="false"><span class="cl-caret" aria-hidden="true">›</span>${esc(satz)}${wert}${vgl}</button>
         <span class="cl-art">${esc(it.label||it.req_type||'')}</span></div>
       <div class="ibody">${q}${block}</div></article>`;
   };

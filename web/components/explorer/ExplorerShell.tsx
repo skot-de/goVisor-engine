@@ -1410,7 +1410,12 @@ export function ExplorerShell({ initialSlug = "leads" }: { initialSlug?: string 
          239 Knoepfe und 58 Textfelder trug und ganz aufgeklappt 22 Bildschirme hoch war.
          Geschrieben wird in hoechstens eine Handvoll davon. */
       case "clopen": {
-        el.closest<HTMLElement>(".item")?.classList.toggle("auf");
+        const item = el.closest<HTMLElement>(".item");
+        const auf = item?.classList.toggle("auf") ?? false;
+        // ⚠ `aria-expanded` MUSS mitwandern. Steht es fest auf "false", sagt das
+        // Vorleseprogramm nach dem Oeffnen weiterhin „zugeklappt" — eine falsche Ansage
+        // ist schlechter als gar keine, weil der Nutzer ihr glaubt.
+        el.setAttribute("aria-expanded", auf ? "true" : "false");
         break;
       }
       // Der Ampel-Grund zeigt zwei Zeilen; ein Klick zeigt den Rest.

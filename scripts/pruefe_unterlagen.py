@@ -211,9 +211,20 @@ def messen(blatt: pathlib.Path) -> dict | None:
                 // Ein aufgeklappter Punkt MUSS Fundstelle und Baustein zeigen — sonst ist
                 // die Ruhe damit erkauft, dass die Funktion verschwunden ist.
                 const eins = document.querySelector('article.item');
+                // ⚠ VOR dem Aufklappen messen: sieht man ueberhaupt, DASS man klicken
+                // kann? Die alte Sonde pruefte nur den Inhalt dahinter — eine Funktion,
+                // die niemand findet, ist dieselbe Null wie eine, die fehlt.
+                a.marke_zu = sicht('.item .cl-caret');
+                const knopf = document.querySelector('.item .cl-satz');
+                a.aria_zu = knopf ? knopf.getAttribute('aria-expanded') : null;
                 if (eins) eins.classList.add('auf');
                 a.ta_auf = sicht('textarea');
                 a.zitat_auf = sicht('.quote');
+                a.marke_auf = sicht('.item.auf .cl-caret');
+                // Dreht sich die Marke? Ohne Drehung sagt sie nicht, in welchem Zustand
+                // die Zeile ist, und taugt nur als Verzierung.
+                const c = document.querySelector('.item.auf .cl-caret');
+                a.marke_dreht = c ? (getComputedStyle(c).transform || 'none') !== 'none' : false;
                 return a;
             }""")
             b.close()
@@ -272,6 +283,19 @@ def main() -> int:
     if m["ta_auf"] < 1 or m["zitat_auf"] < 1:
         befunde.append("ein aufgeklappter Pruefpunkt zeigt keine Fundstelle oder kein "
                        "Textfeld mehr — die Ruhe waere mit der Funktion erkauft")
+    # ⚠ UND DIE DRITTE RICHTUNG, die bis zum 2026-10-03 fehlte: ist die Funktion auch
+    # AUFFINDBAR? Die Zeile war ein Knopf, der wie Fliesstext aussah; `cursor:pointer` ist
+    # kein sichtbares Merkmal (kein Zeiger auf dem Tablet, keiner im Bildschirmfoto).
+    # Gefunden hat es Sven, der die Seite selbst gebaut hat und den Weg nicht fand.
+    if m.get("marke_zu", 0) < 1:
+        befunde.append("die Pruefpunkt-Zeile traegt keine sichtbare Aufklapp-Marke — "
+                       "wer nicht zufaellig klickt, findet Fundstelle und Textbaustein nie")
+    if not m.get("marke_dreht"):
+        befunde.append("die Aufklapp-Marke dreht sich nicht beim Oeffnen — dann sagt sie "
+                       "nicht, in welchem Zustand die Zeile ist")
+    if m.get("aria_zu") != "false":
+        befunde.append(f"die Zeile meldet `aria-expanded={m.get('aria_zu')!r}` statt "
+                       f"'false' — ein Vorleseprogramm kann den Zustand nicht ansagen")
 
     if befunde:
         if not still:
