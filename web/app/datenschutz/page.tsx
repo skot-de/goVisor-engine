@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import RechtsSeite from "@/components/RechtsSeite";
 import { ANBIETER, anschrift } from "@/lib/anbieter";
+import { VERARBEITER, ohneVertrag } from "@/lib/verarbeiter";
 
 /**
  * Datenschutzerklaerung — und zwar die, die zu DIESER Anwendung gehoert.
@@ -33,36 +34,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-/* Empfaenger, denen gegenueber eine Verarbeitung stattfindet. Gemessen, nicht gelistet:
- * Supabase aus `web/.env.local` und `web/lib/supabase`, der Hoster aus `web/vercel.json`,
- * OpenRouter aus `govisor/llm.py` und `scripts/process_upload.py`. */
-const EMPFAENGER = [
-  {
-    name: "Supabase",
-    zweck: "Datenbank und Anmeldeverwaltung (Konto, Profil, gespeicherte Einstellungen)",
-    // ⚠ UNGEPRUEFT, UND DAS IST MEIN FEHLER (2026-10-02). Hier stand von Anfang an
-    // „Vereinigte Staaten", ohne dass ich es gemessen hatte — ich habe es von den beiden
-    // anderen Empfaengern uebernommen. Tatsaechlich ist Vertragspartner die Supabase Pte.
-    // Ltd. (Singapur), und der SERVERSTANDORT haengt an der Projektregion, die beim
-    // Anlegen gewaehlt wurde; liegt sie in Frankfurt, gibt es fuer die Datenbank gar
-    // keine Drittlandsuebermittlung. Der Hostname steht hinter Cloudflare-Anycast, aus
-    // dem DNS ist die Region also nicht ablesbar. Sie steht im Supabase-Dashboard unter
-    // Project Settings, General, Region. Bis sie bestaetigt ist, bleibt die Angabe
-    // vorsichtig: eine zu weit gefasste Drittlandsangabe ist nicht falsch im Sinne eines
-    // Verstosses, aber sie ist auch nicht gemessen, und das soll hier dastehen.
-    ort: "Region nach Projekteinstellung, Vertragspartner Supabase Pte. Ltd., Singapur",
-  },
-  {
-    name: "Vercel",
-    zweck: "Betrieb der Webanwendung, Auslieferung der Seiten, Server-Protokolle",
-    ort: "Vereinigte Staaten",
-  },
-  {
-    name: "OpenRouter",
-    zweck: "Auswertung hochgeladener Vergabeunterlagen durch ein Sprachmodell",
-    ort: "Vereinigte Staaten",
-  },
-];
+
 
 export default function DatenschutzSeite() {
   return (
@@ -259,7 +231,7 @@ export default function DatenschutzSeite() {
                 </tr>
               </thead>
               <tbody>
-                {EMPFAENGER.map((e) => (
+                {VERARBEITER.map((e) => (
                   <tr key={e.name}>
                     <th scope="row">{e.name}</th>
                     <td>{e.zweck}</td>
@@ -275,13 +247,29 @@ export default function DatenschutzSeite() {
           </p>
 
           <h2>12. Übermittlung in Drittländer</h2>
-          <p>
-            Soweit die unter Punkt 11 genannten Dienstleister Daten ausserhalb der
-            Europäischen Union verarbeiten, erfolgt die Übermittlung auf Grundlage der
-            Standardvertragsklauseln der Europäischen Kommission oder, soweit der jeweilige
-            Anbieter zertifiziert ist, auf Grundlage des Angemessenheitsbeschlusses zum
-            EU-US Data Privacy Framework.
-          </p>
+          {/* ⚠ HIER STAND EINE BEHAUPTUNG, KEINE BESCHREIBUNG. Der uebliche Satz „erfolgt
+              auf Grundlage der Standardvertragsklauseln" sagt, dass ein Vertrag
+              geschlossen WURDE. Liegt er nicht vor, ist der Satz falsch, und zwar in dem
+              Dokument, mit dem man seine Rechtmaessigkeit belegt. Deshalb haengt er jetzt
+              am gepflegten Vertragsstand in `lib/verarbeiter.ts` und erscheint erst,
+              wenn fuer alle Empfaenger ein Vertrag vermerkt ist. */}
+          {ohneVertrag().length === 0 ? (
+            <p>
+              Soweit die unter Punkt 11 genannten Dienstleister Daten ausserhalb der
+              Europäischen Union verarbeiten, erfolgt die Übermittlung auf Grundlage der
+              Standardvertragsklauseln der Europäischen Kommission oder, soweit der
+              jeweilige Anbieter zertifiziert ist, auf Grundlage des
+              Angemessenheitsbeschlusses zum EU-US Data Privacy Framework.
+            </p>
+          ) : (
+            <p>
+              Ein Teil der unter Punkt 11 genannten Dienstleister verarbeitet Daten
+              ausserhalb der Europäischen Union. Die vertragliche Grundlage dieser
+              Übermittlungen wird derzeit abgeschlossen; bis dahin machen wir dazu keine
+              Angabe, die wir nicht belegen können. Diese Erklärung wird ergänzt, sobald
+              die Verträge vorliegen.
+            </p>
+          )}
 
           <h2>13. Speicherdauer</h2>
           <ul>

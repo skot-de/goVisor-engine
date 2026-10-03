@@ -105,11 +105,56 @@ def test_impressum_ist_vollstaendig():
         "ist, ist das kein akuter Rechtsverstoß, vor dem Start aber zwingend.")
 
 
+VERARBEITER = ROOT / "web" / "lib" / "verarbeiter.ts"
+
+
+def test_drittland_absatz_behauptet_keine_grundlage_die_fehlt():
+    """⚠ Der Satz „erfolgt auf Grundlage der Standardvertragsklauseln" ist eine BEHAUPTUNG.
+
+    Er sagt, dass ein Vertrag geschlossen wurde. Liegt er nicht vor, ist er falsch, und
+    zwar in genau dem Dokument, mit dem man seine Rechtmässigkeit belegt. Am 2026-10-02
+    stand er hier, ohne dass ein einziger AV-Vertrag nachgewiesen war; ich hatte ihn aus
+    der üblichen Form übernommen. Aufgefallen ist es erst, als eine Nachbarsitzung
+    dieselbe Voraussetzung unabhängig aufschrieb.
+
+    Deshalb haengt der Absatz jetzt am gepflegten Vertragsstand, und dieser Test ist rot,
+    solange einer offen ist. **Das ist eine kaufmännische Aufgabe, keine technische**:
+    kein Code kann einen Vertrag herbeiführen, er kann nur verhindern, dass man ihn
+    vergisst und trotzdem behauptet.
+    """
+    # ⚠ PRO EINTRAG TRENNEN, nicht ueber die ganze Datei suchen. Der erste Versuch war
+    # `name: "…"[\s\S]{0,1400}?avv: "offen"` — nicht gierig, aber ueber Eintragsgrenzen
+    # hinweg: „Supabase" fand den `avv: "offen"` des NAECHSTEN Eintrags und wurde gemeldet,
+    # waehrend Vercel durchrutschte. Ein Test, der die falschen Namen nennt, ist
+    # schlimmer als keiner — man behebt dann das Falsche.
+    t = _text(VERARBEITER)
+    rumpf = t.split("export const VERARBEITER", 1)[1]
+    eintraege = re.split(r"\n  \{", rumpf)
+    offen = [re.search(r'name: "([^"]+)"', e).group(1)
+             for e in eintraege
+             if re.search(r'name: "', e) and re.search(r'^\s*avv: "offen"', e, re.M)]
+    assert not offen, (
+        "Ohne Auftragsverarbeitungsvertrag darf die Datenschutzerklärung keine "
+        "Rechtsgrundlage für die Drittlandübermittlung nennen. Offen: "
+        + ", ".join(offen) + ". Stand pflegen in web/lib/verarbeiter.ts, sobald die "
+        "Verträge vorliegen.")
+
+
+def test_die_seite_rendert_den_vertragsstand_statt_ihn_zu_tippen():
+    """⚠ Sonst stimmt der Test, und die Seite sagt trotzdem etwas anderes."""
+    t = _text(DATENSCHUTZ)
+    assert "ohneVertrag()" in t, (
+        "Abschnitt 12 haengt nicht am Vertragsstand — dann kann er eine Grundlage "
+        "behaupten, die es nicht gibt, ohne dass ein Test es merkt.")
+    assert "VERARBEITER.map" in t, "Die Empfängertabelle kommt nicht aus `verarbeiter.ts`"
+
+
 def test_datenschutz_nennt_die_gemessenen_empfaenger():
     """Die Erklärung muss die Dienstleister nennen, die der Code tatsächlich aufruft."""
-    t = _text(DATENSCHUTZ)
+    v = _text(VERARBEITER)
     for empfaenger in ("Supabase", "Vercel", "OpenRouter"):
-        assert empfaenger in t, f"{empfaenger} fehlt in der Empfängerliste"
+        assert empfaenger in v, f"{empfaenger} fehlt in der Empfängerliste"
+    t = _text(DATENSCHUTZ)
     for pflicht in ("Artikel 15 DSGVO", "Artikel 17 DSGVO", "Beschwerde",
                     "Standardvertragsklauseln", "Speicherdauer", "Cookies"):
         assert pflicht in t, f"Abschnitt fehlt: {pflicht}"
