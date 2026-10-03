@@ -64,15 +64,50 @@ export const VERARBEITER: Verarbeiter[] = [
   {
     name: "OpenRouter",
     zweck: "Auswertung hochgeladener Vergabeunterlagen durch ein Sprachmodell",
-    // Gemessen: `govisor/llm.py` haengt `:floor` an und waehlt damit den guenstigsten
-    // Endpunkt. Der ist nicht der EU-Endpunkt, Verarbeitung ausserhalb der EU ist der
-    // Regelfall. ⚠ `:floor` ist zudem eine Bitte, keine Garantie (s. llm.py) — welcher
-    // Unterverarbeiter bedient, steht damit nicht fest.
+    /* ⚠ DER RECHENSTANDORT IST BEI UNS EINE PREISFOLGE, KEINE ENTSCHEIDUNG.
+     *
+     * `govisor/llm.py` haengt `:floor` an das Modell; das waehlt den guenstigsten der
+     * sieben Endpunkte. Selbst abgerufen am 2026-10-03, nachpruefbar mit:
+     *
+     *   GET https://openrouter.ai/api/v1/models/google/gemini-2.5-flash/endpoints
+     *   (Metadaten, kostet nichts; Schluessel aus .secrets/openrouter.key)
+     *
+     *   $/Mio ein  $/Mio aus  tag
+     *       0.150      1.250  google-ai-studio/flex        ← den nimmt :floor
+     *       0.300      2.500  google-ai-studio
+     *       0.300      2.500  google-vertex
+     *       0.300      2.500  google-vertex/eu             ← es GIBT einen EU-Endpunkt
+     *       0.300      2.500  google-vertex/global
+     *       0.540      4.500  google-ai-studio/priority
+     *       0.540      4.500  google-vertex/global/priority
+     *
+     * ⚠ Die Region steht im Feld `tag`; `provider_region` ist bei allen sieben leer.
+     *
+     * Ein EU-Endpunkt existiert also und wird nur deshalb nicht genommen, weil er nicht
+     * der guenstigste ist. Er ist dabei NICHT teurer als der Normalpreis — er liegt in
+     * derselben Stufe wie drei andere. Der Aufpreis ist der Verzicht auf den Flex-Rabatt,
+     * also ungefaehr eine Verdoppelung der LLM-Rechnung.
+     *
+     * ⓘ Das ist eine Produktentscheidung mit Preisschild und gehoert Sven vorgelegt, nicht
+     * in diese Datei: `google-vertex/eu` festnageln macht aus einer Drittlandsuebermittlung
+     * eine EU-Verarbeitung. Solange `:floor` gilt, gilt der Text unten.
+     *
+     * ⚠ UND `:floor` ALLEIN ZWINGT NICHT. `llm.py` hat das gemessen: ueber 311 Aufrufe,
+     * alle mit `:floor` gesendet, liefen **304 ueber die Standardstufe** (Vertex) und nur
+     * 5 ueber Flex, weil `allow_fallbacks` eine Stufe hoeher geht, sobald der billigste
+     * Endpunkt nicht sofort liefert. Was zwingt, ist der Preisdeckel `max_price`, und der
+     * steht seit `OR_STRENG` standardmaessig an.
+     *
+     * Fuer den Standort heisst das: MIT Deckel landet der Aufruf verlaesslich auf
+     * `google-ai-studio/flex`, OHNE Deckel driftet er auf Vertex. Keiner von beiden ist
+     * der EU-Endpunkt — die Aussage „ausserhalb der EU" gilt also in beiden Faellen, nur
+     * die Begruendung ist eine andere. */
     ort: "Vereinigte Staaten und weitere, Rechenstandort nach Preis gewaehlt",
     // OpenRouters Datenschutzerklaerung kennt AV-Vertraege („If you have a Data Processing
     // Agreement with us"), bietet sie aber nicht zum Selbstbedienen an. Anzufragen.
     avv: "offen",
-    beleg: "openrouter.ai/privacy nennt DPAs nur auf Anfrage; nicht geschlossen",
+    beleg: "openrouter.ai/privacy nennt DPAs nur auf Anfrage; nicht geschlossen. "
+      + "Endpunkte und Preise am 2026-10-03 ueber die OpenRouter-API abgerufen.",
   },
 ];
 
