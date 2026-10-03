@@ -76,8 +76,8 @@ Erzeuger meldet das.
 <!-- ZAHLEN:bestand -->
 | | DE | AT | CH | LU | gesamt |
 |---|---:|---:|---:|---:|---:|
-| Bekanntmachungen | 2.301.878 | 424.373 | 126.204 | 38.559 | **2.891.014** |
-| Zuschläge | 825.378 | 231.604 | 53.808 | 13.375 | **1.124.165** |
+| Bekanntmachungen | 2.302.140 | 424.373 | 126.204 | 38.559 | **2.891.276** |
+| Zuschläge | 825.431 | 231.604 | 53.808 | 13.375 | **1.124.218** |
 | Vorgangsakten | 1.432.773 | 298.239 | 75.269 | 25.224 | **1.831.505** |
 | Bestand ab | 2004-01-02 | ⚠ Datenfehler | 2016-08-09 | 2004-01-02 | |
 
@@ -85,7 +85,7 @@ Erzeuger meldet das.
 
 Quellen-Registry (`govisor/sources.py`): **125** Einträge.
 
-*Gemessen am 2026-10-03 von `scripts/zahlen_nachziehen.py`. Nicht von Hand ändern — der nächste Lauf überschreibt es.*
+*Gemessen am 2026-10-04 von `scripts/zahlen_nachziehen.py`. Nicht von Hand ändern — der nächste Lauf überschreibt es.*
 <!-- /ZAHLEN:bestand -->
 
 
@@ -96,9 +96,21 @@ Behauptung „wir haben mehr Quellen" wäre es auch.
 ### Was wirklich keiner bewirbt
 
 Die **Vorgangsakte als Objekt**: Bekanntmachung, Vergabeunterlagen und Zuschlag unter EINER
-Nummer, 1,83 Mio. davon, zurück bis 2004. Und die **Dokumentenanalyse** mit Zitatverifikation
-(Ticket 23). Kein Anbieter im Feld verspricht, die Vergabeunterlagen selbst auszuwerten —
-alle hören bei „diese Ausschreibung passt zu dir" auf.
+Nummer, 1,83 Mio. davon, zurück bis 2004. Dazu die **Herkunftskennzeichnung je Wert** und die
+**Zitatverifikation**, die jede Aussage an ihre Belegstelle im Dokument bindet (Ticket 23).
+
+⚠ **Hier stand bis zum 2026-10-04: „Kein Anbieter im Feld verspricht, die Vergabeunterlagen
+selbst auszuwerten — alle hören bei ‚diese Ausschreibung passt zu dir' auf."** Der Satz war
+drei Tage alt und falsch. Gemessen an den Herstellerseiten am 2026-10-04 werben **DTAD**
+(Assistent „Frank"), **Patterno** (100 Seiten in 30 s) und **Vergabepilot** (Chat über die
+Unterlagen) alle drei mit genau dieser Auswertung. Die **Dokumentenanalyse** gehört deshalb
+nicht mehr unter diese Überschrift; nur ihre Tiefe tut es.
+
+⚠ **Und die Fehlerursache gehört dazu, weil sie wiederkommt:** §2 entstand aus einer Websuche,
+und Websuchen finden Vergleichsartikel statt Herstellerseiten. Patterno stand dort mit 1.000
+Portalen und wirbt auf der eigenen Seite mit **4.500** — drei Tage später. Fremdzahlen altern
+in Tagen, eigene Zahlen in Nächten. Vor jeder Verwendung dieses Kapitels im Vertrieb gehört
+ein Blick auf die Seite des genannten Anbieters.
 
 ---
 
