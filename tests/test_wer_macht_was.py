@@ -112,3 +112,31 @@ def test_pfadmodus_meldet_freie_pfade_als_frei():
                        cwd=WURZEL, capture_output=True, text=True, timeout=120)
     assert "niemand" in r.stdout, "ein freier Pfad wird nicht als frei gemeldet"
     assert r.returncode == 0, f"freier Pfad muss 0 geben, war {r.returncode}"
+
+
+def test_datei_auf_main_die_niemand_aendert_ist_kein_hindernis():
+    """⚠ Sonst ist das Werkzeug bei JEDER bestehenden Datei rot und damit wertlos.
+
+    Gemessen am 2026-10-03: die erste Fassung meldete fuer `tests/test_marktwert.py` ACHT
+    Branches mit „liegt dort" — die Datei liegt auf main und damit auf jedem Nachkommen. Acht
+    Treffer, null Erkenntnis, und das echte Signal („wer hat sie GEAENDERT") ertrank darin.
+    Jetzt zaehlt nur noch, wer sie aendert.
+    """
+    r = subprocess.run(["bash", str(WER), "--kein-abruf", "scripts/laeuft_was.sh"],
+                       cwd=WURZEL, capture_output=True, text=True, timeout=120)
+    # laeuft_was.sh liegt auf main. Dass ICH sie gerade geaendert habe, darf sie als belegt
+    # melden — aber niemals mit „liegt dort" fuer Branches, die sie nur erben.
+    assert "liegt dort" not in r.stdout, (
+        "eine Datei von origin/main wird als „liegt dort\" gemeldet — das trifft jeden "
+        "Nachkommen und erzeugt Rauschen statt Auskunft:\n" + r.stdout)
+
+
+def test_unterscheidet_neu_angelegt_von_geaendert():
+    """Die Unterscheidung ist der Kern: „neu angelegt" heisst Doppelarbeit, „geaendert" heisst
+    Konflikt beim Zusammenfuehren. Zwei Befunde mit zwei verschiedenen Konsequenzen."""
+    r = rumpf(WER)
+    assert "neu angelegt" in r and "geaendert" in r, (
+        "das Werkzeug unterscheidet nicht zwischen neu angelegt und geaendert")
+    assert "origin/main:$p" in r, (
+        "es prueft nicht, ob der Pfad schon auf origin/main liegt — ohne diese Pruefung "
+        "kann es die beiden Faelle nicht trennen")

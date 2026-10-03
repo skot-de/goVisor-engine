@@ -86,19 +86,31 @@ if [ ${#PFADE[@]} -gt 0 ]; then
   gefunden=0
   for p in "${PFADE[@]}"; do
     treffer=""
+    # ⚠ LIEGT DER PFAD SCHON AUF origin/main? Dann ist „liegt dort" KEINE Auskunft: die Datei
+    #   liegt dann auf jedem Nachkommen, und das Werkzeug meldete acht Branches, von denen
+    #   keiner etwas damit zu tun hat. Gemessen am 2026-10-03 an `tests/test_marktwert.py` —
+    #   acht Treffer, null Erkenntnis, und das echte Signal („wer hat sie GEAENDERT")
+    #   ertrank darin. Bei solchen Pfaden zaehlt nur noch, wer sie anfasst.
+    auf_main=nein
+    git cat-file -e "refs/remotes/origin/main:$p" 2>/dev/null && auf_main=ja
     while read -r b; do
       [ -z "$b" ] && continue
       r=$(ref_fuer "$b"); [ -z "$r" ] && continue
-      # Existiert der Pfad auf dem Branch, oder hat der Branch ihn angefasst?
-      if git cat-file -e "$r:$p" 2>/dev/null; then
-        treffer="$treffer $b(liegt dort)"
-      elif dateien "$r" 2>/dev/null | grep -qxF "$p"; then
-        treffer="$treffer $b(angefasst)"
+      if dateien "$r" 2>/dev/null | grep -qxF "$p"; then
+        treffer="$treffer $b(geaendert)"
+      elif [ "$auf_main" = nein ] && git cat-file -e "$r:$p" 2>/dev/null; then
+        # Neu angelegt und nicht auf main: genau der Fall, der zu Doppelarbeit fuehrt.
+        treffer="$treffer $b(neu angelegt)"
       fi
     done < <(branches)
     if [ -n "$treffer" ]; then
       echo "  ⛔ $p →$treffer"
       gefunden=1
+    elif [ "$auf_main" = ja ]; then
+      # ⚠ KEIN ⛔. Die Datei existiert, aber niemand arbeitet daran — sie zu aendern ist
+      #   normale Arbeit, kein Konflikt. Ein Werkzeug, das hier rot wird, ist bei jeder
+      #   bestehenden Datei rot und damit wertlos.
+      echo "  ✓  $p → liegt auf origin/main, niemand aendert sie gerade"
     else
       echo "  ✓  $p → niemand"
     fi
