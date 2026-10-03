@@ -115,6 +115,28 @@ if [ -n "$tmp" ]; then
   frei=1
 fi
 
+# ── FREMDE BRANCHES, DIE DIESELBEN DATEIEN ANFASSEN ─────────────────────────────────────
+# ⚠ DIESER TEIL AENDERT `frei` ABSICHTLICH NICHT. Eine Ueberlappung ist kein Grund, einen
+#   Pipeline-Lauf zu verschieben — Branches kollidieren erst beim Zusammenfuehren, nicht beim
+#   Schreiben auf die Platte. Wer das zu einem ⛔ machte, wuerde den Riegel abstumpfen: ein
+#   Wächter, der oft grundlos rot ist, wird irgendwann uebergangen.
+#
+# ⚠ OHNE `git fetch`, bewusst. Dieses Skript laeuft vor JEDEM schreibenden Schritt, und ein
+#   Netzabruf je Aufruf waere teuer und wuerde haengen koennen. Der Preis ist, dass frisch
+#   gepushte Fremdarbeit hier fehlt — deshalb der Hinweis auf den vollen Lauf darunter.
+if [ -x scripts/wer_macht_was.sh ] || [ -f scripts/wer_macht_was.sh ]; then
+  ueberlappung="$(bash scripts/wer_macht_was.sh --kein-abruf 2>/dev/null \
+                  | sed -n '/MEHR ALS EIN Branch/,/^$/p' | sed '1d;/^$/d')"
+  if [ -n "$ueberlappung" ] && ! echo "$ueberlappung" | grep -q "sauber getrennt"; then
+    echo
+    echo "── ⚠ dieselben Dateien auf mehreren Branches (kein Grund zu warten) ──"
+    echo "$ueberlappung"
+  fi
+fi
+
 echo
 if [ "$frei" -eq 0 ]; then echo "✅ Bahn frei."; else echo "⛔ NICHT starten — erst abwarten."; fi
+echo
+echo "ⓘ Bevor du NEUE Dateien anlegst, pruefe, ob sie schon jemandem gehoeren:"
+echo "   scripts/wer_macht_was.sh <pfad> [<pfad> …]        (mit Abruf, also aktuell)"
 exit "$frei"
