@@ -1851,6 +1851,26 @@ $PY scripts/pruefe_werte.py \
 $PY scripts/pruefe_gold_integritaet.py \
   || echo "  → Gold-Waechter meldet Waisen. Details: python3 scripts/pruefe_gold_integritaet.py --land <L>"
 
+# ── Sonde 7: misst eine Kennzahl ueberhaupt noch etwas? ──────────────────────────────────
+# Am 2026-09-01 trugen in der SCHWEIZ alle 104 ausgewerteten Vergabestellen denselben
+# KMU-Anteil: 100 %. Rechnerisch korrekt, als Aussage leer — und im Produkt als Marktbefund
+# zu lesen („in der Schweiz gehen alle Auftraege an KMU"). Ursache war ein stiller
+# Stichprobenfilter, kein Rechenfehler.
+#
+# ⚠ WARUM KEINE DER BESTEHENDEN SONDEN DAS SIEHT. Die Datei war frisch, die Verdrahtung
+# stand, kein Feld war NULL, kein Fremdschluessel gebrochen. Der Defekt macht kein
+# Geraeusch: eine Kennzahl ohne Unterschied sieht exakt aus wie eine Kennzahl. Auffallen
+# kann sie nur, wenn jemand zwei LAENDER nebeneinanderlegt — und das tut im Tagesbetrieb
+# niemand von selbst.
+#
+# Der Detektor ist deshalb bewusst grob und landerblind: Streuung null ueber ein ganzes
+# Land. Er sagt nicht, WOHER die Entartung kommt (Vorgabewert, Vokabel-Konstante,
+# entartete Stichprobe, ein Connector, der ein Feld nie fuellt) — nur, dass die Kennzahl
+# nichts mehr unterscheidet. Das genuegt, um sie aus dem Produkt zu halten.
+# ⚠ Sie liest nur `web/data/strategie.json` und darf neben einem Abrufer laufen.
+$PY scripts/pruefe_streuung.py \
+  || echo "  → Kennzahl ohne Streuung, nicht markiert. Details: python3 scripts/pruefe_streuung.py --offen"
+
 # ── BIBEL-PRUEFUNG ───────────────────────────────────────────────────────────────────────
 #
 # Die Laender-Bibel (docs/laender/) altert anders als Code: sie faellt nicht um, sie wird

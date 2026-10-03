@@ -186,6 +186,7 @@ laesst eine undatierte Zahl dort gar nicht durch).
 
       python3 scripts/verdrahtungskarte.py <tabelle>   # wer erzeugt es, wer liest es
       python3 scripts/pruefe_bibel.py [--stand]        # altert die Anleitung selbst?
+      python3 scripts/pruefe_streuung.py [--offen]     # misst die Kennzahl ueberhaupt etwas?
 
   Dazu die **Verdrahtungskarte**: die Sonden melden, dass etwas nicht stimmt, die Karte
   sagt, woran es hängt. Sie wird aus dem Quelltext ERZEUGT, nicht getippt.
@@ -210,6 +211,37 @@ laesst eine undatierte Zahl dort gar nicht durch).
   Produktwege (Onboarding, Zuschläge, /firma) sind seit 2026-08-23 verdrahtet. Und:
   **Polen liegt mit 326.485 Bekanntmachungen in Silber ohne Gold** — angefangen und
   liegengeblieben, steht als Baustelle in `BEWUSST_OHNE_GOLD`.
+- **Eine zweite Fehlerklasse daneben, entdeckt am 2026-09-01: die Kennzahl, die nichts
+  unterscheidet.** Der KMU-Anteil stand in der SCHWEIZ bei allen ausgewerteten
+  Vergabestellen auf **100 %** — und war weder falsch gerechnet noch veraltet. Gemessen
+  wurde er auf `v36` (nur Vergaben mit registerbelegtem Gewinner); dieser Filter liess in
+  CH genau das Melder-Lager uebrig, das die eForms-Sammelstufe `sme` verwendet und `large`
+  in drei Jahren einmal. Das Ergebnis war eine Vokabel-Konstante, die sich als Marktaussage
+  las: „in der Schweiz gehen alle Auftraege an KMU". Auf allen Zuschlaegen gemessen:
+  1 → 45 verschiedene Werte (DE 64 → 70, AT 31 → 30 — die Falle trifft nur das Land, in dem
+  Aufloesungsquote und Vokabular korrelieren).
+
+  ⚠ **Warum keine bestehende Sonde das sah:** der Defekt macht kein Geraeusch. Kein Feld
+  ist NULL, kein Fremdschluessel bricht, keine Datei ist alt, die Suite ist gruen. Eine
+  Kennzahl ohne Streuung sieht exakt aus wie eine Kennzahl — auffallen kann sie nur im
+  LAENDERVERGLEICH, und den zieht im Tagesbetrieb niemand von selbst. Deshalb Sonde 6:
+
+      python3 scripts/pruefe_streuung.py [--offen]
+
+  Zwei Spuren: die Strategie-Kennzahlen je Vergabestelle und die Rohspalten je Land in
+  `gold/<Land>/lead_export.parquet`. Bekannte Befunde stehen als Code in `BEKANNT`, mit
+  Grund und Datum — `tests/test_marktwert.py` haelt sie ehrlich (ein Eintrag fuer eine
+  geschlossene Luecke macht die Suite rot). **Markieren statt wegwerfen:** eine entartete
+  Quote bleibt mit ihrem Rohwert in der Datei und traegt `konstant: true`; die Anzeige
+  schreibt „nicht unterscheidend" statt einer Prozentzahl.
+
+  **Offen aus demselben Scan (2026-09-01, nicht behoben):** der Unterlagen-Block
+  (`has_documents`, `documents_paid`, `documents_source`, `documents_languages`) ist fuer
+  die SCHWEIZ gebaut und fuer DE/AT nie verdrahtet — 90.969 DE-Leads stehen auf
+  `has_documents=False`, obwohl unter `data/docs/DE` ein grosser Bestand liegt. Dieselbe
+  Krankheit mit umgekehrtem Vorzeichen: statt „alles erfuellt" behauptet die Datei „nichts
+  vorhanden". Dazu `consortium_allowed`/`subcontracting_allowed` mit nur-positivem
+  Vokabular (CH 397 bzw. 536 mal `1`, nie `0`, DE/AT leer).
 - **Kein Datenverlust** — nichts nach eigener Relevanz filtern; Unbekanntes →
   „sonstiges"/`attributes`, Zweifelsfälle → `review`-Queue. Erschlossenes trägt Konfidenz.
 - Details + Warum: `docs/entscheidungen-und-kontext.md`.

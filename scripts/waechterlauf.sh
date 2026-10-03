@@ -115,6 +115,13 @@ sonde endgueltige "Details: python3 scripts/pruefe_endgueltige.py --offen" \
   -- $PY scripts/pruefe_endgueltige.py --stichprobe 8
 sonde nuts_vorgabe "Details: python3 scripts/pruefe_nuts_vorgabe.py --alle" \
   -- $PY scripts/pruefe_nuts_vorgabe.py
+# ⚠ Diese Sonde war am 2026-10-03 nur im Tageslauf verdrahtet und hier NICHT — gefunden von
+#   `tests/test_waechterlauf.py::test_beide_listen_sind_deckungsgleich`, also von genau dem
+#   Test, der fuer diesen Fall gebaut wurde. Sie gehoert hierher, weil der Tageslauf frueh
+#   sterben kann (20.09. in Zeile 931 von 1860, danach lief keine einzige Sonde) und eine
+#   entartete Kennzahl dann unbemerkt im Produkt steht. Sie liest nur `web/data/strategie.json`.
+sonde streuung "Details: python3 scripts/pruefe_streuung.py --offen" \
+  -- $PY scripts/pruefe_streuung.py
 sonde sondierung "Details: python3 scripts/pruefe_sondierung.py" \
   -- $PY scripts/pruefe_sondierung.py
 sonde supabase_migrationen "Details: python3 scripts/pruefe_supabase_migrationen.py" \

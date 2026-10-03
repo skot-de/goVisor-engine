@@ -22,6 +22,10 @@ input:focus-visible,.tsearch:focus-within{outline:none}
 .val[data-src="unbekannt"]::before{display:none}
 .val[data-src="na"]{color:var(--ink-400);font-style:italic}
 .val[data-src="na"]::before{display:none}
+/* Kennzahl ohne Streuung ueber ein ganzes Land: sichtbar, aber nicht als Messwert lesbar. */
+.val[data-src="konstant"]{color:var(--ink-400);font-style:italic}
+.val[data-src="konstant"]::before{background:var(--flag)}
+.val[data-src="konstant"] .q-n{font-style:normal;opacity:.7}
 .num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
 
 /* Band-Meter */

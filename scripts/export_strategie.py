@@ -10,6 +10,8 @@ Provenance-Regeln (Ticket §3):
 - Quartale ohne Datenlage bleiben leer, werden nicht interpoliert.
 - Fallzahl-Schwellen (§3.1) gelten für jeden Quoten-KPI.
 """
+import sys
+
 import duckdb, json, pathlib
 import sys
 
@@ -245,6 +247,40 @@ VORLAUF.append(lambda: (
       FROM v36 v JOIN je_notice j ON j.notice_id = v.notice_id GROUP BY 1""")
 ))
 
+# ⚠ ZUSCHLAEGE OHNE GEWINNER-IDENTITAETS-SCHRANKE. `v36` haelt nur Vergaben, deren Gewinner
+# sich auf ein Handelsregister/eine national_id aufloesen liess (Akzeptanzkriterium #8). Fuer
+# Kennzahlen UEBER DEN GEWINNER (Wechsel, Neuzugang, Top-Anbieter) ist das richtig: ohne
+# belegte Identitaet gibt es keine Person, ueber die man etwas aussagen koennte.
+#
+# Die KMU-Kennzeichnung ist KEINE solche Kennzahl. Sie steht als `CompanySizeCode` in der
+# Bekanntmachung, ganz gleich ob wir den Gewinner spaeter einem Register zuordnen konnten.
+# Sie auf `v36` zu messen importiert die Aufloesungs-Quote als stillen Stichprobenfilter —
+# und genau das ist am 2026-09-01 in der Schweiz aufgeflogen.
+#
+# GEMESSEN (2026-09-01, 36-Mon-Fenster, Stellen mit n >= 8):
+#   CH auf v36  : 116 Stellen,   1 verschiedener Quotenwert  → 100 % ueberall
+#   CH auf a36  : 374 Stellen,  53 verschiedene Quotenwerte
+#   DE  87 → 89 verschiedene · AT 40 → 37 — dort aendert sich praktisch nichts.
+#
+# WARUM DIE SCHWEIZ UND SONST NIEMAND. In CH zerfallen die eForms-Melder in zwei Lager, die
+# sich nicht ueberschneiden (13.306 Notices, kein einziges mit beiden Vokabularen):
+#   · SDK 1.6/1.10, MIT national_id → Gewinner aufloesbar (3.964 von 4.058) → meldet die
+#     Sammelstufe `sme`, in drei Jahren genau EINMAL etwas anderes.
+#   · SDK 1.10–1.14, OHNE national_id → Gewinner nur `nur_name` (11.122) → meldet die
+#     abgestuften Werte micro/small/medium/large, darunter 18 % `large`.
+# `v36` liess also exakt das Lager uebrig, das `large` nie verwendet. Das Ergebnis war kein
+# Messwert, sondern eine Vokabel-Konstante — die im Produkt als Marktaussage zu lesen war:
+# „in der Schweiz gehen alle Auftraege an KMU".
+VORLAUF.append(lambda: (
+    con.execute(f"""CREATE OR REPLACE TEMP TABLE a36 AS
+      SELECT DISTINCT n.notice_id, pb.entity_id AS buyer
+      FROM {N} n
+      JOIN {PE} pb ON pb.notice_id = n.notice_id AND pb.role = 'buyer'
+      WHERE n.notice_kind = 'can'
+        AND n.publication_date IS NOT NULL
+        AND n.publication_date >= CURRENT_DATE - INTERVAL 36 MONTH""")
+))
+
 VORLAUF.append(lambda: (
     con.execute(f"""CREATE OR REPLACE TEMP TABLE kmu AS
       WITH je_notice AS (
@@ -252,8 +288,8 @@ VORLAUF.append(lambda: (
                max(CASE WHEN lower(value) IN ('micro','small','medium','sme') THEN 1 ELSE 0 END) AS ist_kmu
         FROM {ATTR}
         WHERE path ILIKE '%CompanySizeCode' AND path NOT ILIKE '%listName' GROUP BY 1)
-      SELECT v.buyer, sum(j.ist_kmu) AS kmu_treffer, count(*) AS kmu_n
-      FROM v36 v JOIN je_notice j ON j.notice_id = v.notice_id GROUP BY 1""")
+      SELECT a.buyer, sum(j.ist_kmu) AS kmu_treffer, count(*) AS kmu_n
+      FROM a36 a JOIN je_notice j ON j.notice_id = a.notice_id GROUP BY 1""")
 ))
 
 # „Preisentscheidung" = Vergabe, deren Zuschlagskriterien NUR Preis enthalten
@@ -822,6 +858,34 @@ def branche_bauen(key):
     return ergebnis
 
 
+# ── STREUUNGS-WACHE: eine Kennzahl ohne Unterschied ist keine Kennzahl ───────────────
+# Am 2026-09-01 trugen in der Schweiz ALLE 104 ausgewerteten Vergabestellen denselben
+# KMU-Anteil: 100 %. Der Wert war rechnerisch korrekt und als Aussage wertlos — schlimmer,
+# er las sich als Marktbefund („in der Schweiz gehen alle Auftraege an KMU"), wo in
+# Wahrheit nur eine Stichprobe entartet war (s. Begruendung am `kmu`-Bauschritt).
+#
+# Die Ursache ist behoben. Diese Wache steht trotzdem, und zwar VOR der Datei, nicht erst
+# in der Anzeige: Kennzahlen kommen aus kodierten Feldern, die je Land verschieden gut
+# gefuellt sind, und die naechste Quelle mit einem konstanten Vorgabewert kommt bestimmt.
+# Faellt die Streuung ueber ein GANZES Land auf null, ist der Wert nicht gemessen, sondern
+# geerbt.
+#
+# MARKIEREN STATT WEGWERFEN. Die Quote bleibt in der Datei — mit `"konstant": true`. Das
+# Frontend zeigt sie dann als „nicht unterscheidend" statt als Messwert, und der Rohwert
+# bleibt fuer die Fehlersuche erhalten. Ein Loeschen saehe aus wie „keine Datenlage" und
+# verwechselte einen ARTEFAKT-Befund mit einer LUECKE.
+#
+# Die Schwelle ist dieselbe wie in der Anzeige (`StrategieView.tsx`): eine Quote zaehlt
+# erst ab n >= 8 mit. Duenne Quoten sind von Natur aus grob (0/8, 4/8, 8/8) und wuerden
+# sonst falschen Alarm ausloesen.
+# Detektor UND Markierung stehen in `scripts/pruefe_streuung.py` — eine Quelle fuer die
+# beiden Schwellen (n >= 8 je Quote, >= 10 Stellen je Urteil), die sonst hier, im Waechter
+# und in der Anzeige dreifach gepflegt waeren. Der Waechter laeuft danach noch einmal
+# eigenstaendig im Tageslauf und prueft, ob wirklich JEDE Entartung markiert ist.
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from pruefe_streuung import markieren as streuung_markieren   # noqa: E402
+
+
 # ── EIN SATZ AGGREGATE JE LAND ───────────────────────────────────────────────────────
 # Die Datei ist nach Land verschluesselt, `/api/strategie?land=…` reicht genau einen Satz
 # heraus. Damit bleibt die Form, die das Frontend liest, exakt wie vorher — und die
@@ -844,6 +908,7 @@ for land in LAENDER:
             # bricht das Skript ab, steht die GANZE Strategie-Ansicht auf altem Stand —
             # und zwar unbemerkt, weil eine alte Datei wie eine frische aussieht.
             print(f"  ⚠ {land}/{key} fehlgeschlagen: {str(e)[:110]}")
+    streuung_markieren(out[land], land)
 
 (OUT / "strategie.json").write_text(json.dumps(out, ensure_ascii=False, sort_keys=True))
 groesse = (OUT / "strategie.json").stat().st_size

@@ -26,6 +26,7 @@ dort steht, kann verrotten, ohne dass es jemand merkt.
 python3 -m pytest tests/ -q                    # muss GRÜN sein, vor dem Commit
 python3 -m govisor.cli verify --country XX     # FK-Integrität
 python3 scripts/pruefe_verdrahtung.py --offen  # Sonde 1-7, s. u.
+python3 scripts/pruefe_streuung.py --offen     # misst die Kennzahl überhaupt etwas?
 npm --prefix web run build                     # ⚠ faehrt sonst NIEMAND
 python3 scripts/pruefe_bibel.py --offen        # altert die Anleitung selbst?
 cd web && npx tsc --noEmit                     # Typprüfung
@@ -78,6 +79,20 @@ beantwortet, hält sich für abgesichert:
 | Fehlt die Tabelle für ein Land? | `pruefe_verdrahtung.sonde_paritaet` — generisch, braucht keine Eintragung |
 | Sind die Daten darin gültig? | `verify.gold_integrity` — Fremdschlüssel je Tabelle |
 | Wurde eine neue Tabelle vergessen? | `test_jede_gold_tabelle_mit_fk_wird_geprueft` |
+| Sagt die Spalte für dieses Land überhaupt etwas? | `pruefe_streuung.spalten_scan` — Streuung null im Ländervergleich |
+
+**Die vierte kam am 2026-09-01 dazu, und zwar weil die ersten drei den Fall durchliessen.**
+Der KMU-Anteil stand in der Schweiz bei **allen 104 ausgewerteten Vergabestellen auf 100 %**.
+Die Tabelle war da, die Fremdschlüssel sauber, die Datei frisch, die Suite grün. Gemessen
+wurde die Quote auf `v36` — nur Vergaben mit registerbelegtem Gewinner — und dieser Filter
+liess in CH genau das Melder-Lager übrig, das die Sammelstufe `sme` verwendet und `large`
+in drei Jahren ein einziges Mal. Auf allen Zuschlägen gemessen: **1 → 45 verschiedene
+Werte**; DE 64 → 70, AT 31 → 30.
+
+⚠ Die Lehre ist nicht „diese eine Quote war falsch berechnet". Sie ist: **eine Kennzahl
+kann vollständig, frisch und rechnerisch korrekt sein und trotzdem nichts aussagen.** Sie
+fällt in keiner Prüfung auf, die einzelne Werte ansieht — nur im Vergleich zweier Länder.
+Und den zieht im Tagesbetrieb niemand von selbst.
 
 Die dritte ist die, die man vergisst. `gold_integrity` führt seine Prüfungen als
 handgepflegte Liste; am 2026-08-25 stand sie bei 22, während `data/gold/<L>` auf 64 Tabellen
