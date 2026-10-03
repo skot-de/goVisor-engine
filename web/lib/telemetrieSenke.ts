@@ -1,5 +1,9 @@
 import "server-only";
 import { createAdminClient } from "@/lib/supabase/admin";
+import {
+  BESUCHER_COOKIE, EINWILLIGUNG_COOKIE, browserKlasse, geraeteKlasse, istJa, kampagneAus,
+  leseCookie,
+} from "@/lib/einwilligung";
 
 /**
  * Telemetrie, Serverseite — die EINZIGE Stelle, die nach `gov_ereignisse` schreibt.
@@ -32,8 +36,7 @@ export const ERLAUBT = new Set([
   // Bestand aus Ticket #8 (EV in analytics.ts)
   "lead_opened", "lead_analysis_opened", "lead_marked_won",
   "onboarding_completed", "list_exported", "briefing_generated",
-  "award_matched_to_user",
-  "landing_viewed", "landing_signpost_clicked", "landing_second_half_seen",
+  "landing_viewed", "landing_second_half_seen",
   "landing_cta_clicked",
   // Neu mit 0035: die klassischen Kennzahlen
   "seite_gesehen",        // Seitenaufruf (Client ODER Server)
@@ -60,6 +63,16 @@ export type Ereignis = {
   ist_bot?: boolean;
   nutzer_id?: string | null;
   org_id?: string | null;
+  // ── Stufe 2 (0036), NUR mit Einwilligung ────────────────────────────────────────────
+  besucher?: string | null;
+  einwilligung?: boolean;
+  bot_art?: string | null;
+  utm_quelle?: string | null;
+  utm_medium?: string | null;
+  utm_kampagne?: string | null;
+  referrer_voll?: string | null;
+  browser?: string | null;
+  geraet?: string | null;
 };
 
 /* ─────────────────────────────────────────────────────────── Normalisierung */
@@ -115,14 +128,107 @@ export function istBot(userAgent: unknown): boolean {
   return BOT_MUSTER.some((m) => u.includes(m));
 }
 
+/**
+ * WELCHER Crawler? Grober Name, abgeleitet bei der Erfassung (0036).
+ *
+ * ⚠ DAS IST DIE KENNZAHL DER KI-SICHTBARKEIT, und sie fehlte. 0035 speicherte nur
+ *   `ist_bot` als Wahrheitswert — damit liess sich nicht beantworten, ob GPTBot die
+ *   Grounding Page liest oder ClaudeBot auf den Landingpages ankommt. Genau diese Frage
+ *   stellt `docs/weiterentwicklung/sichtbarkeit-in-ki-antworten.md`, und genau sie war
+ *   unbeantwortbar.
+ *
+ * ⚠ REIHENFOLGE IST BEDEUTUNG. Die Modell-Abrufer stehen VOR den allgemeinen Mustern,
+ *   sonst verschluckt „bot" sie alle. `GPTBot/1.2` enthaelt beides.
+ *
+ * Ein Crawler ist keine Person — dieses Feld ist unbedenklich und braucht keine
+ * Einwilligung. Der volle User-Agent bleibt trotzdem draussen: bei Menschen waere er ein
+ * Fingerabdruck, und ein Feld, das je nach Besucher etwas anderes bedeutet, ist eine Falle.
+ */
+const BOT_NAMEN: Array<[string, string]> = [
+  // Modell-Abrufer zuerst — sie sind der Grund, warum dieses Feld existiert.
+  ["gptbot", "GPTBot"],
+  ["oai-searchbot", "OAI-SearchBot"],
+  ["chatgpt-user", "ChatGPT-User"],
+  ["claudebot", "ClaudeBot"],
+  ["claude-web", "Claude-Web"],
+  ["anthropic", "Anthropic"],
+  ["perplexity", "PerplexityBot"],
+  ["ccbot", "CCBot"],
+  ["google-extended", "Google-Extended"],
+  ["applebot", "Applebot"],
+  ["bytespider", "Bytespider"],
+  ["amazonbot", "Amazonbot"],
+  ["meta-externalagent", "Meta"],
+  // Klassische Suchmaschinen
+  ["googlebot", "Googlebot"],
+  ["bingbot", "Bingbot"],
+  ["duckduckbot", "DuckDuckBot"],
+  ["yandex", "Yandex"],
+  ["slurp", "Yahoo"],
+  // Werkzeuge und Dienste
+  ["semrush", "SEMrush"],
+  ["ahrefs", "Ahrefs"],
+  ["mj12", "Majestic"],
+  ["facebookexternalhit", "Facebook"],
+  ["lighthouse", "Lighthouse"],
+  ["curl", "curl"],
+  ["wget", "wget"],
+  ["python-requests", "python-requests"],
+];
+export function botArt(userAgent: unknown): string | null {
+  if (typeof userAgent !== "string") return "ohne Kennung";
+  const u = userAgent.toLowerCase();
+  if (!u.trim()) return "ohne Kennung";
+  for (const [muster, name] of BOT_NAMEN) if (u.includes(muster)) return name;
+  // Als Bot erkannt, aber nicht benannt: das ist eine Information, kein Fehler. Wer hier
+  // oft „sonstiger" sieht, sollte die Liste erweitern — nicht die Erkennung lockern.
+  return istBot(userAgent) ? "sonstiger" : null;
+}
+
 const ganzzahl = (v: unknown, min: number, max: number): number | null => {
   const n = typeof v === "number" ? v : Number(v);
   if (!Number.isFinite(n)) return null;
   return Math.min(max, Math.max(min, Math.round(n)));
 };
 
+/**
+ * Die Stufe-2-Felder aus der Anfrage ableiten — oder nichts, wenn keine Einwilligung vorliegt.
+ *
+ * ⚠ DIES IST DIE EINZIGE STELLE, DIE `einwilligung` UND `besucher` SETZT, und sie liest
+ *   beides aus den COOKIES der Anfrage. Der Client darf das nicht behaupten: `pruefe()`
+ *   kopiert diese Felder grundsaetzlich nicht aus dem Anfragekoerper, und `zusatz` wird
+ *   danach darueber gelegt. Wuerde man dem Client glauben, waere die Einwilligung ein
+ *   Selbstbedienungsfeld — jeder koennte `einwilligung: true` mitschicken, und die
+ *   Rechtsgrundlage in der Tabelle waere eine Behauptung ohne Wert.
+ *
+ * ⚠ OHNE EINWILLIGUNG WIRD NICHT „WENIGER GENAU" GEMESSEN, SONDERN GAR NICHTS DAVON. Kein
+ *   besucher, keine Kampagne, kein voller Referrer, kein Browser. Die Stufe-1-Felder aus
+ *   0035 bleiben unberuehrt — sie brauchen die Einwilligung nicht.
+ */
+export function stufe2Aus(kopfzeilen: Headers): Partial<Ereignis> {
+  const cookieZeile = kopfzeilen.get("cookie");
+  const entschieden = leseCookie(cookieZeile, EINWILLIGUNG_COOKIE);
+  if (!istJa(entschieden)) return { einwilligung: false };
+
+  const ua = kopfzeilen.get("user-agent");
+  const referrer = kopfzeilen.get("referer");
+  return {
+    einwilligung: true,
+    besucher: leseCookie(cookieZeile, BESUCHER_COOKIE)?.slice(0, 64) ?? null,
+    referrer_voll: referrer ? referrer.slice(0, 500) : null,
+    browser: browserKlasse(ua),
+    geraet: geraeteKlasse(ua),
+  };
+}
+
 /** Ein eingehendes Ereignis auf das reduzieren, was gespeichert werden darf.
- *  `null` heisst: verwerfen. */
+ *  `null` heisst: verwerfen.
+ *
+ *  ⚠ Die Stufe-2-Felder (`besucher`, `einwilligung`, `utm_*`, `referrer_voll`, `browser`,
+ *    `geraet`) werden hier BEWUSST NICHT aus `roh` uebernommen. Sie kommen ausschliesslich
+ *    ueber `zusatz` von `stufe2Aus()`, also aus den Cookies der Anfrage. Nur `utm_*` darf der
+ *    Browser beitragen, weil die Kampagnenkennung in der Adresse der SEITE steht und nicht in
+ *    der Anfrage an diese Route — aber auch das erst, wenn `zusatz.einwilligung` wahr ist. */
 export function pruefe(roh: unknown, zusatz: Partial<Ereignis> = {}): Ereignis | null {
   if (!roh || typeof roh !== "object") return null;
   const e = roh as Record<string, unknown>;
@@ -137,6 +243,16 @@ export function pruefe(roh: unknown, zusatz: Partial<Ereignis> = {}): Ereignis |
     props = s.length <= 2048 ? (e.props as Record<string, unknown>) : { gekuerzt: true };
   }
 
+  // Kampagnenkennung: nur mit Einwilligung, und nur die drei festen Namen (s.
+  // `kampagneAus` in lib/einwilligung.ts — eine Liste, nie der ganze Query-String).
+  const kampagne: Partial<Ereignis> = zusatz.einwilligung
+    ? {
+        utm_quelle: typeof e.utm_quelle === "string" ? e.utm_quelle.slice(0, 120) : null,
+        utm_medium: typeof e.utm_medium === "string" ? e.utm_medium.slice(0, 120) : null,
+        utm_kampagne: typeof e.utm_kampagne === "string" ? e.utm_kampagne.slice(0, 120) : null,
+      }
+    : {};
+
   return {
     art,
     sitzung: typeof e.sitzung === "string" ? e.sitzung.slice(0, 64) : null,
@@ -149,6 +265,9 @@ export function pruefe(roh: unknown, zusatz: Partial<Ereignis> = {}): Ereignis |
     ziel_y_pct: ganzzahl(e.ziel_y_pct, 0, 100),
     viewport_w: ganzzahl(e.viewport_w, 0, 20_000),
     viewport_h: ganzzahl(e.viewport_h, 0, 20_000),
+    ...kampagne,
+    // ⚠ ZULETZT, damit nichts aus dem Anfragekoerper die serverseitig ermittelten Felder
+    //   ueberschreiben kann. Die Reihenfolge ist hier Sicherheitslogik, nicht Stil.
     ...zusatz,
   };
 }
@@ -199,10 +318,12 @@ export function erfasseSeitenaufruf(
   kopfzeilen: Headers,
   pfad: string,
   props: Record<string, unknown> = {},
+  suche?: string | null,
 ): void {
   try {
     const ua = kopfzeilen.get("user-agent");
     const eigener = kopfzeilen.get("host");
+    const stufe2 = stufe2Aus(kopfzeilen);
     const ereignis: Ereignis = {
       art: "seite_gesehen",
       sitzung: null, // Server-Erfassung, kein sessionStorage — s. 0035
@@ -210,6 +331,13 @@ export function erfasseSeitenaufruf(
       props,
       herkunft: herkunftHost(kopfzeilen.get("referer"), eigener),
       ist_bot: istBot(ua),
+      // ⚠ WELCHER Crawler — der Grund, warum 0036 dieses Feld hat. Auf den oeffentlichen
+      //   Seiten ist das die eigentliche Kennzahl: liest GPTBot die Grounding Page?
+      bot_art: botArt(ua),
+      // Kampagne aus der Adresse DIESER Seite, nicht aus der Anfrage an eine API-Route.
+      // Nur mit Einwilligung, deshalb hinter der Pruefung.
+      ...(stufe2.einwilligung ? kampagneAus(suche) : {}),
+      ...stufe2,
     };
     // `after` ist in Next 15 stabil und genau fuer diesen Fall da: Arbeit nach der Antwort,
     // ohne die Antwort zu verzoegern und ohne dass die Laufzeit sie abschneidet (ein

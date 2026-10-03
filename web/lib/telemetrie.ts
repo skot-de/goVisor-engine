@@ -17,6 +17,11 @@
  *   Lead-Inhalte in die Telemetrie getragen, und das faengt man spaeter nicht mehr ein.
  */
 
+import {
+  BESUCHER_COOKIE, COOKIE_TAGE, EINWILLIGUNG_COOKIE, kampagneAus, leseCookie,
+  type Entscheidung, type Kampagne,
+} from "@/lib/einwilligung";
+
 const WEG = "/api/ereignis";
 const SCHLUESSEL = "gv_tm_sitzung";
 
@@ -25,20 +30,96 @@ type Rohereignis = Record<string, unknown> & { art: string };
 /* ──────────────────────────────────────────────────────── Darf gemessen werden? */
 
 /**
- * ⚠ „Do Not Track" und „Global Privacy Control" werden GEACHTET, obwohl keine Norm das
- *   erzwingt. Begruendung: diese Messung stuetzt sich auf berechtigtes Interesse statt auf
- *   Einwilligung. Diese Abwaegung traegt besser, wenn ein ausdruecklicher Widerspruch des
- *   Nutzers respektiert wird — und sie traegt schlechter, wenn man ihn uebergeht. Die paar
- *   verlorenen Zeilen sind der Preis.
+ * Stufe 1 laeuft immer (im Browser), sie braucht keine Einwilligung.
+ *
+ * ⚠ KORREKTUR ZUM 2026-10-02: hier unterdrueckte „Do Not Track" bzw. „Global Privacy
+ *   Control" zunaechst JEDE Messung. Das war zu weit gegriffen. Stufe 1 erkennt niemanden
+ *   wieder und stuetzt sich auf berechtigtes Interesse; ein Widerspruch gegen
+ *   Nachverfolgung richtet sich nicht dagegen. Die Signale wirken deshalb jetzt genau dort,
+ *   wo sie hingehoeren: sie verhindern Stufe 2 (s. `widerspruch()`), also die dauerhafte
+ *   Kennung — und sie verhindern, dass ueberhaupt gefragt wird.
  */
 function darfMessen(): boolean {
-  if (typeof window === "undefined") return false;
+  return typeof window !== "undefined";
+}
+
+/**
+ * Hat der Besucher der Nachverfolgung ausdruecklich widersprochen?
+ *
+ * ⚠ GPC UND DNT HABEN IN DER EU KEINE BINDENDE WIRKUNG — und werden hier trotzdem geachtet.
+ *   Nicht aus Vorsicht, sondern weil es die Abwaegung traegt: wer ein maschinenlesbares Nein
+ *   sendet und dann einen Einwilligungshinweis vorgesetzt bekommt, ist zu Recht veraergert.
+ *   Wir fragen solche Besucher gar nicht und setzen keine Kennung. Stufe 1 laeuft weiter.
+ */
+export function widerspruch(): boolean {
   try {
     const n = navigator as Navigator & { globalPrivacyControl?: boolean; msDoNotTrack?: string };
-    if (n.globalPrivacyControl === true) return false;
-    if (n.doNotTrack === "1" || n.msDoNotTrack === "1") return false;
-  } catch { /* im Zweifel messen */ }
-  return true;
+    return n.globalPrivacyControl === true || n.doNotTrack === "1" || n.msDoNotTrack === "1";
+  } catch { return false; }
+}
+
+/* ──────────────────────────────────────────── Einwilligung und Besucherkennung (Stufe 2) */
+
+function setzeCookie(name: string, wert: string, tage: number) {
+  try {
+    const bis = new Date(Date.now() + tage * 86_400_000).toUTCString();
+    const sicher = location.protocol === "https:" ? "; Secure" : "";
+    document.cookie = `${name}=${encodeURIComponent(wert)}; Expires=${bis}; Path=/; SameSite=Lax${sicher}`;
+  } catch { /* blockierte Cookies: dann bleibt es bei Stufe 1 */ }
+}
+
+/** Die Entscheidung des Besuchers, oder `null` wenn noch nichts entschieden ist. */
+export function entscheidung(): Entscheidung {
+  if (typeof document === "undefined") return null;
+  const w = leseCookie(document.cookie, EINWILLIGUNG_COOKIE);
+  return w === "ja" || w === "nein" ? w : null;
+}
+
+/**
+ * Entscheidung festhalten. Bei „ja" wird zusaetzlich die dauerhafte Kennung angelegt,
+ * bei „nein" eine bestehende entfernt.
+ *
+ * ⚠ DAS ENTFERNEN BEI „NEIN" IST KEIN DETAIL. Ein Widerruf muss so einfach sein wie die
+ *   Erteilung (Art. 7 Abs. 3 DSGVO). Bliebe die Kennung im Browser liegen, wuerde sie beim
+ *   naechsten Besuch mitgesendet — und der Server wuerde sie verwerfen, weil die
+ *   Einwilligung fehlt. Das ginge gerade noch, aber es waere eine Kennung ohne Grundlage auf
+ *   dem Geraet des Besuchers. Die loescht man.
+ */
+export function entscheide(wert: "ja" | "nein") {
+  setzeCookie(EINWILLIGUNG_COOKIE, wert, COOKIE_TAGE);
+  if (wert === "ja") {
+    if (!leseCookie(document.cookie, BESUCHER_COOKIE)) {
+      const id = (crypto.randomUUID?.() ?? String(Math.random()).slice(2)).replace(/-/g, "");
+      setzeCookie(BESUCHER_COOKIE, id, COOKIE_TAGE);
+    }
+  } else {
+    setzeCookie(BESUCHER_COOKIE, "", -1);
+  }
+}
+
+/**
+ * Kampagnenkennung des EINSTIEGS, nicht der aktuellen Seite.
+ *
+ * ⚠ GENAU HIER GEHT KAMPAGNENMESSUNG SONST KAPUTT. Die `utm_*`-Parameter stehen nur in der
+ *   Adresse, mit der jemand ANKOMMT; klickt er weiter, sind sie weg. Wer sie je Ereignis
+ *   frisch aus der Adresse liest, sieht die Kampagne genau beim ersten Aufruf und danach
+ *   nie — und ordnet damit eine Anmeldung keiner Kampagne mehr zu, obwohl sie aus ihr kam.
+ *   Deshalb werden sie beim ersten Aufruf in `sessionStorage` gelegt und an JEDES Ereignis
+ *   der Sitzung angehaengt.
+ */
+const KAMPAGNE_SCHLUESSEL = "gv_tm_kampagne";
+
+function kampagne(): Kampagne {
+  if (entscheidung() !== "ja") return {};   // Kampagne ist Stufe 2
+  try {
+    const frisch = kampagneAus(location.search);
+    if (Object.keys(frisch).length) {
+      sessionStorage.setItem(KAMPAGNE_SCHLUESSEL, JSON.stringify(frisch));
+      return frisch;
+    }
+    const gemerkt = sessionStorage.getItem(KAMPAGNE_SCHLUESSEL);
+    return gemerkt ? (JSON.parse(gemerkt) as Kampagne) : {};
+  } catch { return {}; }
 }
 
 function sitzung(): string | null {
@@ -87,7 +168,11 @@ function senden(endgueltig = false) {
 
 function melde(e: Rohereignis) {
   if (!darfMessen()) return;
-  puffer.push({ ...e, sitzung: sitzung(), pfad: e.pfad ?? pfad() });
+  // ⚠ `kampagne()` prueft selbst auf Einwilligung und liefert sonst nichts. Die
+  //   Besucherkennung und die Einwilligung selbst schickt der Browser NICHT mit — sie stehen
+  //   in Cookies, die ohnehin bei jeder Anfrage mitlaufen, und der Server liest sie dort.
+  //   Sie als Feld zu senden waere ein Feld, dem man nicht glauben darf.
+  puffer.push({ ...e, sitzung: sitzung(), pfad: e.pfad ?? pfad(), ...kampagne() });
   if (puffer.length >= 20) { senden(); return; }
   if (!timer) timer = setTimeout(() => senden(), 4000);
 }

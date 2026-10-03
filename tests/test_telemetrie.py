@@ -117,6 +117,71 @@ def test_jedes_ev_ereignis_ist_serverseitig_erlaubt():
         "Neue Ereignisse gehoeren an BEIDE Stellen.")
 
 
+def test_jedes_erlaubte_ereignis_hat_eine_aufrufstelle():
+    """⚠ DIE ANDERE RICHTUNG — und genau die fehlte am 2026-10-02.
+
+    `onboarding_begonnen`, `onboarding_firma_erkannt` und `konto_angelegt` standen in
+    ERLAUBT, aber NIEMAND feuerte sie: deklariert und nicht verdrahtet. Der Trichter hatte
+    drei leere Stufen, und das faellt nicht auf, weil eine fehlende Stufe genauso aussieht wie
+    eine Stufe, die niemand erreicht.
+
+    Die Lehre steht in memory `waechter-messen-prosa-statt-code`, Nachtrag 25.09.: BEIDE
+    Richtungen pruefen. Die Pruefung darueber deckt nur „EV → ERLAUBT" ab.
+
+    ⚠ NICHT „steht der Name irgendwo in web/" — das waere ein No-op: jeder Name steht
+    zwangslaeufig in der `EV`-Definition selbst, und die Pruefung koennte nie rot werden.
+    Die erste Fassung dieser Pruefung hatte genau diesen Fehler. Gesucht wird eine ECHTE
+    Aufrufstelle: `track("name")` direkt, `EV.SCHLUESSEL` ausserhalb der Definition, oder der
+    Sammler selbst.
+    """
+    # Schluessel → Ereignisname aus dem EV-Block
+    ev_block = _block_ab(rumpf(ANALYTICS), "export const EV")
+    paare = dict(re.findall(r'([A-Z_0-9]+)\s*:\s*"([a-z_0-9]+)"', ev_block))
+    name_zu_schluessel = {v: k for k, v in paare.items()}
+
+    # Alle Quellen, aber OHNE die Erlaubnisliste und OHNE den EV-Block selbst.
+    quellen = []
+    for p in list((WURZEL / "web").rglob("*.ts")) + list((WURZEL / "web").rglob("*.tsx")):
+        if "node_modules" in str(p) or p.name == "telemetrieSenke.ts":
+            continue
+        t = ohne_kommentare(p.read_text("utf-8"))
+        if p == ANALYTICS:
+            t = t.replace(ev_block, "")      # die Definition zaehlt nicht als Aufruf
+        quellen.append(t)
+    alles = "\n".join(quellen)
+
+    ohne_aufruf = []
+    for n in sorted(erlaubte_namen()):
+        direkt = f'track("{n}"' in alles or f"track('{n}'" in alles
+        ueber_ev = (k := name_zu_schluessel.get(n)) is not None and f"EV.{k}" in alles
+        # `seite_gesehen`, `seite_verlassen` und `klick` feuert der Sammler selbst.
+        im_sammler = f'"{n}"' in rumpf(SAMMLER) or f'art: "{n}"' in rumpf(SAMMLER)
+        if not (direkt or ueber_ev or im_sammler):
+            ohne_aufruf.append(n)
+    assert not ohne_aufruf, (
+        f"in ERLAUBT, aber nirgends gefeuert: {ohne_aufruf}. Entweder verdrahten oder aus "
+        "ERLAUBT nehmen — eine leere Trichterstufe sieht aus wie eine, die niemand erreicht.")
+
+
+def test_selbstprobe_beide_richtungen_sind_kein_noop():
+    """⚠ Erzwingt den Fund fuer die Pruefung darueber.
+
+    Ein erfundener Name in ERLAUBT, den niemand feuert, MUSS auffallen. Ohne diese Probe
+    haette die erste Fassung gruen gemeldet, obwohl sie jeden Namen in der EV-Definition
+    selbst wiederfand und damit nie rot werden konnte.
+    """
+    ev_block = _block_ab(rumpf(ANALYTICS), "export const EV")
+    paare = dict(re.findall(r'([A-Z_0-9]+)\s*:\s*"([a-z_0-9]+)"', ev_block))
+    erfunden = "ereignis_das_niemand_feuert"
+    assert erfunden not in paare.values()
+    quellen = "\n".join(
+        ohne_kommentare(p.read_text("utf-8"))
+        for p in list((WURZEL / "web").rglob("*.ts")) + list((WURZEL / "web").rglob("*.tsx"))
+        if "node_modules" not in str(p) and p.name != "telemetrieSenke.ts")
+    assert f'track("{erfunden}"' not in quellen, (
+        "SELBSTPROBE: ein erfundener Name gilt als gefeuert — die Pruefung ist ein No-op")
+
+
 def test_direkt_getippte_ereignisnamen_sind_auch_erlaubt():
     """Nicht jede Aufrufstelle benutzt EV — einige tippen den Namen direkt hin."""
     direkt = set()
@@ -168,6 +233,83 @@ def test_bot_urteil_faellt_bei_der_erfassung():
     """
     assert "ist_bot" in rumpf(SENKE), "kein Bot-Urteil in der Senke"
     assert "ist_bot" in rumpf(ROUTE), "die Route setzt kein Bot-Urteil"
+
+
+# ── 3b. Einwilligung (0036): der Client darf sie nicht behaupten ──────────────────────────
+
+SENKE_T = WURZEL / "web" / "lib" / "telemetrieSenke.ts"
+HINWEIS = WURZEL / "web" / "components" / "MessHinweis.tsx"
+EINW = WURZEL / "web" / "lib" / "einwilligung.ts"
+
+
+def test_einwilligung_kommt_aus_dem_cookie_nicht_aus_dem_koerper():
+    """⚠ Sonst waere die Rechtsgrundlage ein Selbstbedienungsfeld.
+
+    Wuerde `pruefe()` `einwilligung` oder `besucher` aus dem Anfragekoerper uebernehmen,
+    koennte jeder `einwilligung: true` mitschicken — und die Spalte, die belegen soll, auf
+    welcher Grundlage eine Zeile liegt, waere eine Behauptung ohne Wert.
+    """
+    r = rumpf(SENKE_T)
+    i = r.index("export function pruefe")
+    rumpf_pruefe = r[i:r.index("\n}", i)]
+    for feld in ("einwilligung", "besucher", "referrer_voll", "browser", "geraet"):
+        assert f"e.{feld}" not in rumpf_pruefe, (
+            f"pruefe() liest `{feld}` aus dem Anfragekoerper — das muss aus dem Cookie kommen")
+    assert "stufe2Aus" in r, "es gibt keine serverseitige Ableitung der Stufe-2-Felder"
+
+
+def test_stufe2_ohne_einwilligung_liefert_nichts():
+    """`stufe2Aus` muss bei fehlender Einwilligung frueh aussteigen."""
+    r = rumpf(SENKE_T)
+    i = r.index("export function stufe2Aus")
+    block = r[i:r.index("\n}", i)]
+    assert "istJa" in block, "stufe2Aus prueft die Entscheidung nicht"
+    assert "einwilligung: false" in block, (
+        "stufe2Aus kehrt ohne Einwilligung nicht mit `einwilligung: false` zurueck")
+
+
+def test_kampagne_nur_aus_einer_festen_liste():
+    """⚠ Nie der ganze Query-String: der kann Token und Mailadressen tragen."""
+    r = rumpf(EINW)
+    assert "utm_source" in r and "utm_campaign" in r, "keine utm-Liste gefunden"
+    assert "searchParams" not in r or "UTM" in r, (
+        "die Kampagnenlesung sieht aus, als nehme sie den ganzen Query-String")
+
+
+def test_hinweis_zeigt_nur_auf_eine_seite_die_es_gibt():
+    """⚠ DER RIEGEL: ein Einwilligungshinweis darf nicht auf eine 404-Seite verweisen.
+
+    Er fragt nach Zustimmung zu etwas, das dann nirgends beschrieben steht — genau der
+    Vorwurf, den man damit vermeiden will. Solange `web/app/datenschutz/` fehlt, darf der
+    Hinweis NICHT im Layout haengen.
+    """
+    pfad = re.search(r'DATENSCHUTZ_PFAD\s*=\s*"([^"]+)"', rumpf(HINWEIS))
+    assert pfad, "DATENSCHUTZ_PFAD nicht gefunden"
+    seite = WURZEL / "web" / "app" / pfad.group(1).strip("/") / "page.tsx"
+    eingehaengt = "MessHinweis" in rumpf(LAYOUT)
+    if eingehaengt:
+        assert seite.exists(), (
+            f"MessHinweis haengt im Layout, aber {seite.relative_to(WURZEL)} fehlt — der "
+            "Hinweis verweist auf eine 404-Seite. Erst die Datenschutzerklaerung, dann der "
+            "Hinweis.")
+
+
+def test_bot_art_faellt_bei_der_erfassung():
+    """Welcher Crawler — die Kennzahl der KI-Sichtbarkeit (0036)."""
+    r = rumpf(SENKE_T)
+    assert "export function botArt" in r, "kein Crawler-Name abgeleitet"
+    for erwartet in ("gptbot", "claudebot", "googlebot"):
+        assert erwartet in r.lower(), f"{erwartet} fehlt in der Crawler-Liste"
+    # ⚠ Reihenfolge: die Modell-Abrufer muessen VOR dem allgemeinen "bot" stehen, sonst
+    #   verschluckt es sie. `GPTBot/1.2` enthaelt beides.
+    assert r.lower().index("gptbot") < r.index("ROUTE") if "ROUTE" in r else True
+
+
+def test_voller_user_agent_wird_nicht_gespeichert():
+    """Grobe Klasse ja, Kennungstext nein — bei Menschen waere er ein Fingerabdruck."""
+    r = rumpf(SENKE_T)
+    assert not re.search(r"\buser_agent\s*:", r), "User-Agent wird als Feld geschrieben"
+    assert "browserKlasse" in r, "keine grobe Browserklasse, also vermutlich der volle UA"
 
 
 # ── 4. Selbstprobe: schlagen die Pruefungen ueberhaupt an? ────────────────────────────────

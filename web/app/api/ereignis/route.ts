@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { bremse } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
-import { herkunftHost, istBot, pruefe, schreibe, type Ereignis } from "@/lib/telemetrieSenke";
+import {
+  botArt, herkunftHost, istBot, pruefe, schreibe, stufe2Aus, type Ereignis,
+} from "@/lib/telemetrieSenke";
 
 /**
  * Aufnahme der Browser-Ereignisse (Klicks, Verweildauer, Scrolltiefe) → `gov_ereignisse`.
@@ -59,7 +61,13 @@ export async function POST(req: NextRequest) {
     nutzer_id,
     org_id,
     ist_bot: istBot(kopf.get("user-agent")),
+    bot_art: botArt(kopf.get("user-agent")),
     herkunft: herkunftHost(kopf.get("referer"), kopf.get("host")),
+    // ⚠ Einwilligung, Besucherkennung, voller Referrer, Browser und Geraet kommen
+    //   AUSSCHLIESSLICH hier aus den Cookies — nie aus dem Anfragekoerper. Sonst koennte
+    //   jeder `einwilligung: true` mitschicken und die Rechtsgrundlage waere eine
+    //   Behauptung. `stufe2Aus` liefert ohne Einwilligung nur `{ einwilligung: false }`.
+    ...stufe2Aus(kopf),
   };
 
   const sauber = liste

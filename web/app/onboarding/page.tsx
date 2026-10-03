@@ -437,11 +437,33 @@ export default function OnboardingPage() {
     } catch { setMembers([]); setAktiv(new Set()); return []; }
   }, []);
 
+  /* TRICHTER, Stufe 1 von 4: das Onboarding wurde überhaupt geöffnet.
+   *
+   * ⚠ Ohne dieses Ereignis beginnt der Trichter erst beim ABSCHLUSS (`onboarding_completed`),
+   * und dann beantwortet er die wichtigste Frage nicht: wie viele brechen unterwegs ab?
+   * Eine Abschlussquote ohne Einstiegszahl ist keine Quote.
+   *
+   * ⚠ OHNE MERKMALE, und das ist Absicht. Naheliegend waere `{ ausToken, ausDomain }` —
+   * aber `ausDomain` ist beim Einhaengen immer `false` (es wird erst in `erkennen()`
+   * gesetzt) und `ausToken` existiert dort nur lokal. Ein Merkmal, das zu diesem Zeitpunkt
+   * nichts aussagt, ist schlechter als keines: es sieht wie eine Messung aus. Woher jemand
+   * kam, steht ohnehin im `seite_gesehen` davor. */
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => { track(EV.ONBOARDING_BEGONNEN, {}); }, []);
+
   // Der Abgleich läuft, sobald eine Firma angezeigt wird — nicht erst beim Abschluss,
   // damit der Nutzer den Status sieht, bevor er bestätigt.
   useEffect(() => {
     const m = matched ?? (offen ? matches.find((x) => x.id === offen) : null);
     if (!m || !email.includes("@")) { setBeleg(null); return; }
+    /* TRICHTER, Stufe 2 von 4: wir haben eine Firma erkannt.
+     *
+     * ⚠ Genau HIER trennen sich die Abbruchgründe. Wer bis hier kommt und dann geht, hat
+     * eine Firma gesehen und sie nicht bestätigt — das ist ein Datenqualitätsproblem
+     * (falsche Firma, zu wenig Daten). Wer vorher geht, hat gar nichts gefunden, und das
+     * ist ein Abdeckungsproblem. Ohne dieses Ereignis fallen beide in einen Topf, und man
+     * behebt das falsche. */
+    track(EV.ONBOARDING_FIRMA_ERKANNT, { entity: m.id, wins: m.wins ?? null });
     let weg = false;
     pruefeBeleg(m.id, email).then((b) => { if (!weg) setBeleg(b); });
     // Der Impressum-Check laeuft PARALLEL und wird NICHT abgewartet. Er braucht gemessen
@@ -613,6 +635,13 @@ function testMailErlaubt(mail: string): boolean {
     setBusy(false);
     if (error && !/already registered|already exists/i.test(error.message)) { setAuthFehler(klartext(error.message)); return; }
     if (error) { setAuthFehler("Diese E-Mail hat schon ein Konto, bitte anmelden."); return; }
+    /* TRICHTER, Stufe 3 von 4: ein Konto ist entstanden.
+     *
+     * ⚠ KEINE MAILADRESSE, KEIN DOMAIN-STAMM. Das Ereignis sagt nur, DASS ein Konto
+     * entstanden ist. Die Adresse steht in der Nutzerverwaltung, wo sie hingehört; sie in
+     * die Telemetrie zu kopieren wäre eine zweite Ablage derselben personenbezogenen Daten,
+     * mit eigener Aufbewahrungsfrist und eigenem Löschweg. */
+    track(EV.KONTO_ANGELEGT, {});
     await erkennen();   // signUp ok (mit oder ohne sofortige Session) → weiter im Flow
   }
 
