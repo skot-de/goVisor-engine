@@ -1,6 +1,6 @@
 # Portal-Accessibility-Map — Ausschreibungsdokumente DACH
 
-**Stand 2026-07-29.** Gemessen an **11.705 offenen DE-Leads** mit `documents_url` (96 % der offenen
+**Stand der Sondierung 2026-07-29, nachgemessen am 2026-10-04 (siehe unten).** Gemessen an **11.705 offenen DE-Leads** mit `documents_url` (96 % der offenen
 Leads). Ziel: **wo kommen wir ohne Accounts an die Vergabeunterlagen, wo braucht es Login** — damit
 Accounts nur dort angelegt werden, wo sie wirklich etwas freischalten.
 
@@ -13,7 +13,89 @@ brandenburg, niedersachsen, nrw, autobahn… gleichermaßen). Rechtlicher Hebel:
 **oberschwellige** Vergaben *freien, unentgeltlichen, uneingeschränkten, direkten* Zugang zu den
 Unterlagen — deshalb erlauben die großen Engines den Download oberschwellig **ohne Registrierung**.
 
-## Die Map (nach Engine, gewichtet nach offenen Leads)
+---
+
+## ⚠ NACHGEMESSEN 2026-10-04 — die Kernaussage unten war überholt
+
+**Der alte Schluss „realistischer Bulk-Automat ~32 % (nur cosinex)" gilt nicht mehr. Gemessen
+sind 65 %.** Die Messung vom Juli war eine *Sondierung*: jemand hat die Portale angesehen und
+geschätzt, was ginge. Inzwischen gibt es zehn Abrufer, die es seit Wochen tun, und ihre
+Manifeste (`data/docs/<Land>/_manifest_*.parquet`) sagen, was wirklich herauskommt. **Eine
+Sondierung schätzt, ein Manifest zählt.** Beides stand zwei Monate nebeneinander, und die
+Schätzung war die pessimistischere.
+
+Zwei Engines, die der Juli-Stand als praktisch unerreichbar führte, liefern heute zuverlässig:
+
+| Engine | Juli-Urteil | gemessen 2026-10-04 |
+|---|---|---|
+| **Bund e-Vergabe** | „Wicket-stateful, Download-Link → 403, nur per Browser" | **2.464 von 2.588 geholt (95,2 %)** |
+| **AI evergabe.de** | „418 Anti-Bot, nur per Browser" | **1.731 von 1.899 geholt (91,2 %)** |
+| **bi-medien / ibau** | „kommerzieller Aggregator 🔴 Abo" | **289 von 290 geholt (99,7 %)** |
+
+Die drei Zeilen mit „zu verifizieren" (Staatsanzeiger, AUMASS, Deutsches Ausschreibungsblatt)
+sind ebenfalls erledigt — für alle drei existiert seit Wochen ein Abrufer, und die Karte hat es
+nicht mitbekommen. **Ein Dokument, das einen Bauzustand beschreibt, altert gegen den Code, nicht
+gegen die Zeit.**
+
+### Die Lage heute, gemessen
+
+Verteilung über **12.766 offene DE-Vergaben mit Unterlagen-Link** (`lead_export`, phase open/planned,
+2026-10-04; während eines laufenden Gold-Neubaus gelesen, also auf ±1 Tag genau). Erfolgsquote je
+Engine aus dem jeweiligen Abruf-Manifest über den gesamten bisherigen Bestand.
+
+| Engine | Anteil offen | Abrufe | geholt | Quote | wirksam |
+|---|---:|---:|---:|---:|---:|
+| **cosinex / DTVP** | 35,1 % | 8.656 | 7.490 | 86,5 % | 30,4 % |
+| **Healy-Hudson + NetServer** | 13,4 % | 5.592 | 4.138 | 74,0 % | 9,9 % |
+| **AI evergabe.de** | 13,3 % | 1.899 | 1.731 | 91,2 % | 12,1 % |
+| **Bund e-Vergabe** | 7,7 % | 2.588 | 2.464 | 95,2 % | 7,3 % |
+| **Staatsanzeiger / vergabe24** | 3,5 % | 457 | 282 | 61,7 % | 2,2 % |
+| **AUMASS** | 1,5 % | 559 | 354 | 63,3 % | 0,9 % |
+| **Dt. Ausschreibungsblatt** | 1,4 % | 513 | 505 | 98,4 % | 1,4 % |
+| **bi-medien / ibau** | 0,9 % | 290 | 289 | 99,7 % | 0,9 % |
+| subreport ELViS | 6,4 % | 2.328 | **0 Dateien** | 0 % | 0 % |
+| RIB meinauftrag | 5,3 % | **kein Abrufer** | — | — | 0 % |
+| xvergabe | 0,1 % | gesperrt (`hosts_gesperrt.csv`) | — | — | 0 % |
+| sonstige | 11,5 % | ungemessen | — | — | **offen** |
+| | | | | **Summe** | **65,1 %** |
+
+**65 % statt 32 %.** Dazu kommen von subreport 2.089 öffentliche Dateilisten: keine Dateien, aber
+die Namen, und die beantworten, ob ein Leistungsverzeichnis existiert und welche Nachweise
+verlangt werden.
+
+### ⚠ Was dabei aufgefallen ist und offen bleibt
+
+1. **RIB meinauftrag hat keinen Abrufer.** 5,3 % der offenen Vergaben, 675 Stück, nie versucht.
+   Die Karte führte sie als „Login-Wand"; ob das stimmt, ist seit Juli nicht nachgeprüft — und
+   genau dieselbe Annahme hat sich bei NetServer, Bund, AI und bi-medien als falsch erwiesen.
+2. **Healy-Hudson meldet bei 938 von 1.599 Vorgängen „kein Downloadbereich" (58,7 %).** Das ist
+   exakt das Muster, vor dem der Nachtrag vom 2026-08-24 weiter unten warnt: „kein Download-Knopf
+   gefunden" ist ein Befund über unseren Blick, nicht über das Portal. Bei had.de und xvergabe.de
+   war es jedes Mal ein zweiter Rahmen oder ein anderes Servlet. Arbeitsliste, kein Ergebnis.
+3. **Staatsanzeiger meldet 79-mal `frameset` (17 %).** Dieselbe Krankheit, derselbe Verdacht.
+4. **11,5 % „sonstige" sind nie vermessen worden.** 1.469 offene Vergaben auf dem
+   146-Domain-Schwanz. Der größte unbearbeitete Block nach cosinex.
+
+### ⚠ AT und CH: nicht unversucht, sondern strukturell zu
+
+Hier stand bisher nichts, und im Produkt sah es aus wie eine Lücke aus Nachlässigkeit. Gemessen:
+
+| Land | Abrufe | geholt | Status |
+|---|---:|---:|---|
+| **AT** (vergabeportal) | 536 | **0 Dateien** | 500 „nur_liste", 36 Fehler |
+| **CH** (simap) | 2.815 | **0 Dateien** | **2.815-mal „interesse_noetig"** |
+| LU | 126 | 125 (99,2 %) | läuft |
+
+**In der Schweiz verlangt simap.ch ausnahmslos eine Interessensbekundung**, bevor die Unterlagen
+erscheinen. Das ist eine Anmeldewand mit anderem Namen, und sie trifft 100 % des Bestands. In
+Österreich liefert das Portal die Liste, aber keine Dateien. Beides heißt: **die 0 % Dokumente in
+AT und CH sind kein vergessener Abrufer, sondern ein gemessenes Nein.** Wer dort Unterlagen will,
+braucht einen anderen Weg als einen Abrufer — das gehört als Entscheidung auf den Tisch, nicht als
+Baustelle in eine Liste.
+
+---
+
+## Die Map vom 2026-07-29 (historisch, siehe oben)
 
 | Engine | Anteil | Zugang (oberschwellig) | Für uns |
 |---|---:|---|---|
