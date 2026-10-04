@@ -136,9 +136,13 @@ async function pdfZuText(bytes: Uint8Array): Promise<Gelesen> {
       disableFontFace: true,
     });
     doc = await vorgang.promise;
-  } catch {
+  } catch (e) {
     await vorgang?.destroy().catch(() => {});
-    throw new NichtLesbar("Die PDF-Datei konnte nicht geoeffnet werden.");
+    /* ⚠ Die Ursache MITGEBEN. Hier stand ein `catch {}` ohne Bindung, und als pdf.js in der
+     * Next-Umgebung anders scheiterte als im Test, war nicht herauszufinden warum — die
+     * Meldung sagte nur "konnte nicht geoeffnet werden". Ein Fehler, der seine Ursache
+     * wegwirft, kostet genau dann Zeit, wenn man sie am dringendsten braucht. */
+    throw new NichtLesbar("Die PDF-Datei konnte nicht geoeffnet werden.", { cause: e });
   }
 
   const teile: string[] = [];

@@ -82,6 +82,9 @@ export async function POST(req: Request) {
       /* `NichtLesbar` traegt einen Satz, der fuer den Nutzer geschrieben ist (etwa der
        * Scan-Hinweis) — er wird durchgereicht und nicht durch eine eigene Formulierung ersetzt. */
       if (e instanceof NichtLesbar) {
+        // Der Grund ins Protokoll, der Satz an den Menschen. Ohne das ist nicht zu klaeren,
+        // warum eine Datei abgewiesen wurde, die anderswo durchlief.
+        if (e.cause) console.error("[antwortauftrag] Datei:", e.message, "·", e.cause);
         return NextResponse.json({ error: e.message }, { status: 400 });
       }
       return NextResponse.json({ error: "Die Datei konnte nicht gelesen werden." }, { status: 400 });
@@ -123,7 +126,16 @@ export async function POST(req: Request) {
   const { data, error } = await sb.from("user_antwortauftrag")
     .insert({ org_id, profil_id: user.id, lead_id, dateiname, fragebogen_encrypted })
     .select("id, status, erstellt_at").limit(1);
-  if (error) return NextResponse.json({ error: error.message.slice(0, 300) }, { status: 500 });
+  if (error) {
+    /* ⚠ Die Datenbankmeldung NICHT durchreichen. Beim Sichttest stand im Gesicht des Nutzers
+     * "Could not find the table 'public.user_antwortauftrag' in the schema cache" — fuer ihn
+     * sinnlos, fuer einen Angreifer eine Auskunft ueber das Schema. Der Grund gehoert ins
+     * Serverprotokoll, der Mensch bekommt einen Satz, mit dem er etwas anfangen kann. */
+    console.error("[antwortauftrag] insert:", error.message);
+    return NextResponse.json(
+      { error: "Der Auftrag konnte nicht gespeichert werden. Bitte spaeter erneut versuchen." },
+      { status: 500 });
+  }
 
   return NextResponse.json({ auftrag: data?.[0] ?? null, hinweis });
 }
@@ -141,7 +153,7 @@ export async function GET(req: Request) {
     const { data, error } = await sb.from("user_antwortauftrag")
       .select("id, status, dateiname, lead_id, zaehlung, fragen_gesamt, fehler, erstellt_at, fertig_at")
       .order("erstellt_at", { ascending: false }).limit(20);
-    if (error) return NextResponse.json({ error: error.message.slice(0, 300) }, { status: 500 });
+    if (error) { console.error("[antwortauftrag] lesen:", error.message); return NextResponse.json({ error: "Die Auftraege konnten nicht geladen werden." }, { status: 500 }); }
     return NextResponse.json({ auftraege: data ?? [] });
   }
 
@@ -152,7 +164,7 @@ export async function GET(req: Request) {
   const { data, error } = await sb.from("user_antwortauftrag")
     .select("id, status, dateiname, lead_id, zaehlung, fragen_gesamt, fehler, erstellt_at, fertig_at, ergebnis_encrypted")
     .eq("id", id).limit(1);
-  if (error) return NextResponse.json({ error: error.message.slice(0, 300) }, { status: 500 });
+  if (error) { console.error("[antwortauftrag] lesen:", error.message); return NextResponse.json({ error: "Die Auftraege konnten nicht geladen werden." }, { status: 500 }); }
 
   const zeile = data?.[0];
   if (!zeile) return NextResponse.json({ error: "Nicht gefunden" }, { status: 404 });
