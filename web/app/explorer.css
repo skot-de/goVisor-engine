@@ -3135,3 +3135,38 @@ td.c-doks{width:84px;text-align:center}
 .testphase{display:inline-flex;align-items:center;padding:4px 10px;border:1px solid var(--line,#e5e7eb);border-radius:100px;font-size:11px;color:var(--ink-700,#374151);text-decoration:none;white-space:nowrap}
 .testphase:hover{border-color:var(--ink-400,#9ca3af)}
 .testphase-bald{border-color:var(--signal,#f59e0b);color:var(--signal-ink,#b45309);background:var(--signal-bg,#fffbeb);font-weight:600}
+
+/* ── Antwortvorschlaege (Funktion 1 Go-live) ─────────────────────────────────────────────────
+   ⚠ `unbelegt` MUSS anders aussehen als `fertig`. Ein Entwurf, dessen Beleg nicht haelt, ist
+   gefaehrlicher als keiner, weil er sich fertig anfuehlt. Deshalb Signalfarbe und keine
+   Uebernahme. Wer hier die Farben vereinheitlicht, nimmt der Ansicht ihren Zweck. */
+.antw{display:flex;flex-direction:column;gap:var(--s3,12px);max-width:860px}
+.antw-titel{font-size:var(--t-lg,16px);font-weight:600;color:var(--ink-900,#111827);margin:0}
+.antw-hilfe{font-size:var(--t-sm,13px);color:var(--ink-500,#6b7280);margin:0}
+.antw-eingabe{width:100%;padding:var(--s3,12px);border:1px solid var(--line,#e5e7eb);border-radius:var(--r,8px);font-family:inherit;font-size:var(--t-sm,13px);line-height:1.5;resize:vertical}
+.antw-eingabe:disabled{background:var(--surface,#f9fafb);color:var(--ink-400,#9ca3af)}
+.antw-leiste{display:flex;align-items:center;gap:var(--s3,12px);flex-wrap:wrap}
+.antw-knopf{padding:8px 16px;border:1px solid var(--ink-900,#111827);border-radius:var(--r,8px);background:var(--ink-900,#111827);color:#fff;font-size:var(--t-sm,13px);font-weight:600;cursor:pointer}
+.antw-knopf:disabled{background:var(--ink-400,#9ca3af);border-color:var(--ink-400,#9ca3af);cursor:default}
+.antw-lauf{font-size:var(--t-meta,12px);color:var(--ink-500,#6b7280)}
+.antw-fehler{font-size:var(--t-meta,12px);color:var(--signal-ink,#b45309)}
+.antw-ergebnis{display:flex;flex-direction:column;gap:var(--s3,12px);margin-top:var(--s3,12px)}
+.antw-summe{font-size:var(--t-sm,13px);color:var(--ink-700,#374151);margin:0}
+.antw-hinweis{font-size:var(--t-sm,13px);color:var(--ink-500,#6b7280);margin:0}
+.antw-abschnitt{font-size:var(--t-sm,13px);font-weight:600;color:var(--ink-900,#111827);margin:var(--s3,12px) 0 0}
+.antw-karte{border:1px solid var(--line,#e5e7eb);border-radius:var(--r,8px);padding:var(--s3,12px);display:flex;flex-direction:column;gap:8px}
+.antw-unbelegt{border-color:var(--signal,#f59e0b);background:var(--signal-bg,#fffbeb)}
+.antw-kopf{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--s3,12px)}
+.antw-frage{font-size:var(--t-sm,13px);font-weight:600;color:var(--ink-900,#111827)}
+.antw-marke{font-size:11px;padding:2px 8px;border-radius:100px;white-space:nowrap;border:1px solid var(--line,#e5e7eb);color:var(--ink-500,#6b7280)}
+.antw-marke-fertig{border-color:var(--ink-400,#9ca3af);color:var(--ink-700,#374151)}
+.antw-marke-unbelegt{border-color:var(--signal,#f59e0b);color:var(--signal-ink,#b45309);background:#fff;font-weight:600}
+.antw-antwort{font-size:var(--t-sm,13px);line-height:1.6;color:var(--ink-700,#374151);margin:0;white-space:pre-wrap}
+.antw-belege{font-size:var(--t-meta,12px);color:var(--ink-500,#6b7280)}
+.antw-belege summary{cursor:pointer}
+.antw-belege ul{margin:6px 0 0;padding-left:18px}
+.antw-belege code{font-family:var(--mono,monospace);font-size:11px}
+.antw-maengel{margin:0;padding-left:18px;font-size:var(--t-meta,12px);color:var(--signal-ink,#b45309)}
+.antw-offen{margin:0;padding-left:18px;font-size:var(--t-sm,13px);color:var(--ink-500,#6b7280)}
+.antw-kopieren{align-self:flex-start;padding:4px 12px;border:1px solid var(--line,#e5e7eb);border-radius:var(--r,8px);background:#fff;font-size:var(--t-meta,12px);color:var(--ink-700,#374151);cursor:pointer}
+.antw-trenner{border:0;border-top:1px solid var(--line,#e5e7eb);margin:var(--s4,16px) 0}

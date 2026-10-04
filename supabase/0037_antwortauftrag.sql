@@ -33,12 +33,19 @@
 create table if not exists public.user_antwortauftrag (
   id                   uuid primary key default gen_random_uuid(),
   org_id               uuid        not null,
-  -- Welches Profil liefert die Bausteine. ⚠ `profile_text_blocks` haengt an `profile_id`, NICHT
-  -- an der Organisation (s. 0006) — eine Organisation kann mehrere Profile haben (0033), und
-  -- der Auftrag muss sagen, wessen Bausteine gemeint sind. Mit `org_id` allein wuerde der
-  -- Arbeiter die Bausteine aller Profile zusammenwerfen.
+  -- WESSEN Bausteine der Arbeiter lesen soll.
+  -- ⚠ ZWEI DINGE HEISSEN HIER FAST GLEICH, und sie zu verwechseln heisst, dass der Arbeiter
+  --   nichts findet:
+  --     `user_profiles.id`  IST die Auth-Nutzerkennung (0001: `references auth.users(id)`), und
+  --                         `profile_text_blocks.profile_id` zeigt genau darauf — die
+  --                         Weboberflaeche setzt dort `user.id` (s. web/app/api/blocks/route.ts).
+  --                         **Bausteine haengen also am NUTZER.**
+  --     `profiles.id`       sind die Mehrfachprofile aus 0033, auf die `active_profile_id`
+  --                         zeigt. Mit Bausteinen haben sie NICHTS zu tun.
+  --   Darum zeigt dieses Feld auf `user_profiles` und heisst nicht `profiles`. Ein zusaetzliches
+  --   `nutzer_id` stand hier zuerst und ist ersatzlos weg: es waere dieselbe Person mit anderer
+  --   Loeschregel gewesen, also eine Einladung, die falsche von beiden zu lesen.
   profil_id            uuid        not null references public.user_profiles (id) on delete cascade,
-  nutzer_id            uuid        references auth.users (id) on delete set null,
   -- Der Vorgang, zu dem der Bogen gehoert. Nullable: ein Bogen darf auch ohne Lead hochgeladen
   -- werden (jemand probiert die Funktion an einem alten Angebot aus).
   lead_id              text,
@@ -81,15 +88,19 @@ comment on column public.user_antwortauftrag.versuche is
 -- geben wuerde nur verschleiern, wer hier wirklich darf.
 alter table public.user_antwortauftrag enable row level security;
 
+-- ⚠ Die Form ist aus 0027 uebernommen und nicht neu erfunden: `user_profiles.id` IST die
+--   Auth-Kennung, es gibt dort KEIN `user_id`. Eine Bedingung auf `p.user_id = auth.uid()` stand
+--   hier zuerst und waere beim Anwenden an einer nicht existierenden Spalte gescheitert.
 drop policy if exists antwortauftrag_lesen on public.user_antwortauftrag;
 create policy antwortauftrag_lesen on public.user_antwortauftrag
   for select to authenticated
-  using (org_id in (select p.org_id from public.user_profiles p where p.user_id = auth.uid()));
+  using (org_id = (select org_id from public.user_profiles where id = auth.uid()));
 
 drop policy if exists antwortauftrag_anlegen on public.user_antwortauftrag;
 create policy antwortauftrag_anlegen on public.user_antwortauftrag
   for insert to authenticated
-  with check (org_id in (select p.org_id from public.user_profiles p where p.user_id = auth.uid()));
+  with check (org_id = (select org_id from public.user_profiles where id = auth.uid())
+              and profil_id = auth.uid());
 
 -- ⚠ KEIN update UND KEIN delete FUER `authenticated`. Den Status setzt ausschliesslich der
 -- Arbeiter. Duerfte der Nutzer schreiben, koennte er `versuche` zuruecksetzen — und damit genau
