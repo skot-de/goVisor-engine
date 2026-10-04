@@ -31,9 +31,13 @@ import json
 import os
 import sys
 import time
-import urllib.error
-import urllib.parse
-import urllib.request
+
+# ⚠ `requests` und NICHT `urllib`. Die Python-Installation hier hat keinen Zugriff auf die
+# Wurzelzertifikate des Systems; `urllib` scheitert an jedem HTTPS-Aufruf mit
+# "CERTIFICATE_VERIFY_FAILED: unable to get local issuer certificate". `requests` bringt
+# `certifi` mit und ist ausserdem das, was jedes andere Skript hier benutzt
+# (`pruefkonto.py`, `migrate.py`). Erst beim ersten echten Lauf aufgefallen.
+import requests
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -62,19 +66,16 @@ def _umgebung() -> tuple[str, str]:
 
 def _ruf(url: str, key: str, pfad: str, method: str = "GET", daten=None,
          erwarte_liste: bool = True):
-    leib = json.dumps(daten).encode() if daten is not None else None
-    anfrage = urllib.request.Request(f"{url}/rest/v1/{pfad}", data=leib, method=method)
-    for k, v in (("apikey", key), ("Authorization", f"Bearer {key}"),
-                 ("Content-Type", "application/json"), ("Prefer", "return=representation")):
-        anfrage.add_header(k, v)
-    try:
-        with urllib.request.urlopen(anfrage, timeout=60) as a:
-            roh = a.read().decode()
-    except urllib.error.HTTPError as e:
-        raise RuntimeError(f"{method} {pfad} → {e.code}: {e.read().decode()[:300]}") from None
-    if not roh.strip():
+    kopf = {"apikey": key, "Authorization": f"Bearer {key}",
+            "Content-Type": "application/json", "Prefer": "return=representation"}
+    a = requests.request(method, f"{url}/rest/v1/{pfad}",
+                         headers=kopf, data=json.dumps(daten) if daten is not None else None,
+                         timeout=60)
+    if a.status_code >= 400:
+        raise RuntimeError(f"{method} {pfad} → {a.status_code}: {a.text[:300]}")
+    if not a.text.strip():
         return [] if erwarte_liste else None
-    return json.loads(roh)
+    return a.json()
 
 
 def _beanspruche(url: str, key: str) -> dict | None:
@@ -144,6 +145,23 @@ def _gescheitert(url: str, key: str, auftrag: dict, grund: str) -> None:
     print(f"  {'aufgegeben' if endgueltig else 'zurueck in die Schlange'}: {grund[:160]}")
 
 
+class GeldAus(RuntimeError):
+    """Das Guthaben reicht nicht. Kein Fehler DES AUFTRAGS, sondern des Betriebs."""
+
+
+def _zurueck_ohne_versuch(url: str, key: str, auftrag: dict, grund: str) -> None:
+    """Auftrag zurueck auf `offen` und den Versuch ZURUECKNEHMEN.
+
+    ⚠ Dafuer gibt es einen Grund: `versuche` ist eine Bremse gegen Auftraege, die immer wieder
+    scheitern und dabei Geld kosten. Ein leeres Guthaben ist aber kein Mangel des Auftrags — er
+    wuerde morgen durchlaufen. Zaehlte er hier mit, waere nach drei leeren Tagen jeder wartende
+    Auftrag endgueltig verloren, ohne dass ihn je ein Modell gesehen haette.
+    """
+    _ruf(url, key, f"{TABELLE}?id=eq.{auftrag['id']}", "PATCH",
+         {"status": "offen", "fehler": grund[:500],
+          "versuche": max(0, int(auftrag.get("versuche") or 1) - 1)})
+
+
 def bearbeite(url: str, key: str, auftrag: dict) -> bool:
     """Einen Auftrag rechnen. `True`, wenn er fertig wurde."""
     aid = auftrag["id"]
@@ -179,6 +197,12 @@ def bearbeite(url: str, key: str, auftrag: dict) -> bool:
               f"{z['kein_baustein']} ohne Baustein")
         return True
     except Exception as e:                                   # noqa: BLE001 — Grund wandert mit
+        if type(e).__name__ == "BudgetErschoepft":
+            # Nicht dem Auftrag anlasten, s. `_zurueck_ohne_versuch`. Der Name wird ueber
+            # `type(...).__name__` geprueft, damit dieses Skript ohne LLM-Import lauffaehig
+            # bleibt (die Tests fahren es mit eigenem `chat_fn`, ganz ohne `govisor.llm`).
+            _zurueck_ohne_versuch(url, key, auftrag, f"Guthaben erschoepft: {e}")
+            raise GeldAus(str(e)) from None
         _gescheitert(url, key, auftrag, f"{type(e).__name__}: {e}")
         return False
 
@@ -196,10 +220,23 @@ def main() -> int:
     while True:
         auftrag = _beanspruche(url, key)
         if auftrag:
-            bearbeite(url, key, auftrag)
+            try:
+                bearbeite(url, key, auftrag)
+            except GeldAus as e:
+                # ⚠ ANHALTEN, nicht weitermachen. Ohne Guthaben scheitert jeder weitere
+                #   Auftrag genauso, nur kostet jeder Durchlauf Zeit und Datenbankverkehr —
+                #   und ein Arbeiter, der im Leerlauf rotiert, sieht aus wie einer, der
+                #   arbeitet. Der Auftrag liegt unangetastet wieder in der Schlange.
+                print(f"\n⛔ {e}\n   Der Arbeiter haelt an. Nach dem Aufladen erneut starten.")
+                return 2
             getan += 1
             if a.hoechstens and getan >= a.hoechstens:
                 print(f"{getan} Auftraege, Grenze erreicht.")
+                return 0
+            # ⚠ Mit `--einmal` GENAU EIN Auftrag. Vorher lief die Schleife weiter und nahm
+            #   einen eben gescheiterten Auftrag sofort erneut — drei Versuche in einem Lauf,
+            #   ohne Pause und ohne dass sich an der Lage etwas geaendert haette.
+            if a.einmal:
                 return 0
             continue                                   # gleich nachsehen, es koennte mehr geben
         if a.einmal:
