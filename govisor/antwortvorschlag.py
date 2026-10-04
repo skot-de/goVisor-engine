@@ -201,6 +201,48 @@ def pruefe_belege(antwort: str, belege: list[dict], kand: list[dict]) -> tuple[b
     return (not maengel), maengel
 
 
+def standard_chat_fn():
+    """Die uebliche Anbindung ans Modell. **Die Modellwahl faellt EINMAL, nicht je Frage.**
+
+    ⚠ Vorher stand `llm.gewaehltes_modell()` im Aufruf selbst, also einmal pro Frage. Die
+    Funktion liest `data/modellwahl.json` — und `data` liegt auf der externen Platte, auf der
+    gleichzeitig die Dokument-Arbeiter schreiben. Bei zwoelf Fragen waren das zwoelf
+    Lesezugriffe auf eine Platte unter Last. Aufgefallen ist es, weil der Arbeiter minutenlang
+    stillzustehen schien; der Abbruch-Stapel landete mitten in `read_text`. Dieselbe Ursache,
+    die in `govisor-lv-inkrementell` steht: Laufzeiten schwanken durch Plattenkonkurrenz, nicht
+    durch Wachstum.
+
+    Der Import liegt absichtlich IN der Funktion: die Tests fahren mit eigenem `chat_fn` und
+    sollen `govisor.llm` gar nicht erst laden.
+    """
+    from . import llm
+
+    modell = llm.mit_boden(llm.gewaehltes_modell())
+
+    def chat_fn(messages):
+        with llm.kontext(zweck="antwortvorschlag"):
+            return llm.chat(messages, model=modell)
+
+    return chat_fn
+
+
+def _spaet(bauen):
+    """Baut `bauen()` erst beim ERSTEN Aufruf.
+
+    Damit bleibt die Zusicherung erhalten, dass ein Auftrag ganz ohne passende Bausteine
+    **kein** Modell anfasst — sonst wuerde schon die Modellwahl die Platte lesen, bevor
+    feststeht, dass ueberhaupt etwas zu fragen ist.
+    """
+    halter: dict = {}
+
+    def ruf(messages):
+        if "fn" not in halter:
+            halter["fn"] = bauen()
+        return halter["fn"](messages)
+
+    return ruf
+
+
 def vorschlag(frage: dict, bausteine: list[dict], chat_fn=None, n_kandidaten: int = 3) -> dict:
     """Ein Antwortvorschlag zu einer Frage.
 
@@ -222,12 +264,8 @@ def vorschlag(frage: dict, bausteine: list[dict], chat_fn=None, n_kandidaten: in
         return {"frage": frage, "status": "kein_baustein", "antwort": "", "belege": [],
                 "kandidaten": [], "maengel": []}
 
-    if chat_fn is None:                                   # spaeter Import: Tests brauchen kein Netz
-        from . import llm
-
-        def chat_fn(messages):                            # noqa: E306
-            with llm.kontext(zweck="antwortvorschlag"):
-                return llm.chat(messages, model=llm.mit_boden(llm.gewaehltes_modell()))
+    if chat_fn is None:
+        chat_fn = standard_chat_fn()
 
     roh = chat_fn(_nachricht(frage, kand))
     try:
@@ -254,6 +292,9 @@ def vorschlaege(fragen: list[dict], bausteine: list[dict], chat_fn=None) -> dict
     zaehlt **nur** `fertig`. Ein `unbelegt` als halben Erfolg zu verbuchen waere genau die
     Schoenrechnung, die das Versprechen dieses Produkts aushoehlt.
     """
+    # EINE Anbindung fuer den ganzen Auftrag, spaet gebaut (s. `standard_chat_fn`, `_spaet`).
+    if chat_fn is None:
+        chat_fn = _spaet(standard_chat_fn)
     raus = [vorschlag(f, bausteine, chat_fn=chat_fn) for f in fragen]
     zaehlung = {"fertig": 0, "unbelegt": 0, "kein_baustein": 0}
     for v in raus:

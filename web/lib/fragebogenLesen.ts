@@ -1,4 +1,6 @@
 import { unzipSync } from "fflate";
+import { createRequire } from "node:module";
+import path from "node:path";
 
 /* ⚠ **HIER STEHT BEWUSST KEIN `import "server-only"`.** Das waere die naheliegende Wache, und sie
  * saesse an der falschen Stelle: `server-only` ist von Next bereitgestellt und aus reinem Node
@@ -112,6 +114,27 @@ function xlsxZuText(bytes: Uint8Array): Gelesen {
   return { text: zeilen.join("\n"), art: "xlsx" };
 }
 
+/** Wo pdf.js seine mitgelieferten Daten findet (Schriftmasse, CJK-Tabellen).
+ *
+ * ⚠ **Ohne das warnt pdf.js bei JEDEM PDF** („Ensure that the `standardFontDataUrl` API parameter
+ * is provided") und faellt auf Ersatzmasse zurueck. Das bricht nichts sichtbar — die Entnahme
+ * lief auch vorher — kann aber bei Dokumenten, die auf den 14 Standardschriften aufbauen, die
+ * Zeichenzuordnung verschlechtern. Gefunden im Serverprotokoll beim Abschalten, nicht von einem
+ * Test: eine Warnung ist kein Fehlschlag, und niemand sieht hin.
+ *
+ * Der Pfad wird zur LAUFZEIT aufgeloest. Das geht nur, weil `pdfjs-dist` in
+ * `next.config.mjs` als externes Paket gefuehrt wird und damit aus `node_modules` kommt; waere
+ * es gebuendelt, gaebe es dieses Verzeichnis daneben gar nicht. Der abschliessende Schraegstrich
+ * gehoert dazu, pdf.js haengt die Dateinamen direkt an. */
+function pdfDatenPfade(): { standardFontDataUrl: string; cMapUrl: string; cMapPacked: boolean } {
+  const wurzel = path.dirname(createRequire(import.meta.url).resolve("pdfjs-dist/package.json"));
+  return {
+    standardFontDataUrl: path.join(wurzel, "standard_fonts") + path.sep,
+    cMapUrl: path.join(wurzel, "cmaps") + path.sep,
+    cMapPacked: true,
+  };
+}
+
 async function pdfZuText(bytes: Uint8Array): Promise<Gelesen> {
   /* Spaet geladen: pdf.js ist gross, und die meisten Auftraege sind Excel oder Text. */
   const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
@@ -134,6 +157,7 @@ async function pdfZuText(bytes: Uint8Array): Promise<Gelesen> {
        * vortaeuscht. */
       useWorkerFetch: false,
       disableFontFace: true,
+      ...pdfDatenPfade(),
     });
     doc = await vorgang.promise;
   } catch (e) {

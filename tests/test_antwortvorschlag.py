@@ -165,5 +165,57 @@ def test_zaehlung_zaehlt_nur_fertig():
     assert erg["fertig"] == 1, "die angezeigte Zahl darf nur fertige Vorschlaege zaehlen"
 
 
+# ── Die Modellwahl faellt einmal je Auftrag ──────────────────────────────────────────────────
+
+def _llm_attrappe(monkeypatch, antwort: str, belege: list[dict]):
+    """Haengt sich in `govisor.llm` und zaehlt, wie oft die Modellwahl faellt."""
+    import contextlib
+
+    from govisor import llm
+
+    zaehler = {"wahl": 0, "chat": 0}
+
+    def gewaehlt(*a, **k):
+        zaehler["wahl"] += 1
+        return "attrappe/modell"
+
+    def chat(messages, model=None, **k):
+        zaehler["chat"] += 1
+        return json.dumps({"antwort": antwort, "belege": belege})
+
+    monkeypatch.setattr(llm, "gewaehltes_modell", gewaehlt)
+    monkeypatch.setattr(llm, "mit_boden", lambda m: m)
+    monkeypatch.setattr(llm, "chat", chat)
+    monkeypatch.setattr(llm, "kontext", lambda **k: contextlib.nullcontext())
+    return zaehler
+
+
+def test_modellwahl_faellt_einmal_je_auftrag(monkeypatch):
+    """⚠ Vorher einmal JE FRAGE. `gewaehltes_modell` liest `data/modellwahl.json` von der
+    externen Platte, auf der gleichzeitig die Dokument-Arbeiter schreiben — bei zwoelf Fragen
+    zwoelf Lesezugriffe unter Last. Der Arbeiter sah dadurch aus, als stuende er still.
+    """
+    zaehler = _llm_attrappe(monkeypatch, "Nach ISO 9001 zertifiziert.",
+                            [{"baustein": "b1", "zitat": "nach ISO 9001 zertifiziert"}])
+    fragen = av.fragen_aus_text(
+        "1. Bitte beschreiben Sie Ihr Qualitaetsmanagementsystem.\n"
+        "2. Welche Nachweise zum Qualitaetsmanagement koennen Sie vorlegen?\n")
+    assert len(fragen) == 2
+    av.vorschlaege(fragen, BAUSTEINE)
+    assert zaehler["chat"] == 2, "beide Fragen sollen gefragt werden"
+    assert zaehler["wahl"] == 1, f"Modellwahl fiel {zaehler['wahl']}-mal statt einmal"
+
+
+def test_ohne_kandidaten_faellt_gar_keine_modellwahl(monkeypatch):
+    """Die Zusicherung aus `_spaet`: ohne passenden Baustein wird die Platte nicht angefasst."""
+    zaehler = _llm_attrappe(monkeypatch, "egal", [])
+    fragen = [{"frage": "Wie hoch ist der Wasserstand der Elbe bei Torgau?", "thema": "sonstiges"},
+              {"frage": "Welche Farbe hat das Dach des Rathauses in Torgau?", "thema": "sonstiges"}]
+    erg = av.vorschlaege(fragen, BAUSTEINE)
+    assert erg["zaehlung"]["kein_baustein"] == 2
+    assert zaehler["wahl"] == 0, "ohne Kandidaten darf die Modellwahl nicht fallen"
+    assert zaehler["chat"] == 0
+
+
 if __name__ == "__main__":
     raise SystemExit(pytest.main([__file__, "-q"]))

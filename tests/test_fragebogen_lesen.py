@@ -137,6 +137,33 @@ def test_pdf_zeilen_bleiben_zeilen(tmp_path):
 
 
 @node_fehlt
+def test_pdf_lesen_warnt_nicht(tmp_path):
+    """pdf.js darf nicht ueber fehlende Standard-Schriftdaten klagen.
+
+    ⚠ Der Grund fuer diesen Test: die Warnung „Ensure that the `standardFontDataUrl` API
+    parameter is provided" stand bei JEDEM PDF im Serverprotokoll, und **kein Test hat sie
+    gesehen** — eine Warnung ist kein Fehlschlag, die Entnahme lief, und gefunden wurde sie
+    erst beim Abschalten des Servers von Hand. Seitdem prueft diese Suite die Stroeme mit.
+    """
+    datei = _pdf(tmp_path, ["1. Bitte beschreiben Sie Ihr Qualitaetsmanagementsystem."])
+    skript = (
+        "const {readFileSync} = await import('node:fs');"
+        "const {textAusDatei} = await import('./lib/fragebogenLesen.ts');"
+        "const b = new Uint8Array(readFileSync(process.argv[process.argv.length - 1]));"
+        "const r = await textAusDatei(b, 'x.pdf');"
+        "process.stdout.write(JSON.stringify({len: r.text.length}));"
+    )
+    p = subprocess.run(["node", "--input-type=module", "-e", skript, "--", str(datei)],
+                       cwd=WEB, capture_output=True, text=True)
+    assert p.returncode == 0, p.stderr[-400:]
+    assert json.loads(p.stdout)["len"] > 20
+    # Die Warnung aus pdf.js geht auf stderr; die Modultyp-Warnung von Node ist erlaubt.
+    laut = [z for z in p.stderr.splitlines()
+            if "standardFontDataUrl" in z or "cMap" in z or "UnknownErrorException" in z]
+    assert not laut, laut
+
+
+@node_fehlt
 def test_scan_pdf_bekommt_eine_verstaendliche_absage(tmp_path):
     """Ein Bild-PDF ohne Text ist der haeufige Fall und darf nicht wie ein Nutzerfehler klingen."""
     reportlab = pytest.importorskip("reportlab")
