@@ -3170,3 +3170,8 @@ td.c-doks{width:84px;text-align:center}
 .antw-offen{margin:0;padding-left:18px;font-size:var(--t-sm,13px);color:var(--ink-500,#6b7280)}
 .antw-kopieren{align-self:flex-start;padding:4px 12px;border:1px solid var(--line,#e5e7eb);border-radius:var(--r,8px);background:#fff;font-size:var(--t-meta,12px);color:var(--ink-700,#374151);cursor:pointer}
 .antw-trenner{border:0;border-top:1px solid var(--line,#e5e7eb);margin:var(--s4,16px) 0}
+.antw-datei{display:flex;align-items:flex-start;gap:var(--s3,12px);flex-wrap:wrap}
+.antw-dateiknopf{padding:6px 14px;border:1px solid var(--ink-400,#9ca3af);border-radius:var(--r,8px);background:#fff;font-size:var(--t-sm,13px);color:var(--ink-900,#111827);cursor:pointer;white-space:nowrap}
+.antw-dateiknopf:hover{border-color:var(--ink-900,#111827)}
+.antw-dateiknopf.antw-aus{color:var(--ink-400,#9ca3af);border-color:var(--line,#e5e7eb);cursor:default}
+.antw-dateihilfe{font-size:var(--t-meta,12px);color:var(--ink-500,#6b7280);max-width:52ch;line-height:1.45}

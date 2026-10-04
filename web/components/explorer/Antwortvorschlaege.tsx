@@ -45,6 +45,7 @@ export function Antwortvorschlaege({ leadId }: { leadId?: string }) {
   const [auftrag, setAuftrag] = useState<Auftrag | null>(null);
   const [ergebnis, setErgebnis] = useState<Ergebnis | null>(null);
   const [fehler, setFehler] = useState("");
+  const [hinweis, setHinweis] = useState("");
   const [busy, setBusy] = useState(false);
   const uhr = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -81,23 +82,18 @@ export function Antwortvorschlaege({ leadId }: { leadId?: string }) {
     }
   }, []);
 
-  async function starten() {
-    if (text.trim().length < MIN_TEXT) {
-      setFehler(`Bitte mindestens ${MIN_TEXT} Zeichen einfuegen.`);
-      return;
-    }
-    setBusy(true); setFehler(""); setErgebnis(null); setAuftrag(null);
+  /* Beide Wege, Text und Datei, enden hier: Auftrag merken und nachfragen. */
+  async function abschicken(rumpf: BodyInit, kopf?: HeadersInit) {
+    setBusy(true); setFehler(""); setHinweis(""); setErgebnis(null); setAuftrag(null);
     try {
-      const r = await fetch("/api/antwortauftrag", {
-        method: "POST", headers: { "content-type": "application/json" },
-        body: JSON.stringify({ text, lead_id: leadId ?? null }),
-      });
+      const r = await fetch("/api/antwortauftrag", { method: "POST", headers: kopf, body: rumpf });
       const d = await r.json();
       if (d.error || !d.auftrag) {
         setFehler(d.error || "Der Auftrag konnte nicht angelegt werden.");
         setBusy(false);
         return;
       }
+      if (d.hinweis) setHinweis(d.hinweis);
       setAuftrag(d.auftrag);
       uhr.current = setTimeout(() => nachfragen(d.auftrag.id), TAKT_MS);
     } catch {
@@ -106,16 +102,49 @@ export function Antwortvorschlaege({ leadId }: { leadId?: string }) {
     }
   }
 
+  function starten() {
+    if (text.trim().length < MIN_TEXT) {
+      setFehler(`Bitte mindestens ${MIN_TEXT} Zeichen einfuegen.`);
+      return;
+    }
+    abschicken(JSON.stringify({ text, lead_id: leadId ?? null }),
+               { "content-type": "application/json" });
+  }
+
+  /* ⚠ Kein `content-type` setzen. Der Browser muss ihn fuer FormData selbst erzeugen, weil er
+   * die Abschnittsgrenze enthaelt; ein von Hand gesetzter Wert macht die Anfrage unlesbar. */
+  function dateiGewaehlt(e: React.ChangeEvent<HTMLInputElement>) {
+    const datei = e.target.files?.[0];
+    e.target.value = "";          // damit dieselbe Datei erneut gewaehlt werden kann
+    if (!datei) return;
+    const fd = new FormData();
+    fd.append("datei", datei);
+    if (leadId) fd.append("lead_id", leadId);
+    abschicken(fd);
+  }
+
   const laeuft = busy || auftrag?.status === "offen" || auftrag?.status === "laeuft";
 
   return (
     <section className="antw">
       <h2 className="antw-titel">Antwortvorschlaege aus Ihren Bausteinen</h2>
       <p className="antw-hilfe">
-        Fuegen Sie den Fragenteil des Fragebogens ein, eine Frage je Zeile. Aus einer
-        Excel-Tabelle genuegt die Spalte mit den Fragen. Zu jeder Frage entsteht ein Entwurf,
-        der ausschliesslich aus Ihren eigenen Bausteinen gebaut wird.
+        Laden Sie den Fragebogen als Excel oder PDF hoch, oder fuegen Sie den Fragenteil als
+        Text ein. Zu jeder Frage entsteht ein Entwurf, der ausschliesslich aus Ihren eigenen
+        Bausteinen gebaut wird.
       </p>
+
+      <div className="antw-datei">
+        <label className={`antw-dateiknopf${laeuft ? " antw-aus" : ""}`}>
+          Datei waehlen
+          <input type="file" accept=".xlsx,.xlsm,.pdf,.txt,.csv,.tsv"
+            onChange={dateiGewaehlt} disabled={laeuft} hidden />
+        </label>
+        <span className="antw-dateihilfe">
+          Excel oder PDF, bis 4 MB. Die Datei wird ausgelesen und nicht gespeichert.
+          Ein eingescannter Bogen enthaelt keinen Text, dort hilft nur Einfuegen.
+        </span>
+      </div>
 
       <textarea className="antw-eingabe" value={text} rows={8}
         placeholder={"1. Bitte beschreiben Sie Ihr Qualitaetsmanagementsystem.\n"
@@ -132,6 +161,7 @@ export function Antwortvorschlaege({ leadId }: { leadId?: string }) {
           </span>
         )}
         {fehler && <span className="antw-fehler">{fehler}</span>}
+        {hinweis && !fehler && <span className="antw-lauf">{hinweis}</span>}
       </div>
 
       {ergebnis && <Ergebnisteil ergebnis={ergebnis} />}
