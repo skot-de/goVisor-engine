@@ -228,3 +228,62 @@ Drei, alle an einem Tag, alle in `CLAUDE.md` oder der Auto-Memory vorbeschrieben
    der Veröffentlichung" als Alleinstellung. Im Code gibt es keine Prognose, nur historische
    Mediane. **Der Wettbewerber wurde von seiner Produktseite gemessen, das eigene Produkt aus der
    Erinnerung** — dieselbe Asymmetrie hat an diesem Tag vier Behauptungen gekippt.
+
+---
+
+## 13. ⭐ Nachtrag 2026-10-05: der Sicherheitsteil bekommt ein besseres Signal
+
+Abschnitt 5 nennt als Problem, dass niedriger Wettbewerbsdruck zwei entgegengesetzte Dinge heissen
+kann — Chance oder zugeschnittenes Verfahren — und dass die Unterscheidung an der schlechten
+Deckung der Eignungsanforderungen hängt (Dokumente 20,3 %, `lead_requirement` 8,8 %).
+
+**Dafür gibt es seit dem 2026-10-05 ein direkteres Signal.** Der Zweig `web/grounding-page` hat
+`verfahren_status='erfolglos'` von der Ableitung auf die Quelle umgestellt (`TenderResultCode`,
+BT-142) und dabei das Feld **BT-144 (`nichtvergabe_grund`)** erschlossen: es sagt, **warum** nicht
+vergeben wurde.
+
+**Abdeckung, gemessen 2026-10-05:** 2023 8 %, 2024 84 %, 2025 97 %, **2026 98 %**.
+
+Gemessen an 6.959 erfolglosen Verfahren seit 2025 mit Begründung:
+
+| Lage | Gründe | Anteil | heisst für den Bieter |
+|---|---|---:|---|
+| **Chance** | `no-rece` (keine Angebote), `all-rej` (alle abgelehnt), `one-admis` | **50,8 %** | hier ist Platz |
+| **Sackgasse** | `chan-need` (Bedarf geändert), `ins-fund` (Mittel fehlen), aufgehoben | 27,9 % | kommt so nicht wieder |
+| unklar | `other` und Mehrfachangaben | 21,3 % | wie bisher behandeln |
+
+**Allein `no-rece`: 2.368 Verfahren seit 2025, und 831 davon stehen heute als Lead im Bestand.**
+
+### Was das für diese Funktion ändert
+
+`huerden_quelle` bekommt eine **vierte, bessere Stufe** vor den bisherigen:
+
+| Stufe | Quelle | Deckung | Aussagekraft |
+|---|---|---:|---|
+| **neu** | `grund` — BT-144 des Vorgängerverfahrens | 97 bis 98 % **der erfolglosen** | sagt direkt, ob niemand bot oder der Bedarf weg ist |
+| 1 | `dokument` | 20,3 % | echte Hürdenprüfung |
+| 2 | `strukturiert` | 8,8 % | echte Hürdenprüfung |
+| 3 | `kriterien` | 77,5 % | nur Gewichtung |
+
+⚠ **Die beiden Signale beantworten nicht dieselbe Frage, und sie ersetzen einander nicht.** BT-144
+sagt, warum das **letzte** Verfahren scheiterte; die Dokumente sagen, ob **dieser Bieter** die
+Hürden dieses Verfahrens nimmt. Ein `no-rece` beim Vorgänger ist ein starker Hinweis auf Platz,
+aber kein Nachweis, dass die Eignungskriterien erfüllbar sind. Wer das eine für das andere nimmt,
+baut genau die Falle, vor der Abschnitt 5 warnt — nur mit besserem Gewissen.
+
+**Die Regel bleibt deshalb bestehen** und wird nur ergänzt: mit `grund = no-rece` darf die Zeile
+als Chance ausgezeichnet werden, muss aber dazusagen, dass die Hürden ungeprüft sind, solange
+keine Dokumente vorliegen.
+
+### Und ein Befund über das Messen selbst
+
+Das Signal war **drei Jahre lang blind**: durch die eForms-Umstellung fiel der gemessene
+Erfolglos-Anteil von 13,0 % (2019) auf 0,9 % (2024), weil eForms für jedes Los ein Ergebnis
+schreibt, auch für eines ohne Gewinner. 11.201 von 12.169 echten Fehlvergaben lagen unter
+„unbekannt".
+
+⚠ **Bei der Vermessung der Vergabestellenseite am 2026-10-04 ergab meine eigene Erfolglos-Messung
+0,0 % über alle Grössengruppen, und ich habe das als kaputten Join meiner Abfrage abgetan.** Es
+war echt. Ein Nullergebnis, für das man eine bequeme eigene Erklärung hat, wird zu schnell
+weggeklärt — die unbequeme Lesart („die Quelle ist blind") hätte den Fund drei Wochen früher
+gebracht.
