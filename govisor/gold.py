@@ -467,7 +467,29 @@ def build_quality(cfg: Config, country: str = "DE"):
     L = cfg.silver_table_glob("lots", country)
     A = cfg.silver_table_glob("awards", country)
     PE = str(cfg.gold_dir / country / "party_entity.parquet")
+    AT_ = cfg.silver_table_glob("attributes", country)
     out = cfg.gold_dir / country / "quality.parquet"
+    # ⚠ Ein Land ohne `attributes` darf den Bau nicht abbrechen (DuckDB wirft bei einem
+    # Glob ohne Treffer einen IO-Fehler). Dann eine leere Tabelle gleicher Form.
+    import glob as _glob
+    ERGEBNIS = (f"""
+          SELECT notice_id,
+                 count(*) FILTER (WHERE value = 'clos-nw')               AS lose_leer,
+                 count(*) FILTER (WHERE value = 'selec-w')               AS lose_vergeben,
+                 count(*) FILTER (WHERE value IN ('open-nw','unpublished')) AS lose_offen
+          FROM read_parquet('{AT_}', hive_partitioning=1)
+          WHERE path ILIKE '%LotResult.TenderResultCode' AND path NOT ILIKE '%@%'
+          GROUP BY 1"""
+        if _glob.glob(AT_) else
+        "SELECT NULL::VARCHAR AS notice_id, 0::BIGINT AS lose_leer, "
+        "0::BIGINT AS lose_vergeben, 0::BIGINT AS lose_offen WHERE false")
+    GRUND = (f"""
+          SELECT notice_id, string_agg(DISTINCT value, ',') AS grund
+          FROM read_parquet('{AT_}', hive_partitioning=1)
+          WHERE path ILIKE '%DecisionReason.DecisionReasonCode' AND path NOT ILIKE '%@%'
+          GROUP BY 1"""
+        if _glob.glob(AT_) else
+        "SELECT NULL::VARCHAR AS notice_id, NULL::VARCHAR AS grund WHERE false")
     out.parent.mkdir(parents=True, exist_ok=True)
     # Jeder ERKENNBARE Defekt wird geflaggt (nicht weggeworfen). final_value_clean
     # ist gesetzt, wenn der Betrag plausibel ist UND wir ihn in Euro ausdruecken koennen:
@@ -490,6 +512,13 @@ def build_quality(cfg: Config, country: str = "DE"):
                   FROM '{A}' GROUP BY 1),
           win AS (SELECT DISTINCT notice_id FROM '{PE}' WHERE role='winner'),
           awp AS (SELECT DISTINCT notice_id FROM '{A}'),
+          -- ⚠ eForms SAGT, ob ein Los vergeben wurde — wir mussten es nie erschliessen.
+          -- `LotResult.TenderResultCode` (BT-142): `selec-w` Gewinner gewaehlt,
+          -- `clos-nw` geschlossen ohne Gewinner, `open-nw` offen ohne Gewinner.
+          erg AS ({ERGEBNIS}),
+          -- Und BT-144 sagt WARUM: no-rece (keine Angebote), all-rej (alle abgelehnt),
+          -- chan-need (Bedarf geaendert), ins-fund (Mittel fehlen) und sieben weitere.
+          grd AS ({GRUND}),
           -- ⚠ WELCHE QUELLE LIEFERT UEBERHAUPT ZUSCHLAGSDATEN? Abgeleitet, nicht getippt:
           -- eine Quelle, deren Zuschlags-Bekanntmachungen zu unter 1 % eine Zeile in
           -- `awards` haben, liefert strukturell keine. Sobald sie es tut, faellt die
@@ -508,12 +537,23 @@ def build_quality(cfg: Config, country: str = "DE"):
                    coalesce(bid.bad, false) AS bad_bid,
                    (win.notice_id IS NOT NULL) AS has_winner,
                    (awp.notice_id IS NOT NULL) AS has_award,
+                   -- Die ausdrueckliche Auskunft der Quelle, dreiwertig:
+                   -- TRUE  = jedes Los blieb ohne Gewinner
+                   -- FALSE = mindestens ein Los wurde vergeben
+                   -- NULL  = die Quelle sagt nichts (Altformate, nationale Quellen)
+                   CASE WHEN erg.notice_id IS NULL THEN NULL
+                        WHEN erg.lose_vergeben = 0 AND erg.lose_leer > 0 THEN TRUE
+                        ELSE FALSE END AS quelle_sagt_leer,
+                   erg.lose_leer, erg.lose_vergeben,
+                   grd.grund AS nichtvergabe_grund,
                    coalesce(quelle.anteil, 1.0) < 0.01 AS quelle_ohne_zuschlagsdaten
             FROM '{N}' n
             LEFT JOIN dur ON dur.notice_id=n.notice_id
             LEFT JOIN bid ON bid.notice_id=n.notice_id
             LEFT JOIN win ON win.notice_id=n.notice_id
             LEFT JOIN awp ON awp.notice_id=n.notice_id
+            LEFT JOIN erg ON erg.notice_id=n.notice_id
+            LEFT JOIN grd ON grd.notice_id=n.notice_id
             LEFT JOIN quelle ON quelle.schema_gen=n.schema_gen
           )
           SELECT notice_id,
@@ -611,13 +651,54 @@ def build_quality(cfg: Config, country: str = "DE"):
                  -- noch Faelle, bei denen die Quelle einen Zuschlag haette melden koennen.
                  WHEN notice_kind='can' AND quelle_ohne_zuschlagsdaten
                       THEN 'ohne_zuschlagsdaten'
-                 WHEN notice_kind='can' AND NOT has_award THEN 'erfolglos'
+                 -- ⚠⚠ DIE QUELLE SCHLAEGT DIE ABLEITUNG, und sie steht deshalb DAVOR.
+                 --
+                 -- Gemessen am 2026-10-04: `erfolglos` fiel mit der eForms-Umstellung
+                 -- von 13,0 % (2019) auf 0,9 % (2024-2026). Nicht kaputt, sondern blind:
+                 -- die Ableitung unten lautet „Zuschlag OHNE Award-Zeile", und eForms
+                 -- schreibt fuer JEDES Los ein `LotResult` — auch fuer ein Los, das
+                 -- niemand gewonnen hat. `has_award` ist damit wahr, und 11.201 von
+                 -- 12.169 echten Fehlvergaben landeten in `unbekannt`.
+                 --
+                 -- `TenderResultCode` sagt es direkt. Der Status gilt nur, wenn KEIN
+                 -- einziges Los vergeben wurde (`lose_vergeben = 0`): bleiben in einer
+                 -- Bekanntmachung drei von zehn Losen leer, ist das Verfahren nicht
+                 -- erfolglos, sondern teilweise vergeben. Gemessen: 12.169 ganz leer
+                 -- gegen 3.455 teilweise — die zu verschmelzen haette die Schwaeche-Achse
+                 -- von `market_opportunity` um ein Viertel aufgeblaeht.
+                 --
+                 -- ⚠ Die Verzweigung steht HINTER `has_winner` und `open_house`, nicht
+                 -- davor: ein Vorgang mit Gewinner bleibt `vergeben`, auch wenn die
+                 -- Losergebnisse etwas anderes nahelegen (121 solcher Widersprueche
+                 -- gemessen — lieber konservativ als ein Zuschlag, den wir wegreden).
+                 WHEN notice_kind='can' AND quelle_sagt_leer THEN 'erfolglos'
+                 -- ⚠ UND IN DIE ANDERE RICHTUNG. Der Rueckfall unten liest „keine
+                 -- awards-Zeile, also erfolglos". Zwei eForms-Vorgaenge (371480_2024,
+                 -- 298232_2024) hatten keine awards-Zeile, waehrend die Quelle
+                 -- ausdruecklich zwei vergebene Lose meldet — der Parser hatte die Zeilen
+                 -- nicht gebildet. Sie standen damit als erfolglos da, obwohl vergeben
+                 -- wurde. Dasselbe Prinzip gilt also beidseitig: sagt die Quelle „ein Los
+                 -- ist vergeben", darf die Ableitung nicht dagegen entscheiden.
+                 WHEN notice_kind='can' AND NOT has_award
+                      AND quelle_sagt_leer IS DISTINCT FROM FALSE THEN 'erfolglos'
                  WHEN notice_kind='can' THEN 'unbekannt'
                  -- NEU: auch die AUSSCHREIBUNGSSEITE markieren. Bisher lief der Status nur
                  -- auf Zuschlägen, weshalb 1.816 offene Open-House-Verfahren unerkannt in
                  -- der Akquise standen.
                  WHEN notice_kind IN ('cn','pin') AND {_open_house_sql()} THEN 'open_house'
-                 END AS verfahren_status
+                 END AS verfahren_status,
+            -- WARUM nicht vergeben wurde — BT-144, elf Codes, bisher ungenutzt:
+            --   no-rece    keine Angebote eingegangen        (6.011 Vorgaenge)
+            --   all-rej    alle Angebote abgelehnt           (2.623)
+            --   chan-need  der Bedarf hat sich geaendert     (2.264)
+            --   ins-fund   unzureichende Mittel              (  984)
+            --   one-admis  nur ein zulaessiges Angebot       (  262)
+            -- Das trennt die Faelle, die fuer einen Bieter GEGENSAETZLICH sind:
+            -- `no-rece` heisst „hier hat sich niemand beworben" (Chance),
+            -- `chan-need` und `ins-fund` heissen „kommt so nicht wieder" (keine Chance).
+            -- Bis heute lief beides ununterschieden in `retender_signal`.
+            nichtvergabe_grund,
+            lose_leer, lose_vergeben
           FROM q
         ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)
