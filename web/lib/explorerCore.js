@@ -3102,6 +3102,16 @@ function renderAnalyse(l){
           if(a.eignung && a.eignung.length) rows.push(`<div class="req"><span class="mk i">i</span>
             <span class="code">${tk("Eignung")}</span><span class="lbl">${esc(a.eignung.map(e=>EIG[e]||e).join(' · '))}</span>
             <span class="st">${tk("Im Angebot nachzuweisen")}</span></div>`);
+          /* EU-Kofinanzierung. Steht hier und nicht bei den Stammdaten, weil sie den
+             Auftragnehmer etwas kostet: Publizitaetspflicht, Verwendungsnachweis,
+             Pruefrechte der Kommission, lange Aufbewahrung. Wer das erst nach dem
+             Zuschlag erfaehrt, hat es nicht einkalkuliert.
+             ⚠ NUR BEI `true` ANZEIGEN. `false` waere eine Zeile, die nichts aussagt
+             (die grosse Mehrheit ist nicht gefoerdert), und `null` heisst „die Quelle
+             sagt nichts" — daraus ein „nicht gefoerdert" zu machen waere falsch. */
+          if(a.euGefoerdert===true) rows.push(`<div class="req"><span class="mk i">i</span>
+            <span class="code">${tk("EU-Mittel")}</span><span class="lbl">${a.euProgramm?esc(a.euProgramm):tk("kofinanziert")}</span>
+            <span class="st">${tk("Mit Publizitätspflicht, Verwendungsnachweis und Prüfrechten der EU")}</span></div>`);
           if(!rows.length) return '';
           return `<div class="reqgroup-h">${tk("Strukturierte Anforderungen")}<span class="prov-echt">${tk("aus der Bekanntmachung")}</span></div>`+rows.join('');
         })()}

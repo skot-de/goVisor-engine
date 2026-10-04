@@ -3630,7 +3630,8 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
                 "NULL::INTEGER AS consortium_allowed, NULL::INTEGER AS subcontracting_allowed, "
                 "NULL::VARCHAR AS award_types, NULL::VARCHAR AS award_criteria, "
                 "NULL::VARCHAR AS selection_types, "
-                "NULL::VARCHAR AS deadline_time, NULL::VARCHAR AS question_deadline "
+                "NULL::VARCHAR AS deadline_time, NULL::VARCHAR AS question_deadline, "
+                "NULL::INTEGER AS eu_funded, NULL::VARCHAR AS eu_programme "
                 "WHERE false")
     return f"""
       SELECT notice_id,
@@ -3804,7 +3805,47 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
         (max(CASE WHEN path = 'simap/documentsWithCosts'
              AND lower(value) = 'yes' THEN 1 ELSE 0 END) = 1)           AS documents_paid,
         string_agg(DISTINCT CASE WHEN path = 'simap/documentsLanguage'
-             THEN lower(value) END, ',')                                AS documents_languages
+             THEN lower(value) END, ',')                                AS documents_languages,
+        -- ── EU-KOFINANZIERUNG ─────────────────────────────────────────────────────────
+        -- Warum das ein Produktfeld ist und keine Statistik: wer einen EU-kofinanzierten
+        -- Auftrag gewinnt, erbt Pflichten — Publizitaet, Verwendungsnachweis, Pruefrechte
+        -- der Kommission, lange Aufbewahrung. Das gehoert in die Kalkulation, nicht in die
+        -- Ueberraschung nach Zuschlag.
+        --
+        -- ⚠ ZWEI PFADE, DIE GLEICH ENDEN. `%FundingProgramCode` faengt beides:
+        --     ...TenderingTerms.FundingProgramCode            ja/nein   (828.237 DE)
+        --     ...EformsExtension.Funding.FundingProgramCode   Programm  (1.862 DE)
+        -- Das sind verschiedene Dinge. Die Trennung laeuft ueber das Elternelement
+        -- (`TenderingTerms.` gegen `Funding.`), nicht ueber den Blattnamen; `NOT ILIKE
+        -- '%@%'` haelt zusaetzlich `@listName` heraus, das nur das Vokabular benennt.
+        --
+        -- ⚠ FEHLT HEISST UNBEKANNT, NICHT NEIN. eForms sagt ausdruecklich `no-eu-funds`.
+        -- Die Altformate kennen nur `RELATES_TO_EU_PROJECT_YES` / `EU_PROGR_RELATED` —
+        -- ein ausdrueckliches NEIN gibt es dort nicht (nachgesehen: kein `_NO`-Pfad im
+        -- ganzen Bestand). Wer dort aus dem Schweigen eine 0 macht, behauptet etwas, das
+        -- die Quelle nicht sagt. Deshalb NULL.
+        max(CASE WHEN path ILIKE '%TenderingTerms.FundingProgramCode' AND path NOT ILIKE '%@%'
+                 THEN CASE lower(value) WHEN 'eu-funds' THEN 1
+                                        WHEN 'no-eu-funds' THEN 0 END
+                 WHEN (path LIKE '%EU_PROGR_RELATED.P'
+                       OR path LIKE '%OBJECT_DESCR.EU_PROGR_RELATED'
+                       OR path LIKE '%RELATES_TO_EU_PROJECT_YES.P')
+                      AND length(trim(coalesce(value, ''))) > 1 THEN 1 END)  AS eu_funded,
+        -- Der Programmname. eForms liefert ein sauberes Vokabular (ERDF_2021, EAFRD_2021,
+        -- CEF_2021, COPERNICUS, HEALTH — 27 Codes), die Altformate freien Text.
+        -- ⚠ Der freie Text ist MEHRSPRACHIG und nicht waehlbar: dieselbe Vergabe traegt
+        -- „Europaeisches Statistikprogramm" neben „Europees statistiekprogramma" neben
+        -- „Det europaeiske statistiske program" (Eurostat, LU). Welche Fassung hier
+        -- ankommt, bestimmt `min()` — stabil, aber nicht die Wunschsprache. Der Code hat
+        -- deshalb Vorrang; der Freitext ist Rueckfall, nicht Gleichwertiges.
+        coalesce(
+          string_agg(DISTINCT CASE WHEN path ILIKE '%Funding.FundingProgramCode'
+                                    AND path NOT ILIKE '%@%' THEN value END, ','),
+          min(CASE WHEN (path LIKE '%EU_PROGR_RELATED.P'
+                         OR path LIKE '%OBJECT_DESCR.EU_PROGR_RELATED'
+                         OR path LIKE '%RELATES_TO_EU_PROJECT_YES.P')
+                    AND length(trim(value)) BETWEEN 2 AND 120
+                   THEN trim(value) END))                                    AS eu_programme
       FROM read_parquet('{A}', hive_partitioning=1)
       -- ⚠ Diese WHERE-Liste ist eine POSITIVLISTE. Wer oben eine Spalte ergaenzt, muss den
       -- Pfad hier eintragen — sonst liest das CTE ihn gar nicht erst und die Spalte kommt
@@ -3836,6 +3877,11 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
          OR path ILIKE '%SelectionCriteria.CriterionTypeCode'
          OR path ILIKE '%TenderSubmissionDeadlinePeriod.EndTime'
          OR path ILIKE '%AdditionalInformationRequestPeriod.EndDate'
+         -- EU-Kofinanzierung. Ein Muster faengt beide FundingProgramCode-Pfade (ja/nein
+         -- und Programmname); auseinander gehalten werden sie oben in den Spalten.
+         OR path ILIKE '%FundingProgramCode'
+         OR path LIKE '%EU_PROGR_RELATED%'
+         OR path LIKE '%RELATES_TO_EU_PROJECT_YES.P'
       GROUP BY notice_id
     """
 
@@ -4086,6 +4132,9 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             ctx.award_types, ctx.award_criteria,
             ctx.selection_types,
             ctx.deadline_time, ctx.question_deadline,
+            -- EU-Kofinanzierung: aendert die Pflichten des Auftragnehmers, nicht nur die
+            -- Herkunft des Geldes. NULL heisst „die Quelle sagt es nicht", nicht „nein".
+            ctx.eu_funded, ctx.eu_programme,
             d.ted_url                                 AS source_url,
             (d.incumbent_name IS NOT NULL AND d.incumbent_conf >= 0.75) AS has_comparables,
             (coalesce(d.tenure_years, 0) > 0)         AS has_contract_history
@@ -5223,7 +5272,13 @@ def build_at_gold(cfg: Config, country: str = "AT"):
              -- Kein zweiter Parser: `_lead_context_sql` nimmt das Land als Parameter und
              -- laeuft fuer DE und CH seit jeher. Er wird hier nur angeschlossen.
              ctx.guarantee_required, ctx.variants_allowed, ctx.validity_days,
-             ctx.selection_types, ctx.deadline_time, ctx.question_deadline
+             ctx.selection_types, ctx.deadline_time, ctx.question_deadline,
+             -- ⚠ Der AT-Pfad ist eine ZWEITE Auswahlliste neben der in `build_lead_export`.
+             -- Wer dort eine ctx-Spalte ergaenzt und hier nicht, baut genau die Luecke, die
+             -- diesen Block 2026-08-22 ueberhaupt noetig gemacht hat: AT stand auf 0 %,
+             -- waehrend die Quelle die Werte trug. `test_eu_funded_in_beiden_exporten`
+             -- haelt die beiden Listen deshalb gegeneinander.
+             ctx.eu_funded, ctx.eu_programme
       FROM read_parquet({N}, hive_partitioning=1) n
       LEFT JOIN buyer b ON b.notice_id = n.notice_id
       LEFT JOIN matched m ON m.lead_id = n.notice_id AND m.rn = 1

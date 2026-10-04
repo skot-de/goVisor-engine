@@ -1571,6 +1571,23 @@ def export_branche(key):
                 "bietergemeinschaft": (bool(g("consortium_allowed"))
                                        if g("consortium_allowed") is not None else None),
                 "zertifikate": (str(g("doc_certs")).split(",") if g("doc_certs") else []),
+                # EU-Kofinanzierung. Gehoert zu den Anforderungen und nicht zu den
+                # Stammdaten: wer so einen Auftrag gewinnt, erbt Pflichten — Publizitaet,
+                # Verwendungsnachweis, Pruefrechte der Kommission, lange Aufbewahrung.
+                # Das gehoert in die Kalkulation, nicht in die Ueberraschung danach.
+                # ⚠ DREIWERTIG wie die Nachbarn: `None` heisst „die Quelle sagt nichts".
+                # Nur eForms kennt ein ausdrueckliches Nein; DOeE, DTVP, NetServer und
+                # Healy-Hudson tragen das Feld gar nicht, und die Altformate kennen nur
+                # ein Ja. Aus deren Schweigen ein „nicht gefoerdert" zu machen waere eine
+                # Behauptung ohne Beleg.
+                "euGefoerdert": (bool(g("eu_funded")) if g("eu_funded") is not None
+                                 else None),
+                # Der Programmname, wo die Quelle ihn nennt: eForms liefert Codes
+                # (ERDF_2021, CEF_2021, COPERNICUS), die Altformate freien Text.
+                # ⚠ Der Freitext ist mehrsprachig und nicht waehlbar — dieselbe Vergabe
+                # kann „Europaeisches Statistikprogramm" oder „Europees statistiekprogramma"
+                # tragen. Deshalb nur anzeigen, nie danach filtern.
+                "euProgramm": (str(g("eu_programme")) if g("eu_programme") else None),
                 # ⚠ Ortstermin: DREI Zustaende, und der mittlere ist der wichtige.
                 # `None` = die Unterlagen sagen nichts. `True/False` bei `pflicht` gilt nur,
                 # wenn ueberhaupt ein Termin erkannt wurde — sonst waere „nicht
