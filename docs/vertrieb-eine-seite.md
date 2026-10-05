@@ -54,8 +54,18 @@ Käufer gegenüber dem Feld.
 | Aussage | Zahl | woher |
 |---|---|---|
 | **„Rund 42 % der offenen deutschen Ausschreibungen stehen nicht in TED."** | 41,9–43,2 % | ⭐ am selben Tag **zweimal unabhängig** gemessen, identische Reihenfolge der Quellen |
-| **„Wir haben die Vergabeunterlagen vorab ausgewertet, nicht auf Zuruf."** | 34,1 % der **laufenden** Ausschreibungen | ⚠ immer mit dem Wort „laufend" — ohne Nenner wird daraus 1,6 % |
+| **„Wir haben die Vergabeunterlagen vorab ausgewertet, nicht auf Zuruf."** | **18,0 %** der laufenden Ausschreibungen *(2.657 von 14.775, gemessen 05.10.)* | ⚠ **FÄLLT TÄGLICH**, s. Kasten unten. Immer mit dem Wort „laufend" — ohne Nenner wären es 1,6 % |
 | **„Wir sagen Ihnen, warum ein Verfahren gescheitert ist."** | 11.512 von 79.075 | im amtlichen Wortlaut: „keine Angebote eingegangen" ist eine Chance, „Bedarf geändert" nicht |
+
+> ⛔ **Die 18 % waren einmal 34 % — und der Unterschied ist kein Messfehler.**
+> Das lange Papier nennt 34,1 %. Nachgerechnet am 05.10. sind es **18,0 %**, und der Grund
+> steht zwei Zeilen weiter oben in der Verbotstabelle: **die Dokumentenanalyse steht seit dem
+> 24. September**, weil das LLM-Guthaben leer ist. Neue Ausschreibungen kommen seitdem ohne
+> Auswertung herein, alte laufen ab — der Anteil sinkt mit jedem Tag von selbst.
+>
+> ⚠ **Das ist die teuerste Folge des Stillstands**, und sie war vorher niemandem aufgefallen:
+> er kostet nicht nur 3.946 wartende Dokumente, er **entwertet laufend den einzigen gemessenen
+> Vorsprung**, mit dem wir in ein Gespräch gehen.
 
 **Mehr Zahlen gehören nicht in ein Gespräch.** Alles Weitere steht im langen Papier und ist dort
 teils nur einmal gemessen — wer es nennt und gefragt wird, steht ohne Beleg da.

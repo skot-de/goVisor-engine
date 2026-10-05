@@ -438,6 +438,41 @@ Zuschlagszahl gefiltert ergeben sich 10.953 (≥3), **8.035 (≥5)**, 5.311 (≥
 Schwelle trifft 7.783.** Die Zahl ist damit nicht falsch, aber niemand kann sagen, was sie
 zählt. Sie steht an der Stelle, an der wir unsere eigene grösste Schwäche beziffern.
 
+### Nachrechenversuch vom 2026-10-05 — ⛔ sechs von sechs weichen ab
+
+Ich habe sechs der ◐-Zahlen aus den Daten nachzurechnen versucht. **Keine einzige kam auf den
+Wert im Papier.** Das heisst nicht, dass das Papier falsch liegt — meine Abfrage ist meine
+eigene Rekonstruktion, die ursprüngliche kann eine andere, gut begründete Abgrenzung gehabt
+haben. **Es heisst: ohne die hinterlegte Abfrage ist eine Zahl nicht prüfbar**, und wer es
+versucht, landet irgendwo zwischen 7 % und 80 % daneben.
+
+| Zahl | Papier | nachgerechnet | Abfrage |
+|---|---:|---:|---|
+| Wiederholungs-Indikator „nein" | 97,8 % | **89,1 %** | `attributes`, `path ILIKE '%RecurringProcurementIndicator'`, nach Wert gruppiert (190.518 / 23.322) |
+| chronische Fehlbedarfe ≥3 Fehljahre | 80 | **106** | `retender_signal`, `fail_years >= 3`; davon `still_open`: 42 |
+| Vorlauf der Nachfolge: Paare | 8.521 | **11.018** | `contract_succession` × `lead_duration` (`duration_source='echt'`) × `notices.publication_date` |
+| Vorlauf: Median | 232 Tage | **421 Tage** | dieselbe Abfrage, Quartile 33 bis 1.002 |
+| Single-Bid-Quote | 26,2 % | **24,9 %** | `awards`, `num_tenders = 1` gegen `num_tenders > 0`, ab 2023 (68.943 / 276.932) |
+| Neuzugang je Werktag | 1.300–1.480 | **1.089** | `notices`, letzte 28 Tage / 20 Werktage |
+
+⛔ **Und eine siebte, die auf der Vertriebsseite stand: 34,1 % der laufenden Ausschreibungen
+mit ausgewerteten Unterlagen. Nachgerechnet: 18,0 %** (2.657 von 14.775 offenen DE-Leads mit
+einem Eintrag in `doc_analysis`).
+
+Der Grund ist diesmal bekannt und keine Definitionsfrage: **die Dokumentenanalyse steht seit
+dem 24. September**, weil das LLM-Guthaben leer ist. Neue Ausschreibungen kommen ohne
+Auswertung herein, alte laufen ab — **der Anteil sinkt mit jedem Tag von selbst.**
+
+⚠ Das ist die teuerste Folge des Stillstands, und sie war vorher niemandem aufgefallen: er
+kostet nicht nur 3.946 wartende Dokumente, er **entwertet laufend den einzigen gemessenen
+Vorsprung**, mit dem wir in ein Gespräch gehen. Die Vertriebsseite trägt jetzt 18,0 % mit
+diesem Vorbehalt.
+
+⚠ **Das Feld `has_documents` taugt dafür NICHT** — es steht für alle 14.775 offenen DE-Leads
+auf „nein", obwohl Dokumente vorliegen. Der Unterlagen-Block ist für die Schweiz gebaut und
+für DE/AT nie verdrahtet; das ist seit dem 2026-09-01 als offener Punkt geführt. Wer hier
+nachrechnet und `has_documents` nimmt, bekommt 0 %.
+
 ### ○ Fremde Angaben
 
 2.000+ Unternehmen · ISO 27001 · „+82 % Win-Rate" · „100 % Abdeckung" · „über 200" / „300+" ·
