@@ -15,7 +15,25 @@
 # ============================================================================
 set -uo pipefail
 
-ROOT="/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor"
+# ⛔ WELCHER BAUM LAEUFT HIER? Bis zum 2026-10-05 stand an dieser Stelle ein fester Pfad auf
+# den Haupt-Baum — und damit lief nachts, was dort gerade ausgecheckt war. Am 2026-10-05 war
+# das ein Zweig, dem der KMU-Fix vom 01.09. fehlte: fuenf Wochen lang schrieb alter Code in
+# `web/data/strategie.json`, waehrend die Pruefungen in den Arbeitsbaeumen gruen aussahen,
+# weil `data` und `web/data` dort Symlinks hierher sind. Der Lauf gehoert deshalb in einen
+# Baum, der NICHTS anderes tut als laufen (`scripts/pruefe_laufender_code.py`).
+#
+# ⚠ Der Ort muss VOR der Selbstkopie bestimmt werden. Die Kopie liegt in `/tmp`; dort ist
+# `dirname "$0"` nicht mehr der Baum, sondern das Temp-Verzeichnis. Deshalb wird er hier
+# ermittelt, exportiert und von der Kopie uebernommen — und nur als letzte Rueckfallebene
+# steht noch ein fester Pfad da, damit ein Aufruf ueber eine Kette von Symlinks nicht ins
+# Leere laeuft statt zu arbeiten.
+if [ "${GOVISOR_ROOT:-}" = "" ]; then
+  GOVISOR_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." 2>/dev/null && pwd)"
+  [ -d "${GOVISOR_ROOT:-}/scripts" ] \
+    || GOVISOR_ROOT="/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor"
+  export GOVISOR_ROOT
+fi
+ROOT="$GOVISOR_ROOT"
 cd "$ROOT" || { echo "Repo-Verzeichnis fehlt: $ROOT"; exit 1; }
 
 # ⛔ SELBSTKOPIE — GEGEN DEN FEHLER, DER DIESEN LAUF SCHON ZWEIMAL GETOETET HAT.
@@ -33,8 +51,9 @@ cd "$ROOT" || { echo "Repo-Verzeichnis fehlt: $ROOT"; exit 1; }
 # und die Nacht damit verloren.
 #
 # Also: beim Start EINE Kopie anlegen und die ausfuehren. Wer danach am Original arbeitet,
-# aendert eine Datei, die niemand mehr liest. `ROOT` steht hart oben, deshalb ist der Ort
-# der Kopie gleichgueltig.
+# aendert eine Datei, die niemand mehr liest. Der Ort der Kopie ist gleichgueltig, weil
+# `GOVISOR_ROOT` oben VOR der Kopie bestimmt und exportiert wird — frueher stand dafuer ein
+# fester Pfad da, und genau der machte den Lauf blind fuer den Baum, in dem er liegt.
 if [ "${GOVISOR_TAGESLAUF_KOPIE:-0}" != "1" ]; then
   _KOPIE="$(mktemp "${TMPDIR:-/tmp}/daily_leads.XXXXXX")" || {
     echo "Selbstkopie fehlgeschlagen — Lauf abgebrochen, bevor er beginnt."; exit 1; }
