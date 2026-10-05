@@ -96,6 +96,14 @@ def gold_integrity(cfg: Config, country: str = "DE") -> list[tuple[str, int]]:
          "entities.parquet", "entity_id"),
         ("buyer_recent_awards.lead_id → leads", "buyer_recent_awards.parquet", "lead_id",
          "leads.parquet", "lead_id"),
+        # ⚠ Nachtrag 2026-10-05, gemeldet von der Verdrahtungssonde am Abend ihres Entstehens.
+        # `nachfrage_karte` kam mit 9ca372d und trug einen `buyer_entity`, der weder hier
+        # stand noch in `FK_AUSNAHMEN` begruendet war — dieselbe Luecke wie bei
+        # `lead_retender` am 11.09., nur diesmal am selben Tag gefunden. Vor dem Eintragen
+        # gemessen, weil ein FK mit Waisen in die AUSNAHMEN gehoert und keiner in die
+        # Pruefung: DE 83.373 Zeilen / 0 Waisen · AT 15.955 / 0 · CH 8.529 / 0 · LU 1.079 / 0.
+        ("nachfrage_karte.buyer_entity → entities", "nachfrage_karte.parquet", "buyer_entity",
+         "entities.parquet", "entity_id"),
         # ⚠ Nachtrag 2026-09-11. `lead_retender` trug seit dem 2026-08-25 einen `lead_id`
         # und stand in keiner Pruefung — aufgefallen ist es erst, als die Tabelle in einem
         # zweiten Land entstand. Eine Tabelle, die es nur einmal gibt, faellt in einer
