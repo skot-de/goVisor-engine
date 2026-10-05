@@ -180,3 +180,63 @@ def test_kurse_sind_nicht_veraltet():
     chf = roh["kurse"].get("CHF", {})
     assert jahr in chf, (
         f"Kein CHF-Kurs fuer {jahr} — Vergaben aus diesem Jahr erben den Vorjahreskurs.")
+
+
+# ── Der Teilausfall, der wie ein Erfolg aussah ───────────────────────────────────────────────
+
+@pytest.mark.skipif(not (ROOT / "data" / "reference" / "waehrungskurse.json").exists(),
+                    reason="keine Kursdatei auf dieser Maschine")
+def test_chf_wurde_frisch_geholt_und_nicht_uebernommen():
+    """⚠ `geholt_am` gilt fuer die DATEI, nicht fuer jede Zahl darin.
+
+    Am 2026-10-05 trug die Datei das Datum desselben Tages und hatte trotzdem keinen
+    CHF-Kurs fuer 2026: der naechtliche Abruf bekam fuer `M.CHF` einen 504, das Skript
+    uebersprang die Reihe und schrieb mit Exit 0 weiter. Zwoelf Waehrungen waren frisch,
+    eine nicht, und nichts sagte es. `A.RON` fiel am selben Lauf ganz aus der Datei.
+
+    Seitdem traegt die Datei zwei Buecher: `luecken` (was nicht geholt werden konnte) und
+    `uebernommen` (was deshalb aus der vorigen Datei steht). Dieser Test prueft BEIDE fuer
+    CHF — die einzige Fremdwaehrung mit nennenswertem Bestand (50.350 Bekanntmachungen
+    gegen 216 fuer USD). Fuer ISK oder TRY waere derselbe Anspruch Laerm.
+
+    ⚠ Schlaegt er an, sind die Zahlen trotzdem BENUTZBAR (die Uebernahme hat sie gerettet).
+    Er sagt nur: der letzte Abruf kam fuer CHF nicht durch. Der naechste erfolgreiche Lauf
+    macht ihn von selbst wieder gruen.
+    """
+    import json as _json
+    roh = _json.loads((ROOT / "data" / "reference" / "waehrungskurse.json")
+                      .read_text(encoding="utf-8"))
+    assert "CHF" not in roh.get("luecken", {}), (
+        f"CHF konnte nicht geholt werden: {roh.get('luecken', {}).get('CHF')}. "
+        "Nachziehen mit: python3 scripts/fetch_ezb_kurse.py --waehrungen CHF")
+    assert "CHF" not in roh.get("uebernommen", {}), (
+        f"CHF-Jahre stammen aus einer frueheren Datei: "
+        f"{roh.get('uebernommen', {}).get('CHF')}. Das Datum in `geholt_am` gilt fuer sie "
+        "NICHT. Nachziehen mit: python3 scripts/fetch_ezb_kurse.py --waehrungen CHF")
+
+
+def test_uebernahme_fuellt_luecken_und_meldet_nur_das_gefragte():
+    """Die Uebernahme ist der eigentliche Schutz, also wird sie ohne Netz geprueft.
+
+    Drei Eigenschaften, jede hat einen eigenen Grund:
+    · fehlende Jahre werden gefuellt (sonst schrumpft die Datei bei jedem Ausfall),
+    · frisch geholte Werte werden NICHT ueberschrieben (sonst friert ein alter Kurs fest),
+    · nicht angefragte Waehrungen bleiben erhalten, aber ungemeldet (ein Lauf mit
+      `--waehrungen CHF` soll die uebrigen zwoelf mitnehmen, ohne zwoelf Warnungen zu
+      erzeugen, die niemanden angehen).
+    """
+    import importlib.util
+    pfad = ROOT / "scripts" / "fetch_ezb_kurse.py"
+    spec = importlib.util.spec_from_file_location("fetch_ezb_kurse", pfad)
+    modul = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(modul)
+
+    neu = {"CHF": {"2024": 0.95}}
+    alt = {"CHF": {"2024": 9.99, "2025": 0.94}, "TRY": {"2025": 44.8}}
+    uebernommen = modul._uebernimm(neu, alt, {"CHF"})
+
+    assert neu["CHF"]["2025"] == 0.94, "fehlendes Jahr nicht uebernommen"
+    assert neu["CHF"]["2024"] == 0.95, "frisch geholter Wert wurde ueberschrieben"
+    assert neu["TRY"]["2025"] == 44.8, "nicht gefragte Waehrung ging verloren"
+    assert uebernommen == {"CHF": ["2025"]}, (
+        f"gemeldet werden soll nur das Gefragte, gemeldet wurde {uebernommen}")

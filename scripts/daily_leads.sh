@@ -15,7 +15,25 @@
 # ============================================================================
 set -uo pipefail
 
-ROOT="/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor"
+# ⛔ WELCHER BAUM LAEUFT HIER? Bis zum 2026-10-05 stand an dieser Stelle ein fester Pfad auf
+# den Haupt-Baum — und damit lief nachts, was dort gerade ausgecheckt war. Am 2026-10-05 war
+# das ein Zweig, dem der KMU-Fix vom 01.09. fehlte: fuenf Wochen lang schrieb alter Code in
+# `web/data/strategie.json`, waehrend die Pruefungen in den Arbeitsbaeumen gruen aussahen,
+# weil `data` und `web/data` dort Symlinks hierher sind. Der Lauf gehoert deshalb in einen
+# Baum, der NICHTS anderes tut als laufen (`scripts/pruefe_laufender_code.py`).
+#
+# ⚠ Der Ort muss VOR der Selbstkopie bestimmt werden. Die Kopie liegt in `/tmp`; dort ist
+# `dirname "$0"` nicht mehr der Baum, sondern das Temp-Verzeichnis. Deshalb wird er hier
+# ermittelt, exportiert und von der Kopie uebernommen — und nur als letzte Rueckfallebene
+# steht noch ein fester Pfad da, damit ein Aufruf ueber eine Kette von Symlinks nicht ins
+# Leere laeuft statt zu arbeiten.
+if [ "${GOVISOR_ROOT:-}" = "" ]; then
+  GOVISOR_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." 2>/dev/null && pwd)"
+  [ -d "${GOVISOR_ROOT:-}/scripts" ] \
+    || GOVISOR_ROOT="/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor"
+  export GOVISOR_ROOT
+fi
+ROOT="$GOVISOR_ROOT"
 cd "$ROOT" || { echo "Repo-Verzeichnis fehlt: $ROOT"; exit 1; }
 
 # ⛔ SELBSTKOPIE — GEGEN DEN FEHLER, DER DIESEN LAUF SCHON ZWEIMAL GETOETET HAT.
@@ -33,8 +51,9 @@ cd "$ROOT" || { echo "Repo-Verzeichnis fehlt: $ROOT"; exit 1; }
 # und die Nacht damit verloren.
 #
 # Also: beim Start EINE Kopie anlegen und die ausfuehren. Wer danach am Original arbeitet,
-# aendert eine Datei, die niemand mehr liest. `ROOT` steht hart oben, deshalb ist der Ort
-# der Kopie gleichgueltig.
+# aendert eine Datei, die niemand mehr liest. Der Ort der Kopie ist gleichgueltig, weil
+# `GOVISOR_ROOT` oben VOR der Kopie bestimmt und exportiert wird — frueher stand dafuer ein
+# fester Pfad da, und genau der machte den Lauf blind fuer den Baum, in dem er liegt.
 if [ "${GOVISOR_TAGESLAUF_KOPIE:-0}" != "1" ]; then
   _KOPIE="$(mktemp "${TMPDIR:-/tmp}/daily_leads.XXXXXX")" || {
     echo "Selbstkopie fehlgeschlagen — Lauf abgebrochen, bevor er beginnt."; exit 1; }
@@ -968,9 +987,21 @@ $PY -m govisor.kategorie --country DE --schreiben \
 #
 # ⚠ KEIN ABBRUCH. Faellt die EZB aus, bleibt die alte Datei stehen und der Lauf rechnet
 # mit ihr weiter. Alte Kurse sind besser als keine Werte — und der naechste Lauf holt nach.
+#
+# ⚠ DREI AUSGAENGE, NICHT ZWEI. Bis zum 2026-10-05 stand hier ein blosses `|| echo`, und
+# genau dazwischen fiel der Fehler durch: der Abruf holte zwoelf von dreizehn Waehrungen,
+# meldete Exit 0 und schrieb eine Datei mit dem Datum von heute, in der CHF der Kurs fuer
+# das laufende Jahr fehlte. Fuer die Schweiz rechnete `value_eur` ab da mit dem Vorjahres-
+# kurs, und kein Protokoll, kein Test und kein Waechter sagte es.
 step "Waehrungskurse (EZB-Referenzkurse)"
-$PY scripts/fetch_ezb_kurse.py \
-  || echo "  ⚠ Kursabruf fehlgeschlagen — es gelten die Kurse der letzten erfolgreichen Holung."
+$PY scripts/fetch_ezb_kurse.py
+case $? in
+  0) echo "  Kurse vollstaendig geholt." ;;
+  2) echo "  ⚠ Kursabruf nur TEILWEISE — die Datei ist geschrieben und benutzbar, aber ein"
+     echo "    Teil stammt aus der vorigen Holung. Welcher: Block 'luecken'/'uebernommen' in"
+     echo "    data/reference/waehrungskurse.json. Nachziehen: scripts/fetch_ezb_kurse.py" ;;
+  *) echo "  ⚠ Kursabruf fehlgeschlagen — es gelten die Kurse der letzten erfolgreichen Holung." ;;
+esac
 
 step "AT/CH-Gold (volle Pipeline, 26 Schritte je Land)"
 # ⚠ LU laeuft HIER mit, nicht ueber `cli gold`. Der CLI-Weg zieht build_hr_index() mit —
@@ -1713,6 +1744,15 @@ done
 #
 # Warnung, kein Abbruch — aus demselben Grund wie oben.
 echo ""
+# ⚠ ZUERST: laeuft hier ueberhaupt der Code, gegen den geprueft wird? Am 2026-10-05 standen
+# zwei Pruefungen rot und meldeten eine entartete KMU-Kennzahl — der Fix dafuer lag aber auf
+# zwei Zweigen, und der Nachtlauf faehrt einen dritten Baum. Weil `web/data` und `data` in
+# jedem Arbeitsbaum Symlinks in den Haupt-Baum sind, las die Pruefung die Ausgabe von FREMDEM
+# Code. Diese Sonde steht deshalb vor allen anderen: schlaegt sie an, kann jeder Befund
+# darunter ein Trugbild sein.
+$PY scripts/pruefe_laufender_code.py \
+  || echo "  → Nachtlauf-Baum weicht ab. Details: python3 scripts/pruefe_laufender_code.py --alle"
+
 $PY scripts/pruefe_verdrahtung.py \
   || echo "  → Verdrahtungspruefung meldet Befunde. Details: python3 scripts/pruefe_verdrahtung.py --offen"
 
@@ -1851,6 +1891,26 @@ $PY scripts/pruefe_werte.py \
 $PY scripts/pruefe_gold_integritaet.py \
   || echo "  → Gold-Waechter meldet Waisen. Details: python3 scripts/pruefe_gold_integritaet.py --land <L>"
 
+# ── Sonde 7: misst eine Kennzahl ueberhaupt noch etwas? ──────────────────────────────────
+# Am 2026-09-01 trugen in der SCHWEIZ alle 104 ausgewerteten Vergabestellen denselben
+# KMU-Anteil: 100 %. Rechnerisch korrekt, als Aussage leer — und im Produkt als Marktbefund
+# zu lesen („in der Schweiz gehen alle Auftraege an KMU"). Ursache war ein stiller
+# Stichprobenfilter, kein Rechenfehler.
+#
+# ⚠ WARUM KEINE DER BESTEHENDEN SONDEN DAS SIEHT. Die Datei war frisch, die Verdrahtung
+# stand, kein Feld war NULL, kein Fremdschluessel gebrochen. Der Defekt macht kein
+# Geraeusch: eine Kennzahl ohne Unterschied sieht exakt aus wie eine Kennzahl. Auffallen
+# kann sie nur, wenn jemand zwei LAENDER nebeneinanderlegt — und das tut im Tagesbetrieb
+# niemand von selbst.
+#
+# Der Detektor ist deshalb bewusst grob und landerblind: Streuung null ueber ein ganzes
+# Land. Er sagt nicht, WOHER die Entartung kommt (Vorgabewert, Vokabel-Konstante,
+# entartete Stichprobe, ein Connector, der ein Feld nie fuellt) — nur, dass die Kennzahl
+# nichts mehr unterscheidet. Das genuegt, um sie aus dem Produkt zu halten.
+# ⚠ Sie liest nur `web/data/strategie.json` und darf neben einem Abrufer laufen.
+$PY scripts/pruefe_streuung.py \
+  || echo "  → Kennzahl ohne Streuung, nicht markiert. Details: python3 scripts/pruefe_streuung.py --offen"
+
 # ── BIBEL-PRUEFUNG ───────────────────────────────────────────────────────────────────────
 #
 # Die Laender-Bibel (docs/laender/) altert anders als Code: sie faellt nicht um, sie wird
@@ -1893,6 +1953,18 @@ $PY scripts/pruefe_vollstaendigkeit.py \
 # — dort wird sie nicht nachgezogen, und das Dokument widersprach sich. Deshalb `||`.
 $PY scripts/zahlen_nachziehen.py \
   || echo "  → Zahlen nachgezogen, aber eine Zahl steht doppelt. Details: python3 scripts/zahlen_nachziehen.py"
+
+# ─────────────────────────────────────────────────────────────────────────────────────────
+# TELEMETRIE-AUFBEWAHRUNG (0035). Loescht Ereignisse aelter als 180 Tage.
+#
+# ⚠ OHNE DIESEN AUFRUF RAEUMT NICHTS. Die Funktion steht seit 0035 in der Datenbank, aber
+# Postgres hat keinen Zeitgeber. Speicherbegrenzung ist Pflicht (DSGVO Art. 5 Abs. 1 lit. e),
+# und der Ausfall waere lautlos: die Tabelle waechst, nichts geht kaputt, niemand merkt es.
+#
+# Fail-open mit `||`: ein nicht geraeumtes Protokoll ist ein Mangel, aber kein Grund, den
+# restlichen Nachtlauf abzubrechen.
+$PY scripts/telemetrie_aufraeumen.py \
+  || echo "  → Telemetrie nicht geräumt. Details: python3 scripts/telemetrie_aufraeumen.py --probe"
 
 # Alte Logs aufräumen (>30 Tage)
 find "$LOG_DIR" -name 'daily-*.log' -type f -mtime +30 -delete 2>/dev/null || true

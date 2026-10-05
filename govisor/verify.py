@@ -29,7 +29,9 @@ from .config import Config
 FK_AUSNAHMEN: dict[str, str] = {
     "entity_merge_map.parquet":
         "100 % Waisen, und das ist der Zweck: die Spalte nennt die QUELL-Entitaet einer "
-        "Verschmelzung, die es danach nicht mehr gibt (gemessen 2026-08-31: 10.018).",
+        "Verschmelzung, die es danach nicht mehr gibt (gemessen 2026-10-02: 10.025 = "
+        "10.018 LLM-Konsens + 7 menschliche Entscheide aus "
+        "curated/DE_entity_merge_entscheidung.csv).",
     "entity_group.parquet":
         "12.861 nicht aufloesbar, davon 4.916 verschmolzen und 7.945 Mitglieder aus dem "
         "kuratierten Gruppen-Katalog, die in DE nie als Partei auftraten. Eine "
