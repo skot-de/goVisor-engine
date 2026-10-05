@@ -93,16 +93,47 @@ def test_ueberlappung_macht_den_riegel_nicht_rot():
         "nicht ins Netz")
 
 
-def test_pfadmodus_findet_fremden_besitz():
-    """⚠ SELBSTPROBE am echten Fall, der das Skript ausgeloest hat.
+def _fremder_pfad() -> tuple[str, str] | None:
+    """Sucht sich einen Pfad, den gerade ein ANDERER Zweig anfasst. (Pfad, Zweig) oder None.
 
-    `web/app/datenschutz/page.tsx` liegt auf `web/grounding-page`. Findet der Pfadmodus das
-    nicht, ist er wertlos — und zwar lautlos, denn „niemand" sieht wie eine Antwort aus.
+    ⚠ HIER STAND EIN FESTER FALL, und er ist am 2026-10-05 umgefallen: der Test nagelte
+    `web/app/datenschutz/page.tsx` auf `web/grounding-page` fest. Zwei Stunden spaeter lag die
+    Datei auf `origin/main`, niemand aenderte sie mehr — und die Selbstprobe war rot, obwohl
+    das Skript tadellos arbeitete. Ein Waechter, der die TAGESLAGE festhaelt statt seiner
+    Eigenschaft, veraltet mit der Lage. Deshalb wird der Fall jetzt gesucht statt gesetzt.
     """
-    r = subprocess.run(["bash", str(WER), "--kein-abruf", "web/app/datenschutz/page.tsx"],
+    aktuell = subprocess.run(["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd=WURZEL,
+                             capture_output=True, text=True).stdout.strip()
+    zweige = subprocess.run(["git", "for-each-ref", "--format=%(refname:short)",
+                             "refs/remotes/origin"], cwd=WURZEL,
+                            capture_output=True, text=True).stdout.split()
+    for z in zweige:
+        kurz = z.split("origin/", 1)[-1]
+        if kurz in ("HEAD", "main", aktuell):
+            continue
+        dateien = subprocess.run(["git", "diff", "--name-only", f"origin/main...{z}"],
+                                 cwd=WURZEL, capture_output=True, text=True).stdout.split()
+        if dateien:
+            return dateien[0], kurz
+    return None
+
+
+def test_pfadmodus_findet_fremden_besitz():
+    """⚠ SELBSTPROBE: findet der Pfadmodus einen Pfad, an dem ein anderer Zweig arbeitet?
+
+    Das ist der Fall, fuer den das Skript gebaut wurde — und er versagt LAUTLOS, denn
+    „niemand arbeitet daran" sieht wie eine Antwort aus.
+    """
+    fall = _fremder_pfad()
+    if fall is None:
+        import pytest
+        pytest.skip("gerade arbeitet kein anderer Zweig an einer Datei — nichts zu pruefen")
+    pfad, zweig = fall
+    r = subprocess.run(["bash", str(WER), "--kein-abruf", pfad],
                        cwd=WURZEL, capture_output=True, text=True, timeout=120)
-    assert "grounding-page" in r.stdout, (
-        "SELBSTPROBE: der Pfadmodus findet den fremden Besitz nicht.\n" + r.stdout + r.stderr)
+    assert zweig in r.stdout, (
+        f"SELBSTPROBE: `{pfad}` liegt auf `{zweig}`, der Pfadmodus sagt das nicht.\n"
+        + r.stdout + r.stderr)
     assert r.returncode == 1, f"fremder Besitz muss Rueckgabewert 1 geben, war {r.returncode}"
 
 
