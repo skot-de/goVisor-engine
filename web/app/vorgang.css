@@ -35,6 +35,13 @@
 .vg-verlauf li.aus::before { background: #2f6fdd; }
 .vg-verlauf li.zu::before { background: #1a6b34; }
 .vg-verlauf li.kor::before { background: #d08a2a; }
+/* ⚠ Ein aufgehobenes Verfahren darf NICHT wie ein Zuschlag aussehen. Es trug bis zum
+   2026-10-05 die Zuschlagsfarbe (gruen, `.zu`) und die Beschriftung „Zuschlag" — bei
+   1.507 Stationen, deren Verfahren in Wahrheit aufgehoben wurde. Gedeckt, nicht rot:
+   eine Aufhebung ist kein Fehler, sondern ein Ausgang. */
+.vg-verlauf li.auf::before { background: #8a8f99; }
+.vg-verlauf li.auf .vg-art { color: var(--fg-2, #667); }
+.vg-grund { font-style: normal; }
 .vg-datum { font-variant-numeric: tabular-nums; font-size: .82rem;
             color: var(--fg-2, #667); }
 .vg-art { font-weight: 600; font-size: .9rem; }

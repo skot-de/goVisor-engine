@@ -1965,7 +1965,7 @@ function renderChecklistBlock(a, l){
         <button class="btn btn-p btn-sm" data-clkombi='${esc(kombi)}'>${tk("Kopieren &amp; speichern")}</button></span></div></div>`;
     return `<article class="item" data-clitem="${it._i}">
       <div class="ih"><button class="dchk" data-clchk="${it._i}">✓</button>
-        <button class="cl-satz" data-clopen="${it._i}">${esc(satz)}${wert}${vgl}</button>
+        <button class="cl-satz" data-clopen="${it._i}" aria-expanded="false"><span class="cl-caret" aria-hidden="true">›</span>${esc(satz)}${wert}${vgl}</button>
         <span class="cl-art">${esc(it.label||it.req_type||'')}</span></div>
       <div class="ibody">${q}${block}</div></article>`;
   };
@@ -3102,6 +3102,37 @@ function renderAnalyse(l){
           if(a.eignung && a.eignung.length) rows.push(`<div class="req"><span class="mk i">i</span>
             <span class="code">${tk("Eignung")}</span><span class="lbl">${esc(a.eignung.map(e=>EIG[e]||e).join(' · '))}</span>
             <span class="st">${tk("Im Angebot nachzuweisen")}</span></div>`);
+          /* EU-Kofinanzierung. Steht hier und nicht bei den Stammdaten, weil sie den
+             Auftragnehmer etwas kostet: Publizitaetspflicht, Verwendungsnachweis,
+             Pruefrechte der Kommission, lange Aufbewahrung. Wer das erst nach dem
+             Zuschlag erfaehrt, hat es nicht einkalkuliert.
+             ⚠ NUR BEI `true` ANZEIGEN. `false` waere eine Zeile, die nichts aussagt
+             (die grosse Mehrheit ist nicht gefoerdert), und `null` heisst „die Quelle
+             sagt nichts" — daraus ein „nicht gefoerdert" zu machen waere falsch. */
+          if(a.euGefoerdert===true) rows.push(`<div class="req"><span class="mk i">i</span>
+            <span class="code">${tk("EU-Mittel")}</span><span class="lbl">${a.euProgramm?esc(a.euProgramm):tk("kofinanziert")}</span>
+            <span class="st">${tk("Mit Publizitätspflicht, Verwendungsnachweis und Prüfrechten der EU")}</span></div>`);
+          /* Direktvergabe: die Stelle hat ohne Wettbewerb vergeben und musste das
+             begruenden. Fuer einen Bieter die Frage hinter der Frage — „nur ein
+             Anbieter aus technischen Gruenden" ist angreifbar, wenn man es selbst kann.
+             ⚠ Der Text ist der AMTLICHE Wortlaut der EU-Codeliste und deshalb lang
+             (Median 103 Zeichen). Er steht ungekuerzt da: eine eigene Kurzfassung waere
+             eine Umdeutung eines Rechtsbegriffs. */
+          if(a.direktvergabeGrund) rows.push(`<div class="req"><span class="mk q">!</span>
+            <span class="code">${tk("Direktvergabe")}</span><span class="lbl">${tk("ohne Wettbewerb vergeben")}</span>
+            <span class="st">${esc(tk(a.direktvergabeGrund))}</span></div>`);
+          /* Ausfuehrungsbedingungen. Sie stehen hier, weil sie den Bieter etwas kosten
+             oder ihn ausschliessen — nicht als Beiwerk.
+             ⚠ „vorbehalten" bekommt das Ausschlusszeichen, nicht das Hinweiszeichen:
+             bei `reserved-execution=yes` ist der Auftrag Werkstaetten vorbehalten und
+             ein gewoehnlicher Bieter kann gar nicht mitbieten. Das als freundliches
+             „i" neben einer E-Rechnungspflicht zu zeigen, waere eine Verharmlosung. */
+          for(const x of (a.ausfuehrung||[])){
+            const sperre = x.was === "vorbehalten";
+            rows.push(`<div class="req"><span class="mk ${sperre?'n':'i'}">${sperre?'&#10007;':'i'}</span>
+              <span class="code">${tk("Ausführung")}</span><span class="lbl">${esc(tk(x.was))}</span>
+              <span class="st">${esc(tk(x.text))}</span></div>`);
+          }
           if(!rows.length) return '';
           return `<div class="reqgroup-h">${tk("Strukturierte Anforderungen")}<span class="prov-echt">${tk("aus der Bekanntmachung")}</span></div>`+rows.join('');
         })()}

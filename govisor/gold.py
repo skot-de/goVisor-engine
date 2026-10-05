@@ -467,7 +467,29 @@ def build_quality(cfg: Config, country: str = "DE"):
     L = cfg.silver_table_glob("lots", country)
     A = cfg.silver_table_glob("awards", country)
     PE = str(cfg.gold_dir / country / "party_entity.parquet")
+    AT_ = cfg.silver_table_glob("attributes", country)
     out = cfg.gold_dir / country / "quality.parquet"
+    # ⚠ Ein Land ohne `attributes` darf den Bau nicht abbrechen (DuckDB wirft bei einem
+    # Glob ohne Treffer einen IO-Fehler). Dann eine leere Tabelle gleicher Form.
+    import glob as _glob
+    ERGEBNIS = (f"""
+          SELECT notice_id,
+                 count(*) FILTER (WHERE value = 'clos-nw')               AS lose_leer,
+                 count(*) FILTER (WHERE value = 'selec-w')               AS lose_vergeben,
+                 count(*) FILTER (WHERE value IN ('open-nw','unpublished')) AS lose_offen
+          FROM read_parquet('{AT_}', hive_partitioning=1)
+          WHERE path ILIKE '%LotResult.TenderResultCode' AND path NOT ILIKE '%@%'
+          GROUP BY 1"""
+        if _glob.glob(AT_) else
+        "SELECT NULL::VARCHAR AS notice_id, 0::BIGINT AS lose_leer, "
+        "0::BIGINT AS lose_vergeben, 0::BIGINT AS lose_offen WHERE false")
+    GRUND = (f"""
+          SELECT notice_id, string_agg(DISTINCT value, ',') AS grund
+          FROM read_parquet('{AT_}', hive_partitioning=1)
+          WHERE path ILIKE '%DecisionReason.DecisionReasonCode' AND path NOT ILIKE '%@%'
+          GROUP BY 1"""
+        if _glob.glob(AT_) else
+        "SELECT NULL::VARCHAR AS notice_id, NULL::VARCHAR AS grund WHERE false")
     out.parent.mkdir(parents=True, exist_ok=True)
     # Jeder ERKENNBARE Defekt wird geflaggt (nicht weggeworfen). final_value_clean
     # ist gesetzt, wenn der Betrag plausibel ist UND wir ihn in Euro ausdruecken koennen:
@@ -490,6 +512,13 @@ def build_quality(cfg: Config, country: str = "DE"):
                   FROM '{A}' GROUP BY 1),
           win AS (SELECT DISTINCT notice_id FROM '{PE}' WHERE role='winner'),
           awp AS (SELECT DISTINCT notice_id FROM '{A}'),
+          -- ⚠ eForms SAGT, ob ein Los vergeben wurde — wir mussten es nie erschliessen.
+          -- `LotResult.TenderResultCode` (BT-142): `selec-w` Gewinner gewaehlt,
+          -- `clos-nw` geschlossen ohne Gewinner, `open-nw` offen ohne Gewinner.
+          erg AS ({ERGEBNIS}),
+          -- Und BT-144 sagt WARUM: no-rece (keine Angebote), all-rej (alle abgelehnt),
+          -- chan-need (Bedarf geaendert), ins-fund (Mittel fehlen) und sieben weitere.
+          grd AS ({GRUND}),
           -- ⚠ WELCHE QUELLE LIEFERT UEBERHAUPT ZUSCHLAGSDATEN? Abgeleitet, nicht getippt:
           -- eine Quelle, deren Zuschlags-Bekanntmachungen zu unter 1 % eine Zeile in
           -- `awards` haben, liefert strukturell keine. Sobald sie es tut, faellt die
@@ -508,12 +537,23 @@ def build_quality(cfg: Config, country: str = "DE"):
                    coalesce(bid.bad, false) AS bad_bid,
                    (win.notice_id IS NOT NULL) AS has_winner,
                    (awp.notice_id IS NOT NULL) AS has_award,
+                   -- Die ausdrueckliche Auskunft der Quelle, dreiwertig:
+                   -- TRUE  = jedes Los blieb ohne Gewinner
+                   -- FALSE = mindestens ein Los wurde vergeben
+                   -- NULL  = die Quelle sagt nichts (Altformate, nationale Quellen)
+                   CASE WHEN erg.notice_id IS NULL THEN NULL
+                        WHEN erg.lose_vergeben = 0 AND erg.lose_leer > 0 THEN TRUE
+                        ELSE FALSE END AS quelle_sagt_leer,
+                   erg.lose_leer, erg.lose_vergeben,
+                   grd.grund AS nichtvergabe_grund,
                    coalesce(quelle.anteil, 1.0) < 0.01 AS quelle_ohne_zuschlagsdaten
             FROM '{N}' n
             LEFT JOIN dur ON dur.notice_id=n.notice_id
             LEFT JOIN bid ON bid.notice_id=n.notice_id
             LEFT JOIN win ON win.notice_id=n.notice_id
             LEFT JOIN awp ON awp.notice_id=n.notice_id
+            LEFT JOIN erg ON erg.notice_id=n.notice_id
+            LEFT JOIN grd ON grd.notice_id=n.notice_id
             LEFT JOIN quelle ON quelle.schema_gen=n.schema_gen
           )
           SELECT notice_id,
@@ -611,13 +651,54 @@ def build_quality(cfg: Config, country: str = "DE"):
                  -- noch Faelle, bei denen die Quelle einen Zuschlag haette melden koennen.
                  WHEN notice_kind='can' AND quelle_ohne_zuschlagsdaten
                       THEN 'ohne_zuschlagsdaten'
-                 WHEN notice_kind='can' AND NOT has_award THEN 'erfolglos'
+                 -- ⚠⚠ DIE QUELLE SCHLAEGT DIE ABLEITUNG, und sie steht deshalb DAVOR.
+                 --
+                 -- Gemessen am 2026-10-04: `erfolglos` fiel mit der eForms-Umstellung
+                 -- von 13,0 % (2019) auf 0,9 % (2024-2026). Nicht kaputt, sondern blind:
+                 -- die Ableitung unten lautet „Zuschlag OHNE Award-Zeile", und eForms
+                 -- schreibt fuer JEDES Los ein `LotResult` — auch fuer ein Los, das
+                 -- niemand gewonnen hat. `has_award` ist damit wahr, und 11.201 von
+                 -- 12.169 echten Fehlvergaben landeten in `unbekannt`.
+                 --
+                 -- `TenderResultCode` sagt es direkt. Der Status gilt nur, wenn KEIN
+                 -- einziges Los vergeben wurde (`lose_vergeben = 0`): bleiben in einer
+                 -- Bekanntmachung drei von zehn Losen leer, ist das Verfahren nicht
+                 -- erfolglos, sondern teilweise vergeben. Gemessen: 12.169 ganz leer
+                 -- gegen 3.455 teilweise — die zu verschmelzen haette die Schwaeche-Achse
+                 -- von `market_opportunity` um ein Viertel aufgeblaeht.
+                 --
+                 -- ⚠ Die Verzweigung steht HINTER `has_winner` und `open_house`, nicht
+                 -- davor: ein Vorgang mit Gewinner bleibt `vergeben`, auch wenn die
+                 -- Losergebnisse etwas anderes nahelegen (121 solcher Widersprueche
+                 -- gemessen — lieber konservativ als ein Zuschlag, den wir wegreden).
+                 WHEN notice_kind='can' AND quelle_sagt_leer THEN 'erfolglos'
+                 -- ⚠ UND IN DIE ANDERE RICHTUNG. Der Rueckfall unten liest „keine
+                 -- awards-Zeile, also erfolglos". Zwei eForms-Vorgaenge (371480_2024,
+                 -- 298232_2024) hatten keine awards-Zeile, waehrend die Quelle
+                 -- ausdruecklich zwei vergebene Lose meldet — der Parser hatte die Zeilen
+                 -- nicht gebildet. Sie standen damit als erfolglos da, obwohl vergeben
+                 -- wurde. Dasselbe Prinzip gilt also beidseitig: sagt die Quelle „ein Los
+                 -- ist vergeben", darf die Ableitung nicht dagegen entscheiden.
+                 WHEN notice_kind='can' AND NOT has_award
+                      AND quelle_sagt_leer IS DISTINCT FROM FALSE THEN 'erfolglos'
                  WHEN notice_kind='can' THEN 'unbekannt'
                  -- NEU: auch die AUSSCHREIBUNGSSEITE markieren. Bisher lief der Status nur
                  -- auf Zuschlägen, weshalb 1.816 offene Open-House-Verfahren unerkannt in
                  -- der Akquise standen.
                  WHEN notice_kind IN ('cn','pin') AND {_open_house_sql()} THEN 'open_house'
-                 END AS verfahren_status
+                 END AS verfahren_status,
+            -- WARUM nicht vergeben wurde — BT-144, elf Codes, bisher ungenutzt:
+            --   no-rece    keine Angebote eingegangen        (6.011 Vorgaenge)
+            --   all-rej    alle Angebote abgelehnt           (2.623)
+            --   chan-need  der Bedarf hat sich geaendert     (2.264)
+            --   ins-fund   unzureichende Mittel              (  984)
+            --   one-admis  nur ein zulaessiges Angebot       (  262)
+            -- Das trennt die Faelle, die fuer einen Bieter GEGENSAETZLICH sind:
+            -- `no-rece` heisst „hier hat sich niemand beworben" (Chance),
+            -- `chan-need` und `ins-fund` heissen „kommt so nicht wieder" (keine Chance).
+            -- Bis heute lief beides ununterschieden in `retender_signal`.
+            nichtvergabe_grund,
+            lose_leer, lose_vergeben
           FROM q
         ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
     """)
@@ -3599,6 +3680,54 @@ def _assign_slugs(cfg: Config, country: str, lead_ids: list[str],
 
 
 
+def _execution_terms_sql(cfg: Config, country: str) -> str:
+    """Ausfuehrungsbedingungen je Notice, aus der typisierten `requirements`-Tabelle.
+
+    ⚠ WARUM NICHT AUS `attributes` WIE DIE NACHBARN. `ContractExecutionRequirement`
+    kommt je Vorgang bis zu fuenfmal vor, und erst das `@listName` am Code sagt, wovon
+    die Rede ist (elektronische Rechnung, vorbehaltene Ausfuehrung, Geheimhaltung).
+    In der flachen Attributtabelle stehen Werte und Listennamen als getrennte Zeilen
+    ohne Index — nicht paarbar. Seit dem 2026-10-05 paart der PARSER sie am Knoten und
+    schreibt sie als `kind='execution'` nach `requirements`; hier werden sie nur noch
+    eingesammelt.
+
+    Die Ausgabe ist EIN Feld mit `liste=wert`-Paaren und keine Spalte je Merkmal — es
+    sind neun Listen mit je eigenem Vokabular, und neue koennen dazukommen
+    (`customer-service` und `esubmission` tauchten erst beim Vollneubau auf).
+
+    ⚠ GETRAGEN WIRD NUR, WAS DEN BIETER BINDET. Die Quelle meldet jede Bedingung auch
+    dann, wenn sie NICHTS verlangt — `reserved-execution=no` steht bei 247.376
+    Vorgaengen, `einvoicing=allowed` bei 77.226. Das sind zusammen 1,55 der 1,74 Mio.
+    Zeilen, und sie sagen nur, dass keine Bedingung besteht.
+
+    Das ist nicht bloss Sparsamkeit: die Aggregation ueber alle 1,74 Mio. Zeilen hat
+    den DE-Lauf an der Speichergrenze sterben lassen. Mit der Einschraenkung bleiben
+    rund 190.000 Zeilen.
+
+    Die Liste der bindenden Auspraegungen ist GEMESSEN (Vollbestand DE, 2026-10-05),
+    nicht geraten. Taucht eine neue auf, faellt sie hier heraus und
+    `pruefe-ausfuehrung.mjs` meldet sie als unbekannt — sichtbar, nicht stumm.
+    """
+    import glob as _glob
+    RQ = cfg.silver_table_glob("requirements", country)
+    if not _glob.glob(RQ):
+        return ("SELECT NULL::VARCHAR AS notice_id, NULL::VARCHAR AS execution_terms "
+                "WHERE false")
+    #: (Liste, Wert) → der Bieter muss etwas tun oder darf nicht mitbieten.
+    BINDEND = (("reserved-execution", "yes"), ("einvoicing", "required"),
+               ("nda", "true"), ("ecatalog-submission", "required"),
+               ("esignature-submission", "true"))
+    paare = " OR ".join(f"(type_code = '{a}' AND text = '{b}')" for a, b in BINDEND)
+    return f"""
+      WITH eindeutig AS (
+        SELECT DISTINCT notice_id, type_code || '=' || text AS paar
+        FROM read_parquet('{RQ}', hive_partitioning=1)
+        WHERE kind = 'execution' AND ({paare}))
+      SELECT notice_id, string_agg(paar, ',' ORDER BY paar) AS execution_terms
+      FROM eindeutig GROUP BY notice_id
+    """
+
+
 def _lead_context_sql(cfg: Config, country: str) -> str:
     """Vier Kontext-Felder je Notice, direkt aus der Auffang-Tabelle `attributes`.
 
@@ -3630,7 +3759,9 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
                 "NULL::INTEGER AS consortium_allowed, NULL::INTEGER AS subcontracting_allowed, "
                 "NULL::VARCHAR AS award_types, NULL::VARCHAR AS award_criteria, "
                 "NULL::VARCHAR AS selection_types, "
-                "NULL::VARCHAR AS deadline_time, NULL::VARCHAR AS question_deadline "
+                "NULL::VARCHAR AS deadline_time, NULL::VARCHAR AS question_deadline, "
+                "NULL::INTEGER AS eu_funded, NULL::VARCHAR AS eu_programme, "
+                "NULL::VARCHAR AS direct_award_reason "
                 "WHERE false")
     return f"""
       SELECT notice_id,
@@ -3804,7 +3935,86 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
         (max(CASE WHEN path = 'simap/documentsWithCosts'
              AND lower(value) = 'yes' THEN 1 ELSE 0 END) = 1)           AS documents_paid,
         string_agg(DISTINCT CASE WHEN path = 'simap/documentsLanguage'
-             THEN lower(value) END, ',')                                AS documents_languages
+             THEN lower(value) END, ',')                                AS documents_languages,
+        -- ── EU-KOFINANZIERUNG ─────────────────────────────────────────────────────────
+        -- Warum das ein Produktfeld ist und keine Statistik: wer einen EU-kofinanzierten
+        -- Auftrag gewinnt, erbt Pflichten — Publizitaet, Verwendungsnachweis, Pruefrechte
+        -- der Kommission, lange Aufbewahrung. Das gehoert in die Kalkulation, nicht in die
+        -- Ueberraschung nach Zuschlag.
+        --
+        -- ⚠ ZWEI PFADE, DIE GLEICH ENDEN. `%FundingProgramCode` faengt beides:
+        --     ...TenderingTerms.FundingProgramCode            ja/nein   (828.237 DE)
+        --     ...EformsExtension.Funding.FundingProgramCode   Programm  (1.862 DE)
+        -- Das sind verschiedene Dinge. Die Trennung laeuft ueber das Elternelement
+        -- (`TenderingTerms.` gegen `Funding.`), nicht ueber den Blattnamen; `NOT ILIKE
+        -- '%@%'` haelt zusaetzlich `@listName` heraus, das nur das Vokabular benennt.
+        --
+        -- ⚠ FEHLT HEISST UNBEKANNT, NICHT NEIN. eForms sagt ausdruecklich `no-eu-funds`.
+        -- Die Altformate kennen nur `RELATES_TO_EU_PROJECT_YES` / `EU_PROGR_RELATED` —
+        -- ein ausdrueckliches NEIN gibt es dort nicht (nachgesehen: kein `_NO`-Pfad im
+        -- ganzen Bestand). Wer dort aus dem Schweigen eine 0 macht, behauptet etwas, das
+        -- die Quelle nicht sagt. Deshalb NULL.
+        max(CASE WHEN path ILIKE '%TenderingTerms.FundingProgramCode' AND path NOT ILIKE '%@%'
+                 THEN CASE lower(value) WHEN 'eu-funds' THEN 1
+                                        WHEN 'no-eu-funds' THEN 0 END
+                 WHEN (path LIKE '%EU_PROGR_RELATED.P'
+                       OR path LIKE '%OBJECT_DESCR.EU_PROGR_RELATED'
+                       OR path LIKE '%RELATES_TO_EU_PROJECT_YES.P')
+                      AND length(trim(coalesce(value, ''))) > 1 THEN 1 END)  AS eu_funded,
+        -- Der Programmname. eForms liefert ein sauberes Vokabular (ERDF_2021, EAFRD_2021,
+        -- CEF_2021, COPERNICUS, HEALTH — 27 Codes), die Altformate freien Text.
+        -- ⚠ Der freie Text ist MEHRSPRACHIG und nicht waehlbar: dieselbe Vergabe traegt
+        -- „Europaeisches Statistikprogramm" neben „Europees statistiekprogramma" neben
+        -- „Det europaeiske statistiske program" (Eurostat, LU). Welche Fassung hier
+        -- ankommt, bestimmt `min()` — stabil, aber nicht die Wunschsprache. Der Code hat
+        -- deshalb Vorrang; der Freitext ist Rueckfall, nicht Gleichwertiges.
+        coalesce(
+          string_agg(DISTINCT CASE WHEN path ILIKE '%Funding.FundingProgramCode'
+                                    AND path NOT ILIKE '%@%' THEN value END, ','),
+          min(CASE WHEN (path LIKE '%EU_PROGR_RELATED.P'
+                         OR path LIKE '%OBJECT_DESCR.EU_PROGR_RELATED'
+                         OR path LIKE '%RELATES_TO_EU_PROJECT_YES.P')
+                    AND length(trim(value)) BETWEEN 2 AND 120
+                   THEN trim(value) END))                                    AS eu_programme,
+        -- ── DIREKTVERGABE: WARUM OHNE WETTBEWERB? ─────────────────────────────────────
+        -- BT-136. Fuer einen Bieter die Frage hinter der Frage: die Stelle hat ohne
+        -- Ausschreibung vergeben und musste das begruenden. „Nur ein Anbieter aus
+        -- technischen Gruenden" ist anfechtbar, wenn man es selbst kann; „keine
+        -- geeigneten Angebote" heisst, hier war schon einmal Platz.
+        --
+        -- ⚠ DREI LISTEN UNTER EINEM ELEMENT. `ProcessJustification.ProcessReasonCode`
+        -- traegt je nach `@listName` drei verschiedene Dinge:
+        --     accelerated-procedure        329.781 Vorgaenge, Werte true/false/0
+        --     direct-award-justification    12.258 Vorgaenge, 47 Codes   <- dieser
+        --     no-esubmission-justification     822 Vorgaenge, 5 Codes
+        -- Wert und `@listName` stehen als ZWEI Zeilen OHNE Index — paaren laesst sich
+        -- das nicht.
+        --
+        -- ⚠ Gerettet wird es dadurch, dass die drei Vokabulare DISJUNKT sind (geprueft
+        -- gegen `data/reference/eforms/direct-award-justification.json`: keine
+        -- Ueberschneidung mit `true/false/0` und keine mit den fuenf
+        -- no-esubmission-Codes). Der WERT identifiziert also seine Liste selbst, und
+        -- die `@listName`-Zeilen braucht es gar nicht.
+        --
+        -- Das ist zugleich die Loesung eines Speicherproblems: der erste Entwurf zog
+        -- ueber `%ProcessReasonCode%` rund 700.000 zusaetzliche Zeilen in den Scan —
+        -- fast alle `accelerated-procedure` — und sprengte die 5,5-GB-Grenze.
+        --
+        -- ⚠ Genau hieran scheiterte `ExecutionRequirementCode` endgueltig: dort teilen
+        -- sich acht Listen EIN Vokabular (`no`/`required`/`performance`), bei bis zu
+        -- fuenf Zeilen je Vorgang. Dort rettet nichts, das Feld bleibt ungenutzt, bis
+        -- der Parser indizierte Pfade schreibt.
+        max(CASE WHEN path ILIKE '%ProcessJustification.ProcessReasonCode'
+                  AND path NOT ILIKE '%@%'
+                  -- `unpublished` ist KEIN Grund, sondern TEDs Marke dafuer, dass die
+                  -- Angabe zurueckgehalten wurde (139 Vorgaenge). Sie als Begruendung
+                  -- anzuzeigen hiesse, Schweigen als Aussage auszugeben; NULL sagt
+                  -- dasselbe ehrlicher. Geprueft gegen die amtliche Codeliste: es ist
+                  -- der einzige vorkommende Wert, der nicht darin steht.
+                  AND value NOT IN ('true', 'false', '0', 'unpublished',
+                                    'phy-mod', 'sen-info', 'tdf-non-av',
+                                    'ipr-iss', 'sp-of-eq')
+                 THEN value END)                                 AS direct_award_reason
       FROM read_parquet('{A}', hive_partitioning=1)
       -- ⚠ Diese WHERE-Liste ist eine POSITIVLISTE. Wer oben eine Spalte ergaenzt, muss den
       -- Pfad hier eintragen — sonst liest das CTE ihn gar nicht erst und die Spalte kommt
@@ -3836,6 +4046,16 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
          OR path ILIKE '%SelectionCriteria.CriterionTypeCode'
          OR path ILIKE '%TenderSubmissionDeadlinePeriod.EndTime'
          OR path ILIKE '%AdditionalInformationRequestPeriod.EndDate'
+         -- EU-Kofinanzierung. Ein Muster faengt beide FundingProgramCode-Pfade (ja/nein
+         -- und Programmname); auseinander gehalten werden sie oben in den Spalten.
+         OR path ILIKE '%FundingProgramCode'
+         OR path LIKE '%EU_PROGR_RELATED%'
+         OR path LIKE '%RELATES_TO_EU_PROJECT_YES.P'
+         -- Direktvergabe-Begruendung. NUR die Wertzeile, nicht `@listName`: die
+         -- Vokabulare sind disjunkt, der Wert identifiziert seine Liste selbst. Mit
+         -- `%ProcessReasonCode%` kamen 700.000 `accelerated-procedure`-Zeilen mit und
+         -- der Lauf starb an der Speichergrenze.
+         OR path ILIKE '%ProcessJustification.ProcessReasonCode'
       GROUP BY notice_id
     """
 
@@ -4086,6 +4306,12 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             ctx.award_types, ctx.award_criteria,
             ctx.selection_types,
             ctx.deadline_time, ctx.question_deadline,
+            -- EU-Kofinanzierung: aendert die Pflichten des Auftragnehmers, nicht nur die
+            -- Herkunft des Geldes. NULL heisst „die Quelle sagt es nicht", nicht „nein".
+            ctx.eu_funded, ctx.eu_programme, ctx.direct_award_reason,
+            -- Ausfuehrungsbedingungen aus `requirements` (Parser paart sie dort),
+            -- nicht aus `attributes` — dort waeren sie nicht zuzuordnen.
+            exe.execution_terms,
             d.ted_url                                 AS source_url,
             (d.incumbent_name IS NOT NULL AND d.incumbent_conf >= 0.75) AS has_comparables,
             (coalesce(d.tenure_years, 0) > 0)         AS has_contract_history
@@ -4118,6 +4344,7 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             GROUP BY notice_id
           ) lt ON lt.notice_id = d.lead_id
           LEFT JOIN ({_lead_context_sql(cfg, country)}) ctx ON ctx.notice_id = d.lead_id
+          LEFT JOIN ({_execution_terms_sql(cfg, country)}) exe ON exe.notice_id = d.lead_id
           LEFT JOIN (
             -- Erst JE LOS die Gewichte je Art buendeln, DANN ueber die Lose mitteln.
             -- Andersherum (alles in einen Topf) addierten sich die Lose zu >100 %.
@@ -4469,6 +4696,15 @@ def build_lead_requirement(cfg: Config, country: str = "DE"):
             JOIN read_parquet('{(g / "lead_export.parquet").as_posix()}') l
               ON l.lead_id = r.notice_id
            WHERE r.text IS NOT NULL
+             -- ⚠ `kind='execution'` IST KEIN FREITEXT. Seit dem 2026-10-05 schreibt der
+             -- Parser die Ausfuehrungsbedingungen hierher, und dort steht im `text` ein
+             -- CODE (`required`, `not-allowed`, `performance`), nicht die Anforderung.
+             -- Ohne diesen Ausschluss haette die Anforderungsliste Zeilen wie
+             -- „Anforderung: required" gezeigt — und die Haelfte davon waere am
+             -- Ja/Nein-Filter unten stumm verschwunden, was noch schlimmer ist: eine
+             -- Liste, die teils falsch und teils unvollstaendig ist.
+             -- Sie werden in `_execution_terms_sql` eigens ausgewertet.
+             AND r.kind <> 'execution'
              AND lower(trim(r.text)) NOT IN ('ja','nein','yes','no','true','false')
              AND r.text NOT LIKE 'http%'
         ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
@@ -5223,11 +5459,19 @@ def build_at_gold(cfg: Config, country: str = "AT"):
              -- Kein zweiter Parser: `_lead_context_sql` nimmt das Land als Parameter und
              -- laeuft fuer DE und CH seit jeher. Er wird hier nur angeschlossen.
              ctx.guarantee_required, ctx.variants_allowed, ctx.validity_days,
-             ctx.selection_types, ctx.deadline_time, ctx.question_deadline
+             ctx.selection_types, ctx.deadline_time, ctx.question_deadline,
+             -- ⚠ Der AT-Pfad ist eine ZWEITE Auswahlliste neben der in `build_lead_export`.
+             -- Wer dort eine ctx-Spalte ergaenzt und hier nicht, baut genau die Luecke, die
+             -- diesen Block 2026-08-22 ueberhaupt noetig gemacht hat: AT stand auf 0 %,
+             -- waehrend die Quelle die Werte trug. `test_eu_funded_in_beiden_exporten`
+             -- haelt die beiden Listen deshalb gegeneinander.
+             ctx.eu_funded, ctx.eu_programme,
+             ctx.direct_award_reason, exe.execution_terms
       FROM read_parquet({N}, hive_partitioning=1) n
       LEFT JOIN buyer b ON b.notice_id = n.notice_id
       LEFT JOIN matched m ON m.lead_id = n.notice_id AND m.rn = 1
       LEFT JOIN ({_lead_context_sql(cfg, country)}) ctx ON ctx.notice_id = n.notice_id
+      LEFT JOIN ({_execution_terms_sql(cfg, country)}) exe ON exe.notice_id = n.notice_id
       {AV_WERT}
       WHERE {LEAD}
     ) TO '{(g / 'lead_export.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")

@@ -18,7 +18,11 @@ import { useSprache } from "@/lib/i18n";
 
 type Verlauf = { datum: string | null; art: string; label: string; n: number;
                  dubletten: number; nur_zweitmeldung: boolean;
-                 ids: string[]; unterlagen: boolean };
+                 ids: string[]; unterlagen: boolean;
+                 /* Eine Zuschlagsbekanntmachung, deren Verfahren AUFGEHOBEN wurde.
+                    Eigenes Merkmal statt Vergleich mit dem Label: das Label laeuft
+                    durch die Uebersetzung und waere in en/fr nicht mehr erkennbar. */
+                 aufgehoben?: boolean; grund?: string };
 type Dok = { notice: string; quelle: string | null; url: string | null; gelesen: boolean;
              n: number; dateien: Array<{ name: string; typ: string }>; gekuerzt: number };
 type Glied = { vorgang: string; position: number; jahr: number | null;
@@ -286,10 +290,17 @@ export function Vorgangsakte() {
         <h2>{t("Verlauf")}</h2>
         <ol className="vg-verlauf">
           {a.verlauf.map((e, i) => (
-            <li key={i} className={ART_TON[e.art] || ""}>
+            <li key={i} className={e.aufgehoben ? "auf" : (ART_TON[e.art] || "")}>
               <span className="vg-datum">{e.datum ? tag(e.datum) : t("ohne Datum")}</span>
               <span className="vg-art">
                 {t(e.label)}
+                {/* ⚠ Der Grund steht NUR, wo die Quelle ihn nennt: 678 von 1.507
+                    aufgehobenen Stationen. Ohne ihn bleibt es bei „Aufgehoben" — eine
+                    erfundene Begruendung waere schlimmer als gar keine.
+                    Als `em` im selben Block wie die uebrigen Zusaetze, nicht als
+                    fuenftes Grid-Element: die Zeile hat vier Spalten, ein weiteres
+                    Kind rutschte in eine neue Reihe. */}
+                {e.grund ? <em className="vg-grund">{t(e.grund)}</em> : null}
                 {e.n > 1 ? <em>{t("{n} am selben Tag", { n: e.n })}</em> : null}
                 {/* Dieselbe Vergabe, von einem zweiten Portal gemeldet. Sie bleibt sichtbar,
                     zaehlt aber nicht als weiteres Ereignis. */}

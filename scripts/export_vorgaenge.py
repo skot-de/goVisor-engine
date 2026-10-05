@@ -75,6 +75,35 @@ MAX_DATEIEN = 60
 ARTEN = {"cn": "Ausschreibung", "can": "Zuschlag", "corrigendum": "Korrektur",
          "pin": "Vorinformation", "other": "Weitere Bekanntmachung"}
 
+# ⚠ EINE ZUSCHLAGSBEKANNTMACHUNG IST NICHT IMMER EIN ZUSCHLAG. Gemessen am 2026-10-05:
+# 1.620 der 43.114 Zuschlagsstationen (3,8 %) gehoeren zu einem AUFGEHOBENEN Verfahren —
+# und die Akte schrieb trotzdem „Zuschlag" daneben. Das ist keine fehlende Angabe,
+# sondern eine falsche: wer die Akte liest, schliesst daraus, dass vergeben wurde.
+#
+# Die Verknuepfung ist exakt (dieselbe `notice_id`), nicht geraten. Drei andere Wege
+# wurden vorher gemessen und verworfen: `lead_predecessor` fuehrt nur Amtsinhaber
+# (0 Treffer), Kaeufer+CPV-Klasse zaehlt klassenweit ueber („Fraport 27x gescheitert"
+# neben einer Aufzugswartung), und zwei gemeinsame Titelwoerter paaren
+# „Wirkstoff Atomoxetin" mit „Wirkstoff Dexamethason".
+AUFGEHOBEN_LABEL = "Aufgehoben"
+
+# BT-144, das eForms-Vokabular fuer „warum nicht vergeben". Elf Codes, bis zum
+# 2026-10-05 ungenutzt. Fuer einen Bieter sind sie GEGENSAETZLICH: „keine Angebote"
+# heisst, hier war niemand — „Bedarf geaendert" heisst, es kommt so nicht wieder.
+NICHTVERGABE = {
+    "no-rece": "keine Angebote eingegangen",
+    "all-rej": "alle Angebote abgelehnt",
+    "chan-need": "der Bedarf hat sich geändert",
+    "ins-fund": "die Mittel reichten nicht",
+    "one-admis": "nur ein zulässiges Angebot",
+    "rev-buyer": "von der Vergabestelle zurückgezogen",
+    "rev-body": "von der Nachprüfungsstelle aufgehoben",
+    "no-signed": "kein Vertrag zustande gekommen",
+    "tch-pr-error": "technischer Fehler im Verfahren",
+    "unpublished": "nicht veröffentlicht",
+    "other": "anderer Grund",
+}
+
 # Wie viele Kettenglieder eine Akte mitfuehrt (um die eigene Position herum).
 #
 # ⚠ WARUM UEBERHAUPT EINE GRENZE. Ohne sie traegt jede Akte jedes Glied ihrer Kette. Die
@@ -316,10 +345,27 @@ def _verlauf(teile: list[dict]) -> list[dict]:
     verlauf = []
     for (datum, art), gruppe in sorted(nach_tag.items(),
                                        key=lambda kv: (kv[0][0] or "", kv[0][1])):
+        # ⚠ NUR WENN JEDE Bekanntmachung der Gruppe aufgehoben ist. Am selben Tag kann
+        # eine Vergabestelle ein Los vergeben und ein anderes aufheben; stuende dann
+        # „Aufgehoben" an der Station, waere die Aussage fuer die vergebenen Lose falsch.
+        # `all()` ueber eine leere Gruppe gibt True — daher das `gruppe and`.
+        alle_auf = bool(gruppe) and all(t.get("aufgehoben") for t in gruppe)
+        gruende = sorted({x for t in gruppe for x in str(t.get("grund") or "").split(",")
+                          if x})
         verlauf.append({
             "datum": _tag(datum),
             "art": art,
-            "label": ARTEN.get(art, art),
+            "label": (AUFGEHOBEN_LABEL if art == "can" and alle_auf
+                      else ARTEN.get(art, art)),
+            # ⚠ EIGENES MERKMAL, NICHT DER TEXT. Die Oberflaeche braucht die Aussage
+            # „aufgehoben" fuer Farbe und Symbol. Sie am uebersetzten `label` zu
+            # erkennen hiesse, sie in der englischen Fassung zu verlieren.
+            **({"aufgehoben": True} if art == "can" and alle_auf else {}),
+            # Der Grund steht nur da, wo er belegt ist. Fehlt er, bleibt es bei
+            # „Aufgehoben" ohne Begruendung — das ist die ehrliche Aussage, denn nur
+            # eForms traegt BT-144 (678 von 1.507 Stationen).
+            **({"grund": " · ".join(NICHTVERGABE.get(x, x) for x in gruende)}
+               if art == "can" and alle_auf and gruende else {}),
             # ⚠ `n` ZAEHLT OHNE ZWEITMELDUNGEN. Sie bleiben in `ids` sichtbar — die Spur zur
             # zweiten Quelle ist der Beleg dafuer, dass wir beide Portale gelesen haben —
             # aber sie sind nicht noch ein Ereignis. Genau daran hingen im Zuercher Beispiel
@@ -398,6 +444,21 @@ def _akten(con: duckdb.DuckDBPyConnection, land: str,
     spalten = [b[0] for b in ergebnis.description]
     kopf = [dict(zip(spalten, zeile)) for zeile in ergebnis.fetchall()]
 
+    # Aufgehobene Verfahren und ihr Grund, je Bekanntmachung. Fehlt `quality.parquet`
+    # (frische Installation, Land noch ohne Gold), bleibt die Zuordnung leer und der
+    # Verlauf sieht aus wie bisher — kein Abbruch.
+    aufgehoben: dict[str, str | None] = {}
+    _q = Path(g) / "quality.parquet"
+    if _q.exists():
+        for nid, grund in con.execute(f"""
+            select q.notice_id, q.nichtvergabe_grund
+            from read_parquet('{_q.as_posix()}') q
+            join read_parquet('{g}/vorgang_notice.parquet') vn
+              on vn.notice_id = q.notice_id
+            where q.verfahren_status = 'erfolglos'
+        """).fetchall():
+            aufgehoben[nid] = grund
+
     teile = defaultdict(list)
     for r in con.execute(f"""
         select vn.vorgang_id, vn.notice_id, vn.notice_kind, vn.jahr,
@@ -407,7 +468,9 @@ def _akten(con: duckdb.DuckDBPyConnection, land: str,
     """).fetchall():
         teile[r[0]].append({"notice_id": r[1], "notice_kind": r[2], "jahr": r[3],
                             "veroeffentlicht": r[4], "hat_unterlagen": r[5],
-                            "dublette": bool(r[6])})
+                            "dublette": bool(r[6]),
+                            "aufgehoben": r[1] in aufgehoben,
+                            "grund": aufgehoben.get(r[1])})
 
     ketten: dict[str, dict] = {}
     kette_glieder = defaultdict(list)

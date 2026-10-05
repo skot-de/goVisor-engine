@@ -523,6 +523,22 @@ mark.hit{background:#CFF3E4;box-shadow:0 0 0 2px #CFF3E4}
   font:inherit;font-size:13px;line-height:1.5;color:var(--ink-900);min-width:0}
 .va-checklist .item.auf .cl-satz{-webkit-line-clamp:unset}
 .va-checklist .item .cl-satz:hover{color:var(--signal-deep)}
+/* ⚠ DIE ZEILE WAR EIN KNOPF, DER WIE FLIESSTEXT AUSSAH. `cursor:pointer` stand da, aber
+   das ist kein sichtbares Merkmal: auf einem Tablet gibt es keinen Zeiger, und in einem
+   Bildschirmfoto sieht man es auch nicht. Sven am 2026-10-03, der die Seite selbst gebaut
+   hat: „warum kann man da nicht mehr die textblöcke bearbeiten". Er konnte, er fand den
+   Weg nur nicht — Fundstelle und Textbaustein liegen hinter genau diesem Klick.
+   Derselbe Pfeil wie bei den Gruppen daneben, damit die Geste einmal gelernt reicht. */
+.va-checklist .item .cl-caret{display:inline-block;color:var(--ink-400);margin-right:6px;
+  transition:transform .18s;transform-origin:50% 50%}
+.va-checklist .item.auf .cl-caret{transform:rotate(90deg)}
+.va-checklist .item .cl-satz:hover .cl-caret{color:var(--signal-deep)}
+/* Tastatur: ohne sichtbaren Fokus ist eine Liste aus 58 Knoepfen nicht bedienbar. */
+.va-checklist .item .cl-satz:focus-visible{outline:2px solid var(--signal-deep);
+  outline-offset:2px;border-radius:3px}
+@media (prefers-reduced-motion: reduce){
+  .va-checklist .item .cl-caret{transition:none}
+}
 .va-checklist .cl-wert{font-weight:700;white-space:nowrap}
 /* Die Art ist jetzt Beiwerk: in 87 % der Faelle steht sie in derselben Liste mehrfach und
    unterscheidet nichts. Sie bleibt, weil sie beim Ueberfliegen einer Gruppe einordnet. */

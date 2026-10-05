@@ -1403,8 +1403,16 @@ def _eforms_requirements(root: ET.Element) -> list[Requirement]:
             if cur is None:
                 return None
             if _local(cur) == "ProcurementProjectLot":
-                return next((_first_child_text(c, ("ID",))[0]
-                             for c in cur if _local(c) == "ID"), None)
+                # ⚠ HIER STAND `_first_child_text(c, ("ID",))[0]` — das sucht ein
+                # `ID`-Kind INNERHALB des `ID`-Elements. Das gibt es nicht, also kam
+                # immer None zurueck: **5,6 Mio. Anforderungszeilen ohne Los, quer
+                # ueber alle Arten** (exclusion, suitability, technical, economic …),
+                # 0 % gefuellt. Aufgefallen beim Anschluss der Ausfuehrungsbedingungen,
+                # die eForms je LOS fuehrt — ohne Los liessen sich die Bedingungen
+                # zweier Lose nicht auseinanderhalten.
+                # Gesucht ist der Text des ID-Kindes selbst.
+                return next((_text_of(c) for c in cur
+                             if _local(c) == "ID" and _text_of(c)), None)
         return None
 
     # Keep a requirement if it has text OR a code. A coded ground with no free
@@ -1427,6 +1435,37 @@ def _eforms_requirements(root: ET.Element) -> list[Requirement]:
         if text or code:
             reqs.append(Requirement(lot_id=lot_of(req), kind="exclusion",
                                     type_code=code, text=text))
+
+    # ── AUSFUEHRUNGSBEDINGUNGEN ────────────────────────────────────────────────────
+    # ⚠ WARUM DAS HIER STEHEN MUSS UND NICHT IN GOLD GEHT. `ContractExecutionRequirement`
+    # kommt je Vorgang MEHRFACH vor — bis zu fuenf Mal — und jedes Vorkommen traegt ein
+    # `ExecutionRequirementCode` mit einem `@listName`, das erst sagt, WOVON die Rede ist:
+    # elektronische Rechnung, vorbehaltene Ausfuehrung, Geheimhaltung, E-Katalog.
+    #
+    # In `silver/attributes` landen diese Werte als flache Zeilen OHNE Index. Gemessen an
+    # einem einzigen Vorgang:
+    #     ...ExecutionRequirementCode            false / no / not-allowed / required / true
+    #     ...ExecutionRequirementCode@listName   ecatalog-submission / einvoicing /
+    #                                            esignature-submission / nda /
+    #                                            reserved-execution
+    # Fuenf Werte, fuenf Merkmale, beide alphabetisch — welcher zu welchem gehoert, ist
+    # dort nicht mehr feststellbar. Jeder Versuch, es in Gold zu paaren, waere geraten.
+    # 21.874 Leads hingen daran; das Feld blieb deshalb ungenutzt, bis zu dieser Zeile.
+    #
+    # Der Parser sieht beides am SELBEN Knoten und kann es deshalb paaren. Das ist der
+    # ganze Unterschied, und er ist nur hier zu haben.
+    for bedingung in _iter_named(root, "ContractExecutionRequirement"):
+        for kind_el in bedingung:
+            if _local(kind_el) != "ExecutionRequirementCode":
+                continue
+            wert = _text_of(kind_el)
+            # `listName` sagt, WOVON die Rede ist. Ohne ihn ist der Wert bedeutungslos
+            # (`required` — was denn?), deshalb wird er dann verworfen statt geraten.
+            liste = kind_el.get("listName")
+            if not wert or not liste:
+                continue
+            reqs.append(Requirement(lot_id=lot_of(bedingung), kind="execution",
+                                    type_code=liste, text=wert))
     return reqs
 
 
