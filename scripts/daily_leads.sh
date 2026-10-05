@@ -968,9 +968,21 @@ $PY -m govisor.kategorie --country DE --schreiben \
 #
 # ⚠ KEIN ABBRUCH. Faellt die EZB aus, bleibt die alte Datei stehen und der Lauf rechnet
 # mit ihr weiter. Alte Kurse sind besser als keine Werte — und der naechste Lauf holt nach.
+#
+# ⚠ DREI AUSGAENGE, NICHT ZWEI. Bis zum 2026-10-05 stand hier ein blosses `|| echo`, und
+# genau dazwischen fiel der Fehler durch: der Abruf holte zwoelf von dreizehn Waehrungen,
+# meldete Exit 0 und schrieb eine Datei mit dem Datum von heute, in der CHF der Kurs fuer
+# das laufende Jahr fehlte. Fuer die Schweiz rechnete `value_eur` ab da mit dem Vorjahres-
+# kurs, und kein Protokoll, kein Test und kein Waechter sagte es.
 step "Waehrungskurse (EZB-Referenzkurse)"
-$PY scripts/fetch_ezb_kurse.py \
-  || echo "  ⚠ Kursabruf fehlgeschlagen — es gelten die Kurse der letzten erfolgreichen Holung."
+$PY scripts/fetch_ezb_kurse.py
+case $? in
+  0) echo "  Kurse vollstaendig geholt." ;;
+  2) echo "  ⚠ Kursabruf nur TEILWEISE — die Datei ist geschrieben und benutzbar, aber ein"
+     echo "    Teil stammt aus der vorigen Holung. Welcher: Block 'luecken'/'uebernommen' in"
+     echo "    data/reference/waehrungskurse.json. Nachziehen: scripts/fetch_ezb_kurse.py" ;;
+  *) echo "  ⚠ Kursabruf fehlgeschlagen — es gelten die Kurse der letzten erfolgreichen Holung." ;;
+esac
 
 step "AT/CH-Gold (volle Pipeline, 26 Schritte je Land)"
 # ⚠ LU laeuft HIER mit, nicht ueber `cli gold`. Der CLI-Weg zieht build_hr_index() mit —

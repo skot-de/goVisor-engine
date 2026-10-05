@@ -101,6 +101,40 @@ Jahreswert veröffentlicht, hat er Vorrang und der gemittelte verschwindet.
 Welche Jahreswerte so entstanden sind, steht im Block `laufend` der Zieldatei — wer mit den
 Zahlen rechnet, muss das wissen können, ohne den Code zu lesen.
 
+> **⚠ `geholt_am` gilt für die DATEI, nicht für jede Zahl darin.** Am **2026-10-05** trug die
+> Kursdatei das Datum desselben Tages und hatte trotzdem **keinen CHF-Kurs für 2026**: der
+> nächtliche Abruf um 01:13 bekam für `M.CHF` einen 504, das Skript übersprang die Reihe und
+> schrieb mit **Exit 0** weiter. `A.RON` fiel am selben Lauf ganz aus der Datei. Zwölf von
+> dreizehn Währungen waren frisch, eine nicht, und nichts sagte es — der Tageslauf meldete
+> „ok", und für die Schweiz rechnete `value_eur` ab da mit dem Vorjahreskurs.
+>
+> Der Ausfall war ein **Zeitfenster**: dieselben Reihen antworteten am Vormittag sechsmal von
+> sechs mit 200. Aus einem vorübergehenden 504 wurde eine dauerhaft fehlende Zahl.
+>
+> Drei Dinge halten das jetzt auf, und der mittlere ist der wichtigste:
+> 1. **Wiederholung** bei 500/502/503/504/408/429 (nicht bei 404 — eine Reihe, die es nicht
+>    gibt, gibt es auch beim vierten Fragen nicht). Beim Messen am selben Tag kamen **USD,
+>    NOK und PLN erst im zweiten Versuch** durch; ohne Wiederholung wären auch sie
+>    ausgefallen.
+> 2. **Übernahme aus der vorigen Datei.** Das Skript schreibt die Zieldatei GANZ neu — fällt
+>    eine Reihe aus, war die neue Datei bisher schlechter als die alte, und zwar ohne
+>    Fehlermeldung. Jetzt wird jeder Wert nachgetragen, den die alte hatte und die neue nicht.
+>    ⚠ Ohne Vordatei fehlt der Kurs weiterhin, und das ist richtig so: geraten wird nichts.
+> 3. **Zwei Bücher in der Datei** — `luecken` (was nicht geholt werden konnte) und
+>    `uebernommen` (was deshalb aus der vorigen Datei stammt) — plus **Exit 2** für den
+>    Teilausfall, den `daily_leads.sh` eigens ansagt. 0 hieße „alles geholt", 1 hieße „nichts
+>    geschrieben"; beides war hier falsch.
+>
+> Gewacht wird das von `tests/test_waehrungsumrechnung.py::
+> test_chf_wurde_frisch_geholt_und_nicht_uebernommen` — **nur für CHF**, der einzigen
+> Fremdwährung mit nennenswertem Bestand. Für ISK oder TRY wäre derselbe Anspruch Lärm.
+>
+> ⚠ **Die Reihenfolge der Währungsliste ist Teil des Schutzes.** Ein Zeitdeckel begrenzt den
+> Lauf (sonst kosten 26 Reihen mal drei Versuche über zwei Stunden), und er wird von vorn
+> nach hinten verbraucht: was hinten steht, fällt bei einer kranken Quelle zuerst aus. CHF
+> steht deshalb vorn. Am 2026-10-05 hingen `A.ISK` und `A.BGN` reproduzierbar (beide 504 nach
+> genau 30 s), während ihre Monatsreihen in 0,2 s antworteten.
+
 ```
 CHF  2026 laufend: 0.9212 aus 8 Monaten · -1,7 % gegen 2025
 HUF  2026 laufend: 369.4938 aus 8 Monaten · -7,1 % gegen 2025
