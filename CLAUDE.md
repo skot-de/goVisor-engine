@@ -176,13 +176,26 @@ laesst eine undatierte Zahl dort gar nicht durch).
   starb der Tageslauf in Zeile 931, und **keine einzige Sonde lief** — im exakten Fall, für
   den sie gebaut sind. Die Aufsicht hing am Beaufsichtigten. Seitdem:
 
-      scripts/waechterlauf.sh [--still]     # alle vierzehn Sonden, unabhängig vom Tageslauf
+      scripts/waechterlauf.sh [--still]     # alle sechzehn Sonden, unabhängig vom Tageslauf
 
   Er nimmt die Tageslauf-Sperre **nicht** (alle Sonden lesen nur) und läuft als eigener
   Dienst `eu.govisor.waechter`. Der Tageslauf ruft dieselben Sonden weiterhin selbst auf;
   damit die zwei Listen nicht auseinanderlaufen, hält `tests/test_waechterlauf.py` sie
   gegeneinander. Sein Protokoll liegt in `~/Library/Logs/govisor-waechter-*.log` und **nicht**
   unter `data/logs/` — launchd-Bash darf das externe Volume nicht beschreiben.
+
+      python3 scripts/pruefe_warteschlangen.py [--alle]  # steht eine Schlange mit Arbeit?
+
+  ⚠ **Ein Arbeiter, der läuft und nichts bewegt, sieht in jeder Prozessliste gesund aus.**
+  Am 2026-10-05 lief der Analyse-Arbeiter seit dem 11.09. ununterbrochen, protokollierte alle
+  30 Minuten seinen Stand — und hatte seit dem **24.09. nichts mehr analysiert**: 3.946
+  Dokumente lagen, das OpenRouter-Guthaben war seit dem 21.09. leer. Elf Tage, vierzehn
+  Sonden, keine schlug an (der Dienst lief, die Daten waren vollständig, kein Feld NULL).
+  ⭐ Die Auskunft lag dabei schon in `data/.llm_stand.json` — der Arbeiter schreibt
+  `halt: "guthaben"` samt Satz im Klartext. Es las nur niemand.
+  **Ein Befund braucht BEIDES: Arbeit liegt an UND seit Tagen keine Bewegung.** Eine leere
+  Schlange, die stillsteht, ist fertig. Schwelle 7 Tage, gemessen (grösste Lücke im
+  Normalbetrieb 5, Ausfall 11).
 
       python3 scripts/verdrahtungskarte.py <tabelle>   # wer erzeugt es, wer liest es
       python3 scripts/pruefe_bibel.py [--stand]        # altert die Anleitung selbst?
