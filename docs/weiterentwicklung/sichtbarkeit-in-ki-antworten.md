@@ -76,16 +76,16 @@ Erzeuger meldet das.
 <!-- ZAHLEN:bestand -->
 | | DE | AT | CH | LU | gesamt |
 |---|---:|---:|---:|---:|---:|
-| Bekanntmachungen | 2.299.806 | 424.330 | 125.927 | 38.548 | **2.888.611** |
-| Zuschläge | 824.907 | 231.586 | 53.716 | 13.372 | **1.123.581** |
-| Vorgangsakten | 1.431.195 | 298.215 | 75.133 | 25.216 | **1.829.759** |
+| Bekanntmachungen | 2.302.157 | 424.349 | 126.339 | 38.568 | **2.891.413** |
+| Zuschläge | 825.285 | 231.593 | 53.848 | 13.383 | **1.124.109** |
+| Vorgangsakten | 1.433.279 | 298.267 | 75.318 | 25.226 | **1.832.090** |
 | Bestand ab | 2004-01-02 | ⚠ Datenfehler | 2016-08-09 | 2004-01-02 | |
 
 ⚠ AT trägt als frühestes `publication_date` einen Wert vor 1993. Das ist ein Parserfehler, kein Bestand — er ist zu klären, bevor diese Tabelle öffentlich wird.
 
 Quellen-Registry (`govisor/sources.py`): **125** Einträge.
 
-*Gemessen am 2026-10-01 von `scripts/zahlen_nachziehen.py`. Nicht von Hand ändern — der nächste Lauf überschreibt es.*
+*Gemessen am 2026-10-05 von `scripts/zahlen_nachziehen.py`. Nicht von Hand ändern — der nächste Lauf überschreibt es.*
 <!-- /ZAHLEN:bestand -->
 
 
@@ -96,9 +96,21 @@ Behauptung „wir haben mehr Quellen" wäre es auch.
 ### Was wirklich keiner bewirbt
 
 Die **Vorgangsakte als Objekt**: Bekanntmachung, Vergabeunterlagen und Zuschlag unter EINER
-Nummer, 1,83 Mio. davon, zurück bis 2004. Und die **Dokumentenanalyse** mit Zitatverifikation
-(Ticket 23). Kein Anbieter im Feld verspricht, die Vergabeunterlagen selbst auszuwerten —
-alle hören bei „diese Ausschreibung passt zu dir" auf.
+Nummer, 1,83 Mio. davon, zurück bis 2004. Dazu die **Herkunftskennzeichnung je Wert** und die
+**Zitatverifikation**, die jede Aussage an ihre Belegstelle im Dokument bindet (Ticket 23).
+
+⚠ **Hier stand bis zum 2026-10-04: „Kein Anbieter im Feld verspricht, die Vergabeunterlagen
+selbst auszuwerten — alle hören bei ‚diese Ausschreibung passt zu dir' auf."** Der Satz war
+drei Tage alt und falsch. Gemessen an den Herstellerseiten am 2026-10-04 werben **DTAD**
+(Assistent „Frank"), **Patterno** (100 Seiten in 30 s) und **Vergabepilot** (Chat über die
+Unterlagen) alle drei mit genau dieser Auswertung. Die **Dokumentenanalyse** gehört deshalb
+nicht mehr unter diese Überschrift; nur ihre Tiefe tut es.
+
+⚠ **Und die Fehlerursache gehört dazu, weil sie wiederkommt:** §2 entstand aus einer Websuche,
+und Websuchen finden Vergleichsartikel statt Herstellerseiten. Patterno stand dort mit 1.000
+Portalen und wirbt auf der eigenen Seite mit **4.500** — drei Tage später. Fremdzahlen altern
+in Tagen, eigene Zahlen in Nächten. Vor jeder Verwendung dieses Kapitels im Vertrieb gehört
+ein Blick auf die Seite des genannten Anbieters.
 
 ---
 
