@@ -3121,6 +3121,18 @@ function renderAnalyse(l){
           if(a.direktvergabeGrund) rows.push(`<div class="req"><span class="mk q">!</span>
             <span class="code">${tk("Direktvergabe")}</span><span class="lbl">${tk("ohne Wettbewerb vergeben")}</span>
             <span class="st">${esc(tk(a.direktvergabeGrund))}</span></div>`);
+          /* Ausfuehrungsbedingungen. Sie stehen hier, weil sie den Bieter etwas kosten
+             oder ihn ausschliessen — nicht als Beiwerk.
+             ⚠ „vorbehalten" bekommt das Ausschlusszeichen, nicht das Hinweiszeichen:
+             bei `reserved-execution=yes` ist der Auftrag Werkstaetten vorbehalten und
+             ein gewoehnlicher Bieter kann gar nicht mitbieten. Das als freundliches
+             „i" neben einer E-Rechnungspflicht zu zeigen, waere eine Verharmlosung. */
+          for(const x of (a.ausfuehrung||[])){
+            const sperre = x.was === "vorbehalten";
+            rows.push(`<div class="req"><span class="mk ${sperre?'n':'i'}">${sperre?'&#10007;':'i'}</span>
+              <span class="code">${tk("Ausführung")}</span><span class="lbl">${esc(tk(x.was))}</span>
+              <span class="st">${esc(tk(x.text))}</span></div>`);
+          }
           if(!rows.length) return '';
           return `<div class="reqgroup-h">${tk("Strukturierte Anforderungen")}<span class="prov-echt">${tk("aus der Bekanntmachung")}</span></div>`+rows.join('');
         })()}

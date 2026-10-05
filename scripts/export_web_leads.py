@@ -86,6 +86,48 @@ OUT = pathlib.Path("web/data"); OUT.mkdir(parents=True, exist_ok=True)
 # `scripts/hole_eforms_codeliste.py`. ⚠ Fehlt die Datei, bleibt die Zuordnung leer und
 # im Produkt steht der rohe Code — das ist sichtbar falsch und damit behebbar. Eine
 # selbst getippte Ersatzliste waere unsichtbar falsch.
+#: Ausfuehrungsbedingungen: welche Auspraegung ist eine ANFORDERUNG an den Bieter?
+#: Gemessen am 2026-10-05 ueber einen neu gebauten Monat (14.614 Notices) — jede Liste
+#: hat ihr eigenes Vokabular, und nur diese Werte verlangen etwas:
+#:     einvoicing          required 4.053 · allowed 4.023 · not-allowed 342
+#:     reserved-execution  no 8.294 · not-known 259 · yes 80
+#:     nda                 false 241 · true 80
+#:     ecatalog-submission not-allowed 7.651 · allowed 199 · required 49
+#: ⚠ `reserved-execution=yes` ist der schwerste Posten: der Auftrag ist Werkstaetten
+#: oder Sozialunternehmen vorbehalten, ein gewoehnlicher Bieter ist ausgeschlossen.
+#: Das gehoert ganz nach vorn, nicht in eine Fussnote.
+_AUSFUEHRUNG = {
+    ("reserved-execution", "yes"): ("vorbehalten",
+                                    "Nur für Werkstätten oder Sozialunternehmen"),
+    ("einvoicing", "required"): ("E-Rechnung Pflicht",
+                                 "Elektronische Rechnungsstellung ist verlangt"),
+    ("nda", "true"): ("Geheimhaltung",
+                      "Eine Geheimhaltungsvereinbarung ist zu unterzeichnen"),
+    ("ecatalog-submission", "required"): ("E-Katalog Pflicht",
+                                          "Das Angebot ist als elektronischer Katalog "
+                                          "einzureichen"),
+    ("esignature-submission", "true"): ("E-Signatur Pflicht",
+                                        "Das Angebot ist elektronisch zu signieren"),
+}
+
+
+def _ausfuehrung(roh) -> dict:
+    """`liste=wert,liste=wert` → die Anforderungen, die daraus folgen.
+
+    Leer, wenn nichts gefordert wird — ein Lead ohne Bedingungen traegt dann gar kein
+    Feld statt einer leeren Liste, und die Oberflaeche muss nichts unterdruecken.
+    """
+    if not roh:
+        return {}
+    aus = []
+    for paar in str(roh).split(","):
+        liste, _, wert = paar.partition("=")
+        tr = _AUSFUEHRUNG.get((liste.strip(), wert.strip()))
+        if tr:
+            aus.append({"was": tr[0], "text": tr[1]})
+    return {"ausfuehrung": aus} if aus else {}
+
+
 _REF_EFORMS = pathlib.Path("data/reference/eforms")
 try:
     _DIREKTVERGABE = json.loads(
@@ -1615,6 +1657,16 @@ def export_branche(key):
                     _DIREKTVERGABE.get(str(g("direct_award_reason")), {}).get(
                         "de", str(g("direct_award_reason")))
                     if g("direct_award_reason") else None),
+                # Ausfuehrungsbedingungen (BT-736 / BT-743 / BT-801 …). Der Parser
+                # paart sie seit dem 2026-10-05 am Knoten; aus `attributes` waren sie
+                # nicht zuzuordnen.
+                # ⚠ NUR WAS EINE ANFORDERUNG IST. Das Vokabular je Liste ist gemessen,
+                # nicht geraten: `einvoicing` kennt required/allowed/not-allowed,
+                # `reserved-execution` yes/no/not-known, `nda` true/false. Angezeigt
+                # wird allein die fordernde Auspraegung — „E-Rechnung erlaubt" oder
+                # „nicht vorbehalten" ist keine Bedingung, sondern deren Abwesenheit,
+                # und stuende bei fast jedem Lead als Rauschen.
+                **_ausfuehrung(g("execution_terms")),
                 # ⚠ Ortstermin: DREI Zustaende, und der mittlere ist der wichtige.
                 # `None` = die Unterlagen sagen nichts. `True/False` bei `pflicht` gilt nur,
                 # wenn ueberhaupt ein Termin erkannt wurde — sonst waere „nicht

@@ -3680,6 +3680,54 @@ def _assign_slugs(cfg: Config, country: str, lead_ids: list[str],
 
 
 
+def _execution_terms_sql(cfg: Config, country: str) -> str:
+    """Ausfuehrungsbedingungen je Notice, aus der typisierten `requirements`-Tabelle.
+
+    ⚠ WARUM NICHT AUS `attributes` WIE DIE NACHBARN. `ContractExecutionRequirement`
+    kommt je Vorgang bis zu fuenfmal vor, und erst das `@listName` am Code sagt, wovon
+    die Rede ist (elektronische Rechnung, vorbehaltene Ausfuehrung, Geheimhaltung).
+    In der flachen Attributtabelle stehen Werte und Listennamen als getrennte Zeilen
+    ohne Index — nicht paarbar. Seit dem 2026-10-05 paart der PARSER sie am Knoten und
+    schreibt sie als `kind='execution'` nach `requirements`; hier werden sie nur noch
+    eingesammelt.
+
+    Die Ausgabe ist EIN Feld mit `liste=wert`-Paaren und keine Spalte je Merkmal — es
+    sind neun Listen mit je eigenem Vokabular, und neue koennen dazukommen
+    (`customer-service` und `esubmission` tauchten erst beim Vollneubau auf).
+
+    ⚠ GETRAGEN WIRD NUR, WAS DEN BIETER BINDET. Die Quelle meldet jede Bedingung auch
+    dann, wenn sie NICHTS verlangt — `reserved-execution=no` steht bei 247.376
+    Vorgaengen, `einvoicing=allowed` bei 77.226. Das sind zusammen 1,55 der 1,74 Mio.
+    Zeilen, und sie sagen nur, dass keine Bedingung besteht.
+
+    Das ist nicht bloss Sparsamkeit: die Aggregation ueber alle 1,74 Mio. Zeilen hat
+    den DE-Lauf an der Speichergrenze sterben lassen. Mit der Einschraenkung bleiben
+    rund 190.000 Zeilen.
+
+    Die Liste der bindenden Auspraegungen ist GEMESSEN (Vollbestand DE, 2026-10-05),
+    nicht geraten. Taucht eine neue auf, faellt sie hier heraus und
+    `pruefe-ausfuehrung.mjs` meldet sie als unbekannt — sichtbar, nicht stumm.
+    """
+    import glob as _glob
+    RQ = cfg.silver_table_glob("requirements", country)
+    if not _glob.glob(RQ):
+        return ("SELECT NULL::VARCHAR AS notice_id, NULL::VARCHAR AS execution_terms "
+                "WHERE false")
+    #: (Liste, Wert) → der Bieter muss etwas tun oder darf nicht mitbieten.
+    BINDEND = (("reserved-execution", "yes"), ("einvoicing", "required"),
+               ("nda", "true"), ("ecatalog-submission", "required"),
+               ("esignature-submission", "true"))
+    paare = " OR ".join(f"(type_code = '{a}' AND text = '{b}')" for a, b in BINDEND)
+    return f"""
+      WITH eindeutig AS (
+        SELECT DISTINCT notice_id, type_code || '=' || text AS paar
+        FROM read_parquet('{RQ}', hive_partitioning=1)
+        WHERE kind = 'execution' AND ({paare}))
+      SELECT notice_id, string_agg(paar, ',' ORDER BY paar) AS execution_terms
+      FROM eindeutig GROUP BY notice_id
+    """
+
+
 def _lead_context_sql(cfg: Config, country: str) -> str:
     """Vier Kontext-Felder je Notice, direkt aus der Auffang-Tabelle `attributes`.
 
@@ -4261,6 +4309,9 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             -- EU-Kofinanzierung: aendert die Pflichten des Auftragnehmers, nicht nur die
             -- Herkunft des Geldes. NULL heisst „die Quelle sagt es nicht", nicht „nein".
             ctx.eu_funded, ctx.eu_programme, ctx.direct_award_reason,
+            -- Ausfuehrungsbedingungen aus `requirements` (Parser paart sie dort),
+            -- nicht aus `attributes` — dort waeren sie nicht zuzuordnen.
+            exe.execution_terms,
             d.ted_url                                 AS source_url,
             (d.incumbent_name IS NOT NULL AND d.incumbent_conf >= 0.75) AS has_comparables,
             (coalesce(d.tenure_years, 0) > 0)         AS has_contract_history
@@ -4293,6 +4344,7 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             GROUP BY notice_id
           ) lt ON lt.notice_id = d.lead_id
           LEFT JOIN ({_lead_context_sql(cfg, country)}) ctx ON ctx.notice_id = d.lead_id
+          LEFT JOIN ({_execution_terms_sql(cfg, country)}) exe ON exe.notice_id = d.lead_id
           LEFT JOIN (
             -- Erst JE LOS die Gewichte je Art buendeln, DANN ueber die Lose mitteln.
             -- Andersherum (alles in einen Topf) addierten sich die Lose zu >100 %.
@@ -4644,6 +4696,15 @@ def build_lead_requirement(cfg: Config, country: str = "DE"):
             JOIN read_parquet('{(g / "lead_export.parquet").as_posix()}') l
               ON l.lead_id = r.notice_id
            WHERE r.text IS NOT NULL
+             -- ⚠ `kind='execution'` IST KEIN FREITEXT. Seit dem 2026-10-05 schreibt der
+             -- Parser die Ausfuehrungsbedingungen hierher, und dort steht im `text` ein
+             -- CODE (`required`, `not-allowed`, `performance`), nicht die Anforderung.
+             -- Ohne diesen Ausschluss haette die Anforderungsliste Zeilen wie
+             -- „Anforderung: required" gezeigt — und die Haelfte davon waere am
+             -- Ja/Nein-Filter unten stumm verschwunden, was noch schlimmer ist: eine
+             -- Liste, die teils falsch und teils unvollstaendig ist.
+             -- Sie werden in `_execution_terms_sql` eigens ausgewertet.
+             AND r.kind <> 'execution'
              AND lower(trim(r.text)) NOT IN ('ja','nein','yes','no','true','false')
              AND r.text NOT LIKE 'http%'
         ) TO '{out}' (FORMAT PARQUET, COMPRESSION ZSTD)
@@ -5405,11 +5466,12 @@ def build_at_gold(cfg: Config, country: str = "AT"):
              -- waehrend die Quelle die Werte trug. `test_eu_funded_in_beiden_exporten`
              -- haelt die beiden Listen deshalb gegeneinander.
              ctx.eu_funded, ctx.eu_programme,
-             ctx.direct_award_reason
+             ctx.direct_award_reason, exe.execution_terms
       FROM read_parquet({N}, hive_partitioning=1) n
       LEFT JOIN buyer b ON b.notice_id = n.notice_id
       LEFT JOIN matched m ON m.lead_id = n.notice_id AND m.rn = 1
       LEFT JOIN ({_lead_context_sql(cfg, country)}) ctx ON ctx.notice_id = n.notice_id
+      LEFT JOIN ({_execution_terms_sql(cfg, country)}) exe ON exe.notice_id = n.notice_id
       {AV_WERT}
       WHERE {LEAD}
     ) TO '{(g / 'lead_export.parquet').as_posix()}' (FORMAT PARQUET, COMPRESSION ZSTD)""")

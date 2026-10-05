@@ -108,12 +108,12 @@ export const FAKTEN = {
     },
     {
       name: "Vorgangsakten",
-      wert: "1.830.893 Vergabevorgänge, die Ausschreibung, Unterlagen und Zuschlag unter "
+      wert: "über 1.830.000 Vergabevorgänge, die Ausschreibung, Unterlagen und Zuschlag unter "
         + "einer Nummer zusammenführen",
     },
     {
       name: "Vertragsketten",
-      wert: "53.655 belegte Vorgänger-Nachfolger-Ketten zwischen einem Zuschlag und "
+      wert: "über 53.000 belegte Vorgänger-Nachfolger-Ketten zwischen einem Zuschlag und "
         + "seiner Neuvergabe",
     },
     {
@@ -131,10 +131,10 @@ export const FAKTEN = {
   ] as Kernfakt[],
 
   laender: [
-    { code: "DE", name: "Deutschland", bekanntmachungen: "2.301.205", zuschlaege: "825.298", ab: "2004" },
-    { code: "AT", name: "Österreich", bekanntmachungen: "424.373", zuschlaege: "231.604", ab: "1998" },
-    { code: "CH", name: "Schweiz", bekanntmachungen: "126.157", zuschlaege: "53.788", ab: "2016" },
-    { code: "LU", name: "Luxemburg", bekanntmachungen: "38.559", zuschlaege: "13.375", ab: "2004" },
+    { code: "DE", name: "Deutschland", bekanntmachungen: "2.300.000", zuschlaege: "825.000", ab: "2004" },
+    { code: "AT", name: "Österreich", bekanntmachungen: "424.000", zuschlaege: "231.000", ab: "1998" },
+    { code: "CH", name: "Schweiz", bekanntmachungen: "126.000", zuschlaege: "53.800", ab: "2016" },
+    { code: "LU", name: "Luxemburg", bekanntmachungen: "38.500", zuschlaege: "13.300", ab: "2004" },
   ] as LandZeile[],
 
   /* ⚠ AUFNAHMEKRITERIUM: der Begriff muss im PRODUKT vorkommen, nicht nur in einer Notiz.
@@ -169,7 +169,7 @@ export const FAKTEN = {
         + "Fortsetzung eines früheren Auftrags ist. Kandidatenpaare werden über "
         + "Auftraggeber, Leistungsbeschreibung und zeitlichen Abstand gebildet und dann "
         + "einzeln beurteilt, strittige Fälle durch ein Sprachmodell. Das Ergebnis sind "
-        + "belegte Vertragsketten, derzeit 53.655, und sie sind die Trainingsgrundlage "
+        + "belegte Vertragsketten, derzeit über 53.000, und sie sind die Trainingsgrundlage "
         + "der Verdrängbarkeit. Ohne dieses Verfahren wäre die Verdrängbarkeit eine "
         + "Vermutung über ähnliche Aufträge statt eine Messung an denselben.",
     },

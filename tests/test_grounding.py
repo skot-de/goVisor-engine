@@ -52,7 +52,15 @@ def _zahl(roh: str) -> int:
 
 
 def _genannt(muster: str) -> int:
-    """Die erste Zahl, die hinter `muster` in `fakten.ts` steht."""
+    """Die erste Zahl, die hinter `muster` in `fakten.ts` steht.
+
+    ⚠ Ein vorangestelltes „ueber" ist erlaubt und erwuenscht. Die Seite nennt seit
+    dem 2026-10-05 abgerundete Zahlen, weil jeder Silber- oder Gold-Neubau die
+    Zaehlungen um Dutzende verschiebt und eine exakte Angabe am naechsten Morgen
+    falsch ist. Geprueft wird die AUSSAGE (nicht uebertreiben), nicht die Schreibweise
+    — ein Test, der auf einer nackten Ziffer besteht, erzwingt genau die Praezision,
+    die hier das Risiko ist.
+    """
     t = _text(FAKTEN)
     m = re.search(muster, t)
     assert m, f"Muster nicht gefunden in fakten.ts: {muster}"
@@ -99,8 +107,8 @@ def test_bekanntmachungen_und_zuschlaege_stimmen():
             z += b
     finally:
         con.close()
-    _pruefe_menge("Bekanntmachungen", _genannt(r'wert: "([\d.]+), davon'), n)
-    _pruefe_menge("Zuschläge", _genannt(r'davon ([\d.]+) Zuschläge'), z)
+    _pruefe_menge("Bekanntmachungen", _genannt(r'wert: "(?:über )?([\d.]+), davon'), n)
+    _pruefe_menge("Zuschläge", _genannt(r'davon (?:über )?([\d.]+) Zuschläge'), z)
 
 
 @pytest.mark.skipif(not (ROOT / "data" / "gold" / "DE").is_dir(), reason="kein Gold")
@@ -126,8 +134,8 @@ def test_vorgangsakten_und_vertragsketten_stimmen():
                     dubletten += n
     finally:
         con.close()
-    _pruefe_menge("Vorgangsakten", _genannt(r'wert: "([\d.]+) Vergabevorgänge'), akten)
-    _pruefe_menge("Vertragsketten", _genannt(r'wert: "([\d.]+) belegte Vorgänger'), ketten)
+    _pruefe_menge("Vorgangsakten", _genannt(r'wert: "(?:über )?([\d.]+) Vergabevorgänge'), akten)
+    _pruefe_menge("Vertragsketten", _genannt(r'wert: "(?:über )?([\d.]+) belegte Vorgänger'), ketten)
     # ⚠ Die Dubletten-Zahl steht in einem umgebrochenen String, der Regex muss das wissen.
     roh = re.search(r'Derzeit sind ([\d.]+) "', _text(FAKTEN))
     assert roh, "Dubletten-Zahl nicht in fakten.ts gefunden"
