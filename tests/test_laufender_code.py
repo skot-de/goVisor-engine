@@ -83,6 +83,37 @@ def test_jeder_erzeuger_existiert_wirklich():
         assert (ROOT / skript).exists(), f"{ausgabe}: Erzeuger {skript} gibt es nicht"
 
 
+def test_zweig_liest_arbeitsbaum_UND_hauptcheckout():
+    """⚠ In einem Arbeitsbaum ist `.git` eine DATEI (`gitdir: …`), im Haupt-Checkout ein
+    Verzeichnis. Wer nur `<baum>/.git/HEAD` liest, bekommt fuer JEDEN Arbeitsbaum `None` —
+    und damit schwiege die Zweigpruefung genau dort, wo sie gebraucht wird."""
+    # Dieser Baum ist ein Arbeitsbaum (`.git` ist eine Datei).
+    assert (ROOT / ".git").is_file(), "Erwartung dieses Tests: hier laeuft ein Arbeitsbaum"
+    assert plc.zweig(ROOT) == "pipeline/entity-wachen"
+    # Und der Haupt-Checkout, wo `.git` ein Verzeichnis ist.
+    haupt = pathlib.Path("/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor")
+    if (haupt / ".git").is_dir():
+        assert plc.zweig(haupt), "Haupt-Checkout: kein Zweig gelesen"
+
+
+def test_ein_arbeitszweig_im_nachtlauf_baum_ist_ein_befund(tmp_path, capsys):
+    """Der Kern der Vorkehrung: der Nachtlauf-Baum darf NUR auf `main` stehen. Steht dort ein
+    Arbeitszweig, laeuft nachts wieder ein Arbeitsstand — der Zustand vom 2026-10-05."""
+    baum = tmp_path / "nacht"
+    (baum / ".git").mkdir(parents=True)
+    (baum / ".git" / "HEAD").write_text("ref: refs/heads/feature/irgendwas\n")
+    echt = plc.PLIST
+    try:
+        plc.PLIST = tmp_path / "egal.plist"
+        import plistlib
+        plc.PLIST.write_bytes(plistlib.dumps({"WorkingDirectory": str(baum),
+                                              "ProgramArguments": ["/bin/bash"]}))
+        assert plc.main([]) == 1
+        assert "statt auf `main`" in capsys.readouterr().out
+    finally:
+        plc.PLIST = echt
+
+
 def test_der_nachtlauf_baum_wird_nicht_geraten():
     """⚠ Welcher Baum nachts faehrt, ist genau die Frage — sie aus dem eigenen Pfad
     abzuleiten hiesse, die Antwort vorauszusetzen. Ohne launchd-Eintrag misst die Sonde

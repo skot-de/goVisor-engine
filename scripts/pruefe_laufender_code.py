@@ -58,6 +58,10 @@ ENDUNGEN = (".py", ".sh")
 PLIST = (pathlib.Path.home() / "Library" / "LaunchAgents"
          / "de.skot.govisor.daily.plist")
 
+# Der Zweig, auf dem der Nachtlauf-Baum stehen MUSS. Alles andere heisst, dass dort
+# gearbeitet wird — und dann ist „was laeuft" wieder eine Zufallsfrage.
+ZWEIG = "main"
+
 
 def nachtlauf_baum() -> tuple[pathlib.Path | None, str]:
     """Der Baum, in dem der Tageslauf wirklich läuft — aus dem launchd-Eintrag.
@@ -77,6 +81,30 @@ def nachtlauf_baum() -> tuple[pathlib.Path | None, str]:
         return None, f"{PLIST.name} nennt kein WorkingDirectory"
     p = pathlib.Path(wd)
     return (p, "") if p.is_dir() else (None, f"WorkingDirectory {wd} gibt es nicht")
+
+
+def zweig(baum: pathlib.Path) -> str | None:
+    """Auf welchem Zweig steht dieser Baum? Ohne git, nur Dateien lesen.
+
+    ⚠ In einem Arbeitsbaum ist `.git` eine DATEI (`gitdir: …`), kein Verzeichnis — und das
+    `HEAD`, das zaehlt, liegt dann dort, nicht im Hauptverzeichnis. Wer nur `<baum>/.git/HEAD`
+    liest, bekommt fuer jeden Arbeitsbaum `None` und haelt das fuer „kein Zweig".
+    """
+    g = baum / ".git"
+    if g.is_file():
+        try:
+            ziel = g.read_text(encoding="utf-8").strip()
+        except OSError:
+            return None
+        if not ziel.startswith("gitdir:"):
+            return None
+        g = pathlib.Path(ziel.split(":", 1)[1].strip())
+    kopf = g / "HEAD"
+    try:
+        t = kopf.read_text(encoding="utf-8").strip()
+    except OSError:
+        return None
+    return t.split("refs/heads/", 1)[1] if "refs/heads/" in t else t[:12]
 
 
 def _hash(p: pathlib.Path) -> str | None:
@@ -129,9 +157,22 @@ def main(argv: list[str] | None = None) -> int:
     if dort is None:
         print(f"  ⓘ {grund} — nicht prüfbar, kein Befund.")
         return 0
+
+    # ⛔ Der Nachtlauf-Baum gehört auf `main` und sonst nirgendwohin. Steht dort ein Arbeits-
+    # zweig, ist die ganze Vorkehrung aufgehoben: dann läuft nachts wieder, was jemand
+    # zufällig ausgecheckt hat — genau der Zustand vom 2026-10-05. Das gilt UNABHÄNGIG davon,
+    # ob dieser Baum derselbe ist, deshalb steht die Prüfung vor dem Dateivergleich.
+    z = zweig(dort)
+    if z is not None and z != ZWEIG:
+        print(f"\n⚠ Befund: der Nachtlauf-Baum {dort}")
+        print(f"   steht auf `{z}` statt auf `{ZWEIG}`.")
+        print("   Damit läuft nachts wieder ein Arbeitsstand. Der Lauf gehört in einen Baum,"
+              "\n   der nichts anderes tut als laufen.")
+        return 1
+
     if dort.resolve() == HIER.resolve():
         if not a.offen:
-            print("  ✓ Dieser Baum IST der Nachtlauf-Baum — nichts zu vergleichen.")
+            print(f"  ✓ Dieser Baum IST der Nachtlauf-Baum, auf `{z}` — nichts zu vergleichen.")
         return 0
 
     e = vergleiche(HIER, dort)
