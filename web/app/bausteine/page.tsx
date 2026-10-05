@@ -35,6 +35,11 @@ export default function BausteinePage() {
               Bibliothek: die Themenleiste oben filtert sie, und ein Eingabefeld dazwischen
               wuerde diesen Zusammenhang zerschneiden. */}
           <hr className="antw-trenner" />
+          {/* Der Weg zur zweiten Verwendung der Bibliothek. Kein Eintrag in der Hauptnavigation,
+              solange `Rail.tsx` und die i18n-Dateien von drei Zweigen bearbeitet werden. */}
+          <p className="antw-hilfe">
+            <a className="dok-klein" href="/dokumente">Dokument aus Bausteinen bauen</a>
+          </p>
           <Antwortvorschlaege />
         </div>
       </div>
