@@ -90,6 +90,9 @@ def _glob_oder_leer(verzeichnis: str, spalten: str) -> str:
 
 G = E = DC = ATTR = PE = EN = N = AW = AC = CS = CA = CL = LL = BN = LR = ""
 
+# Gemessener Vorlauf je CPV-Klasse; je Land einmal gefuellt (s. Hauptlauf).
+_VORLAUF_KLASSEN: dict = {}
+
 BRANCHE = """CASE b.branche
   WHEN 'IT' THEN 'it' WHEN 'Elektro' THEN 'it' WHEN 'Messtechnik' THEN 'it'
   WHEN 'Bau' THEN 'bau' WHEN 'Installation' THEN 'bau' WHEN 'Immobilien' THEN 'bau'
@@ -469,7 +472,171 @@ VORLAUF.append(lambda: (
 
 # Vorlauf bis zum Einstiegsfenster: Median Bekanntmachung→Zuschlag ~87 Tage
 # plus Positionierungsvorlauf. Vor diesem Datum muss man sich bewegt haben.
+#
+# ⛔ DIESE ZAHL IST GERATEN, UND ZWAR ZWEIFACH — gemessen am 2026-10-05.
+#   · Die 87 sind die FALSCHE GROESSE: Bekanntmachung→Zuschlag. Gefragt ist aber, wie lange
+#     vor dem VERTRAGSENDE die Nachfolge-Ausschreibung erscheint. Das sind zwei verschiedene
+#     Strecken, und sie haengen nicht aneinander.
+#   · Die 90 („Positionierungsvorlauf") stehen in keiner Messung.
+#
+# Der echte Wert, an 8.521 Nachfolge-Paaren mit BELEGTEM Vertragsende (`duration_source='echt'`):
+#     Median 232 Tage · Quartile -13 bis 632 · je CPV-Klasse Mediane zwischen 168 und 722
+# Ein Viertel der Nachfolgen erscheint also ERST NACH dem Ende des alten Vertrags.
+#
+# ⚠ `VORLAUF_TAGE` bleibt vorerst stehen, weil `bindung.fenster` daran haengt und die Ansicht
+# es zeigt. Die ehrliche Fassung ist der Block `beobachtung` weiter unten: er rechnet JE
+# SEGMENT aus gemessenen Paaren und laesst das Fenster LEER, wo es keine Messung gibt, statt
+# eine Zahl zu erfinden. Wer `bindung.fenster` aus der Ansicht nimmt, kann diese Konstante
+# mitnehmen — vorher nicht, sonst verschwindet eine Anzeige ohne Ersatz.
 VORLAUF_TAGE = 87 + 90
+
+# Ab wie vielen gemessenen Paaren eine CPV-Klasse einen eigenen Vorlauf bekommt.
+# ⚠ Keine runde Zahl aus dem Gefuehl: unter 30 Paaren schwankt der Median zwischen zwei Laeufen
+# staerker als der Unterschied zwischen den Segmenten, den er zeigen soll. Lieber kein Fenster
+# als eines, das sich jede Nacht bewegt.
+BEOB_MIN_PAARE = 30
+
+# Fenster nur fuer Vertraege, die in diesem Zeitraum enden. Darunter ist die Nachfolge meist
+# schon draussen, darueber ist jede Aussage Kaffeesatz.
+BEOB_TAGE_MAX = 1095
+
+
+def vorlauf_je_klasse() -> dict:
+    """Wie lange VOR dem Vertragsende erscheint die Nachfolge-Ausschreibung? Je CPV-Klasse.
+
+    ⚠ DIE EINZIGE EHRLICHE GRUNDLAGE FUER EIN BEOBACHTUNGSFENSTER, und sie wurde bis zum
+    2026-10-05 nicht benutzt. Davor stand `VORLAUF_TAGE = 87 + 90` (s. o.) — eine geratene
+    Zahl aus einer anderen Strecke. Hier wird stattdessen gemessen, an Paaren, die es
+    tatsaechlich gab: Vorgaenger mit BELEGTEM Vertragsende, Nachfolger mit
+    Veroeffentlichungsdatum.
+
+    ⚠ `duration_source='echt'` ist Pflicht. Mit geschaetzten Enden misst man den eigenen
+    Schaetzer, nicht die Welt — der Median waere dann ein Artefakt von `lead_duration`.
+
+    ⚠ UND DAS ERGEBNIS TRAEGT KEIN DATUM, SONDERN EINE SPANNE. Gemessen ueber alle Klassen:
+    Median 232 Tage, Quartile -13 bis 632. Ein Viertel der Nachfolgen erscheint also ERST
+    NACH dem Ende des alten Vertrags. Wer daraus ein Handlungsdatum macht, erfindet eine
+    Genauigkeit, die in den Daten nicht steht. Deshalb liefert diese Funktion `q75` als
+    BEOBACHTUNGSBEGINN (wer spaeter hinsieht, verpasst ein Viertel) und `median` als „dann
+    ist es wahrscheinlich soweit" — zwei Zahlen, nicht eine.
+
+    Leeres Ergebnis ist ein gueltiger Zustand: ein Land ohne Nachfolge-Kanten oder ohne
+    belegte Enden bekommt keine Fenster, und die Ansicht sagt das.
+    """
+    try:
+        rows = con.execute(f"""
+            WITH pub AS (SELECT notice_id, any_value(publication_date) AS pub
+                         FROM {N} GROUP BY 1),
+                 ende AS (SELECT notice_id, contract_end
+                          FROM read_parquet('{G}/lead_duration.parquet')
+                          WHERE duration_source = 'echt'),
+                 paare AS (
+                   SELECT cs.cpv_class,
+                          datediff('day', p.pub, e.contract_end) AS tage
+                   FROM {CS} cs
+                   JOIN ende e ON e.notice_id = cs.predecessor
+                   JOIN pub  p ON p.notice_id = cs.successor
+                   WHERE p.pub IS NOT NULL AND e.contract_end IS NOT NULL
+                     -- Fenster gegen Ausreisser: zwei Jahre nach dem Ende ist keine
+                     -- Nachfolge mehr, und drei Jahre davor ist es eine andere Vergabe.
+                     AND datediff('day', p.pub, e.contract_end) BETWEEN -730 AND 1095)
+            SELECT cpv_class, count(*) AS n,
+                   median(tage) AS med,
+                   quantile_cont(tage, 0.75) AS q75
+            FROM paare GROUP BY 1 HAVING count(*) >= {BEOB_MIN_PAARE}""").fetchall()
+    except Exception as e:                       # fehlende Tabelle, fehlende Spalte, leeres Land
+        print(f"  ⚠ Vorlauf nicht messbar: {str(e)[:90]}")
+        return {}
+    return {str(c): {"n": int(n), "median": int(round(m)), "q75": int(round(q))}
+            for (c, n, m, q) in rows}
+
+
+def beobachtung(key, fenster: list, klassen: dict) -> dict:
+    """Auslaufende Rahmen mit einem BELEGTEN Beobachtungsfenster — oder ohne, und das sichtbar.
+
+    Kein Terminplan. Eine Ueberwachungsanweisung: ab wann lohnt es sich hinzusehen, und
+    worauf stuetzt sich das. Was das Produkt daraus machen kann, gibt es schon
+    (`user_buyer_watch` + Alarme).
+
+    ⚠ ABDECKUNG IST HIER EIN ERGEBNIS, KEIN MANGEL. Gemessen am 2026-10-05: von 90
+    bindung-Fenstern tragen 56 ein echtes Vertragsende und 19 zusaetzlich eine CPV-Klasse
+    mit genug Messpaaren. Die uebrigen bekommen `ab=None` und einen Grund — sie verschwinden
+    NICHT aus der Liste, denn „wir wissen es nicht" ist eine Auskunft und eine Luecke ist
+    kein Grund zu schweigen.
+
+    ⚠ UND DIE 62 % SIND NICHT DIE EIGENSCHAFT DES BESTANDS (Hinweis von goVisor-MAIN, und er
+    ist berechtigt): sie gelten fuer diese AUSWAHL, also fuer Rahmenvertraege mit gelisteten
+    Firmen. Dort ist ein belegtes Ende naturgemaess haeufiger. Ueber alle Leads traegt
+    `lead_duration` 66,8 % ueberhaupt ein Ende, davon nur 33 % ein echtes. Wer die 62 %
+    spaeter zitiert, muss die Bezugsgroesse mitzitieren.
+    """
+    posten, mit, ohne = [], 0, 0
+    # CPV je Posten in EINER Abfrage statt je Zeile — `bindung_daten` liefert sie nicht mit,
+    # und ich fasse die Funktion nicht an (fremdes Gebiet, und sie hat eigene Verbraucher).
+    ids = [f["id"] for f in fenster if f.get("id")]
+    cpv_je_id = {}
+    if ids:
+        platz = ", ".join(["?"] * len(ids))
+        try:
+            cpv_je_id = {r[0]: (str(r[1])[:4] if r[1] is not None else None)
+                         for r in con.execute(
+                             # ⚠ Die Spalte heisst `cpv_code`, NICHT `cpv_main`. Der erste Entwurf griff
+                            # daneben — und weil der Fehler abgefangen wird, lief der Export
+                            # weiter und lieferte NULL Fenster bei 41 gemessenen Klassen. Ein
+                            # stiller Totalausfall, der nur auffiel, weil danach nachgezaehlt
+                            # wurde. Eine Abfangroutine macht einen Fehler leise, nicht klein.
+                            f"SELECT lead_id, cpv_code FROM {E} WHERE lead_id IN ({platz})",
+                             ids).fetchall()}
+        except Exception as e:
+            print(f"  ⚠ CPV je Bindungs-Posten nicht lesbar: {str(e)[:80]}")
+    for f in fenster:
+        cpv4 = cpv_je_id.get(f.get("id")) or ""
+        k = klassen.get(cpv4)
+        belegt = f.get("endeSrc") == "echt"
+        grund = (None if (belegt and k)
+                 else "ende_geschaetzt" if not belegt
+                 else "feld_nicht_gemessen")
+        if grund is None:
+            mit += 1
+        else:
+            ohne += 1
+        # ⭐ DIE LAGE STEHT IN DEN DATEN, NICHT IM RENDERER — dieselbe Regel wie bei den
+        # Kettenguete-Baendern. Sonst kennt die Anzeige eine Schwelle, die der Export nicht
+        # kennt, und beide laufen beim naechsten Anfassen auseinander.
+        #
+        # ⚠ UND ES GIBT ZWEI LAGEN, NICHT EINE. Gemessen am 2026-10-05 je Land:
+        #     DE  8.521 Paare  Median +232 Tage   → Nachfolge kommt VOR dem Ende
+        #     AT  8.050 Paare  Median  -83 Tage   → Nachfolge kommt NACH dem Ende
+        # In Oesterreich wird also typischerweise verlaengert oder es klafft eine Luecke,
+        # statt rechtzeitig neu auszuschreiben. Bei 8.050 Paaren ist das kein Messfehler.
+        # Ein „ab MM/YYYY beobachten" waere dort sinnlos — die Lage heisst `nachlauf`, und
+        # die Ansicht sagt etwas anderes. Verschwiegen wird sie nicht: fuer einen Bieter ist
+        # „hier wird regelmaessig zu spaet ausgeschrieben" eine verwertbare Auskunft.
+        lage = None if grund else ("vorlauf" if k["median"] > 0 else "nachlauf")
+        posten.append({
+            **{s: f.get(s) for s in ("id", "titel", "buyer", "ende", "endeSrc",
+                                     "wert", "wertSrc", "nGelistet", "gelistete", "tage")},
+            "cpv4": cpv4 or None,
+            "lage": lage,
+            # Beobachtungsbeginn = Ende minus dem oberen Quartil. Wer spaeter hinsieht,
+            # verpasst das Viertel der Nachfolgen, das besonders frueh erscheint.
+            # ⚠ NUR bei `lage == "vorlauf"`. Ein q75 von 10 Tagen (so gemessen in AT) waere
+            # ein Fenster, das sich niemand in den Kalender schreibt, und ein negativer
+            # Median macht aus „wahrscheinlich dran" ein Datum NACH dem Vertragsende — das
+            # liest sich wie ein Fehler, obwohl die Zahl stimmt.
+            "abTage": k["q75"] if lage == "vorlauf" else None,
+            "wahrscheinlichTage": k["median"] if lage == "vorlauf" else None,
+            # Bei `nachlauf`: wie weit DANACH, als positive Zahl — die Ansicht sagt dann
+            # „erfahrungsgemaess erst rund N Tage nach Ablauf".
+            "nachlaufTage": (-k["median"]) if lage == "nachlauf" else None,
+            "beleg": ({"n": k["n"], "median": k["median"], "q75": k["q75"]}
+                      if grund is None else None),
+            "ohneFensterWeil": grund,
+        })
+    return {"posten": posten, "mitFenster": mit, "ohneFenster": ohne,
+            "klassenGemessen": len(klassen),
+            "mitVorlauf": sum(1 for p in posten if p["lage"] == "vorlauf"),
+            "mitNachlauf": sum(1 for p in posten if p["lage"] == "nachlauf")}
 
 
 def bindung_daten(key):
@@ -833,11 +1000,16 @@ def faehigkeiten(key):
 
 def branche_bauen(key):
     q = pipeline(key)
+    _bindung = bindung_daten(key)
     ergebnis = {
         "quartale": q,
         "top": top_posten(key),
         "stellen": vergabestellen(key),
-        "bindung": bindung_daten(key),
+        "bindung": _bindung,
+        # ⚠ Baut auf DENSELBEN Fenstern auf, statt sie ein zweites Mal abzufragen. Zwei
+        # Abfragen waeren zwei Mengen, die beim naechsten Anfassen auseinanderlaufen — und
+        # die Ansicht zeigt beide nebeneinander.
+        "beobachtung": beobachtung(key, _bindung.get("fenster", []), _VORLAUF_KLASSEN),
         "felder": felder(key),
         "nachbarn": nachbarfelder(key),
         "einstieg": einstiegsfreundlich(key),
@@ -899,6 +1071,12 @@ for land in LAENDER:
     quellen_setzen(land)
     for schritt in VORLAUF:
         schritt()
+    # ⚠ EINMAL JE LAND, nicht je Branche. Die Messung laeuft ueber alle Nachfolge-Kanten des
+    # Landes (DE: 115.280) und haengt nicht an der Branche — je Branche gerechnet waere es
+    # sechsmal dieselbe Arbeit mit sechsmal demselben Ergebnis.
+    globals()["_VORLAUF_KLASSEN"] = vorlauf_je_klasse()
+    print(f"  Vorlauf gemessen: {len(_VORLAUF_KLASSEN)} CPV-Klassen "
+          f"mit mindestens {BEOB_MIN_PAARE} Paaren")
     out[land] = {}
     for key in BRANCHEN:
         try:

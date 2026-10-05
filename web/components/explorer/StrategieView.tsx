@@ -58,12 +58,33 @@ type Faehig = {
   buergschaft: { treffer: number; vol: number | null; n: number };
   nachweise: { code: string; n: number }[];
 };
+/** Ein auslaufender Rahmen mit (oder ohne) belegtem Beobachtungsfenster.
+ *
+ * ⚠ `lage` kommt aus dem EXPORT, nicht aus dieser Datei. Die Schwelle, ab der ein Vorlauf
+ * ein Vorlauf ist, gehoert zu den Daten; sonst kennt die Anzeige eine Grenze, die der
+ * Export nicht kennt, und beide laufen beim naechsten Anfassen auseinander. */
+type BeobPosten = {
+  id: string; titel: string; buyer: string;
+  ende: string; endeSrc: "echt" | "schaetz";
+  wert: string | null; wertSrc?: string;
+  nGelistet: number; gelistete: string[]; tage: number;
+  cpv4: string | null;
+  lage: "vorlauf" | "nachlauf" | null;
+  abTage: number | null; wahrscheinlichTage: number | null; nachlaufTage: number | null;
+  beleg: { n: number; median: number; q75: number } | null;
+  ohneFensterWeil: "ende_geschaetzt" | "feld_nicht_gemessen" | null;
+};
+
 type Strat = {
   quartale: Quartal[]; top: Posten[]; stellen: Stelle[];
   felder: Feld[]; nachbarn: Nachbar[]; einstieg: Einstieg[]; wettbewerb: Wett; faehigkeiten: Faehig;
   bindung: {
     rahmen: number; belegtGesperrt: number; gelisteteUnbekannt: number;
     volGesperrt: number | null; volN: number; fenster: Fenster[];
+  };
+  beobachtung?: {
+    posten: BeobPosten[]; mitFenster: number; ohneFenster: number;
+    klassenGemessen: number; mitVorlauf: number; mitNachlauf: number;
   };
   summe: { nGesamt: number; volEcht: number; volSchaetz: number; nUnbekannt: number; nRahmenOhneWb: number };
   _pro?: boolean;                 // Härtung 4: false = Free (Teaser-Redaktion aktiv)
@@ -127,6 +148,7 @@ export const SEKTIONEN = [
     { key: "position", label: "Position", frage: "Wo stehen wir?" },
     { key: "faehigkeiten", label: "Fähigkeiten", frage: "Was blockiert uns?" },
     { key: "bindung", label: "Bindung", frage: "Was ist uns verschlossen?" },
+    { key: "beobachtung", label: "Beobachtung", frage: "Worauf lohnt es sich zu warten?" },
     { key: "trefferguete", label: "Treffergüte", frage: "Warum passt manches nicht, und was ändert das?" },
     { key: "profil", label: "Profil", frage: "Wer sind wir?" },
   ]},
@@ -707,6 +729,123 @@ const WETT_SPALTEN: { key: string; label: string; wert: (a: Anbieter) => number 
   { key: "vol", label: "Volumen belegt", wert: (a) => a.vol ?? -1 },
 ];
 
+/** Beobachtungsliste: wann lohnt es sich hinzusehen, und worauf stuetzt sich das.
+ *
+ * ⛔ KEIN TERMINPLAN, UND DAS IST EINE MESSUNG, KEINE VORSICHT. Gefragt ist: wie lange vor
+ * dem Vertragsende erscheint die Nachfolge-Ausschreibung? Gemessen am 2026-10-05 an echten
+ * Nachfolge-Paaren mit BELEGTEM Vertragsende (`duration_source='echt'`):
+ *
+ *     DE  8.521 Paare   Median +232 Tage   Quartile  -13 bis 632
+ *     AT  8.050 Paare   Median  -83 Tage   Quartile -283 bis 146
+ *     CH     49 Paare   ·   LU 2 Paare     (beide zu duenn fuer eine Aussage)
+ *
+ * Die Spanne ist anderthalb Jahre breit, je CPV-Klasse schwanken die Mediane zwischen 168
+ * und 722 Tagen, und in Oesterreich ist der Median NEGATIV: dort erscheint die Nachfolge
+ * typischerweise NACH dem Ende des alten Vertrags. Ein berechnetes Handlungsdatum waere
+ * deshalb eine erfundene Genauigkeit. Diese Ansicht zeigt ein Fenster und sagt dazu, worauf
+ * es sich stuetzt, oder sie sagt, dass sie nichts sagen kann.
+ *
+ * ⚠ VORHER STAND IM EXPORT `VORLAUF_TAGE = 87 + 90`, und die Zahl war zweifach geraten: die
+ * 87 sind die falsche Strecke (Bekanntmachung bis Zuschlag), die 90 stehen in keiner
+ * Messung. Diese Ansicht ersetzt sie durch eine gemessene mit Spanne.
+ */
+function Beobachtung({ data }: { data: Strat }) {
+  const { t } = useSprache();
+  const b = data.beobachtung;
+  if (!b || !b.posten.length) {
+    return (
+      <>
+        <div className="st-head"><div>
+          <h4>{t("Beobachtung")}</h4>
+          <p className="st-frage">{t("Worauf lohnt es sich zu warten?")}</p>
+        </div></div>
+        <p className="st-leer">{t("In diesem Feld läuft gerade kein Rahmenvertrag aus, für den wir gelistete Firmen kennen.")}</p>
+      </>
+    );
+  }
+
+  /** `dd.mm.yyyy` minus N Tage, als `MM/JJJJ`. Monatsgenau, weil die Messung keine
+   *  Tagesgenauigkeit hergibt und ein Datum sie vortäuschen würde. */
+  const minus = (ende: string, tage: number): string => {
+    const m = /^(\d{2})\.(\d{2})\.(\d{4})$/.exec(ende || "");
+    if (!m) return "?";
+    const d = new Date(Number(m[3]), Number(m[2]) - 1, Number(m[1]));
+    d.setDate(d.getDate() - tage);
+    return `${String(d.getMonth() + 1).padStart(2, "0")}/${d.getFullYear()}`;
+  };
+
+  // Reihenfolge: was beobachtbar ist zuerst, danach der Nachlauf, zuletzt das Unbelegte.
+  const rang = (p: BeobPosten) => (p.lage === "vorlauf" ? 0 : p.lage === "nachlauf" ? 1 : 2);
+  const posten = [...b.posten].sort((x, y) => rang(x) - rang(y) || x.tage - y.tage);
+
+  return (
+    <>
+      <div className="st-head"><div>
+        <h4>{t("Beobachtung")}</h4>
+        <p className="st-frage">{t("Worauf lohnt es sich zu warten?")}</p>
+      </div></div>
+
+      {/* ⚠ Die Abdeckung steht OBEN, nicht im Kleingedruckten. Wer sie unten versteckt,
+          verkauft eine Liste als vollständig, die es nicht ist. */}
+      <p className="st-hinweis">
+        {t("{n} von {ges} auslaufenden Rahmen tragen ein belegtes Fenster. Grundlage sind {k} gemessene Vergabefelder. Wo zu wenige vergleichbare Verträge vorliegen oder das Vertragsende nur geschätzt ist, steht hier bewusst keine Zahl.",
+          { n: b.mitFenster, ges: b.posten.length, k: b.klassenGemessen })}
+      </p>
+
+      <div className="beob-liste">
+        {posten.map((p) => (
+          <div key={p.id} className={`beob ${p.lage ? "beob-" + p.lage : "beob-offen"}`}>
+            <div className="beob-kopf">
+              <span className="beob-titel">{p.titel}</span>
+              {p.wert ? <span className="beob-wert">{p.wert}</span> : null}
+            </div>
+            <div className="beob-stelle">
+              {p.buyer}
+              {p.nGelistet ? (
+                <span className="beob-gelistet">{t("{n} Firmen gelistet", { n: p.nGelistet })}</span>
+              ) : null}
+            </div>
+
+            {p.lage === "vorlauf" && p.beleg ? (
+              <>
+                <div className="beob-aktion">
+                  {t("Ab {ab} beobachten.", { ab: minus(p.ende, p.abTage as number) })}{" "}
+                  <span className="beob-wahrsch">
+                    {t("Wahrscheinlich dran ab {w}.", { w: minus(p.ende, p.wahrscheinlichTage as number) })}
+                  </span>
+                </div>
+                <div className="beob-beleg">
+                  {t("Vertragsende {ende}, belegt. Bei {n} vergleichbaren Verträgen in diesem Feld erschien die Nachfolge im Mittel {med} Tage vorher, bei einem Viertel schon {q} Tage vorher.",
+                    { ende: p.ende, n: p.beleg.n, med: p.beleg.median, q: p.beleg.q75 })}
+                </div>
+              </>
+            ) : p.lage === "nachlauf" && p.beleg ? (
+              <>
+                {/* ⚠ Hier wird NICHT geglättet. Dass in einem Feld regelmässig erst nach
+                    Ablauf neu ausgeschrieben wird, ist für einen Bieter eine verwertbare
+                    Auskunft: es heisst Verlängerung oder Lücke, nicht Wettbewerb. */}
+                <div className="beob-aktion beob-spaet">
+                  {t("Erfahrungsgemäß erst nach Ablauf. Rechnet mit Verlängerung oder einer Lücke, nicht mit einer rechtzeitigen Neuvergabe.")}
+                </div>
+                <div className="beob-beleg">
+                  {t("Vertragsende {ende}, belegt. Bei {n} vergleichbaren Verträgen in diesem Feld erschien die Nachfolge im Mittel erst {tage} Tage nach dem Ende.",
+                    { ende: p.ende, n: p.beleg.n, tage: p.nachlaufTage as number })}
+                </div>
+              </>
+            ) : (
+              <div className="beob-offen-grund">
+                {p.ohneFensterWeil === "ende_geschaetzt"
+                  ? t("Kein Fenster: das Vertragsende {ende} ist geschätzt, nicht belegt.", { ende: p.ende })
+                  : t("Kein Fenster: für dieses Vergabefeld liegen zu wenige vergleichbare Verträge vor, um einen Vorlauf zu messen.")}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
+
 function Wettbewerb({ data }: { data: Strat }) {
   const { t } = useSprache();
   const w = data.wettbewerb;
@@ -1011,6 +1150,10 @@ export function StrategieView({
           ? (!data ? <div className="st-head"><div><h4>{t("Bindung")}</h4><p className="st-frage">{t("Lade Aggregate …")}</p></div></div>
              : !isPro(data) ? <ProGate titel="Bindung" frage="Was ist euch verschlossen?" was="Gesperrtes Volumen, Gelisteten-Analyse und die nächsten Einstiegsfenster." />
              : <Bindung data={data} />)
+          : sektion === "beobachtung"
+          ? (!data ? <div className="st-head"><div><h4>{t("Beobachtung")}</h4><p className="st-frage">{t("Lade Aggregate …")}</p></div></div>
+             : !isPro(data) ? <ProGate titel="Beobachtung" frage="Worauf lohnt es sich zu warten?" was="Auslaufende Rahmen mit gemessenem Beobachtungsfenster und dem Beleg dazu." />
+             : <Beobachtung data={data} />)
           : sektion === "faehigkeiten"
           ? (!data ? <div className="st-head"><div><h4>{t("Fähigkeiten")}</h4><p className="st-frage">{t("Lade Aggregate …")}</p></div></div>
              : !isPro(data) ? <ProGate titel="Fähigkeiten" frage="Was blockiert uns?" was="Geforderte Nachweise, Bürgschafts-Hürde und der formale Rahmen im Feld." />

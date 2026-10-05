@@ -3147,3 +3147,25 @@ td.c-doks{width:84px;text-align:center}
 .testphase{display:inline-flex;align-items:center;padding:4px 10px;border:1px solid var(--line,#e5e7eb);border-radius:100px;font-size:11px;color:var(--ink-700,#374151);text-decoration:none;white-space:nowrap}
 .testphase:hover{border-color:var(--ink-400,#9ca3af)}
 .testphase-bald{border-color:var(--signal,#f59e0b);color:var(--signal-ink,#b45309);background:var(--signal-bg,#fffbeb);font-weight:600}
+
+/* ── Beobachtungsliste (Strategie) ────────────────────────────────────────────────────────
+   ⚠ DREI ZUSTÄNDE, DREI FARBEN, und der dritte ist der wichtigste: ein Posten OHNE belegtes
+   Fenster sieht anders aus als einer mit, statt still zu fehlen. Eine Liste, in der die
+   Lücken unsichtbar sind, liest sich vollständig und ist es nicht. */
+.beob-liste{display:flex;flex-direction:column;gap:var(--s3);margin-top:var(--s4)}
+.beob{padding:var(--s3);border:1px solid var(--line);border-radius:6px;border-left-width:3px}
+.beob-vorlauf{border-left-color:var(--ok,#16794a)}
+.beob-nachlauf{border-left-color:var(--warn,#b45309)}
+.beob-offen{border-left-color:var(--line);background:var(--bg-soft,transparent)}
+.beob-kopf{display:flex;justify-content:space-between;gap:var(--s3);align-items:baseline}
+.beob-titel{font-weight:600;color:var(--ink-900);line-height:1.3}
+.beob-wert{font-family:var(--mono);font-size:var(--t-sm);color:var(--ink-500);white-space:nowrap}
+.beob-stelle{font-size:var(--t-sm);color:var(--ink-500);margin-top:2px}
+.beob-gelistet{margin-left:var(--s2);color:var(--ink-400)}
+.beob-aktion{margin-top:var(--s2);font-weight:600;color:var(--ink-900)}
+.beob-wahrsch{font-weight:400;color:var(--ink-500)}
+.beob-spaet{font-weight:600;color:var(--warn,#b45309)}
+/* Der Beleg steht IMMER unter der Aussage, nie daneben: wer die Zahl liest, soll ohne
+   Zusatzklick sehen, worauf sie sich stützt. */
+.beob-beleg{margin-top:4px;font-size:var(--t-meta);color:var(--ink-400);line-height:1.45}
+.beob-offen-grund{margin-top:var(--s2);font-size:var(--t-sm);color:var(--ink-400);font-style:italic}
