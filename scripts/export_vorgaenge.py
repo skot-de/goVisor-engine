@@ -688,6 +688,13 @@ def schreibe(produkt: dict[tuple[str, str], dict],
     `doc-analysis/` stuenden sonst rund 156.000 Dateien unter `web/data`, und `next build`
     starb daran reproduzierbar im Node-Heap (SIGABRT, Stapel in `node::fs::AfterStat`).
 
+    ⚠ DIE 156.000 SIND DER AUSLOESER, NICHT DER HEUTIGE STAND. Am 2026-10-05 wurden auch
+    `firma/` (48.634) und `suppliers/` (48.194) gebuendelt; seitdem liegen **63.133** Dateien
+    dort, der Bau braucht 18 s statt rund 5 min, und bis zur Grenze sind es ~92.900 Dateien.
+    Wer diese Zeile liest, soll nicht glauben, es sei weiterhin knapp — die naechste Enge
+    kaeme aus `doc-text/` (18.567) und `doc-analysis/` (12.085), die beide noch Einzeldateien
+    schreiben und mit dem Dokumentenbestand wachsen.
+
     ⚠ UND WARUM NICHT EINE SAMMELDATEI. Daran ist `firma-profiles.json` gescheitert:
     67 MB laden, um 1,6 KB zu liefern.
 

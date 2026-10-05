@@ -4,9 +4,24 @@ import { loadDataFile, ausSpeicher, inSpeicher } from "@/lib/dataSource";
 /* Vorgangsakten (scripts/export_vorgaenge.py) — Ausschreibung, Korrekturen, Unterlagen und
  * Zuschlag unter EINER Nummer.
  *
- * Dieselbe Form wie `firma/` und `doc-analysis/`: eine Akte je Datei, Hash als Name. Der
- * Grund ist derselbe, aus dem `firma-profiles.json` am 2026-08-25 aufgeteilt wurde — eine
- * Sammeldatei laedt bei jedem Kaltstart alles, um genau einen Eintrag zu liefern.
+ * GEBUENDELT: der Hash ist der Schluessel, aber viele Akten teilen sich eine Datei (die
+ * ersten `BUENDEL_STELLEN` Stellen des Hashs sind der Dateiname). Dieselbe Form haben seit
+ * dem 2026-10-05 auch `firma/` und `suppliers/`.
+ *
+ * ⚠ ZWEI FEHLER STECKEN IN DEN BEIDEN NAHELIEGENDEN EXTREMEN, und beide sind hier schon
+ * passiert. EINE SAMMELDATEI: daran starb `firma-profiles.json` am 2026-08-25 — 67 MB bei
+ * jedem Kaltstart laden, um 1,6 KB zu liefern. EINE DATEI JE AKTE: damit standen rund
+ * 156.000 Dateien unter `web/data`, und `next build` starb reproduzierbar im Node-Heap
+ * (SIGABRT, Stapel in `node::fs::AfterStat`). Die Buendelzahl ist der gemessene Kompromiss
+ * dazwischen, keine Willkuer — ein Buendel wird als Ganzes neu geschrieben, sobald sich ein
+ * Eintrag darin aendert, und bei 256 Buendeln waren das 87 MB Upload je Nacht.
+ *
+ * ⚠ DIE ZAHL MUSS IN PYTHON UND TYPESCRIPT DIESELBE SEIN. Weichen sie ab, sucht die App in
+ * Dateien, die es nicht gibt — und findet nichts, ohne zu scheitern.
+ *
+ * ⚠ `doc-analysis/` und `doc-text/` sind NOCH nicht gebuendelt (12.085 und 18.567 Dateien,
+ * Stand 2026-10-05). Wer hier die Form abschaut, schaut sie an `vorgang/` ab, nicht an
+ * jenen beiden.
  *
  * ⚠ NICHT ALLE VORGAENGE. In `vorgang/` liegen die Akten mit einer heute sichtbaren
  * Vergabe (gemessen 2026-09-04: 54.252), in `vorgang-archiv/` die Glieder ihrer Ketten
