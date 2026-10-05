@@ -333,7 +333,7 @@ def test_die_anzeige_kennt_die_markierung():
         pytest.skip(
             "StrategieView.tsx kennt die Markierung `konstant` auf diesem Zweig noch nicht — "
             "sie liegt auf `pipeline/entity-wachen`. Bis dahin zeigt die Anzeige fuer eine "
-            "entartete Quote weiterhin eine Prozentzahl statt „nicht unterscheidend".")
+            "entartete Quote weiterhin eine Prozentzahl statt 'nicht unterscheidend'.")
     assert "konstant" in c, "StrategieView liest die Markierung nicht"
     assert "q.konstant" in c and "data-src=\"konstant\"" in c
     # und sie darf keinen Marktwert mehr speisen
