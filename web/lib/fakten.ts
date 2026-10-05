@@ -118,7 +118,7 @@ export const FAKTEN = {
     },
     {
       name: "Angebundene Quellen",
-      wert: "20 produktiv angebunden, 125 Quellen in der Quellen-Registry erfasst und "
+      wert: "21 produktiv angebunden, 125 Quellen in der Quellen-Registry erfasst und "
         + "mit ehrlichem Status geführt",
     },
     {
