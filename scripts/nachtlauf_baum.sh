@@ -61,6 +61,34 @@ else
   echo "✓ Zweig: $ZWEIG"
 fi
 
+# ⛔ STIMMT DER INHALT MIT DEM EIGENEN HEAD UEBEREIN?
+#
+# Am 2026-10-05 stand hier ein GESTAGTES LOESCHEN auf einer Datei, die HEAD mit 21.570 Bytes
+# traegt — niemand hatte sie angefasst. Ursache war kein `add`, sondern die Mechanik: der Zweig
+# wurde per `update-ref` aus einem ANDEREN Baum weitergeschoben, waehrend dieser hier darauf
+# steht. Sein HEAD zeigt dann auf den neuen Commit, sein Index steht auf dem alten — und jede
+# seither hinzugekommene Datei erscheint als geloescht.
+#
+# ⚠ Der Schaden faellt eine Stufe weiter an: wer von hier aus committet, fuehrt das Loeschen
+# AUS, unter einer Nachricht, die von etwas ganz anderem handelt. Gefunden hat es eine andere
+# Sitzung von Hand; diese Pruefung soll das naechste Mal frueher dran sein.
+#
+# ⚠ Ein blosses `git status` taugt nicht: der Lauf traegt selbst erzeugte Zahlen nach, die
+# IMMER abweichen. Gemeldet wird deshalb nur das gestagte LOESCHEN — das ist der Fall, der
+# Arbeit vernichtet.
+if command -v git >/dev/null 2>&1 && [ -e "$BAUM/.git" ]; then
+  geloescht="$(git -C "$BAUM" diff --cached --name-only --diff-filter=D HEAD 2>/dev/null | head -8)"
+  if [ -n "$geloescht" ]; then
+    echo "⛔ GESTAGTE LOESCHUNGEN — ein Commit von hier wuerde sie ausfuehren:"
+    echo "$geloescht" | sed 's/^/     /'
+    echo "   Meist die Folge eines update-ref auf diesen Zweig aus einem anderen Baum."
+    echo "   Reparieren:  git -C $BAUM restore --source=HEAD --staged --worktree ."
+    fehler=1
+  else
+    echo "✓ keine gestagten Loeschungen"
+  fi
+fi
+
 for eintrag in "${VERKNUEPFUNGEN[@]}"; do
   ziel="${eintrag%%|*}"
   quelle="${eintrag#*|}"
