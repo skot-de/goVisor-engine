@@ -1922,6 +1922,13 @@ $PY scripts/pruefe_streuung.py \
 # CLAUDE.md (wer eine Aussage an zwei Stellen fuehrt, pflegt sie an einer nicht).
 #
 # Warnung, kein Abbruch — wie die Verdrahtungspruefung.
+# ⚠ Eine Warteschlange, in der Arbeit liegt und sich seit Tagen nichts bewegt. Der Ausloeser:
+# der Analyse-Arbeiter lief am 2026-10-05 seit dem 11.09. und hatte seit dem 24.09. nichts
+# mehr analysiert — 3.946 Dokumente, leeres Guthaben, elf Tage, und keine Sonde sah es. Ein
+# Arbeiter, der laeuft und nichts bewegt, sieht in jeder Prozessliste gesund aus.
+$PY scripts/pruefe_warteschlangen.py \
+  || echo "  → Warteschlange steht. Details: python3 scripts/pruefe_warteschlangen.py --alle"
+
 $PY scripts/pruefe_bibel.py \
   || echo "  → Bibel-Pruefung meldet Befunde. Details: python3 scripts/pruefe_bibel.py --offen"
 
