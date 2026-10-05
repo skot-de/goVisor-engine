@@ -76,16 +76,27 @@ fi
 # ⚠ Ein blosses `git status` taugt nicht: der Lauf traegt selbst erzeugte Zahlen nach, die
 # IMMER abweichen. Gemeldet wird deshalb nur das gestagte LOESCHEN — das ist der Fall, der
 # Arbeit vernichtet.
+# ⚠ NICHT NUR LOESCHUNGEN. Der erste Anlauf dieser Pruefung filterte auf `--diff-filter=D` und
+# meldete zehn Minuten spaeter Ruhe, waehrend der Baum eine VERALTETE Fassung genau dieses
+# Skripts trug: eine NEUE Datei erscheint beim Zurueckbleiben als geloescht, eine GEAENDERTE
+# nur als geaendert — und ein Commit von hier wuerde sie stillschweigend zurueckdrehen. Beide
+# Faelle vernichten Arbeit, der zweite nur leiser.
+#
+# ⚠ Geprueft wird deshalb der Index gegen HEAD, aber NUR auf den Code-Pfaden. `data/` und
+# `web/data/` sind Symlinks auf erzeugte Staende und weichen staendig ab; sie mitzumelden
+# machte die Pruefung dauerrot und damit wertlos.
 if command -v git >/dev/null 2>&1 && [ -e "$BAUM/.git" ]; then
-  geloescht="$(git -C "$BAUM" diff --cached --name-only --diff-filter=D HEAD 2>/dev/null | head -8)"
-  if [ -n "$geloescht" ]; then
-    echo "⛔ GESTAGTE LOESCHUNGEN — ein Commit von hier wuerde sie ausfuehren:"
-    echo "$geloescht" | sed 's/^/     /'
+  zurueck="$(git -C "$BAUM" diff --cached --name-status HEAD -- \
+             scripts govisor tests docs web/lib web/app web/components 2>/dev/null | head -8)"
+  if [ -n "$zurueck" ]; then
+    echo "⛔ DER BAUM BLEIBT HINTER SEINEM EIGENEN HEAD ZURUECK."
+    echo "   Ein Commit von hier wuerde diese Aenderungen rueckgaengig machen:"
+    echo "$zurueck" | sed 's/^/     /'
     echo "   Meist die Folge eines update-ref auf diesen Zweig aus einem anderen Baum."
-    echo "   Reparieren:  git -C $BAUM restore --source=HEAD --staged --worktree ."
+    echo "   Nachziehen:  git -C $BAUM checkout -- . && git -C $BAUM reset --hard HEAD"
     fehler=1
   else
-    echo "✓ keine gestagten Loeschungen"
+    echo "✓ Inhalt stimmt mit HEAD ueberein"
   fi
 fi
 
