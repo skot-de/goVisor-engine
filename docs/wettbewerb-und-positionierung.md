@@ -3,6 +3,25 @@
 **Zweck:** Gesprächsvorbereitung für den Vertrieb, nicht Eigenlob. Enthält bewusst auch,
 **wo wir schwächer sind** — wer das im Gespräch zum ersten Mal hört, hat schon verloren.
 
+> ## ⚠ UNGEPRÜFT: alle wörtlichen Zitate vom Wettbewerb
+>
+> **Dieses Papier zitiert vier fremde Firmen wörtlich — AGB-Passagen, Werbeaussagen,
+> Produktbeschreibungen — und bei keinem dieser Zitate ist festgehalten, wann und woher es
+> stammt.** Bis das geschehen ist, dürfen sie **nicht nach aussen** verwendet werden.
+>
+> ⚠ **Warum das hier eine Regel ist und keine Ordnungsliebe:** Abruf-Werkzeuge erfinden
+> Zitate. Das ist in diesem Haus gemessen und als Arbeitsregel festgehalten — bei jeder
+> Recherche wird ausdrücklich vermerkt, ob der **Rohtext** gesehen wurde. Ein anderes Papier
+> im selben Verzeichnis macht es richtig („Produktseite, gelesen 2026-10-04"); dieses nicht.
+>
+> ⛔ **Das schwerste Zitat ist das über fremde AGB.** Auf ihm ruht ein ganzer Abschnitt
+> („Wie der Markt mit Lücken umgeht"). Liegt es daneben, ist es keine Ungenauigkeit, sondern
+> eine falsche Tatsachenbehauptung über einen Wettbewerber, in einem Papier, das an Vertrieb
+> und Kunden geht.
+>
+> **Die vollständige Liste steht am Ende unter „Zu prüfende Zitate".** Jedes bekommt entweder
+> Quelle und Lesedatum — oder es fliegt raus. Ein Drittes gibt es nicht.
+
 **Stand:** 2026-10-05, abends. ⚠ Jede Zahl hier trägt dieses Datum. Wer sie ändert, zieht das
 Datum mit. Zusammengetragen aus drei parallel arbeitenden Sitzungen; wer was beigetragen hat,
 steht am Ende.
@@ -24,7 +43,7 @@ das Gespräch beim ersten Nachfragen — und zwar bei einem Kunden, der es prüf
 | „Unsere Dokumentenanalyse ist aktuell." | ⚠ **Sie steht seit dem 24.09.** 3.946 Dokumente warten, weil das LLM-Guthaben leer ist. Ausgerechnet unser einziger gemessener Vorsprung — und solange nicht aufgeladen ist, ist der Satz falsch. |
 | „govisor.eu ist live." | Bewusst noch nicht online. |
 | „Wir erkennen den Bedarf, bevor er ausgeschrieben wird." | ⛔ **Vier Quellen gemessen, vier gefallen.** Ratsdokumente (das BidFix-Modell): Median **29 Tage** Vorlauf, nicht Monate — die Papiere begleiten das Verfahren, sie gehen ihm nicht voraus. Vorinformation: **53 %** führen zu einer Ausschreibung, Grundrauschen **55 %** — sie sagt nichts voraus. Haushaltspläne: Jahre im Voraus, aber nur **~3 %** einer Bekanntmachung zuordenbar, weil der Haushalt intern schreibt und die Bekanntmachung öffentlich. EU-Fördervorhaben: **2 %** gegen 1 % Grundrauschen. |
-| „Das Feld sagt uns, dass sich eine Beschaffung wiederholt." | ⛔ `RecurringProcurementIndicator` steht zu **97,8 % auf „false"** — die Käufer kreuzen es praktisch nie an. Ausgerechnet unsere Produktthese wörtlich im Datenfeld, und als Beleg unbrauchbar. Wer es nennt, wird widerlegt. |
+| „Das Feld sagt uns, dass sich eine Beschaffung wiederholt." | ⛔ `RecurringProcurementIndicator` steht bei **97,3 % der deutschen Leads auf „nein"** *(Stand 2026-10-05; über alle DE-Vorgänge mit dem Feld: 94,9 %)* — die Käufer kreuzen es praktisch nie an. Ausgerechnet unsere Produktthese wörtlich im Datenfeld, und als Beleg unbrauchbar. Wer es nennt, wird widerlegt. |
 | „Die neuen Merkmale gelten DACH-weit." | ⛔ **Die Schweiz bekommt davon nichts.** 1 von 8.549 CH-Leads trägt EU-Kofinanzierung; Direktvergabe-Grund und Ausführungsbedingungen stehen bei **0**. Das ist richtig so — die Schweiz fällt nicht unter die EU-Richtlinien — aber „gilt EU-weit" darf im DACH-Gespräch nicht als „gilt auch in der Schweiz" gelesen werden. |
 | „Tausende zusätzliche Leads durch die neuen Merkmale." | ⚠ **Die absoluten Zahlen sind klein**: 921 EU-kofinanzierte und 1.601 mit Direktvergabe-Grund unter 43.027 Leads im Frontend. Als Merkmal, das sonst niemand hat, ist das stark; als Mengenaussage wäre es falsch. |
 | „Impressum, Datenschutz und AGB stehen." | ⚠ Impressum ja. Die Datenschutzerklärung hat **offene Stellen** (Auftragsverarbeitung bei zwei Dienstleistern, eine Serverregion ungeprüft), die AGB sind ein **Entwurf mit acht offenen Geschäftsentscheidungen**, und **eine Rechtsprüfung hat nicht stattgefunden.** |
@@ -328,3 +347,214 @@ Sitzungen unabhängig voneinander gemessen haben** — und sie hielt.
 
 ⚠ **Was keine Sitzung behauptet:** dass irgendetwas davon beim Kunden erprobt wäre. Alle
 Zahlen sind aus dem Bestand gemessen, keine aus einem Gespräch.
+
+
+---
+
+## Zu prüfende Zitate
+
+⚠ **Keines davon ist belegt.** ⭐ **Nachtrag 2026-10-05:** die messende Sitzung hat
+geantwortet — gelesen wurden sie am **2026-10-05 vormittags**, auf den AGB- und
+Marketingseiten der vier Anbieter sowie auf `bidfix.ai`. **Welche Unterseite, ist nirgends
+festgehalten**, und das reicht für einen Beleg nicht. Sie bleiben deshalb ○: wer eines im
+Gespräch braucht, liest es vorher neu. Jede Zeile braucht: die Adresse, von der es stammt, und das
+Datum, an dem der **Rohtext** gesehen wurde. Wer es prüft, trägt beides hier ein und entfernt
+die Warnung oben — oder streicht das Zitat.
+
+Die Spalte „trägt" sagt, was zusammenbricht, wenn das Zitat nicht stimmt. Die Reihenfolge ist
+danach sortiert, nicht nach Vorkommen.
+
+| # | Zitat | zugeschrieben | trägt | Quelle | gelesen am |
+|---|---|---|---|---|---|
+| 1 | „weder für die Vollständigkeit oder Richtigkeit der Auftragsinformationen verantwortlich" | DTAD, AGB | ⛔ **den ganzen Abschnitt „Wie der Markt mit Lücken umgeht"** und die zweite Einwand-Antwort | | |
+| 2 | „keine Gewähr für die Richtigkeit und Vollständigkeit" | Deutsches Ausschreibungsblatt, Vergabe24, evergabe.de — AGB | ⛔ denselben Abschnitt; **drei Firmen auf einmal** | | |
+| 3 | „100 % Abdeckung in DE & EU" | BidFix | die Einwand-Antwort „jeder behauptet das" | | |
+| 4 | „+82 % Win-Rate" | BidFix | nichts Tragendes, aber es steht als deren Eigenangabe da | | |
+| 5 | „10.000 Kommunen" | BidFix | die Gegenrechnung über OParl (25 Endpunkte) | | |
+| 6 | „Er liest Dokumente, extrahiert Eignungs- und Zuschlagskriterien." | DTAD, zu „Frank" | die erste Einwand-Antwort (auf Zuruf gegen vorab) | | |
+| 7 | „über 200" / „300+" / „hunderte" | aufträge.io, drei verschiedene Stellen | den Vorwurf, dass ihre Zahlen sich widersprechen | | |
+| 8 | „3,1 Mio analysierte Vergaben" / „über 3,1 Mio" | aufträge.io | denselben Vorwurf | | |
+| 9 | 40.000 gegen 30.000 Auftraggeber | aufträge.io, zwei Stellen | denselben Vorwurf | | |
+| 10 | „arbeitet in Ihren Vorlagen, nicht in fremden Templates" | BidFix | die Grenze unseres Dokument-Exports | ⭐ Produktseite | ⭐ 2026-10-04 |
+
+⭐ **Nummer 10 ist das Vorbild.** Sie steht in `funktion-dokument-bauen.md` mit Quelle und
+Datum, weil sie dort beim Bauen gebraucht wurde. Genau so sollen die anderen neun aussehen.
+
+⚠ **Nicht in dieser Liste** stehen die Sätze in Anführungszeichen, die **wir selbst** formuliert
+haben — die Verbotstabelle, die erwarteten Einwände, interne Etiketten. Sie sind keine
+Fremdzitate und brauchen keinen Beleg. Die Unterscheidung ist von Hand getroffen, nicht von
+einer Regel; wer die Liste pflegt, prüft sie mit.
+
+
+---
+
+## Zahlen und ihre Belegbarkeit
+
+⚠ **Nicht jede Zahl in diesem Papier steht auf demselben Grund.** Wer eine davon im Gespräch
+nennt und nachgefragt wird, sollte vorher wissen, ob er sie belegen kann.
+
+Drei Stufen, und die Einteilung sagt **nichts über richtig oder falsch** — nur darüber, ob
+jemand sie nachvollziehen kann:
+
+| | heisst |
+|---|---|
+| ⭘ **nachrechenbar** | die Abfrage ist hinterlegt, jeder kann sie gegen unsere Daten wiederholen |
+| ◐ **einmal gemessen** | jemand hat es gemessen, der Weg ist nicht aufgeschrieben — niemand kann es prüfen, auch wir nicht |
+| ○ **fremde Angabe** | aus dem Material des Wettbewerbs, ungeprüft (s. „Zu prüfende Zitate") |
+
+### ⭘ Nachrechenbar
+
+41,9–43,2 % nicht über TED · Dublettenquoten je Quelle (66,6 / 29,8 / 62,0) · 2.631
+EU-kofinanziert · 4.872 Direktvergabe-Gründe · 8.077 Ausführungsbedingungen · 11.512 von
+79.075 mit Nichtvergabe-Grund · `erfolglos` je Jahr (13,0 → 4,2 %) · KMU 53 Werte an 159
+Stellen · 15 von 15 DE-Quellen live · die Aufteilung der 125 Quellen · 173.623 Firmen und die
+Grössenverteilung · Los-IDs 97 / 80 / 23 % · 273.175 Käufer-Lieferanten-Beziehungen ·
+⭐ **97,3 % „nein" beim Wiederholungs-Indikator** · ⭐ **Vorlauf 8.521 Paare, Median 232 Tage**
+(Abfrage als Code: `export_strategie.vorlauf_je_klasse()`) · ⭐ **1.394 Neuzugänge je Werktag
+über alle vier Länder** (DE allein 1.089) · ⭐ **18,0 % ausgewertete und 39,6 % vorliegende
+Unterlagen** — alle vier am 2026-10-05 aufgeklärt, s. u.
+*(das Papier nennt 273.425 — der Bestand wächst täglich)*
+
+### ◐ Einmal gemessen, Weg nicht hinterlegt
+
+⚠ **Hierunter stehen die Zahlen, mit denen wir gegen den Wettbewerb argumentieren.** Genau die,
+auf die ein skeptischer Kunde zeigen würde.
+
+| Zahl | wo sie steht |
+|---|---|
+| Dresden: 12 von 119 Vorlagen, Median 29 Tage | die ganze BidFix-Gegenrechnung · ⚠ **n = 12** ist eine Richtung, kein Wert |
+| Haushaltsplan ~3 % zuordenbar | dieselbe |
+| OParl: 25 Endpunkte gegen „10.000 Kommunen" | dieselbe |
+| 30 von 35 Portalen haben wir | BidFix-Abschnitt · ⚠ die Liste der 35 steht nirgends im Repo |
+| Faktor 5,8 gegen aufträge.io | „Was für uns spricht" — die Überschriftzahl gegen den nächsten Wettbewerber |
+| 0,8 bis 8,6 % Positionskarte (7 Firmen) | eine Verbotszeile |
+| 11,0 % Fehlstellen Westfalen (91 Vergaben) | eine Verbotszeile und die Quellenfrage |
+| Vorinformation 53 % gegen 55 % Grundrauschen | eine Verbotszeile |
+| EU-Fördervorhaben 2 % gegen 1 % | eine Verbotszeile |
+| Zielkunden-Schichten (30 Firmen) | „Was tatsächlich trägt" |
+| **7.783 Vergabestellen mit Profil** | unsere **Hauptschwäche** — ⛔ s. unten |
+
+⛔ **Ein Versuch, sie nachzurechnen, ist am 2026-10-05 gescheitert**, und er zeigt genau, was
+„nicht hinterlegt" praktisch bedeutet. `buyer_stats` führt **22.350** Vergabestellen; nach
+Zuschlagszahl gefiltert ergeben sich 10.953 (≥3), **8.035 (≥5)**, 5.311 (≥10) — **keine
+Schwelle trifft 7.783.** Die Zahl ist damit nicht falsch, aber niemand kann sagen, was sie
+zählt. Sie steht an der Stelle, an der wir unsere eigene grösste Schwäche beziffern.
+
+### Nachrechenversuch vom 2026-10-05 — ⛔ sechs von sechs weichen ab
+
+Ich habe sechs der ◐-Zahlen aus den Daten nachzurechnen versucht. **Keine einzige kam auf den
+Wert im Papier.** Das heisst nicht, dass das Papier falsch liegt — meine Abfrage ist meine
+eigene Rekonstruktion, die ursprüngliche kann eine andere, gut begründete Abgrenzung gehabt
+haben. **Es heisst: ohne die hinterlegte Abfrage ist eine Zahl nicht prüfbar**, und wer es
+versucht, landet irgendwo zwischen 7 % und 80 % daneben.
+
+| Zahl | Papier | nachgerechnet | Abfrage |
+|---|---:|---:|---|
+
+### ⭐ Eine davon ist aufgeklärt — und die Aufklärung ist lehrreicher als die Zahl
+
+Beim Wiederholungs-Indikator kam ich auf **89,1 %**, das Papier nannte 97,8 %. Die Sitzung, die
+ihn gemessen hat, hat beide Wege nachgerechnet:
+
+| Abgrenzung | „nein" | „ja" | Anteil |
+|---|---:|---:|---:|
+| DE, alle Jahre, **Zeilen** | 190.518 | 23.322 | 89,1 % ← *meine Zahl* |
+| DE, alle Jahre, **Vorgänge** | 127.780 | 6.924 | **94,9 %** |
+| DE, **nur Leads**, Vorgänge | 8.947 | 245 | **97,3 %** |
+
+⚠ **Meine Zahl war exakt reproduzierbar und trotzdem falsch.** `silver/attributes` trägt keinen
+Index: ein Element, das je Vorgang mehrfach vorkommt, erzeugt mehrere Zeilen. Und es trifft die
+beiden Werte **ungleich stark** — `true` wächst von 6.924 Vorgängen auf 23.322 Zeilen (Faktor
+3,4), `false` nur von 127.780 auf 190.518 (Faktor 1,5). Der Grund ist inhaltlich: ein
+wiederkehrender Auftrag ist häufiger mehrlosig. Zeilen zu zählen übergewichtet also genau den
+Wert, auf den es ankommt.
+
+**Ins Papier gehört die Lead-Zahl (97,3 %)**, weil die Behauptung lautet „das Feld unterscheidet
+*im Produkt* nichts" — und die Leads sind die Menge, die das Produkt bedient.
+
+⚠ **Und die messende Sitzung hat sich selbst korrigiert:** gemeldet hatte sie 97,8 %, heute misst
+sie 97,3 %. Drift der Lead-Menge, kein Fehler — aber der Beleg dafür, dass diese Zahl **ohne
+Datum daneben nicht haltbar** ist.
+
+⭐ Damit ist sie die erste Zahl, die von ◐ nach ⭘ gewandert ist. Nicht weil jemand sie bestätigt
+hat, sondern weil der Weg jetzt aufgeschrieben ist — **und dabei hat sich herausgestellt, dass
+beide Ausgangswerte danebenlagen.**
+
+⛔ **Und eine siebte, die auf der Vertriebsseite stand: 34,1 % der laufenden Ausschreibungen
+mit ausgewerteten Unterlagen. Nachgerechnet: 18,0 %** (2.657 von 14.775 offenen DE-Leads mit
+einem Eintrag in `doc_analysis`).
+
+Der Grund ist diesmal bekannt und keine Definitionsfrage: **die Dokumentenanalyse steht seit
+dem 24. September**, weil das LLM-Guthaben leer ist. Neue Ausschreibungen kommen ohne
+Auswertung herein, alte laufen ab — **der Anteil sinkt mit jedem Tag von selbst.**
+
+⚠ Das ist die teuerste Folge des Stillstands, und sie war vorher niemandem aufgefallen: er
+kostet nicht nur 3.946 wartende Dokumente, er **entwertet laufend den einzigen gemessenen
+Vorsprung**, mit dem wir in ein Gespräch gehen. Die Vertriebsseite trägt jetzt 18,0 % mit
+diesem Vorbehalt.
+
+⚠ **Das Feld `has_documents` taugt dafür NICHT** — es steht für alle 14.775 offenen DE-Leads
+auf „nein", obwohl Dokumente vorliegen. Der Unterlagen-Block ist für die Schweiz gebaut und
+für DE/AT nie verdrahtet; das ist seit dem 2026-09-01 als offener Punkt geführt. Wer hier
+nachrechnet und `has_documents` nimmt, bekommt 0 %.
+
+### Was die Nachfrage ergeben hat — vier aufgeklärt, zwei verloren
+
+Beide messenden Sitzungen haben ihre Abfragen herausgesucht. Ergebnis:
+
+**⭐ Vorlauf der Nachfolge — der Unterschied war genau ein Filter.**
+Die Abfrage steht seit heute als Code (`export_strategie.vorlauf_je_klasse()`), und sie
+begrenzt das Fenster: `BETWEEN -730 AND 1095` Tage. Begründung im Code: zwei Jahre nach dem
+Ende ist keine Nachfolge mehr, drei Jahre davor eine andere Vergabe.
+
+| | n | Median | Q25 | Q75 |
+|---|---:|---:|---:|---:|
+| mit Fenster | 8.521 | 232 | −13 | 632 |
+| ohne Fenster *(meine Rekonstruktion)* | 11.018 | 421 | 33 | 1.002 |
+
+Beide richtig gerechnet, eine Abgrenzung besser begründet. **Nach ⭘.**
+
+**⭐ Neuzugang je Werktag — ich hatte DE gerechnet, sie alle vier Länder.**
+DE 1.089 · AT 127 · CH 166 · LU 12 → **1.394 über alle vier.** Nach ⭘, sofern „alle vier
+Länder" dabeisteht. ⚠ Die Spanne 1.300–1.480 bleibt unbegründet; ein Wert mit Datum ist besser.
+
+**⛔ 34,1 % „mit ausgewerteten Unterlagen" — die Zahl trug das falsche Etikett.**
+Nachgemessen, derselbe Nenner (14.775 offene DE-Leads), von zwei Sitzungen unabhängig auf die
+Stelle bestätigt:
+
+| | Leads | Anteil |
+|---|---:|---:|
+| **ausgewertet** (`doc_analysis`) | 2.657 | **18,0 %** |
+| Abruf versucht (Manifeste) | 8.282 | 56,1 % |
+| **Unterlagen liegen vor** | 5.857 | **39,6 %** |
+
+Die 34,1 % gehören in die Nähe von „liegen vor", nicht von „ausgewertet" — und sind damit
+**raus**. Im Papier stehen jetzt beide Zahlen mit ihrer Bedeutung. ⚠ Dass „ausgewertet" auf
+18,0 % steht und weiter fällt, liegt am Stillstand der Analyse, nicht an der Messung.
+
+⚠ **Falle beim Nachrechnen von „liegen vor":** neun der zehn Manifeste unter `data/docs/DE`
+nennen den Schlüssel `lead_id`, nur `_manifest.parquet` nennt ihn `notice_id`. Wer sie naiv
+vereinigt, liest ein einziges Manifest und bekommt 0,0 %. Der Status heisst `downloaded` oder
+`exists`, nicht `ok`.
+
+**○ Zwei sind verloren, und das steht so da.**
+
+| Zahl | was gemessen wurde | Urteil |
+|---|---|---|
+| 80 chronische Fehlbedarfe | `fail_years>=3` → 106 · davon `still_open` 42 · `>=4` → 16 · CLAUDE.md nennt für dieselbe Sache 282 | **keine Abgrenzung ergibt 80.** Momentaufnahme ohne Datum — die Tabelle wird jede Nacht neu gebaut |
+| Single-Bid 26,2 % | ab 2023 → 24,9 % · ab 2022 → 25,4 % · ab 2021 → 24,6 % · alle Jahre → 21,3 % | **kein Fenster trifft 26,2 %** |
+
+Beide bleiben als ◐ mit dem Vermerk stehen, dass der Weg verloren ist. ⚠ Die Single-Bid-Zahl
+trägt im Papier die Aussage „der Wettbewerber misst sauber" — die bleibt richtig, denn unsere
+24,9 % und seine 27,9 % liegen weiterhin nah beieinander.
+
+### ○ Fremde Angaben
+
+2.000+ Unternehmen · ISO 27001 · „+82 % Win-Rate" · „100 % Abdeckung" · „über 200" / „300+" ·
+„3,1 Mio analysierte Vergaben" · 40.000 Auftraggeber — alle aus dem Material des Wettbewerbs,
+keine davon geprüft.
+
+---
+
+⭐ **Die drei Zahlen auf der Vertriebsseite (`vertrieb-eine-seite.md`) sind bewusst nur aus der
+ersten Stufe gewählt.** Das ist der Grund, warum dort drei stehen und nicht dreissig.
