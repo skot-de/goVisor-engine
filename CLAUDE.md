@@ -206,7 +206,20 @@ laesst eine undatierte Zahl dort gar nicht durch).
       python3 scripts/pruefe_laufender_code.py [--alle]
 
   Sie steht VOR allen anderen Sonden: schlägt sie an, kann jeder Befund darunter ein Trugbild
-  sein. Ein Befund ist nur, wo ein **Erzeuger einer geteilten Ausgabe** abweicht (Liste
+  sein.
+
+  **Seit dem 2026-10-05 hat der Lauf einen EIGENEN BAUM**, in dem niemand arbeitet:
+  `/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor-nachtlauf`, fest auf **`main`**.
+  Damit ist „was läuft" keine Zufallsfrage mehr — und die Regel daraus: **ein Fix ist erst
+  fertig, wenn er auf `main` liegt.**
+
+      scripts/nachtlauf_baum.sh --pruefen      # ist er vollständig?
+      scripts/nachtlauf_baum.sh --einrichten   # Verknüpfungen anlegen/reparieren
+
+  ⚠ **Er wird aus git NICHT vollständig.** Sechs Dinge liegen ausserhalb der Versionierung,
+  und das gefährlichste ist `web/data`: fehlt der Link, schreibt der Lauf in ein eigenes
+  Verzeichnis, das niemand liest — und meldet Erfolg. Deshalb das Skript statt einer Liste
+  im Kopf; die Verknüpfungen waren beim Einrichten viermal von Hand zu setzen. Ein Befund ist nur, wo ein **Erzeuger einer geteilten Ausgabe** abweicht (Liste
   `ERZEUGER` im Skript) — ein Arbeitsbaum weicht sonst naturgemäss ab, und eine dauerrote
   Sonde ist keine.
 
