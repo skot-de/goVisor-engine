@@ -98,11 +98,42 @@ Satzkontrolle braucht, braucht einen Server-Renderer — eigene Phase, eigener A
 Abschaltbar, **standardmässig aus**: welcher Teil kam aus welchem Baustein, mit Datum. Unsere
 Hausform, nützlich für die interne Freigabe, peinlich im Angebot.
 
-## 4. Phase 3 — Verbindung zum Fragebogen
+## 4. Phase 3 — Verbindung zum Fragebogen  ✅ gebaut 2026-10-05
 
 Ein fertiger Lauf aus `user_antwortauftrag` schiebt seine `fertig`-Vorschläge als Teile in ein
-neues Dokument, **mitsamt Beleg**. Damit schliesst sich der Kreis: Fragebogen rein, geprüftes
-Dokument raus. ⚠ Nur `fertig`, nie `unbelegt` — dieselbe Regel wie in der Ansicht.
+neues Dokument. Damit schliesst sich der Kreis: Fragebogen rein, geprüftes Dokument raus.
+⚠ Nur `fertig`, nie `unbelegt` — dieselbe Regel wie in der Ansicht, und seit dem Bau durch
+`tests/test_antwortvorschlag.py::test_uebernahme_ins_dokument_nimmt_nur_fertig` gehalten: die
+Regel gilt an **zwei** Stellen (Rechenseite und Übertrag), geprüft war bis dahin nur die erste.
+
+**Abweichung von diesem Plan, bewusst.** Hier stand „**mitsamt Beleg**". Umgesetzt ist es nicht,
+und zwar aus zwei Gründen: im Dokument gibt es kein Feld dafür (`profile_dokument_teil` kennt
+`baustein`, `ueberschrift`, `text`), und der Beleg gehört in die **Prüfung**, nicht in die
+Ausgabe — im abgegebenen Angebot wäre er peinlich, genau wie der Herkunftsnachweis in §3.
+Die Rückverfolgung entsteht stattdessen über die **Form**: jede Frage wird zur Überschrift, die
+Antwort steht darunter. Wer wissen will, woher ein Absatz kommt, sieht die Frage über ihm.
+
+Die Antworten wandern als Teile der Art `text`, **nicht** als Baustein-Verweise: der Entwurf ist
+aus mehreren Bausteinen zusammengesetzt und vom Modell umformuliert. Ein Verweis wäre eine Lüge
+über seine Herkunft, und eine spätere Baustein-Änderung würde eine bereits abgegebene Antwort
+rückwirkend verändern.
+
+**Das Drucklayout ist angesehen** (2026-10-05, zum ersten Mal: in Phase 2 war es gebaut und
+ungeprüft). Es zeigt Titel, Überschriften und Antworten, ohne Werkzeugleisten, Knöpfe und
+Seitenleiste. Geprüft, indem `@media print` vorübergehend auf `@media screen` gestellt wurde.
+Die grauen Bahnen darin kommen vom **Seitenkörper**, nicht vom Dokument (alle Dokumentelemente
+sind `transparent`, nachgemessen) — Browser drucken Körperhintergründe standardmässig nicht.
+
+**Gemessen am laufenden System** (2026-10-05, Prüfkonto, 4 Bausteine, 5 Fragen): 4 belegt, 1 ohne
+passenden Baustein; das Dokument bekam 8 Teile in der richtigen Reihenfolge, die unbeantwortete
+Frage fehlt korrekt. ⚠ Der **Modellaufruf** war dabei durch eine Attrappe ersetzt (OpenRouter-
+Guthaben leer); alles andere, Verschlüsselung und Belegprüfung eingeschlossen, lief echt.
+
+`POST /api/dokument` nimmt die Teile seit Phase 3 gleich mit. Ohne das wären es zwei Anfragen,
+und scheitert die zweite, bleibt ein **leeres Dokument** stehen, das der Nutzer für vollständig
+hält. Zwei Aufrufe über PostgREST sind keine Transaktion, deshalb wird das Dokument bei einem
+Fehler beim Schreiben der Teile wieder entfernt — gemessen: ohne diesen Rückbau bleibt der Rumpf
+tatsächlich liegen.
 
 ## 5. ⛔ Die Grenze, die in den Plan gehört
 

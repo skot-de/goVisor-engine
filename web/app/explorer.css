@@ -3153,6 +3153,14 @@ td.c-doks{width:84px;text-align:center}
 .antw-ergebnis{display:flex;flex-direction:column;gap:var(--s3,12px);margin-top:var(--s3,12px)}
 .antw-summe{font-size:var(--t-sm,13px);color:var(--ink-700,#374151);margin:0}
 .antw-hinweis{font-size:var(--t-sm,13px);color:var(--ink-500,#6b7280);margin:0}
+
+/* Uebergang aus den Antwortvorschlaegen in ein Dokument (Phase 3). Abgesetzt, damit er nicht
+   wie eine weitere Antwortkarte aussieht: er ist eine Handlung, kein Inhalt. */
+.antw-uebernahme{display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+  padding:12px 14px;border:1px solid var(--line,#e5e7eb);border-radius:10px;
+  background:var(--bg-50,#f9fafb)}
+.antw-uebernahme .antw-knopf{text-decoration:none}
+.antw-uebernahme-ok{font-size:var(--t-sm,13px);font-weight:600;color:var(--ok-700,#15803d)}
 .antw-abschnitt{font-size:var(--t-sm,13px);font-weight:600;color:var(--ink-900,#111827);margin:var(--s3,12px) 0 0}
 .antw-karte{border:1px solid var(--line,#e5e7eb);border-radius:var(--r,8px);padding:var(--s3,12px);display:flex;flex-direction:column;gap:8px}
 .antw-unbelegt{border-color:var(--signal,#f59e0b);background:var(--signal-bg,#fffbeb)}

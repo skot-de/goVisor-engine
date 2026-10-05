@@ -7,6 +7,8 @@ einen Fall mit erfundenem und mit verwechseltem Zitat und erwartet dort ausdruec
 """
 import json
 
+import pathlib
+
 import pytest
 
 from govisor import antwortvorschlag as av
@@ -215,6 +217,57 @@ def test_ohne_kandidaten_faellt_gar_keine_modellwahl(monkeypatch):
     assert erg["zaehlung"]["kein_baustein"] == 2
     assert zaehler["wahl"] == 0, "ohne Kandidaten darf die Modellwahl nicht fallen"
     assert zaehler["chat"] == 0
+
+
+# ── Die Regel „nur `fertig`" gilt an ZWEI Stellen ────────────────────────────────────────────
+
+def _ohne_kommentare(quelle: str) -> str:
+    """Blockkommentare und Zeilenkommentare raus.
+
+    ⚠ Ohne das misst dieser Waechter PROSA statt Code: die Datei erklaert die Regel in ihrem
+    Kopf und benutzt dabei genau die Woerter, auf die hier geprueft wird. Dieselbe Falle ist in
+    diesem Projekt an einem Tag fuenfmal zugeschlagen (Auto-Memory
+    `waechter-messen-prosa-statt-code`).
+    """
+    raus, i, n = [], 0, len(quelle)
+    while i < n:
+        if quelle.startswith("/*", i):
+            i = quelle.find("*/", i + 2)
+            i = n if i < 0 else i + 2
+        elif quelle.startswith("//", i):
+            i = quelle.find("\n", i)
+            i = n if i < 0 else i
+        else:
+            raus.append(quelle[i])
+            i += 1
+    return "".join(raus)
+
+
+def _uebernahme_rumpf() -> str:
+    """Der Rumpf von `insDokument` aus der Oberflaeche, ohne Kommentare."""
+    quelle = _ohne_kommentare(
+        (pathlib.Path(__file__).resolve().parent.parent
+         / "web/components/explorer/Antwortvorschlaege.tsx").read_text(encoding="utf-8"))
+    anfang = quelle.index("async function insDokument()")
+    return quelle[anfang:quelle.index("\n  }", anfang)]
+
+
+def test_uebernahme_ins_dokument_nimmt_nur_fertig():
+    """⚠ Seit Phase 3 gibt es einen ZWEITEN Weg aus einem Vorschlag heraus: der Uebertrag ins
+    Dokument. Die Pruefungen oben decken die Rechenseite ab, nicht diesen Weg. Wuerde hier
+    `unbelegt` mitwandern, kaeme ein Entwurf mit nicht haltbarem Beleg ueber den Umweg Dokument
+    doch noch in ein abgegebenes Angebot, und zwar ohne jede Markierung."""
+    rumpf = _uebernahme_rumpf()
+    assert 'nachStatus("fertig")' in rumpf, "der Uebertrag filtert nicht mehr auf fertig"
+    for verboten in ('"unbelegt"', '"kein_baustein"'):
+        assert verboten not in rumpf, f"{verboten} wandert in den Uebertrag"
+
+
+def test_der_waechter_misst_code_und_nicht_prosa():
+    """Selbstprobe des Waechters: er darf am Kommentar NICHT anschlagen und am Code schon."""
+    assert "unbelegt" in _ohne_kommentare('const a = 1; const b = "unbelegt";')
+    assert "unbelegt" not in _ohne_kommentare("/* nie unbelegt uebernehmen */ const a = 1;")
+    assert "unbelegt" not in _ohne_kommentare("// nie unbelegt uebernehmen\nconst a = 1;")
 
 
 if __name__ == "__main__":

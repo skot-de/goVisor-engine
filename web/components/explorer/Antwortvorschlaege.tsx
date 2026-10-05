@@ -46,6 +46,7 @@ export function Antwortvorschlaege({ leadId }: { leadId?: string }) {
   const [ergebnis, setErgebnis] = useState<Ergebnis | null>(null);
   const [fehler, setFehler] = useState("");
   const [hinweis, setHinweis] = useState("");
+  const [quelle, setQuelle] = useState("");     // Dateiname, fuer den Dokumenttitel
   const [busy, setBusy] = useState(false);
   const uhr = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -107,6 +108,7 @@ export function Antwortvorschlaege({ leadId }: { leadId?: string }) {
       setFehler(`Bitte mindestens ${MIN_TEXT} Zeichen einfuegen.`);
       return;
     }
+    setQuelle("");
     abschicken(JSON.stringify({ text, lead_id: leadId ?? null }),
                { "content-type": "application/json" });
   }
@@ -117,6 +119,7 @@ export function Antwortvorschlaege({ leadId }: { leadId?: string }) {
     const datei = e.target.files?.[0];
     e.target.value = "";          // damit dieselbe Datei erneut gewaehlt werden kann
     if (!datei) return;
+    setQuelle(datei.name.replace(/\.[a-z0-9]{1,5}$/i, ""));
     const fd = new FormData();
     fd.append("datei", datei);
     if (leadId) fd.append("lead_id", leadId);
@@ -164,14 +167,61 @@ export function Antwortvorschlaege({ leadId }: { leadId?: string }) {
         {hinweis && !fehler && <span className="antw-lauf">{hinweis}</span>}
       </div>
 
-      {ergebnis && <Ergebnisteil ergebnis={ergebnis} />}
+      {ergebnis && <Ergebnisteil ergebnis={ergebnis} titel={dokumentTitel(quelle)} />}
     </section>
   );
 }
 
-function Ergebnisteil({ ergebnis }: { ergebnis: Ergebnis }) {
+/** Titel des Dokuments, das aus diesem Lauf entsteht. Nie leer, nie zweimal derselbe. */
+function dokumentTitel(quelle: string): string {
+  const tag = new Date().toLocaleDateString("de-DE");
+  return quelle ? `Antworten ${quelle} (${tag})` : `Antworten vom ${tag}`;
+}
+
+function Ergebnisteil({ ergebnis, titel }: { ergebnis: Ergebnis; titel: string }) {
   const z = ergebnis.zaehlung;
   const nachStatus = (s: Vorschlag["status"]) => ergebnis.vorschlaege.filter(v => v.status === s);
+  const [uebertrag, setUebertrag] = useState<"" | "laeuft" | "fehler">("");
+  const [dokId, setDokId] = useState("");
+
+  /* Die belegten Vorschlaege als Dokument ablegen (Phase 3). Damit schliesst sich der Kreis:
+   * Fragebogen rein, geprueftes Dokument raus, von dort Word oder PDF.
+   *
+   * ⚠ NUR `fertig`, nie `unbelegt` — dieselbe Regel wie in der Anzeige. Ein Entwurf, dessen
+   * Beleg nicht haelt, darf nicht ueber den Umweg Dokument doch noch in ein Angebot geraten.
+   * Deshalb filtert diese Funktion selbst und verlaesst sich nicht darauf, dass der Knopf
+   * nur zum richtigen Zeitpunkt sichtbar ist.
+   *
+   * ⚠ ABWEICHUNG VOM PLAN, bewusst: `docs/funktion-dokument-bauen.md` sagte „mitsamt Beleg".
+   * Dafuer gaebe es im Dokument kein Feld, und der Beleg gehoert in die PRUEFUNG, nicht in die
+   * Ausgabe; im abgegebenen Angebot waere er peinlich. Die Rueckverfolgung entsteht stattdessen
+   * ueber die Form: jede Frage wird zur Ueberschrift, die Antwort steht darunter. Wer spaeter
+   * wissen will, woher ein Absatz kommt, sieht die Frage ueber ihm. Steht im Plan nachgetragen.
+   *
+   * ⚠ Als Teile der Art `text`, NICHT als Baustein-Verweise. Der Entwurf ist aus mehreren
+   * Bausteinen zusammengesetzt und vom Modell umformuliert; ein Verweis waere eine Luege ueber
+   * seine Herkunft, und eine spaetere Baustein-Aenderung wuerde eine abgegebene Antwort
+   * ruecklaufend veraendern.
+   */
+  async function insDokument() {
+    const teile = nachStatus("fertig").flatMap((v) => ([
+      { art: "ueberschrift", ebene: 2,
+        inhalt: `${v.frage.nr ? `${v.frage.nr}. ` : ""}${v.frage.frage}` },
+      { art: "text", inhalt: v.antwort },
+    ]));
+    if (!teile.length) return;
+    setUebertrag("laeuft");
+    try {
+      const r = await fetch("/api/dokument", {
+        method: "POST", headers: { "content-type": "application/json" },
+        body: JSON.stringify({ titel, teile }),
+      });
+      const d = await r.json();
+      if (d.error || !d.dokument) { setUebertrag("fehler"); return; }
+      setDokId(d.dokument.id);
+      setUebertrag("");
+    } catch { setUebertrag("fehler"); }
+  }
 
   return (
     <div className="antw-ergebnis">
@@ -184,6 +234,37 @@ function Ergebnisteil({ ergebnis }: { ergebnis: Ergebnis }) {
         {z.kein_baustein > 0 && <> {z.kein_baustein} ohne passenden Baustein.</>}
       </p>
       {ergebnis.hinweis && <p className="antw-hinweis">{ergebnis.hinweis}</p>}
+
+      {/* Uebergang ins Dokument. Erscheint nur, wenn es etwas Belegtes zu uebernehmen gibt. */}
+      {ergebnis.fertig > 0 && (
+        <div className="antw-uebernahme">
+          {dokId ? (
+            <>
+              <span className="antw-uebernahme-ok">
+                Dokument angelegt: {ergebnis.fertig} Antwort{ergebnis.fertig === 1 ? "" : "en"}
+                {" "}uebernommen.
+              </span>
+              <a className="antw-knopf" href={`/dokumente?id=${encodeURIComponent(dokId)}`}>
+                Dokument oeffnen
+              </a>
+            </>
+          ) : (
+            <>
+              <button className="antw-knopf" onClick={insDokument}
+                      disabled={uebertrag === "laeuft"}>
+                {uebertrag === "laeuft" ? "wird angelegt" : "Als Dokument anlegen"}
+              </button>
+              <span className="antw-dateihilfe">
+                Nur die {ergebnis.fertig} belegten Antworten wandern mit. Im Dokument koennen Sie
+                sie umstellen, ergaenzen und als Word oder PDF ausgeben.
+              </span>
+            </>
+          )}
+          {uebertrag === "fehler" && (
+            <span className="antw-fehler">Das Dokument konnte nicht angelegt werden.</span>
+          )}
+        </div>
+      )}
 
       {nachStatus("fertig").map((v, i) => <Karte key={`f${i}`} v={v} />)}
 

@@ -128,16 +128,36 @@ export async function GET(req: Request) {
   });
 }
 
+/** Verschluesselt die Teile und legt sie als Zeilen ab. Wirft `KeinSchluessel`. */
+function reihenBauen(id: string, teile: ReturnType<typeof teileLesen>) {
+  return teile.map((t, i) => ({
+    dokument_id: id, position: (i + 1) * 10, art: t.art, baustein_id: t.baustein_id,
+    ebene: t.ebene,
+    inhalt_encrypted: t.inhalt === null ? null : zuHex(verschluessele(t.inhalt)),
+  }));
+}
+
 export async function POST(req: Request) {
   const { sb, user } = await sitzung();
   if (!user) return NextResponse.json({ error: "Anmeldung erforderlich" }, { status: 401 });
 
   let titel = "Ohne Titel", lead_id: string | null = null;
+  let teile: ReturnType<typeof teileLesen> | undefined;
   try {
     const b = await req.json();
     if (b.titel) titel = String(b.titel).slice(0, 200);
     lead_id = b.lead_id ? String(b.lead_id).slice(0, 64) : null;
-  } catch { /* leerer Rumpf ist erlaubt: ein Dokument darf ohne Angaben entstehen */ }
+    /* Teile duerfen gleich mitkommen (Phase 3: Fragebogen-Uebernahme). Ohne das waeren es
+     * zwei Anfragen, und scheitert die zweite, bleibt ein LEERES Dokument stehen, das der
+     * Nutzer nicht bestellt hat. */
+    if (b.teile !== undefined) teile = teileLesen(b.teile);
+  } catch (e) {
+    /* Leerer Rumpf ist erlaubt (ein Dokument darf ohne Angaben entstehen); unbrauchbare Teile
+     * sind es nicht. Am `name` unterscheidbar, weil `req.json()` bei leerem Rumpf wirft. */
+    if (e instanceof Error && !(e instanceof SyntaxError)) {
+      return NextResponse.json({ error: e.message || "Eingabe nicht lesbar" }, { status: 400 });
+    }
+  }
 
   const org_id = await orgVon(sb, user.id);
   if (!org_id) return NextResponse.json({ error: "Keine Organisation hinterlegt." }, { status: 409 });
@@ -146,7 +166,29 @@ export async function POST(req: Request) {
     .insert({ org_id, profil_id: user.id, titel, lead_id })
     .select("id, titel, lead_id, erstellt_at, updated_at").limit(1);
   if (error) return fehler("anlegen", error, "Das Dokument konnte nicht angelegt werden.");
-  return NextResponse.json({ dokument: data?.[0] ?? null });
+  const dok = data?.[0] ?? null;
+
+  if (dok && teile?.length) {
+    /* ⚠ Scheitert das Schreiben der Teile, wird das Dokument wieder ENTFERNT. Postgres gibt
+     * uns hier keine Transaktion ueber zwei PostgREST-Aufrufe; ein Rumpf-Dokument ohne Inhalt
+     * waere aber schlimmer als gar keins, weil der Nutzer es fuer vollstaendig haelt. */
+    let schlecht: { message: string } | null = null;
+    try {
+      const { error: eIns } = await sb.from("profile_dokument_teil")
+        .insert(reihenBauen(dok.id, teile));
+      schlecht = eIns ?? null;
+    } catch (e) {
+      if (!(e instanceof KeinSchluessel)) throw e;
+      schlecht = { message: "KEIN SCHLUESSEL" };
+    }
+    if (schlecht) {
+      await sb.from("profile_dokument").delete().eq("id", dok.id);
+      return fehler("anlegen mit Teilen", schlecht,
+                    "Das Dokument konnte nicht angelegt werden.");
+    }
+  }
+
+  return NextResponse.json({ dokument: dok });
 }
 
 export async function PATCH(req: Request) {
@@ -180,11 +222,7 @@ export async function PATCH(req: Request) {
      * ist das vertretbar; wer Gleichzeitigkeit braucht, braucht ohnehin mehr als diese Route. */
     let reihen;
     try {
-      reihen = teile.map((t, i) => ({
-        dokument_id: id, position: (i + 1) * 10, art: t.art, baustein_id: t.baustein_id,
-        ebene: t.ebene,
-        inhalt_encrypted: t.inhalt === null ? null : zuHex(verschluessele(t.inhalt)),
-      }));
+      reihen = reihenBauen(id, teile);
     } catch (e) {
       /* Fehlt der Schluessel, wird NICHT im Klartext gespeichert — es wird gar nicht gespeichert. */
       if (e instanceof KeinSchluessel) {

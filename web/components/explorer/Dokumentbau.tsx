@@ -54,6 +54,16 @@ export function Dokumentbau() {
     } catch { setFehler("Die Dokumente konnten nicht geladen werden."); }
   }, []);
 
+  const oeffne = useCallback(async (id: string) => {
+    setBusy(true); setFehler(""); setHinweis("");
+    try {
+      const d = await (await fetch(`/api/dokument?id=${encodeURIComponent(id)}`)).json();
+      if (d.error) { setFehler(d.error); return; }
+      setDok(d.dokument); setTeile(d.teile || []); setSchmutzig(false);
+    } catch { setFehler("Das Dokument konnte nicht geladen werden."); }
+    finally { setBusy(false); }
+  }, []);
+
   useEffect(() => {
     ladeListe();
     (async () => {
@@ -62,17 +72,13 @@ export function Dokumentbau() {
         setBausteine((d.blocks || []).filter((b: Baustein) => b.id && b.content));
       } catch { /* ohne Bibliothek bleibt die linke Spalte leer, das ist sichtbar genug */ }
     })();
-  }, [ladeListe]);
+    /* `?id=` direkt oeffnen. Dahinter steht der Uebergang aus den Antwortvorschlaegen
+     * (Phase 3): dort entsteht das Dokument, hier wird es weiterbearbeitet. Ohne das landete
+     * der Nutzer auf einer Liste und muesste sein eben erzeugtes Dokument suchen. */
+    const id = new URLSearchParams(window.location.search).get("id");
+    if (id) oeffne(id);
+  }, [ladeListe, oeffne]);
 
-  async function oeffne(id: string) {
-    setBusy(true); setFehler(""); setHinweis("");
-    try {
-      const d = await (await fetch(`/api/dokument?id=${encodeURIComponent(id)}`)).json();
-      if (d.error) { setFehler(d.error); return; }
-      setDok(d.dokument); setTeile(d.teile || []); setSchmutzig(false);
-    } catch { setFehler("Das Dokument konnte nicht geladen werden."); }
-    finally { setBusy(false); }
-  }
 
   async function neu() {
     setBusy(true); setFehler("");
