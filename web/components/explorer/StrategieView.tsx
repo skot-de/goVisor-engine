@@ -28,7 +28,7 @@ type Stelle = {
   top1: number | null; top: { n: string; wins: number; pct: number }[];
 };
 type Fenster = {
-  id: string; titel: string; buyer: string; ende: string; fenster: string; tage: number;
+  id: string; titel: string; buyer: string; ende: string; tage: number;
   wert: string | null; wertSrc: string; endeSrc: string; nGelistet: number; gelistete: string[];
 };
 type Feld = {
@@ -681,30 +681,6 @@ function Bindung({ data }: { data: Strat }) {
         </div>
       </div>
 
-      <section className="bsec" style={{ marginTop: "var(--s5)" }}>
-        <h4>{t("Nächste Einstiegsfenster")}</h4>
-        <p className="st-frage" style={{ marginBottom: "var(--s3)" }}>
-          {t("Wann ihr euch bewegen müsst, um beim Auslaufen dabei zu sein. Vertragsende minus üblichem Vorlauf (Median Bekanntmachung→Zuschlag 87 Tage, plus Positionierung).")}
-        </p>
-        <div className="st-table st-fenster">
-          <div className="st-row st-row-h">
-            <span>{t("Rahmenvereinbarung")}</span><span>{t("Gelistet")}</span><span>{t("Wert")}</span>
-            <span>{t("Läuft aus")}</span><span>{t("Fenster ab")}</span>
-          </div>
-          {b.fenster.map((f) => (
-            <div key={f.id} className="st-row">
-              <span className="st-t">
-                {f.titel}
-                <span className="st-sub">{f.buyer}{f.gelistete.length ? ` · ${f.gelistete.slice(0, 2).join(", ")}` : ""}</span>
-              </span>
-              <span className="st-w"><span className="v-num">{f.nGelistet}</span></span>
-              <span className="st-w">{f.wert ? <span className="val" data-src={f.wertSrc}><span className="v-num">{f.wert}</span></span> : <span style={{ color: "var(--ink-300)" }}>—</span>}</span>
-              <span className="st-w"><span className="val" data-src={f.endeSrc}>{f.ende}</span></span>
-              <span className="st-w"><span className="st-fen">{f.fenster}</span></span>
-            </div>
-          ))}
-        </div>
-      </section>
 
       <section className="bsec" style={{ marginTop: "var(--s5)" }}>
         <h4>{t("Euer eigener Vertragsbestand")}</h4>

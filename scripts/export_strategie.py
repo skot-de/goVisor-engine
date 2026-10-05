@@ -470,25 +470,13 @@ VORLAUF.append(lambda: (
       WHERE e.contract_end >= CURRENT_DATE""")
 ))
 
-# Vorlauf bis zum Einstiegsfenster: Median Bekanntmachung→Zuschlag ~87 Tage
-# plus Positionierungsvorlauf. Vor diesem Datum muss man sich bewegt haben.
-#
-# ⛔ DIESE ZAHL IST GERATEN, UND ZWAR ZWEIFACH — gemessen am 2026-10-05.
-#   · Die 87 sind die FALSCHE GROESSE: Bekanntmachung→Zuschlag. Gefragt ist aber, wie lange
-#     vor dem VERTRAGSENDE die Nachfolge-Ausschreibung erscheint. Das sind zwei verschiedene
-#     Strecken, und sie haengen nicht aneinander.
-#   · Die 90 („Positionierungsvorlauf") stehen in keiner Messung.
-#
-# Der echte Wert, an 8.521 Nachfolge-Paaren mit BELEGTEM Vertragsende (`duration_source='echt'`):
-#     Median 232 Tage · Quartile -13 bis 632 · je CPV-Klasse Mediane zwischen 168 und 722
-# Ein Viertel der Nachfolgen erscheint also ERST NACH dem Ende des alten Vertrags.
-#
-# ⚠ `VORLAUF_TAGE` bleibt vorerst stehen, weil `bindung.fenster` daran haengt und die Ansicht
-# es zeigt. Die ehrliche Fassung ist der Block `beobachtung` weiter unten: er rechnet JE
-# SEGMENT aus gemessenen Paaren und laesst das Fenster LEER, wo es keine Messung gibt, statt
-# eine Zahl zu erfinden. Wer `bindung.fenster` aus der Ansicht nimmt, kann diese Konstante
-# mitnehmen — vorher nicht, sonst verschwindet eine Anzeige ohne Ersatz.
-VORLAUF_TAGE = 87 + 90
+# ⛔ HIER STAND `VORLAUF_TAGE = 87 + 90`, UND DIE ZAHL WAR ZWEIFACH GERATEN.
+# Die 87 waren `avg_decision_days` (Bekanntmachung→Zuschlag) — die falsche Strecke; gefragt
+# ist, wie lange vor dem VERTRAGSENDE die Nachfolge erscheint. Die 90 („Positionierungs-
+# vorlauf") standen in keiner Messung. Daraus rechnete `bindung.fenster` ein Datum auf den
+# Tag genau, und die Ansicht erklaerte dem Nutzer die falsche Methode im Klartext.
+# Ersetzt am 2026-10-05 durch `vorlauf_je_klasse()` + `beobachtung()` weiter unten: gemessen
+# je CPV-Klasse, mit Spanne, und LEER wo es keine Messung gibt.
 
 # Ab wie vielen gemessenen Paaren eine CPV-Klasse einen eigenen Vorlauf bekommt.
 # ⚠ Keine runde Zahl aus dem Gefuehl: unter 30 Paaren schwankt der Median zwischen zwei Laeufen
@@ -505,7 +493,7 @@ def vorlauf_je_klasse() -> dict:
     """Wie lange VOR dem Vertragsende erscheint die Nachfolge-Ausschreibung? Je CPV-Klasse.
 
     ⚠ DIE EINZIGE EHRLICHE GRUNDLAGE FUER EIN BEOBACHTUNGSFENSTER, und sie wurde bis zum
-    2026-10-05 nicht benutzt. Davor stand `VORLAUF_TAGE = 87 + 90` (s. o.) — eine geratene
+    2026-10-05 nicht benutzt. Davor stand `VORLAUF_TAGE = 87 + 90` (am 2026-10-05 entfernt) — eine geratene
     Zahl aus einer anderen Strecke. Hier wird stattdessen gemessen, an Paaren, die es
     tatsaechlich gab: Vorgaenger mit BELEGTEM Vertragsende, Nachfolger mit
     Veroeffentlichungsdatum.
@@ -654,7 +642,6 @@ def bindung_daten(key):
     fenster = con.execute(f"""
         SELECT lead_id, title, buyer_name,
                strftime(contract_end, '%d.%m.%Y')                         AS ende,
-               strftime(contract_end - INTERVAL {VORLAUF_TAGE} DAY, '%m/%Y') AS fenster,
                tage_bis_ende, value_eur, value_source, timing_source,
                len(gelistete)                                             AS n_gelistet,
                gelistete[1:3]                                             AS namen
@@ -672,13 +659,13 @@ def bindung_daten(key):
         "volN": int(r[4] or 0),
         "fenster": [{
             "id": lid, "titel": (t[:70] + "…") if t and len(t) > 70 else (t or ""),
-            "buyer": bn or "", "ende": ende, "fenster": fen,
+            "buyer": bn or "", "ende": ende,
             "tage": int(tage or 0),
             "wert": eur(v) if v else None,
             "wertSrc": "echt" if vs == "actual" else "schaetz",
             "endeSrc": "echt" if ts == "actual" else "schaetz",
             "nGelistet": int(ng or 0), "gelistete": list(nm or []),
-        } for (lid, t, bn, ende, fen, tage, v, vs, ts, ng, nm) in fenster],
+        } for (lid, t, bn, ende, tage, v, vs, ts, ng, nm) in fenster],
     }
 
 
