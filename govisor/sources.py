@@ -160,9 +160,25 @@ def _ted_status(cc: str) -> tuple[str, str]:
         candidate  nichts da
         prepared   Silber liegt, Gold nicht — angefangen und liegengeblieben
         live       Gold liegt, das Land ist in der Kette
+
+    ⚠ **DER STATUS IST DAMIT EINE EIGENSCHAFT DER MASCHINE, nicht des Codes.** Derselbe
+    Commit meldet in einem Baum mit Datenebene 21 live und in einem frischen Arbeitsbaum
+    ohne `data`-Symlink 18 — gemessen am 2026-10-05 von der Aufräum-Sitzung, als eine
+    Zahl auf der Faktenseite nicht stimmen wollte. Das ist kein Fehler dieser Funktion,
+    sondern der Preis dafür, dass sie nachsieht statt zu behaupten.
+
+    ⚠ Eine Folge davon gehört aber benannt: **wer diese Zahl irgendwo hinschreibt, schreibt
+    den Zustand EINER Maschine hin.** Ein Generator für die Faktenseite würde je nach Baum
+    eine andere Zahl erzeugen — deshalb steht sie dort von Hand. Und fehlt die Datenebene
+    ganz, ist „candidate" keine Messung, sondern eine Vermutung mit Etikett; genau das sagt
+    der Hinweis dann auch.
     """
     from pathlib import Path as _P
     wurzel = _P(__file__).resolve().parents[1] / "data"
+    if not wurzel.exists():
+        # ⚠ NICHT STILL `candidate`. Ohne Datenebene ist nichts gemessen, und ein Status
+        # ohne Messung, der sich wie einer liest, ist die Fehlerklasse dieses Hauses.
+        return "candidate", "⚠ Datenebene nicht erreichbar — Status NICHT gemessen"
     silber = list((wurzel / "silver" / cc / "notices").glob("*/*.parquet")) \
         if (wurzel / "silver" / cc / "notices").is_dir() else []
     gold = (wurzel / "gold" / cc / "lead_export.parquet").exists()
