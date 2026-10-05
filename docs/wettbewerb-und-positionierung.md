@@ -3,6 +3,25 @@
 **Zweck:** Gesprächsvorbereitung für den Vertrieb, nicht Eigenlob. Enthält bewusst auch,
 **wo wir schwächer sind** — wer das im Gespräch zum ersten Mal hört, hat schon verloren.
 
+> ## ⚠ UNGEPRÜFT: alle wörtlichen Zitate vom Wettbewerb
+>
+> **Dieses Papier zitiert vier fremde Firmen wörtlich — AGB-Passagen, Werbeaussagen,
+> Produktbeschreibungen — und bei keinem dieser Zitate ist festgehalten, wann und woher es
+> stammt.** Bis das geschehen ist, dürfen sie **nicht nach aussen** verwendet werden.
+>
+> ⚠ **Warum das hier eine Regel ist und keine Ordnungsliebe:** Abruf-Werkzeuge erfinden
+> Zitate. Das ist in diesem Haus gemessen und als Arbeitsregel festgehalten — bei jeder
+> Recherche wird ausdrücklich vermerkt, ob der **Rohtext** gesehen wurde. Ein anderes Papier
+> im selben Verzeichnis macht es richtig („Produktseite, gelesen 2026-10-04"); dieses nicht.
+>
+> ⛔ **Das schwerste Zitat ist das über fremde AGB.** Auf ihm ruht ein ganzer Abschnitt
+> („Wie der Markt mit Lücken umgeht"). Liegt es daneben, ist es keine Ungenauigkeit, sondern
+> eine falsche Tatsachenbehauptung über einen Wettbewerber, in einem Papier, das an Vertrieb
+> und Kunden geht.
+>
+> **Die vollständige Liste steht am Ende unter „Zu prüfende Zitate".** Jedes bekommt entweder
+> Quelle und Lesedatum — oder es fliegt raus. Ein Drittes gibt es nicht.
+
 **Stand:** 2026-10-05, abends. ⚠ Jede Zahl hier trägt dieses Datum. Wer sie ändert, zieht das
 Datum mit. Zusammengetragen aus drei parallel arbeitenden Sitzungen; wer was beigetragen hat,
 steht am Ende.
@@ -328,3 +347,36 @@ Sitzungen unabhängig voneinander gemessen haben** — und sie hielt.
 
 ⚠ **Was keine Sitzung behauptet:** dass irgendetwas davon beim Kunden erprobt wäre. Alle
 Zahlen sind aus dem Bestand gemessen, keine aus einem Gespräch.
+
+
+---
+
+## Zu prüfende Zitate
+
+⚠ **Keines davon ist belegt.** Jede Zeile braucht: die Adresse, von der es stammt, und das
+Datum, an dem der **Rohtext** gesehen wurde. Wer es prüft, trägt beides hier ein und entfernt
+die Warnung oben — oder streicht das Zitat.
+
+Die Spalte „trägt" sagt, was zusammenbricht, wenn das Zitat nicht stimmt. Die Reihenfolge ist
+danach sortiert, nicht nach Vorkommen.
+
+| # | Zitat | zugeschrieben | trägt | Quelle | gelesen am |
+|---|---|---|---|---|---|
+| 1 | „weder für die Vollständigkeit oder Richtigkeit der Auftragsinformationen verantwortlich" | DTAD, AGB | ⛔ **den ganzen Abschnitt „Wie der Markt mit Lücken umgeht"** und die zweite Einwand-Antwort | | |
+| 2 | „keine Gewähr für die Richtigkeit und Vollständigkeit" | Deutsches Ausschreibungsblatt, Vergabe24, evergabe.de — AGB | ⛔ denselben Abschnitt; **drei Firmen auf einmal** | | |
+| 3 | „100 % Abdeckung in DE & EU" | BidFix | die Einwand-Antwort „jeder behauptet das" | | |
+| 4 | „+82 % Win-Rate" | BidFix | nichts Tragendes, aber es steht als deren Eigenangabe da | | |
+| 5 | „10.000 Kommunen" | BidFix | die Gegenrechnung über OParl (25 Endpunkte) | | |
+| 6 | „Er liest Dokumente, extrahiert Eignungs- und Zuschlagskriterien." | DTAD, zu „Frank" | die erste Einwand-Antwort (auf Zuruf gegen vorab) | | |
+| 7 | „über 200" / „300+" / „hunderte" | aufträge.io, drei verschiedene Stellen | den Vorwurf, dass ihre Zahlen sich widersprechen | | |
+| 8 | „3,1 Mio analysierte Vergaben" / „über 3,1 Mio" | aufträge.io | denselben Vorwurf | | |
+| 9 | 40.000 gegen 30.000 Auftraggeber | aufträge.io, zwei Stellen | denselben Vorwurf | | |
+| 10 | „arbeitet in Ihren Vorlagen, nicht in fremden Templates" | BidFix | die Grenze unseres Dokument-Exports | ⭐ Produktseite | ⭐ 2026-10-04 |
+
+⭐ **Nummer 10 ist das Vorbild.** Sie steht in `funktion-dokument-bauen.md` mit Quelle und
+Datum, weil sie dort beim Bauen gebraucht wurde. Genau so sollen die anderen neun aussehen.
+
+⚠ **Nicht in dieser Liste** stehen die Sätze in Anführungszeichen, die **wir selbst** formuliert
+haben — die Verbotstabelle, die erwarteten Einwände, interne Etiketten. Sie sind keine
+Fremdzitate und brauchen keinen Beleg. Die Unterscheidung ist von Hand getroffen, nicht von
+einer Regel; wer die Liste pflegt, prüft sie mit.
