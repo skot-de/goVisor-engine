@@ -864,7 +864,16 @@ def test_source_registry_is_wellformed():
     # man notiert statt behebt, wird zur Fussnote — und Fussnoten liest niemand zweimal.
     live_ids = {s.id for s in sources.bekanntmachungen() if s.status == "live"}
     assert live_ids == {"ted-de", "ted-at", "ted-lu", "doe-de", "simap-ch",
-                        "netserver-de", "offeneverg-at"}, (
+                        "netserver-de", "offeneverg-at", "cosinex-de"}, (
+        # ⚠ `cosinex-de` kam am 2026-10-05 dazu — und zwar als KORREKTUR, nicht als Ausbau.
+        # Die Quelle stand sieben Wochen auf "prepared": Modul seit 2026-08-14 fertig, Nutzen
+        # gemessen und daneben notiert (23,5 % der Bekanntmachungen neu, RLP 48 %), aber im
+        # Tageslauf kam "cosinex" nur beim Unterlagen-Abruf vor. Gegenprobe vor dem
+        # Einschalten: zwei Seiten je Division, nur NRW → 966 neue Bekanntmachungen.
+        # Brandenburg bleibt draussen (robots.txt sperrt den Host), deshalb `--portale nw,rp`.
+        # Dass dieser Test die Liste festnagelt, ist richtig — er hat die Aenderung erzwungen,
+        # statt sie durchrutschen zu lassen. Neu ist nur die Sonde, die das Umgekehrte faengt:
+        # `scripts/pruefe_quellen_register.py` meldet, was gebaut und NICHT eingeschaltet ist.
         # ⚠ `ted-lu` kam am 2026-09-03 dazu, OHNE dass jemand einen Status getippt hat:
         # `_ted_status` leitet ihn aus der Datenlage ab, und mit `data/gold/LU` sprang das
         # Land von `candidate` auf `live`. Genau so ist es gebaut — deshalb faellt hier die

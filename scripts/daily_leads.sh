@@ -831,6 +831,40 @@ if [ "${GOVISOR_NEUE_QUELLEN:-1}" = "1" ]; then
   mit_grenze "$GRENZE_ABRUF" $PY -m govisor.healyhudson --silber \
     || echo "  ⚠ Healy-Hudson-Silber nicht gebaut — die Vorgaenge bleiben in Bronze liegen."
 
+# COSINEX-LANDESPORTALE (NRW, Rheinland-Pfalz) — dieselbe Software wie DTVP, aber die
+# LANDESportale statt des Bundes-DTVP. Sie fuehren ober- UND unterschwellige Vergaben;
+# ueber TED kommen nur die oberschwelligen, ueber DOeE nur ein Teil.
+#
+# ⛔ DIESER SCHRITT HAT SIEBEN WOCHEN GEFEHLT, und das ist der eigentliche Punkt.
+# `govisor/cosinex.py` ist seit dem 2026-08-14 fertig — mit `hole()`, `schreibe_bronze()`,
+# `nach_silber()` und eigenem `main()`. Der Nutzen war damals gemessen und in
+# `sources.REGISTRY` notiert: an 6.520 Bekanntmachungen ab 2023 waren **23,5 % neu**
+# (NRW 19 %, Brandenburg 26 %, Rheinland-Pfalz 48 %). Die Quelle stand trotzdem bis heute
+# auf `status="prepared"` und wurde von NIEMANDEM aufgerufen — „cosinex" kam im Tageslauf
+# nur beim Unterlagen-Abruf vor. Wir haben die Portale also benutzt, um Dokumente zu holen,
+# aber nicht, um Ausschreibungen zu holen.
+# Gegenprobe am 2026-10-05, zwei Seiten je Division, nur NRW, nur 2026: **966 neue
+# Bekanntmachungen** — durchweg kommunal und unterschwellig (Gewaessermonitoring Herne,
+# Klaerschlammtransport Solingen, Gebaeudereinigung staedtische Liegenschaften).
+#
+# ⚠ REIHENFOLGE wie bei DTVP und NetServer: VOR der Dubletten-Firewall. Sie liest Silber;
+# kaeme der Import danach, griffe der Dubletten-Ausschluss einen Lauf zu spaet.
+#
+# ⚠ BRANDENBURG FEHLT ABSICHTLICH. `PORTALE["bb"]` traegt `"disallow"` — die robots.txt des
+# Portals sperrt den Host. Das Modul haette `--ignoriere-robots`; der Schalter gehoert nicht
+# in einen automatischen Lauf (s. [[govisor-gesperrte-hosts]]: bei xvergabe.de und evoportal
+# wird gar nicht erst angefragt). Die dort gemessenen 26 % neu bleiben damit liegen — bewusst.
+#
+# ⛔ EINMALIG VON HAND NACH DEM ERSTEN LAUF, sonst bleibt die halbe Arbeit liegen:
+#     GOVISOR_DEDUPE_VOLL=1 scripts/daily_leads.sh
+# Begruendung steht unten beim Dedupe-Modus: das rollende 190-Tage-Fenster faengt „eine neue
+# Quelle mit ALTBESTAND" nicht ein, und cosinex bringt ein Archiv mit (NRW 6.867 · RLP 625
+# Bekanntmachungen im Portal). Ohne den einen Volllauf stehen die aelteren cosinex-Saetze
+# ungeprueft neben ihren TED-/DOeE-Zwillingen.
+  step "cosinex-Landesportale (NRW/RLP, ober- und unterschwellig)"
+  mit_grenze "$GRENZE_ABRUF" $PY -m govisor.cosinex --portale nw,rp --silber \
+    || echo "  ⚠ cosinex-Import fehlgeschlagen — fremdes Portal, der Lauf geht ohne weiter."
+
 
 # ══ ERNTE VOR ABRUF ══════════════════════════════════════════════════════════════════
 # Dieser Block stand bis 2026-08-17 HINTER den Unterlagen-Abrufern. Am 2026-08-16 kostete
@@ -1939,6 +1973,16 @@ $PY scripts/pruefe_bibel.py \
 # ⚠ Sie liest nur und darf deshalb neben einem Abrufer laufen.
 $PY scripts/pruefe_vollstaendigkeit.py \
   || echo "  → Ein holbarer Lead traegt keinen Zustand. Details: python3 scripts/pruefe_vollstaendigkeit.py --offen"
+
+# QUELLENREGISTER — was gebaut ist, muss auch laufen.
+# ⚠ Anlass am 2026-10-05: `cosinex-de` stand sieben Wochen auf "prepared". Das Modul war seit
+# dem 2026-08-14 fertig, der Nutzen gemessen und im Register notiert (23,5 % der
+# Bekanntmachungen neu, bei Rheinland-Pfalz 48 %) — und niemand rief es auf. Aufgefallen ist
+# es durch Svens Frage, nicht durch eine Pruefung. Diese Sonde haette es am ersten Tag
+# gemeldet; belegt durch Gegenprobe (Status zurueckgesetzt → rot, Rueckgabe 1).
+# ⚠ Sie liest nur Quelltext, kein `data/`, und geht ohne `--netz` nicht ins Netz.
+$PY scripts/pruefe_quellen_register.py \
+  || echo "  → Eine Quelle ist gebaut, aber nicht eingeschaltet. Details: python3 scripts/pruefe_quellen_register.py"
 
 # ── ZAHLEN IN DER MARKTANALYSE NACHZIEHEN ────────────────────────────────────────────────
 # `docs/weiterentwicklung/sichtbarkeit-in-ki-antworten.md` stellt unseren gemessenen Bestand

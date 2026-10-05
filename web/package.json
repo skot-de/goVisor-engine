@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "prebuild": "node scripts/pruefe-daten.mjs && node scripts/pruefe-html-escape.mjs",
-    "lint:escape": "node scripts/pruefe-html-escape.mjs"
+    "lint:escape": "node scripts/pruefe-html-escape.mjs",
+    "pruefe:seite": "node scripts/pruefe-ausgelieferte-seite.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.3",

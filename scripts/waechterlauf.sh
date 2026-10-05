@@ -144,6 +144,12 @@ sonde bibel "Details: python3 scripts/pruefe_bibel.py --offen" \
   -- $PY scripts/pruefe_bibel.py
 sonde vollstaendigkeit "Details: python3 scripts/pruefe_vollstaendigkeit.py --offen" \
   -- $PY scripts/pruefe_vollstaendigkeit.py
+# ⚠ Quellenregister: meldet, was gebaut und nicht eingeschaltet ist. Anlass war `cosinex-de`
+# — sieben Wochen auf "prepared", mit gemessenem Nutzen (23,5 % neu) direkt daneben, und
+# aufgefallen durch eine Frage statt durch eine Pruefung. Laeuft OHNE Netz; `--netz` ist
+# freiwillig und gehoert hier NICHT hinein (fremde Portale im Minutentakt).
+sonde quellen_register "Details: python3 scripts/pruefe_quellen_register.py" \
+  -- $PY scripts/pruefe_quellen_register.py
 
 # ── Zusammenfassung ──────────────────────────────────────────────────────────────────────
 #

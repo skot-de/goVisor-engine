@@ -217,8 +217,13 @@ REGISTRY: list[Source] = [
     # cosinex-Landesportale. Der Connector geht NICHT über die (clientseitige) Suchmaske,
     # sondern über den server-gerenderten Auftragsgegenstand-Überblick — deshalb `requests`
     # statt Playwright, und deshalb mit ECHTEM CPV (Division) für jede Vergabeordnung.
+    # ⛔ STAND BIS 2026-10-05 AUF "prepared" — sieben Wochen, obwohl das Modul seit dem
+    # 2026-08-14 fertig war und der Nutzen unten gemessen danebenstand. Niemand rief es auf;
+    # "cosinex" kam im Tageslauf nur beim Unterlagen-Abruf vor. Gegenprobe am 2026-10-05
+    # (zwei Seiten je Division, nur NRW, nur 2026): 966 neue Bekanntmachungen. Jetzt in
+    # `scripts/daily_leads.sh` verdrahtet, Portale nw,rp — BB bleibt draussen (robots).
     Source("cosinex-de", "cosinex-Landesportale (NRW/RLP/BB)", "cosinex-html", "DE",
-           "beides", "prepared", portals=3,
+           "beides", "live", portals=3,
            coverage="NRW 6.867 · Brandenburg 2.310 · RLP 625 Bekanntmachungen im Portal "
                     "(Archiv). Trefferzeile: Veröffentlichung + Frist MIT UHRZEIT, Titel, "
                     "Vergabeordnung, Typ, Vergabestelle, CPV-Division. Unterlagen NICHT "
