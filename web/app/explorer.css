@@ -3217,3 +3217,23 @@ td.c-doks{width:84px;text-align:center}
 .dok-inhalt{font-size:var(--t-sm,13px);line-height:1.6;color:var(--ink-700,#374151);margin:0;white-space:pre-wrap}
 .dok-warnung{font-size:var(--t-meta,12px);color:var(--signal-ink,#b45309);margin:0;font-weight:600}
 .dok-eingabe{width:100%;padding:8px;border:1px solid var(--line,#e5e7eb);border-radius:var(--r,8px);font-family:inherit;font-size:var(--t-sm,13px);line-height:1.5;resize:vertical}
+.dok-sperre{font-size:var(--t-meta,12px);color:var(--signal-ink,#b45309);background:var(--signal-bg,#fffbeb);border:1px solid var(--signal,#f59e0b);border-radius:var(--r,8px);padding:8px 10px;margin:0}
+.dok-nurdruck{display:none}
+
+/* ── Druck: nur das Dokument, ohne Bedienung ─────────────────────────────────────────────────
+   Die Umkehr ueber `visibility` statt ueber `display` haengt NICHT an den Klassennamen der
+   uebrigen App: die Leiste, die Kopfzeile und die Bibliothek koennen umbenannt werden, ohne
+   dass der Ausdruck kaputtgeht. Mit einer Liste zu versteckender Klassen waere das anders. */
+@media print {
+  body * { visibility: hidden; }
+  .dok-ziel, .dok-ziel * { visibility: visible; }
+  .dok-ziel { position: absolute; left: 0; top: 0; width: 100%; }
+  .dok-unter, .dok-werkzeuge, .dok-knoepfe, .dok-teilkopf, .dok-sperre,
+  .dok-eingabe, .dok-leer { display: none !important; }
+  .dok-nurdruck { display: block; }
+  .dok-teil { border: 0; padding: 0; margin: 0 0 10pt; break-inside: avoid; }
+  .dok-inhalt, .dok-nurdruck { font-size: 11pt; line-height: 1.5; color: #000; margin: 0 0 8pt; }
+  .dok-drucktitel { font-size: 20pt; font-weight: 700; margin: 0 0 16pt; color: #000; }
+  .dok-druckueber { font-size: 14pt; font-weight: 700; margin: 14pt 0 6pt; color: #000;
+                    break-after: avoid; }
+}

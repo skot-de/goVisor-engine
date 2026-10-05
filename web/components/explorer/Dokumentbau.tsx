@@ -1,5 +1,6 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
+import { baueDocx, dateiname, type DocxTeil } from "@/lib/docx";
 
 /* Dokumente aus Bausteinen zusammenstellen (Phase 1, Plan: `docs/funktion-dokument-bauen.md`).
  *
@@ -144,6 +145,37 @@ export function Dokumentbau() {
       ? { art: "text" as Art, baustein_id: null, inhalt: x.inhalt, ebene: null } : x)));
   }
 
+  /* ⚠ EIN DOKUMENT MIT LOCH WIRD NICHT EXPORTIERT. Ein Teil ohne Quelle einfach wegzulassen
+   * waere der schlimmste Ausgang: die Datei saehe vollstaendig aus, und der fehlende Absatz
+   * faellt erst der Vergabestelle auf. Der Export bleibt deshalb gesperrt, bis der Teil
+   * entfernt oder ersetzt ist, und sagt warum. */
+  const kaputt = teile.filter((t) => t.quelle_fehlt).length;
+
+  function alsDocxTeile(): DocxTeil[] {
+    return teile.flatMap((t): DocxTeil[] => {
+      if (t.art === "ueberschrift") {
+        return [{ art: "ueberschrift", text: t.inhalt || "",
+                  ebene: (t.ebene === 1 || t.ebene === 3 ? t.ebene : 2) }];
+      }
+      return t.inhalt ? [{ art: "absatz", text: t.inhalt }] : [];
+    });
+  }
+
+  function exportWord() {
+    if (!dok || kaputt) return;
+    const bytes = baueDocx(dok.titel, alsDocxTeile());
+    /* `slice()` erzeugt einen eigenen ArrayBuffer. Ohne das bekommt der Blob die Sicht auf den
+     * Puffer von fflate, und der kann groesser sein als die Nutzlast. */
+    const url = URL.createObjectURL(new Blob([bytes.slice().buffer],
+      { type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" }));
+    const a = document.createElement("a");
+    a.href = url; a.download = dateiname(dok.titel);
+    document.body.appendChild(a); a.click(); a.remove();
+    /* Spaet freigeben: ein sofortiges `revoke` kommt dem Download in manchen Browsern zuvor. */
+    setTimeout(() => URL.revokeObjectURL(url), 10_000);
+    setHinweis(`${dateiname(dok.titel)} wurde erzeugt.`);
+  }
+
   const gefiltert = thema ? bausteine.filter((b) => b.theme === thema) : bausteine;
   const themenImBestand = [...new Set(bausteine.map((b) => b.theme))];
 
@@ -209,6 +241,8 @@ export function Dokumentbau() {
             </div>
 
             <div className="dok-ziel">
+              {/* Nur im Druck sichtbar: der Titel als Ueberschrift statt als Eingabefeld. */}
+              <h1 className="dok-nurdruck dok-drucktitel">{dok.titel}</h1>
               <h3 className="dok-unter">Dokument ({teile.length})</h3>
               <div className="dok-werkzeuge">
                 <button className="dok-klein" onClick={ueberschrift}>Ueberschrift</button>
@@ -216,10 +250,26 @@ export function Dokumentbau() {
                 <button className="dok-knopf" onClick={sichern} disabled={busy || !schmutzig}>
                   Speichern
                 </button>
+                <button className="dok-klein" onClick={exportWord}
+                  disabled={busy || teile.length === 0 || kaputt > 0}>
+                  Word
+                </button>
+                <button className="dok-klein" onClick={() => window.print()}
+                  disabled={busy || teile.length === 0 || kaputt > 0}>
+                  Drucken oder PDF
+                </button>
                 <button className="dok-klein dok-weg" onClick={loesche} disabled={busy}>
                   Dokument loeschen
                 </button>
               </div>
+
+              {kaputt > 0 && (
+                <p className="dok-sperre">
+                  Export gesperrt: {kaputt} Teil{kaputt === 1 ? "" : "e"} ohne Quelle. Bitte
+                  entfernen oder ersetzen. Ein Dokument mit Loch saehe vollstaendig aus, und der
+                  fehlende Absatz fiele erst der Vergabestelle auf.
+                </p>
+              )}
 
               {teile.length === 0 && (
                 <p className="dok-leer">
@@ -263,10 +313,18 @@ export function Dokumentbau() {
                   ) : t.art === "baustein" ? (
                     <p className="dok-inhalt">{t.inhalt}</p>
                   ) : (
-                    <textarea className="dok-eingabe" value={t.inhalt || ""}
-                      rows={t.art === "ueberschrift" ? 1 : 4}
-                      onChange={(e) => aendern((x) => x.map((y, j) =>
-                        (j === i ? { ...y, inhalt: e.target.value } : y)))} />
+                    <>
+                      <textarea className="dok-eingabe" value={t.inhalt || ""}
+                        rows={t.art === "ueberschrift" ? 1 : 4}
+                        onChange={(e) => aendern((x) => x.map((y, j) =>
+                          (j === i ? { ...y, inhalt: e.target.value } : y)))} />
+                      {/* ⚠ Nur fuer den Druck. Ein `textarea` druckt sich mit fester Hoehe und
+                          abgeschnittenem Text; dieselbe Zeichenfolge als Absatz nicht. */}
+                      <p className={t.art === "ueberschrift" ? "dok-nurdruck dok-druckueber"
+                                                             : "dok-nurdruck"}>
+                        {t.inhalt}
+                      </p>
+                    </>
                   )}
                 </article>
               ))}
