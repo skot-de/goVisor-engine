@@ -121,6 +121,24 @@ class Source:
     coverage: str = ""          # was sie liefert
     overlap: str = ""           # bekannte Überschneidung mit anderen Quellen (Ehrlichkeit)
     url: str = ""
+    # ISO-Datum (YYYY-MM-DD), an dem jemand den Status ZULETZT NACHGEPRÜFT hat. Leer = nie.
+    #
+    # ⛔ WARUM ES DIESES FELD GIBT. Am 2026-10-05 stand `cosinex-de` sieben Wochen auf
+    # "prepared": Modul fertig, Nutzen gemessen und daneben notiert (23,5 % neu), und
+    # niemand rief es auf. Aufgefallen ist es durch eine Frage, nicht durch eine Prüfung.
+    # Am selben Tag galt `vergabe-westfalen.de` als „nicht erreichbar" — die Adresse
+    # braucht nur `www.`. Beide Male versteinerte ein Urteil, weil nichts es altern liess.
+    #
+    # ⚠ „ZULETZT GEPRÜFT" IST NICHT „GESETZT". Das sind zwei Dinge, und ein Feld, das beide
+    # tragen soll, trägt am Ende keines verlässlich. Hier steht ausschliesslich das Erste.
+    # Wann ein Status sich GEÄNDERT hat, sagt `git log -S'"<id>"' -- govisor/sources.py`
+    # genauer, als eine Hand es pflegen könnte — ein zweites Feld dafür wäre ein doppelt
+    # gepflegter Wert, und genau die jagt `scripts/pruefe_bibel.py` seit Wochen.
+    #
+    # ⚠ EIN DATUM VON HEUTE IST KEIN BEWEIS. goVisor-MAIN hatte am selben Tag eine Kursdatei
+    # mit `geholt_am` von heute, in der eine Zahl Wochen alt war. Wer hier ein Datum setzt,
+    # ohne die Quelle wirklich angefasst zu haben, macht die Sonde blind statt wachsam.
+    geprueft: str = ""
     # --- zweite Ebene: Vergabeunterlagen -----------------------------------------------------
     # ⚠ DREI Ebenen, nicht zwei. CLAUDE.md verlangt sie ausdruecklich, und die
     # Portal-Sondierung hat am 2026-09-03 gezeigt, warum zwei nicht reichen: die
@@ -249,7 +267,12 @@ REGISTRY: list[Source] = [
                    "(Titel zu kurz). Offene Vorgänge: 2.064, davon 322 belegt neu. Die "
                    "Dubletten deckt überwiegend TED-eForms (2.796), dann DÖE (1.038) und "
                    "DTVP (377 — dieselben Vergaben stehen doppelt in der cosinex-Familie)",
-           url="https://www.evergabe.nrw.de/VMPCenter"),
+           url="https://www.evergabe.nrw.de/VMPCenter",
+           # Am 2026-10-05 nicht geglaubt, sondern gefahren: `--dry-run --portale nw
+           # --max-seiten 2 --ab-jahr 2026` ergab 966 neue Bekanntmachungen. Das ist
+           # der einzige Eintrag mit Datum, weil es der einzige ist, den ich an diesem
+           # Tag wirklich angefasst habe — die anderen 124 bleiben ehrlich leer.
+           geprueft="2026-10-05"),
 
     # --- PREPARED (Brücke fertig, wartet auf Voll-Ingest / Speicher) ---
     Source("ted-at", "TED Österreich", "ted-bulk", "AT", "oberschwellig", "prepared",

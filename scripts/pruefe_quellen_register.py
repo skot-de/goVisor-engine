@@ -36,6 +36,7 @@ Rückgabe 0 = sauber, 1 = Fund.
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import re
 import sys
 import time
@@ -152,12 +153,52 @@ def main(argv: list[str] | None = None) -> int:
         gut(f"keine Bekanntmachungs-Quelle ruht unbegründet "
             f"({len(ruht)} 'prepared', davon {len(ruht)} begründet)")
 
-    # ── c) ALTER: kann diese Sonde NICHT prüfen, und das muss sichtbar bleiben ───────────
-    ohne_datum = [s for s in R if not hasattr(s, "geprueft")]
+    # ── c) ALTER: ein Urteil, das nicht altern kann, altert trotzdem — nur unbemerkt ─────
+    #
+    # ⚠ DIE FRISTEN SIND EINE ÜBEREINKUNFT, KEINE MESSUNG, und das soll hier stehen statt
+    # so zu tun, als wäre es anders. Wie schnell ein Portal sich ändert, hat niemand erhoben.
+    # Der EINE belegte Ankerpunkt ist der 2026-10-05: `cosinex-de` stand 52 Tage auf
+    # "prepared", während der gemessene Nutzen danebenstand — das war nachweislich zu lang.
+    # Darum unten gestaffelt: wer Arbeit investiert hat, wird früher gefragt als wer nur
+    # hingesehen hat. Wer bessere Zahlen hat, ersetzt die Fristen und streicht diesen Absatz.
+    FRIST_TAGE = {"candidate": 180, "research": 180, "sondiert": 365}
+    # 'prepared' steht nicht drin: Zusicherung b) meldet es ohnehin als Fund, unabhängig vom
+    # Datum. 'live' auch nicht: dafür ist Zusicherung a) da (wird es aufgerufen?).
+    heute = dt.date.today()
+    ohne_datum, zu_alt = [], []
+    for s in R:
+        d = (getattr(s, "geprueft", "") or "").strip()
+        if not d:
+            ohne_datum.append(s)
+            continue
+        # ⚠ FORMAT ZUERST, FRIST DANACH — und nicht umgekehrt. Im ersten Entwurf stand die
+        # Fristabfrage vor dem Parsen, mit `continue` bei Status ohne Frist. Folge: eine
+        # kaputte Datumsangabe auf einer `live`- oder `prepared`-Quelle wurde NIE geprüft.
+        # Aufgefallen nur, weil die Selbstprobe ein Unsinns-Datum pflanzte und die Sonde
+        # dazu schwieg. Ein Format gilt für jedes Datum, eine Frist nur für manche.
+        try:
+            tage = (heute - dt.date.fromisoformat(d)).days
+        except ValueError:
+            klage(f"{s.id}: `geprueft` ist kein ISO-Datum ({d!r}) — ein Datum, das niemand "
+                  f"lesen kann, ist schlechter als keines: es sieht nach Pflege aus")
+            continue
+        if tage < 0:
+            klage(f"{s.id}: `geprueft` liegt {-tage} Tage in der ZUKUNFT ({d})")
+            continue
+        frist = FRIST_TAGE.get(s.status)
+        if frist is not None and tage > frist:
+            zu_alt.append((s, tage, frist))
+    for s, tage, frist in zu_alt:
+        klage(f"{s.id}: zuletzt vor {tage} Tagen geprüft (Frist {frist} für Status "
+              f"'{s.status}') — die Einschätzung ist älter als die Welt, die sie beschreibt")
     if ohne_datum:
-        hinweis(f"{len(ohne_datum)} von {len(R)} Quellen tragen kein Prüfdatum — ein Urteil "
-                f"im Register altert nicht. Ohne ein Feld `geprueft` in `Source` kann keine "
-                f"Sonde melden, dass eine Einschätzung veraltet ist.")
+        hinweis(f"{len(ohne_datum)} von {len(R)} Quellen tragen kein Prüfdatum. Das Feld gibt "
+                f"es seit dem 2026-10-05; nachgetragen wird es beim nächsten Anfassen einer "
+                f"Quelle, nicht pauschal — ⚠ ein Datum, hinter dem niemand nachgesehen hat, "
+                f"macht diese Sonde blind statt wachsam.")
+    if not zu_alt and len(ohne_datum) < len(R):
+        gut(f"kein Prüfdatum ist über seine Frist gelaufen "
+            f"({len(R) - len(ohne_datum)} mit Datum)")
 
     # ── d) NETZ (freiwillig): erreichbar? Und ist 'nicht erreichbar' wirklich wahr? ──────
     if a.netz:

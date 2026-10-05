@@ -77,3 +77,73 @@ def test_kommentare_werden_vor_der_suche_entfernt():
     assert len(ohne) < len(roh), "Es wurde kein einziger Kommentar entfernt"
     kommentarzeilen = [z for z in ohne.splitlines() if z.lstrip().startswith("#")]
     assert not kommentarzeilen, f"Kommentare überlebt: {kommentarzeilen[:3]}"
+
+
+# ───────────────────────────────────────────────────────────────────────────────────────
+# Das Prüfdatum (`Source.geprueft`, seit 2026-10-05)
+#
+# ⚠ WARUM DIESE DREI TESTS EXISTIEREN. Die Alters-Zusicherung war im ersten Entwurf BLIND:
+# sie prüfte das Datumsformat erst NACH der Fristabfrage und sprang bei Status ohne Frist
+# vorher ab. Eine kaputte Datumsangabe auf einer `live`-Quelle fiel damit nie auf. Gemerkt
+# nur, weil eine Probe ein Unsinns-Datum pflanzte und die Sonde dazu schwieg. Eine Zusicherung,
+# die man nicht zum Anschlagen gebracht hat, ist eine Vermutung.
+# ───────────────────────────────────────────────────────────────────────────────────────
+
+
+def _fahre(registry):
+    """Laesst die Sonde gegen eine ERSETZTE Registry laufen und gibt (Rueckgabe, Funde)."""
+    import contextlib
+    import io
+    echt = sources.REGISTRY
+    sources.REGISTRY = registry
+    sonde.fehler, sonde.hinweise = 0, 0
+    buf = io.StringIO()
+    try:
+        with contextlib.redirect_stdout(buf):
+            rc = sonde.main([])
+    finally:
+        sources.REGISTRY = echt
+    return rc, [z.strip() for z in buf.getvalue().splitlines() if z.strip().startswith("\u2717")]
+
+
+def test_ein_zu_altes_pruefdatum_schlaegt_an():
+    import dataclasses
+    import datetime as dt
+    R = list(sources.REGISTRY)
+    s = next((x for x in R if x.status == "sondiert"), None)
+    if s is None:
+        pytest.skip("keine sondierte Quelle im Register")
+    alt = (dt.date.today() - dt.timedelta(days=400)).isoformat()   # Frist fuer sondiert: 365
+    rc, funde = _fahre([dataclasses.replace(x, geprueft=alt) if x.id == s.id else x for x in R])
+    assert rc == 1 and any(s.id in f for f in funde), (
+        f"Ein 400 Tage altes Pruefdatum wurde nicht gemeldet. Funde: {funde}")
+
+
+def test_ein_unlesbares_pruefdatum_schlaegt_an_AUCH_OHNE_FRIST():
+    """⚠ Der eigentliche Fehler des ersten Entwurfs: `live` hat keine Frist, und genau
+    deshalb wurde das Format dort nie geprueft."""
+    import dataclasses
+    R = list(sources.REGISTRY)
+    l = next(x for x in R if x.status == "live")
+    rc, funde = _fahre([dataclasses.replace(x, geprueft="letzten Dienstag") if x.id == l.id else x
+                        for x in R])
+    assert rc == 1 and any("ISO" in f for f in funde), (
+        f"Ein unlesbares Datum auf einer live-Quelle wurde nicht gemeldet. Funde: {funde}")
+
+
+def test_ein_pruefdatum_in_der_zukunft_schlaegt_an():
+    """Ein Datum von morgen ist keine Pflege, sondern ein Tippfehler oder eine Behauptung."""
+    import dataclasses
+    R = list(sources.REGISTRY)
+    l = next(x for x in R if x.status == "live")
+    rc, funde = _fahre([dataclasses.replace(x, geprueft="2099-01-01") if x.id == l.id else x
+                        for x in R])
+    assert rc == 1 and any("ZUKUNFT" in f for f in funde), (
+        f"Ein Datum in der Zukunft wurde nicht gemeldet. Funde: {funde}")
+
+
+def test_die_unveraenderte_registry_bleibt_gruen():
+    """Gegenrichtung: ohne gepflanzten Fehler darf die Sonde NICHT anschlagen — sonst waere
+    sie eine Funktion, die immer meldet, und die drei Tests darueber waeren wertlos."""
+    rc, funde = _fahre(list(sources.REGISTRY))
+    assert rc == 0 and not funde, f"Die Sonde meldet ohne gepflanzten Fehler: {funde}"
