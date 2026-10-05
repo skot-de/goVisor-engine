@@ -47,7 +47,7 @@ das Gespräch beim ersten Nachfragen — und zwar bei einem Kunden, der es prüf
 | „Die neuen Merkmale gelten DACH-weit." | ⛔ **Die Schweiz bekommt davon nichts.** 1 von 8.549 CH-Leads trägt EU-Kofinanzierung; Direktvergabe-Grund und Ausführungsbedingungen stehen bei **0**. Das ist richtig so — die Schweiz fällt nicht unter die EU-Richtlinien — aber „gilt EU-weit" darf im DACH-Gespräch nicht als „gilt auch in der Schweiz" gelesen werden. |
 | „Tausende zusätzliche Leads durch die neuen Merkmale." | ⚠ **Die absoluten Zahlen sind klein**: 921 EU-kofinanzierte und 1.601 mit Direktvergabe-Grund unter 43.027 Leads im Frontend. Als Merkmal, das sonst niemand hat, ist das stark; als Mengenaussage wäre es falsch. |
 | „Impressum, Datenschutz und AGB stehen." | ⚠ Impressum ja. Die Datenschutzerklärung hat **offene Stellen** (Auftragsverarbeitung bei zwei Dienstleistern, eine Serverregion ungeprüft), die AGB sind ein **Entwurf mit acht offenen Geschäftsentscheidungen**, und **eine Rechtsprüfung hat nicht stattgefunden.** |
-| „34,1 % der Ausschreibungen haben ausgewertete Unterlagen." | Nur **mit Nenner** zitieren: 34,1 % gilt für *laufende* Ausschreibungen. Gegen alle Akten gerechnet sind es 1,6 %, weil 69 % der Akten vor dem Abrufstart am 01.08.2026 liegen und kein Portal rückwirkend herausgibt. ⚠ An diesem Nenner ist heute schon einmal fast eine gute Idee gekippt. |
+| „34,1 % der Ausschreibungen haben ausgewertete Unterlagen." | ⛔ **Die Zahl ist tot, in zwei Schichten.** Richtig ist: **18,0 % ausgewertet**, 39,6 % liegen vor, 56,1 % Abruf versucht — je von 14.775 offenen DE-Leads. Die 34,1 % trugen das falsche Etikett (sie lagen näher an „liegen vor") *und* fallen weiter, weil die Analyse seit dem 24.09. steht. Dazu der Nenner: gegen **alle** Akten sind es 1,6 %, weil 69 % vor dem Abrufstart am 01.08.2026 liegen und kein Portal rückwirkend herausgibt. ⚠ An diesem Nenner ist heute schon einmal fast eine gute Idee gekippt. |
 
 ---
 
@@ -126,8 +126,11 @@ vom Wettbewerb nicht besetzt.**
 ⚠ **Zu #2 — ein Messfehler, der fast eine gute Idee gekippt hätte.** Die 1,6 % waren gegen
 **alle** Akten gerechnet, also gegen 22 Jahre Geschichte, für die es nie Unterlagen geben kann
 (69 % der Akten liegen vor dem Abrufstart am 01.08.2026, und kein Portal gibt rückwirkend
-heraus). Für einen Bieter zählt, worauf er **heute bieten kann**, und dort sind es **34,1 %**.
-**Lehre: bei jeder Abdeckungszahl zuerst den Nenner prüfen.**
+heraus). Für einen Bieter zählt, worauf er **heute bieten kann** — und dort sind es **18,0 %
+ausgewertete** und **39,6 % vorliegende** Unterlagen (⚠ die Zahl stand hier bis zum 05.10. als
+34,1 %, mit dem falschen Etikett; Korrektur und Dreisatz am Ende des Papiers).
+**Lehre: bei jeder Abdeckungszahl zuerst den Nenner prüfen — und dann, was die Zahl eigentlich
+zählt. Hier war beides falsch, und der Nennerfehler hat den Etikettenfehler verdeckt.**
 
 ---
 
@@ -138,7 +141,7 @@ heraus). Für einen Bieter zählt, worauf er **heute bieten kann**, und dort sin
 | Materialvorsprung | **Faktor 5,8** gegen aufträge.io, identischer Monat, seine Filter |
 | Neuzugang je Werktag | **1.300–1.480** gegen „über 500" |
 | Nicht über TED erreichbar | **rund 42 bis 43 %** der offenen deutschen Ausschreibungen — ⭐ **zweimal unabhängig gemessen** (s. u.) |
-| Unterlagen ausgewertet | **34,1 %** der laufenden Ausschreibungen |
+| Unterlagen ausgewertet | **18,0 %** der laufenden Ausschreibungen · **39,6 %** liegen vor (abgerufen, nicht ausgewertet) ⚠ s. Korrektur unten |
 | Anforderungen aus Unterlagen | 31,8 % — darunter **Zertifikate, Pflicht-Ortstermin, Präsentation: in eForms zu 0 % vorhanden** |
 | Käufer-Lieferanten-Beziehungen | **273.425** über 22 Jahre |
 | Quellenregister | **125 Quellen mit ausdrücklichem Status** — in DE **15 von 15 live** ⚠ s. Warnung oben |

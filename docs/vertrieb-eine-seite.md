@@ -58,7 +58,9 @@ Käufer gegenüber dem Feld.
 | **„Wir sagen Ihnen, warum ein Verfahren gescheitert ist."** | 11.512 von 79.075 | im amtlichen Wortlaut: „keine Angebote eingegangen" ist eine Chance, „Bedarf geändert" nicht |
 
 > ⛔ **Die 18 % waren einmal 34 % — und der Unterschied ist kein Messfehler.**
-> Das lange Papier nennt 34,1 %. Nachgerechnet am 05.10. sind es **18,0 %**, und der Grund
+> Das lange Papier nannte 34,1 % und trägt die Korrektur seit dem 05.10. an allen vier Stellen
+> (die Zahl stand dort dreimal vorn, während die Korrektur 350 Zeilen weiter unten lag — wer nur
+> die Tabelle liest, hätte die alte genannt). Nachgerechnet sind es **18,0 %**, und der Grund
 > steht zwei Zeilen weiter oben in der Verbotstabelle: **die Dokumentenanalyse steht seit dem
 > 24. September**, weil das LLM-Guthaben leer ist. Neue Ausschreibungen kommen seitdem ohne
 > Auswertung herein, alte laufen ab — der Anteil sinkt mit jedem Tag von selbst.
