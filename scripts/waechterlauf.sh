@@ -106,7 +106,13 @@ if [ -d "$ROOT/data/.daily_leads.lock" ]; then
   echo "   (Tageslauf laeuft gerade — die Sonden lesen nur, das stoert ihn nicht)" | tee -a "$LOG"
 fi
 
-# ── Die zwoelf Sonden, in der Reihenfolge des Tageslaufs ─────────────────────────────────
+# ── Die vierzehn Sonden, in der Reihenfolge des Tageslaufs ─────────────────────────────────
+# ⚠ ZUERST, und zwar aus dem Grund, der diese Sonde hervorgebracht hat: am 2026-10-05
+# meldeten zwei Pruefungen eine entartete Kennzahl, und die Ursache war, dass der Nachtlauf
+# einen anderen Baum faehrt als den, in dem geprueft wird. Schlaegt sie an, kann jeder
+# Befund darunter ein Trugbild sein.
+sonde laufender_code "Details: python3 scripts/pruefe_laufender_code.py --alle" \
+  -- $PY scripts/pruefe_laufender_code.py
 sonde verdrahtung "Details: python3 scripts/pruefe_verdrahtung.py --offen" \
   -- $PY scripts/pruefe_verdrahtung.py
 sonde laender_tabellen "Details: python3 scripts/pruefe_laender_tabellen.py --alle" \

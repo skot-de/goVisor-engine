@@ -76,6 +76,33 @@ def test_die_zeile_schweigt_wo_die_daten_duenn_sind():
             "Wenn das echt ist, ist es eine gute Nachricht und dieser Test gehört angepasst.")
 
 
+
+def _fremder_erzeuger(ausgabe: str) -> str:
+    """Wurde `ausgabe` womoeglich von FREMDEM Code gebaut? Dann als Satz, sonst leer.
+
+    ⚠ Am 2026-10-05 haben die zwei Pruefungen unten einen ganzen Vormittag in die falsche
+    Richtung gezeigt: sie meldeten „die KMU-Kennzahl ist wieder entartet", und in Wahrheit
+    war der Fix vom 01.09. nie dort angekommen, wo der Nachtlauf laeuft. `web/data` ist in
+    jedem Arbeitsbaum ein Symlink in den Haupt-Baum — gelesen wird also eine FREMDE Ausgabe.
+    Eine Fehlermeldung, die das verschweigt, kostet genau diese Zeit noch einmal.
+    """
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+        import pruefe_laufender_code as plc
+        dort, _ = plc.nachtlauf_baum()
+        if dort is None or dort.resolve() == plc.HIER.resolve():
+            return ""
+        betroffen = {b["ausgabe"]: b for b in plc.befunde(plc.vergleiche(plc.HIER, dort))}
+        if ausgabe not in betroffen:
+            return ""
+        b = betroffen[ausgabe]
+        return (f" ⚠ ZUERST HIER HINSEHEN: {ausgabe} wird vom Nachtlauf in "
+                f"{dort} erzeugt, und dort {b['art']} {b['skript']} gegenueber diesem Baum. "
+                "Die Zahl kann aus altem Code stammen, nicht aus einer Entartung. "
+                "Pruefen: python3 scripts/pruefe_laufender_code.py")
+    except Exception:                                                # noqa: BLE001
+        return ""
+
 def _quoten_je_stelle(land: str, feld: str) -> dict:
     """Ein Wert je Vergabestelle — dieselbe Stelle steht in mehreren Branchen."""
     d = json.loads(STRATEGIE.read_text(encoding="utf-8"))
@@ -105,7 +132,8 @@ def test_die_kmu_kennzeichnung_unterscheidet_wieder():
     assert len(werte) > 1, (
         "CH-KMU traegt wieder EINEN einzigen Wert. Das ist der Zustand vom 2026-09-01: "
         "die Kennzahl unterscheidet nichts und liest sich trotzdem als Marktaussage. "
-        "Ursache pruefen — `python3 scripts/pruefe_streuung.py`.")
+        "Ursache pruefen — `python3 scripts/pruefe_streuung.py`."
+        + _fremder_erzeuger("web/data/strategie.json"))
 
 
 def test_keine_kennzahl_ohne_streuung_bleibt_unmarkiert():
@@ -123,8 +151,9 @@ def test_keine_kennzahl_ohne_streuung_bleibt_unmarkiert():
 
     d = json.loads(STRATEGIE.read_text(encoding="utf-8"))
     offen = [b for b in pruefe_streuung.pruefe(d) if not b["markiert"]]
-    assert not offen, "unmarkierte Kennzahl(en) ohne Streuung: " + ", ".join(
+    assert not offen, ("unmarkierte Kennzahl(en) ohne Streuung: " + ", ".join(
         f"{b['land']}/{b['kennzahl']} ({b['stellen']} Stellen, Wert {b['wert']})" for b in offen)
+        + _fremder_erzeuger("web/data/strategie.json"))
 
 
 def test_der_waechter_findet_eine_konstante():

@@ -1725,6 +1725,15 @@ done
 #
 # Warnung, kein Abbruch — aus demselben Grund wie oben.
 echo ""
+# ⚠ ZUERST: laeuft hier ueberhaupt der Code, gegen den geprueft wird? Am 2026-10-05 standen
+# zwei Pruefungen rot und meldeten eine entartete KMU-Kennzahl — der Fix dafuer lag aber auf
+# zwei Zweigen, und der Nachtlauf faehrt einen dritten Baum. Weil `web/data` und `data` in
+# jedem Arbeitsbaum Symlinks in den Haupt-Baum sind, las die Pruefung die Ausgabe von FREMDEM
+# Code. Diese Sonde steht deshalb vor allen anderen: schlaegt sie an, kann jeder Befund
+# darunter ein Trugbild sein.
+$PY scripts/pruefe_laufender_code.py \
+  || echo "  → Nachtlauf-Baum weicht ab. Details: python3 scripts/pruefe_laufender_code.py --alle"
+
 $PY scripts/pruefe_verdrahtung.py \
   || echo "  → Verdrahtungspruefung meldet Befunde. Details: python3 scripts/pruefe_verdrahtung.py --offen"
 

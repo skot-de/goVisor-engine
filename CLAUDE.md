@@ -176,7 +176,7 @@ laesst eine undatierte Zahl dort gar nicht durch).
   starb der Tageslauf in Zeile 931, und **keine einzige Sonde lief** — im exakten Fall, für
   den sie gebaut sind. Die Aufsicht hing am Beaufsichtigten. Seitdem:
 
-      scripts/waechterlauf.sh [--still]     # alle zwölf Sonden, unabhängig vom Tageslauf
+      scripts/waechterlauf.sh [--still]     # alle vierzehn Sonden, unabhängig vom Tageslauf
 
   Er nimmt die Tageslauf-Sperre **nicht** (alle Sonden lesen nur) und läuft als eigener
   Dienst `eu.govisor.waechter`. Der Tageslauf ruft dieselben Sonden weiterhin selbst auf;
@@ -187,6 +187,28 @@ laesst eine undatierte Zahl dort gar nicht durch).
       python3 scripts/verdrahtungskarte.py <tabelle>   # wer erzeugt es, wer liest es
       python3 scripts/pruefe_bibel.py [--stand]        # altert die Anleitung selbst?
       python3 scripts/pruefe_streuung.py [--offen]     # misst die Kennzahl ueberhaupt etwas?
+
+  ⛔ **DER NACHTLAUF FÄHRT DEN HAUPT-BAUM, NICHT DEINEN ARBEITSBAUM.** Das ist die bisher
+  teuerste Form von „gebaut, aber nicht verdrahtet", gefunden am 2026-10-05: zwei Prüfungen
+  meldeten, der KMU-Anteil der Schweiz sei wieder zu einer Konstanten entartet. Er war es nie
+  wieder geworden — **der Fix vom 01.09. war nie dort angekommen, wo es läuft.** Er lag auf
+  zwei Zweigen, der launchd-Dienst `de.skot.govisor.daily` fährt
+  `/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor`, und dort stand ein dritter Zweig,
+  in dem das Wort `a36` nicht ein einziges Mal vorkam.
+
+  ⚠ **Warum es im Arbeitsbaum trotzdem grün aussieht:** `data` UND `web/data` sind in jedem
+  Arbeitsbaum **Symlinks in den Haupt-Baum**. Die Tests lesen also die Ausgabe von FREMDEM
+  Code und halten sie für die eigene. Gemessen an diesem Tag: 7 Pipeline-Dateien weichen ab,
+  7 gibt es dort gar nicht — darunter `scripts/pruefe_streuung.py`, also genau die Sonde, die
+  diesen Defekt melden sollte. Sie hat seit ihrem Bau **nie in Produktion gelaufen**; der
+  Wächterlauf dort kennt zwölf Sonden, dieser hier vierzehn.
+
+      python3 scripts/pruefe_laufender_code.py [--alle]
+
+  Sie steht VOR allen anderen Sonden: schlägt sie an, kann jeder Befund darunter ein Trugbild
+  sein. Ein Befund ist nur, wo ein **Erzeuger einer geteilten Ausgabe** abweicht (Liste
+  `ERZEUGER` im Skript) — ein Arbeitsbaum weicht sonst naturgemäss ab, und eine dauerrote
+  Sonde ist keine.
 
   Dazu die **Verdrahtungskarte**: die Sonden melden, dass etwas nicht stimmt, die Karte
   sagt, woran es hängt. Sie wird aus dem Quelltext ERZEUGT, nicht getippt.
