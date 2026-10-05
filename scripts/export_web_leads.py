@@ -82,6 +82,20 @@ CAP = 2500          # Leads je Grundraum UND Phase (Quote statt gemeinsamer Rang
                     # bei ein paar Tausend; der volle Bestand (Bau 48k) braucht die Server-Query.
 OUT = pathlib.Path("web/data"); OUT.mkdir(parents=True, exist_ok=True)
 
+# Amtliche EU-Codeliste fuer die Direktvergabe-Begruendung (BT-136), geholt von
+# `scripts/hole_eforms_codeliste.py`. ⚠ Fehlt die Datei, bleibt die Zuordnung leer und
+# im Produkt steht der rohe Code — das ist sichtbar falsch und damit behebbar. Eine
+# selbst getippte Ersatzliste waere unsichtbar falsch.
+_REF_EFORMS = pathlib.Path("data/reference/eforms")
+try:
+    _DIREKTVERGABE = json.loads(
+        (_REF_EFORMS / "direct-award-justification.json").read_text(encoding="utf-8"))
+except (OSError, ValueError):
+    _DIREKTVERGABE = {}
+    print("  ⚠ data/reference/eforms/direct-award-justification.json fehlt — "
+          "Direktvergabe-Gruende erscheinen als roher Code. "
+          "Holen: python3 scripts/hole_eforms_codeliste.py")
+
 
 def _volltext_index() -> set:
     """Welche Leads haben bei UNS den Volltext der Vergabeunterlagen?
@@ -1588,6 +1602,19 @@ def export_branche(key):
                 # kann „Europaeisches Statistikprogramm" oder „Europees statistiekprogramma"
                 # tragen. Deshalb nur anzeigen, nie danach filtern.
                 "euProgramm": (str(g("eu_programme")) if g("eu_programme") else None),
+                # Direktvergabe: WARUM durfte ohne Wettbewerb vergeben werden?
+                # ⚠ Der Text ist der AMTLICHE Wortlaut der EU-Codeliste, nicht meine
+                # Zusammenfassung. Die Codes benennen Ausnahmetatbestaende der
+                # Vergaberichtlinien (`not-wss`, `resd`, `dir24-list`); eine eigene
+                # Kurzfassung waere eine Umdeutung, und ein Bieter leitet daraus ab,
+                # ob die Begruendung angreifbar ist. Nachgeladen aus
+                # `data/reference/eforms/`, geholt von `hole_eforms_codeliste.py`.
+                # Fehlt ein Code dort, steht der Code selbst da — sichtbar roh statt
+                # heimlich geraten.
+                "direktvergabeGrund": (
+                    _DIREKTVERGABE.get(str(g("direct_award_reason")), {}).get(
+                        "de", str(g("direct_award_reason")))
+                    if g("direct_award_reason") else None),
                 # ⚠ Ortstermin: DREI Zustaende, und der mittlere ist der wichtige.
                 # `None` = die Unterlagen sagen nichts. `True/False` bei `pflicht` gilt nur,
                 # wenn ueberhaupt ein Termin erkannt wurde — sonst waere „nicht

@@ -3112,6 +3112,15 @@ function renderAnalyse(l){
           if(a.euGefoerdert===true) rows.push(`<div class="req"><span class="mk i">i</span>
             <span class="code">${tk("EU-Mittel")}</span><span class="lbl">${a.euProgramm?esc(a.euProgramm):tk("kofinanziert")}</span>
             <span class="st">${tk("Mit Publizitätspflicht, Verwendungsnachweis und Prüfrechten der EU")}</span></div>`);
+          /* Direktvergabe: die Stelle hat ohne Wettbewerb vergeben und musste das
+             begruenden. Fuer einen Bieter die Frage hinter der Frage — „nur ein
+             Anbieter aus technischen Gruenden" ist angreifbar, wenn man es selbst kann.
+             ⚠ Der Text ist der AMTLICHE Wortlaut der EU-Codeliste und deshalb lang
+             (Median 103 Zeichen). Er steht ungekuerzt da: eine eigene Kurzfassung waere
+             eine Umdeutung eines Rechtsbegriffs. */
+          if(a.direktvergabeGrund) rows.push(`<div class="req"><span class="mk q">!</span>
+            <span class="code">${tk("Direktvergabe")}</span><span class="lbl">${tk("ohne Wettbewerb vergeben")}</span>
+            <span class="st">${esc(tk(a.direktvergabeGrund))}</span></div>`);
           if(!rows.length) return '';
           return `<div class="reqgroup-h">${tk("Strukturierte Anforderungen")}<span class="prov-echt">${tk("aus der Bekanntmachung")}</span></div>`+rows.join('');
         })()}

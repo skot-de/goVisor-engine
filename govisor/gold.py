@@ -3712,7 +3712,8 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
                 "NULL::VARCHAR AS award_types, NULL::VARCHAR AS award_criteria, "
                 "NULL::VARCHAR AS selection_types, "
                 "NULL::VARCHAR AS deadline_time, NULL::VARCHAR AS question_deadline, "
-                "NULL::INTEGER AS eu_funded, NULL::VARCHAR AS eu_programme "
+                "NULL::INTEGER AS eu_funded, NULL::VARCHAR AS eu_programme, "
+                "NULL::VARCHAR AS direct_award_reason "
                 "WHERE false")
     return f"""
       SELECT notice_id,
@@ -3926,7 +3927,46 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
                          OR path LIKE '%OBJECT_DESCR.EU_PROGR_RELATED'
                          OR path LIKE '%RELATES_TO_EU_PROJECT_YES.P')
                     AND length(trim(value)) BETWEEN 2 AND 120
-                   THEN trim(value) END))                                    AS eu_programme
+                   THEN trim(value) END))                                    AS eu_programme,
+        -- ── DIREKTVERGABE: WARUM OHNE WETTBEWERB? ─────────────────────────────────────
+        -- BT-136. Fuer einen Bieter die Frage hinter der Frage: die Stelle hat ohne
+        -- Ausschreibung vergeben und musste das begruenden. „Nur ein Anbieter aus
+        -- technischen Gruenden" ist anfechtbar, wenn man es selbst kann; „keine
+        -- geeigneten Angebote" heisst, hier war schon einmal Platz.
+        --
+        -- ⚠ DREI LISTEN UNTER EINEM ELEMENT. `ProcessJustification.ProcessReasonCode`
+        -- traegt je nach `@listName` drei verschiedene Dinge:
+        --     accelerated-procedure        329.781 Vorgaenge, Werte true/false/0
+        --     direct-award-justification    12.258 Vorgaenge, 47 Codes   <- dieser
+        --     no-esubmission-justification     822 Vorgaenge, 5 Codes
+        -- Wert und `@listName` stehen als ZWEI Zeilen OHNE Index — paaren laesst sich
+        -- das nicht.
+        --
+        -- ⚠ Gerettet wird es dadurch, dass die drei Vokabulare DISJUNKT sind (geprueft
+        -- gegen `data/reference/eforms/direct-award-justification.json`: keine
+        -- Ueberschneidung mit `true/false/0` und keine mit den fuenf
+        -- no-esubmission-Codes). Der WERT identifiziert also seine Liste selbst, und
+        -- die `@listName`-Zeilen braucht es gar nicht.
+        --
+        -- Das ist zugleich die Loesung eines Speicherproblems: der erste Entwurf zog
+        -- ueber `%ProcessReasonCode%` rund 700.000 zusaetzliche Zeilen in den Scan —
+        -- fast alle `accelerated-procedure` — und sprengte die 5,5-GB-Grenze.
+        --
+        -- ⚠ Genau hieran scheiterte `ExecutionRequirementCode` endgueltig: dort teilen
+        -- sich acht Listen EIN Vokabular (`no`/`required`/`performance`), bei bis zu
+        -- fuenf Zeilen je Vorgang. Dort rettet nichts, das Feld bleibt ungenutzt, bis
+        -- der Parser indizierte Pfade schreibt.
+        max(CASE WHEN path ILIKE '%ProcessJustification.ProcessReasonCode'
+                  AND path NOT ILIKE '%@%'
+                  -- `unpublished` ist KEIN Grund, sondern TEDs Marke dafuer, dass die
+                  -- Angabe zurueckgehalten wurde (139 Vorgaenge). Sie als Begruendung
+                  -- anzuzeigen hiesse, Schweigen als Aussage auszugeben; NULL sagt
+                  -- dasselbe ehrlicher. Geprueft gegen die amtliche Codeliste: es ist
+                  -- der einzige vorkommende Wert, der nicht darin steht.
+                  AND value NOT IN ('true', 'false', '0', 'unpublished',
+                                    'phy-mod', 'sen-info', 'tdf-non-av',
+                                    'ipr-iss', 'sp-of-eq')
+                 THEN value END)                                 AS direct_award_reason
       FROM read_parquet('{A}', hive_partitioning=1)
       -- ⚠ Diese WHERE-Liste ist eine POSITIVLISTE. Wer oben eine Spalte ergaenzt, muss den
       -- Pfad hier eintragen — sonst liest das CTE ihn gar nicht erst und die Spalte kommt
@@ -3963,6 +4003,11 @@ def _lead_context_sql(cfg: Config, country: str) -> str:
          OR path ILIKE '%FundingProgramCode'
          OR path LIKE '%EU_PROGR_RELATED%'
          OR path LIKE '%RELATES_TO_EU_PROJECT_YES.P'
+         -- Direktvergabe-Begruendung. NUR die Wertzeile, nicht `@listName`: die
+         -- Vokabulare sind disjunkt, der Wert identifiziert seine Liste selbst. Mit
+         -- `%ProcessReasonCode%` kamen 700.000 `accelerated-procedure`-Zeilen mit und
+         -- der Lauf starb an der Speichergrenze.
+         OR path ILIKE '%ProcessJustification.ProcessReasonCode'
       GROUP BY notice_id
     """
 
@@ -4215,7 +4260,7 @@ def build_lead_export(cfg: Config, country: str = "DE"):
             ctx.deadline_time, ctx.question_deadline,
             -- EU-Kofinanzierung: aendert die Pflichten des Auftragnehmers, nicht nur die
             -- Herkunft des Geldes. NULL heisst „die Quelle sagt es nicht", nicht „nein".
-            ctx.eu_funded, ctx.eu_programme,
+            ctx.eu_funded, ctx.eu_programme, ctx.direct_award_reason,
             d.ted_url                                 AS source_url,
             (d.incumbent_name IS NOT NULL AND d.incumbent_conf >= 0.75) AS has_comparables,
             (coalesce(d.tenure_years, 0) > 0)         AS has_contract_history
@@ -5359,7 +5404,8 @@ def build_at_gold(cfg: Config, country: str = "AT"):
              -- diesen Block 2026-08-22 ueberhaupt noetig gemacht hat: AT stand auf 0 %,
              -- waehrend die Quelle die Werte trug. `test_eu_funded_in_beiden_exporten`
              -- haelt die beiden Listen deshalb gegeneinander.
-             ctx.eu_funded, ctx.eu_programme
+             ctx.eu_funded, ctx.eu_programme,
+             ctx.direct_award_reason
       FROM read_parquet({N}, hive_partitioning=1) n
       LEFT JOIN buyer b ON b.notice_id = n.notice_id
       LEFT JOIN matched m ON m.lead_id = n.notice_id AND m.rn = 1
