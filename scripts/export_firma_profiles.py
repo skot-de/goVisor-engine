@@ -16,6 +16,11 @@ import json
 import pathlib
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+# ⚠ EINE Buendel-Fassung fuer alle drei Exporte. Warum keine zweite: siehe dort und bei
+# `schreibe_je_firma` weiter unten.
+from export_vorgaenge import buendeln  # noqa: E402
+
 import duckdb
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -340,31 +345,55 @@ def dateiname(schluessel: str) -> str:
     return hashlib.sha1(schluessel.encode("utf-8")).hexdigest()
 
 
+# Wie viele Zeichen des Hashes den Buendelnamen bilden: 3 → 16³ = 4.096 Buendel.
+# ⚠ MUSS mit `web/lib/firmaProfiles.ts::BUENDEL_STELLEN` uebereinstimmen. Laufen die beiden
+# auseinander, findet die App gar nichts mehr — LAUTLOS, weil eine fehlende Datei genauso
+# aussieht wie eine unbekannte Firma.
+#
+# ⛔ DRITTE FORM, UND WARUM. Erst gab es EINE Sammeldatei `firma-profiles.json`: sie lud
+# 67 MB, um im Median 1,6 KB zu liefern. Dann eine Datei je Firma: 48.634 Stueck, dazu 48.194
+# unter `web/data/suppliers` — zusammen 64 % von 151.769 Dateien unter `web/data`, fuer
+# magere 385 MB. `next build` geht den Projektbaum ab und ist bei rund 156.000 Dateien im
+# Node-Heap gestorben (SIGABRT); am 2026-10-05 war die Reserve auf 4.231 geschrumpft, bei
+# ~16.800 neuen Firmen im Jahr. Beide Extreme sind also schon einmal schiefgegangen; die
+# Mitte sind Buendel, genau wie in `export_vorgaenge.py`.
+BUENDEL_STELLEN = 3
+
+
+def buendelname(schluessel: str) -> str:
+    """Firmenschlüssel → Name des Bündels (ohne `.json`)."""
+    return dateiname(schluessel)[:BUENDEL_STELLEN]
+
+
 def schreibe_je_firma(profile: dict) -> None:
-    """Ein Profil je Datei + ein Index. Dieselbe Form wie `doc-analysis/<id>.json`.
+    """Profile in 4.096 Bündel + ein Index.
 
     Beide Verbraucher (`/api/firma`, `/api/netz`) holen GENAU EIN Profil über seine Kennung
-    heraus und luden dafür bisher 67 MB. Im Median ist ein Profil 1,6 KB gross.
+    heraus. Ein Bündel ist im Mittel zwölf Profile gross — klein genug, um es ganz zu laden,
+    und wenige genug, dass `next build` den Baum noch abgehen kann.
     """
     JE_FIRMA.mkdir(parents=True, exist_ok=True)
-    vorher = {p.name for p in JE_FIRMA.glob("*.json")}
-    neu = gleich = 0
-    index: dict[str, str] = {}
-    for schluessel, eintrag in profile.items():
-        name = dateiname(schluessel)
-        index[schluessel] = name
-        ziel = JE_FIRMA / f"{name}.json"
-        text = json.dumps(eintrag, ensure_ascii=False, default=str)
-        # Nur schreiben, was sich geaendert hat — sonst laedt der naechtliche Abgleich
-        # 38.307 unveraenderte Dateien erneut hoch (dieselbe Regel wie bei doc-analysis).
-        if ziel.exists() and ziel.read_text(encoding="utf-8") == text:
-            gleich += 1
-        else:
-            ziel.write_text(text, encoding="utf-8")
-            neu += 1
-        vorher.discard(f"{name}.json")
-    for tot in vorher:
-        (JE_FIRMA / tot).unlink(missing_ok=True)
+    # ⚠ KEINE EIGENE BUENDEL-SCHLEIFE. `export_vorgaenge.buendeln()` traegt zwei Korrekturen,
+    # die bereits Daten gekostet haben: die Mischlogik gegen den Teillauf-Verlust vom
+    # 2026-09-04 (DE-Archiv 1,38 Mio → 475.096 Akten, lautlos) und `allow_nan=False` gegen
+    # die 256 gueltig aussehenden, aber unlesbaren Buendel. Eine zweite Fassung haette beides
+    # nicht — und genau diese zweite Fassung stand hier im ersten Entwurf.
+    #
+    # ⛔ VORAUSSETZUNG FUER `raeumen=True`: dieses Skript baut IMMER die volle Menge — es hat
+    # kein einziges `add_argument` und keine Laender-Schleife. Wer hier jemals einen
+    # `--land`-Schalter ergaenzt, MUSS `raeumen=False` durchreichen, sonst wiederholt sich der
+    # 04.09.: ein Buendel streut ueber alle Laender, und ein Teillauf wirft die fremden
+    # Eintraege darin weg, ohne dass irgendetwas einen Fehler meldet.
+    #
+    # Der Index zeigt weiter auf den VOLLEN Hash; das Buendel ergibt sich daraus durch
+    # Abschneiden, und der Hash bleibt der Schluessel INNERHALB des Buendels. Zwei Angaben
+    # waeren zwei Stellen, die auseinanderlaufen koennen.
+    index = {schluessel: dateiname(schluessel) for schluessel in profile}
+    vorher_n = len(list(JE_FIRMA.glob("*.json")))
+    buendeln({index[s]: e for s, e in profile.items()}, JE_FIRMA,
+             f"Firmenprofile ({len(profile):,})", raeumen=True)
+    print(f"  Dateien unter firma/: {vorher_n:,} vorher, "
+          f"{len(list(JE_FIRMA.glob('*.json'))):,} nachher")
     (OUT / "firma-index.json").write_text(
         json.dumps(index, ensure_ascii=False, sort_keys=True), encoding="utf-8")
     # ⚠ 100 BYTES, DIE EINE UNTERSCHEIDUNG RETTEN. `/api/firma` trennt „diese Firma hat kein
@@ -374,8 +403,7 @@ def schreibe_je_firma(profile: dict) -> None:
     # Diese Datei beantwortet dieselbe Frage, ohne ein einziges Profil zu laden.
     (OUT / "firma-stand.json").write_text(
         json.dumps({"n": len(profile)}), encoding="utf-8")
-    print(f"  je Firma: {neu:,} geschrieben, {gleich:,} unveraendert, {len(vorher):,} entfernt "
-          f"→ web/data/firma/ + firma-index.json")
+    print("  → web/data/firma/ + firma-index.json + firma-stand.json")
 
 
 if __name__ == "__main__":

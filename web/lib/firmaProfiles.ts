@@ -26,17 +26,37 @@ export function firmaDateiname(id: string): string {
   return createHash("sha1").update(id, "utf8").digest("hex");
 }
 
-/** Ein Profil. `null`, wenn es die Firma nicht gibt. */
+/** Wie viele Zeichen des Hashes den Bündelnamen bilden: 3 → 16³ = 4.096 Bündel.
+ *  ⚠ MUSS mit `export_firma_profiles.BUENDEL_STELLEN` übereinstimmen. Laufen die beiden
+ *  auseinander, findet diese Datei gar nichts mehr — und zwar LAUTLOS, weil eine fehlende
+ *  Datei genauso aussieht wie eine unbekannte Firma. */
+const BUENDEL_STELLEN = 3;
+
+/** Ein Profil. `null`, wenn es die Firma nicht gibt.
+ *
+ * ⚠ DRITTE FORM, UND BEIDE VORGÄNGER SIND GESCHEITERT. Erst lag alles in EINER Datei
+ * `firma-profiles.json`: 67 MB laden, um im Median 1,6 KB zu liefern. Dann eine Datei je
+ * Firma: 48.634 Stück, dazu 48.194 unter `suppliers/` — zusammen 64 % von 151.769 Dateien
+ * unter `web/data`, für magere 385 MB. `next build` geht den Projektbaum ab und ist bei rund
+ * 156.000 Dateien im Node-Heap gestorben (SIGABRT, Stapel in `node::fs::AfterStat`); am
+ * 2026-10-05 war die Reserve auf 4.231 Dateien geschrumpft, bei ~16.800 neuen Firmen im Jahr.
+ * Seitdem 4.096 Bündel — dieselbe Form und dieselbe Zahl wie in `vorgangsakte.ts`.
+ *
+ * ⚠ Das Verzeichnis in `loadDataFile` bleibt WÖRTLICH `firma/`. Nie eine Variable daraus
+ * machen: `pruefe_verdrahtung.sonde_nutzlast` baut ihre Lesermuster aus diesen Vorlagen und
+ * wird sonst blind für jedes tote Ausliefergut. */
 export async function loadFirmaProfil(id: string): Promise<Profile | null> {
   if (!id) return null;
   const schluessel = `firma:${id}`;
   const fertig = ausSpeicher<Profile | null>(schluessel);
   if (fertig !== undefined) return fertig;
   try {
-    const roh = await loadDataFile(`firma/${firmaDateiname(id)}.json`);
+    const hash = firmaDateiname(id);
+    const roh = await loadDataFile(`firma/${hash.slice(0, BUENDEL_STELLEN)}.json`);
     if (roh) {
-      const p = JSON.parse(roh) as Profile;
-      return inSpeicher(schluessel, p, roh.length);
+      const buendel = JSON.parse(roh) as Record<string, Profile>;
+      const p = buendel[hash];
+      if (p) return inSpeicher(schluessel, p, roh.length);
     }
   } catch {
     /* faellt auf null zurueck — die Route unterscheidet das ueber `firmaBestand` */

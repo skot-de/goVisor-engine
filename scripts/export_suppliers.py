@@ -8,6 +8,10 @@ Gruppiert über `entity_identity` (grp:*), damit die Varianten einer Firma (z. B
 24 CANCOM-Entities) zu EINEM Profil verschmelzen. Nur belegt aufgelöste Identitäten.
 """
 import duckdb, hashlib, json, os, pathlib, requests
+import sys
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+# ⚠ EINE Buendel-Fassung fuer alle drei Exporte. Siehe dort, warum keine zweite.
+from export_vorgaenge import buendeln  # noqa: E402
 
 OUT = pathlib.Path("web/data"); OUT.mkdir(parents=True, exist_ok=True)
 con = duckdb.connect(); con.execute("SET threads=4")
@@ -616,10 +620,37 @@ JE_FIRMA.mkdir(parents=True, exist_ok=True)
 
 
 def suppliers_dateiname(schluessel: str) -> str:
-    """Firmen-ID → Dateiname. IDENTISCH zu `export_firma_profiles.dateiname` und
+    """Firmen-ID → Hash. IDENTISCH zu `export_firma_profiles.dateiname` und
     `web/lib/suppliers.ts::supplierDateiname`. Hash, weil die uebliche Saeuberung
-    `[^A-Za-z0-9_-]` → "" bei diesen Kennungen kollidiert (dort gemessen: drei Paare)."""
+    `[^A-Za-z0-9_-]` → "" bei diesen Kennungen kollidiert (dort gemessen: drei Paare).
+
+    ⚠ Seit dem 2026-10-05 ist das NICHT mehr der Dateiname, sondern der Schluessel INNERHALB
+    eines Buendels. Die Datei heisst nach den ersten `BUENDEL_STELLEN` Zeichen des Hashes."""
     return hashlib.sha1(schluessel.encode("utf-8")).hexdigest()
+
+
+# Wie viele Zeichen des Hashes den Buendelnamen bilden: 3 → 16³ = 4.096 Buendel.
+# ⚠ MUSS mit `web/lib/suppliers.ts::BUENDEL_STELLEN` uebereinstimmen. Laufen die beiden
+# auseinander, findet die App gar nichts mehr — und zwar LAUTLOS, weil eine fehlende Datei
+# genauso aussieht wie eine unbekannte Firma.
+#
+# ⛔ WARUM GEBUENDELT, seit dem 2026-10-05. Eine Datei je Firma ergab hier 48.194 Dateien,
+# dazu 48.634 unter `web/data/firma` — zusammen 64 % von 151.769 Dateien unter `web/data`,
+# fuer magere 385 MB. `next build` geht den Projektbaum ab und ist schon einmal bei rund
+# 156.000 Dateien im Node-Heap gestorben (SIGABRT); die Reserve war auf 4.231 geschrumpft,
+# bei ~16.800 neuen Firmen im Jahr (2023 +16.970, 2024 +16.825, 2025 +16.583 — gemessen).
+# Mit 4.096 Buendeln werden aus 96.828 Dateien 8.192.
+#
+# ⚠ UND WARUM NICHT GROEBER. Ein Buendel wird als GANZES neu geschrieben, sobald EINE Firma
+# darin sich aendert. Bei 256 Buendeln kostete das in der Vorgangsakte 87 MB Upload je Nacht;
+# bei 4.096 liegen rund 12 Firmen je Buendel. Die Zahl ist ein gemessener Kompromiss, kein
+# runder Wert — dieselbe Begruendung steht in `export_vorgaenge.BUENDEL_STELLEN`.
+BUENDEL_STELLEN = 3
+
+
+def suppliers_buendel(schluessel: str) -> str:
+    """Firmen-ID → Name des Buendels (ohne `.json`)."""
+    return suppliers_dateiname(schluessel)[:BUENDEL_STELLEN]
 
 
 # Was die Suche und der Domain-Index brauchen — und sonst nichts. `wins` ist dabei, weil
@@ -627,26 +658,24 @@ def suppliers_dateiname(schluessel: str) -> str:
 # Rueckwaerts-Index ueber ALLE Firmen bildet.
 _BASIS = ("id", "name", "aliases", "wins", "domain", "domainBelege")
 
-_vorher = {q.name for q in JE_FIRMA.glob("*.json")}
-_neu = _gleich = 0
-for _s in out:
-    _name = suppliers_dateiname(str(_s.get("id")))
-    _ziel = JE_FIRMA / f"{_name}.json"
-    _text = json.dumps(_s, ensure_ascii=False, sort_keys=True)
-    if _ziel.exists() and _ziel.read_text(encoding="utf-8") == _text:
-        _gleich += 1
-    else:
-        _ziel.write_text(_text, encoding="utf-8")
-        _neu += 1
-    _vorher.discard(f"{_name}.json")
-for _tot in _vorher:
-    (JE_FIRMA / _tot).unlink(missing_ok=True)
+# ⚠ KEINE EIGENE BUENDEL-SCHLEIFE. `export_vorgaenge.buendeln()` traegt zwei Korrekturen, die
+# bereits Daten gekostet haben: die Mischlogik gegen den Teillauf-Verlust vom 2026-09-04
+# (DE-Archiv 1,38 Mio → 475.096 Akten, lautlos) und `allow_nan=False` gegen die 256 gueltig
+# aussehenden, aber unlesbaren Buendel. Eine zweite Fassung haette beides NICHT.
+#
+# ⛔ VORAUSSETZUNG FUER `raeumen=True`: dieses Skript baut IMMER die volle Menge — es hat kein
+# einziges `add_argument` und keine Laender-Schleife. Wer hier jemals einen `--land`-Schalter
+# ergaenzt, MUSS `raeumen=False` durchreichen, sonst wiederholt sich der 04.09.: ein Buendel
+# streut ueber alle Laender, und ein Teillauf wirft die fremden Eintraege darin weg.
+_buendel = {suppliers_dateiname(str(_s.get("id"))): _s for _s in out}
+_vorher_n = len(list(JE_FIRMA.glob("*.json")))
+buendeln(_buendel, JE_FIRMA, f"Lieferanten ({len(out):,} Firmen)", raeumen=True)
 
 _basis = [{k: _s[k] for k in _BASIS if k in _s} for _s in out]
 (OUT / "suppliers-basis.json").write_text(
     json.dumps(_basis, ensure_ascii=False, separators=(",", ":")))
-print(f"  je Firma: {_neu:,} geschrieben, {_gleich:,} unveraendert, {len(_vorher):,} entfernt "
-      f"→ web/data/suppliers/ · Basis "
+_nachher_n = len(list(JE_FIRMA.glob("*.json")))
+print(f"  Dateien unter suppliers/: {_vorher_n:,} vorher, {_nachher_n:,} nachher · Basis "
       f"{(OUT / 'suppliers-basis.json').stat().st_size / 1048576:.1f} MB "
       f"statt {(OUT / 'suppliers.json').stat().st_size / 1048576:.0f} MB")
 cancom = next((s for s in out if "cancom" in s["name"].lower()), None)

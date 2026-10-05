@@ -557,9 +557,19 @@ def _akten(con: duckdb.DuckDBPyConnection, land: str,
     return akten
 
 
-def _buendeln(akten: dict[tuple[str, str], dict], ziel: Path, was: str,
+def buendeln(akten: dict[str, dict], ziel: Path, was: str,
               raeumen: bool = True) -> None:
-    """Akten in Buendel schreiben; nur Geaendertes anfassen, Verwaistes entfernen.
+    """Eintraege in Buendel schreiben; nur Geaendertes anfassen, Verwaistes entfernen.
+
+    Schluessel ist der FERTIGE Hash; das Buendel sind seine ersten `BUENDEL_STELLEN` Zeichen.
+
+    ⚠ DER SCHLUESSEL WAR BIS 2026-10-05 `(land, vorgang_id)`, und der Hash wurde hier drin
+    gebildet. Damit war die Funktion an Vorgangsakten gebunden, obwohl ihr Wert in dem steckt,
+    was DANACH kommt — der Mischlogik und `allow_nan=False`. Als `firma/` und `suppliers/`
+    dieselbe Buendelung brauchten (96.828 Einzeldateien, `next build` 4.231 Dateien vor dem
+    Tod), waere der naheliegende Weg eine zweite Kopie gewesen; sie haette die beiden Fehler
+    unten NICHT mitgebracht. Deshalb nimmt sie jetzt den Hash entgegen, und es gibt weiter
+    genau EINE Fassung. Die Aufrufer bilden ihn mit ihrem eigenen `dateiname()`.
 
     ⚠ `raeumen=False` BEI EINEM TEILLAUF — UND DAS REICHTE NICHT. Das Wegraeumen setzt
     voraus, dass die uebergebene Menge VOLLSTAENDIG ist. Mit `--land CH` ist sie es nicht;
@@ -579,8 +589,7 @@ def _buendeln(akten: dict[tuple[str, str], dict], ziel: Path, was: str,
     ziel.mkdir(parents=True, exist_ok=True)
     vorher = {p.name for p in ziel.glob("*.json")}
     buendel: dict[str, dict[str, dict]] = defaultdict(dict)
-    for (land, vid), akte in akten.items():
-        h = dateiname(land, vid)
+    for h, akte in akten.items():
         buendel[h[:BUENDEL_STELLEN]][h] = akte
     neu = gleich = 0
     for name, inhalt in sorted(buendel.items()):
@@ -687,8 +696,13 @@ def schreibe(produkt: dict[tuple[str, str], dict],
     Pfad 21 KB kostet. Getrennt bleibt der haeufige Weg billig und das seltene Nachschlagen
     im Archiv bezahlbar.
     """
-    _buendeln(produkt, JE_VORGANG, "Produktmenge", raeumen=voll)
-    _buendeln(archiv, ARCHIV, "Archiv", raeumen=voll)
+    # ⚠ Der Hash wird HIER gebildet, seit `_buendeln` ihn entgegennimmt statt ihn zu bilden
+    # (2026-10-05, s. dort). `dateiname()` bleibt die eine Stelle, die `(land, vorgang_id)`
+    # in einen Schluessel uebersetzt — sie ist nur aus der Buendelung herausgezogen.
+    buendeln({dateiname(l, v): a for (l, v), a in produkt.items()},
+              JE_VORGANG, "Produktmenge", raeumen=voll)
+    buendeln({dateiname(l, v): a for (l, v), a in archiv.items()},
+              ARCHIV, "Archiv", raeumen=voll)
 
     # ⚠ SERVERSEITIG, NICHT IM BROWSER. Bekanntmachung → Vorgang, damit die Detailansicht
     # einer Vergabe ihre Akte verlinken kann. Die Datei liegt im Cache der Route und geht NIE

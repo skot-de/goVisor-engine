@@ -941,7 +941,7 @@ def test_teillauf_mischt_statt_zu_ersetzen():
     `raeumen=False` allein genügt also nicht — es verhindert nur das Löschen ganzer Dateien,
     nicht das Ausleeren ihres Inhalts.
     """
-    kern = SKRIPT.read_text(encoding="utf-8").split("def _buendeln(")[1].split("\ndef ")[0]
+    kern = SKRIPT.read_text(encoding="utf-8").split("def buendeln(")[1].split("\ndef ")[0]
     assert "if not raeumen and pfad.exists():" in kern
     assert "{**bestand, **inhalt}" in kern
 
@@ -958,7 +958,11 @@ def test_teillauf_mischt_wirklich(tmp_path, monkeypatch):
     ziel.mkdir()
     (ziel / f"{h_e[:M.BUENDEL_STELLEN]}.json").write_text(
         _json.dumps({h_f: fremd}, ensure_ascii=False), encoding="utf-8")
-    M._buendeln({("LU", "pub:eigen"): eigen}, ziel, "Probe", raeumen=False)
+    # ⚠ Seit 2026-10-05 nimmt `buendeln` den FERTIGEN Hash entgegen, nicht mehr
+    # `(land, vorgang_id)` — die Funktion wird jetzt auch von `export_firma_profiles`
+    # und `export_suppliers` benutzt. Was dieser Test beweist, aendert sich dadurch
+    # nicht: eine fremde Akte im selben Buendel muss den Teillauf ueberleben.
+    M.buendeln({h_e: eigen}, ziel, "Probe", raeumen=False)
     drin = _json.loads((ziel / f"{h_e[:M.BUENDEL_STELLEN]}.json").read_text(encoding="utf-8"))
     assert h_e in drin, "die eigene Akte fehlt"
     assert h_f in drin, "die fremde Akte wurde weggeworfen"

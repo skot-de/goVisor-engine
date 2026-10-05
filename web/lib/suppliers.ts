@@ -53,15 +53,34 @@ export function supplierDateiname(id: string): string {
   return createHash("sha1").update(id, "utf8").digest("hex");
 }
 
-/** Eine Firma, vollständig. `null`, wenn es sie nicht gibt. */
+/** Wie viele Zeichen des Hashes den Bündelnamen bilden: 3 → 16³ = 4.096 Bündel.
+ *  ⚠ MUSS mit `export_suppliers.BUENDEL_STELLEN` übereinstimmen. Laufen die beiden
+ *  auseinander, findet diese Datei gar nichts mehr — und zwar LAUTLOS, weil sie danach still
+ *  auf die Sammeldatei zurückfällt und nur langsamer, nicht falscher aussieht. */
+const BUENDEL_STELLEN = 3;
+
+/** Eine Firma, vollständig. `null`, wenn es sie nicht gibt.
+ *
+ * ⚠ 4.096 BÜNDEL statt einer Datei je Firma, seit dem 2026-10-05. Vorher lagen hier 48.194
+ * Einzeldateien, dazu 48.634 unter `firma/` — zusammen 64 % von 151.769 Dateien unter
+ * `web/data`, für 385 MB. `next build` geht den Projektbaum ab und stirbt bei rund 156.000
+ * Dateien im Node-Heap; die Reserve war auf 4.231 geschrumpft. Dieselbe Form wie
+ * `vorgangsakte.ts` und `firmaProfiles.ts`.
+ *
+ * ⚠ Das Verzeichnis in `loadDataFile` bleibt WÖRTLICH `suppliers/` — nie eine Variable
+ * daraus machen, sonst wird `pruefe_verdrahtung.sonde_nutzlast` blind. */
 export async function loadSupplier(id: string): Promise<Supplier | null> {
   if (!id) return null;
   const schluessel = `supplier:${id}`;
   const fertig = ausSpeicher<Supplier | null>(schluessel);
   if (fertig !== undefined) return fertig;
   try {
-    const roh = await loadDataFile(`suppliers/${supplierDateiname(id)}.json`);
-    if (roh) return inSpeicher(schluessel, JSON.parse(roh) as Supplier, roh.length);
+    const hash = supplierDateiname(id);
+    const roh = await loadDataFile(`suppliers/${hash.slice(0, BUENDEL_STELLEN)}.json`);
+    if (roh) {
+      const treffer = (JSON.parse(roh) as Record<string, Supplier>)[hash];
+      if (treffer) return inSpeicher(schluessel, treffer, roh.length);
+    }
   } catch {
     /* faellt unten auf die Sammeldatei zurueck */
   }
