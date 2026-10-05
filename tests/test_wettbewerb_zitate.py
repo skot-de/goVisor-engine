@@ -104,5 +104,56 @@ def test_kein_fremdzitat_ausserhalb_der_liste_ohne_beleg():
         "wurde ein Fremdzitat eingefügt, ohne es einzutragen?")
 
 
+# ── Die Belegbarkeit der Zahlen ──────────────────────────────────────────────────────────────
+
+SEITE = WURZEL / "docs" / "vertrieb-eine-seite.md"
+STUFEN = ("### ⭘ Nachrechenbar", "### ◐ Einmal gemessen", "### ○ Fremde Angaben")
+
+
+def test_die_drei_stufen_gibt_es():
+    """Ohne die Einteilung steht jede Zahl auf demselben Grund — und das ist nicht so."""
+    text = PAPIER.read_text(encoding="utf-8")
+    for stufe in STUFEN:
+        assert stufe in text, f"die Stufe {stufe!r} fehlt"
+
+
+def test_die_vertriebsseite_nennt_nur_nachrechenbare_zahlen():
+    """⭐ DIE EIGENTLICHE ZUSAGE. Auf der Seite, die jemand ins Gespraech mitnimmt, duerfen
+    nur Zahlen stehen, die er auch belegen kann.
+
+    ⚠ Geprueft wird gegen die Liste der EINMAL GEMESSENEN: taucht eine davon auf der
+    Vertriebsseite auf, ist die Trennung aufgehoben — und zwar still, denn die Seite sieht
+    danach genauso aus wie vorher.
+    """
+    if not SEITE.exists():
+        pytest.skip("die Vertriebsseite gibt es (noch) nicht")
+    seite = SEITE.read_text(encoding="utf-8")
+    # Zahlen, die ausdruecklich NUR einmal gemessen sind und nirgends sonst herkommen.
+    verboten = {
+        "5,8": "Faktor 5,8 gegen auftraege.io",
+        "1.300": "Neuzugaenge je Werktag",
+        "26,2": "Single-Bid-Quote",
+        "8.521": "Vorlauf-Paare",
+        "7.783": "Vergabestellen mit Profil",
+    }
+    drin = {z: w for z, w in verboten.items() if z in seite}
+    # ⚠ 7.783 darf dort stehen, WENN sie als Schwaeche und mit Vorbehalt genannt wird —
+    # das ist der einzige Fall, in dem eine unbelegte Zahl ins Gespraech gehoert.
+    drin.pop("7.783", None)
+    assert not drin, (
+        "einmal gemessene Zahlen auf der Vertriebsseite: "
+        + ", ".join(f"{z} ({w})" for z, w in drin.items())
+        + " — dort gehoeren nur nachrechenbare hin")
+
+
+def test_die_gescheiterte_nachrechnung_steht_im_papier():
+    """⚠ Der Versuch, 7.783 nachzurechnen, ist gescheitert (22.350 gesamt, 8.035 ab fuenf
+    Zuschlaegen, keine Schwelle trifft). Dass er gescheitert ist, gehoert ins Papier — ein
+    stiller Fehlversuch waere genau die Sorte Wissen, die beim naechsten Mal fehlt."""
+    text = PAPIER.read_text(encoding="utf-8")
+    assert "7.783" in text and "8.035" in text, (
+        "der gescheiterte Nachrechenversuch zu 7.783 ist nicht dokumentiert")
+
+
 if __name__ == "__main__":
     raise SystemExit(pytest.main([__file__, "-q"]))

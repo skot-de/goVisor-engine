@@ -380,3 +380,71 @@ Datum, weil sie dort beim Bauen gebraucht wurde. Genau so sollen die anderen neu
 haben — die Verbotstabelle, die erwarteten Einwände, interne Etiketten. Sie sind keine
 Fremdzitate und brauchen keinen Beleg. Die Unterscheidung ist von Hand getroffen, nicht von
 einer Regel; wer die Liste pflegt, prüft sie mit.
+
+
+---
+
+## Zahlen und ihre Belegbarkeit
+
+⚠ **Nicht jede Zahl in diesem Papier steht auf demselben Grund.** Wer eine davon im Gespräch
+nennt und nachgefragt wird, sollte vorher wissen, ob er sie belegen kann.
+
+Drei Stufen, und die Einteilung sagt **nichts über richtig oder falsch** — nur darüber, ob
+jemand sie nachvollziehen kann:
+
+| | heisst |
+|---|---|
+| ⭘ **nachrechenbar** | die Abfrage ist hinterlegt, jeder kann sie gegen unsere Daten wiederholen |
+| ◐ **einmal gemessen** | jemand hat es gemessen, der Weg ist nicht aufgeschrieben — niemand kann es prüfen, auch wir nicht |
+| ○ **fremde Angabe** | aus dem Material des Wettbewerbs, ungeprüft (s. „Zu prüfende Zitate") |
+
+### ⭘ Nachrechenbar
+
+41,9–43,2 % nicht über TED · Dublettenquoten je Quelle (66,6 / 29,8 / 62,0) · 2.631
+EU-kofinanziert · 4.872 Direktvergabe-Gründe · 8.077 Ausführungsbedingungen · 11.512 von
+79.075 mit Nichtvergabe-Grund · `erfolglos` je Jahr (13,0 → 4,2 %) · KMU 53 Werte an 159
+Stellen · 15 von 15 DE-Quellen live · die Aufteilung der 125 Quellen · 173.623 Firmen und die
+Grössenverteilung · Los-IDs 97 / 80 / 23 % · 273.175 Käufer-Lieferanten-Beziehungen
+*(das Papier nennt 273.425 — der Bestand wächst täglich)*
+
+### ◐ Einmal gemessen, Weg nicht hinterlegt
+
+⚠ **Hierunter stehen die Zahlen, mit denen wir gegen den Wettbewerb argumentieren.** Genau die,
+auf die ein skeptischer Kunde zeigen würde.
+
+| Zahl | wo sie steht |
+|---|---|
+| Dresden: 12 von 119 Vorlagen, Median 29 Tage | die ganze BidFix-Gegenrechnung · ⚠ **n = 12** ist eine Richtung, kein Wert |
+| Haushaltsplan ~3 % zuordenbar | dieselbe |
+| OParl: 25 Endpunkte gegen „10.000 Kommunen" | dieselbe |
+| 30 von 35 Portalen haben wir | BidFix-Abschnitt · ⚠ die Liste der 35 steht nirgends im Repo |
+| Faktor 5,8 gegen aufträge.io | „Was für uns spricht" — die Überschriftzahl gegen den nächsten Wettbewerber |
+| 1.300–1.480 Neuzugänge je Werktag | dieselbe Tabelle |
+| 0,8 bis 8,6 % Positionskarte (7 Firmen) | eine Verbotszeile |
+| 11,0 % Fehlstellen Westfalen (91 Vergaben) | eine Verbotszeile und die Quellenfrage |
+| Vorinformation 53 % gegen 55 % Grundrauschen | eine Verbotszeile |
+| EU-Fördervorhaben 2 % gegen 1 % | eine Verbotszeile |
+| 97,8 % „nein" beim Wiederholungs-Indikator | eine Verbotszeile |
+| Single-Bid 26,2 % gegen deren 27,9 % | der Beleg, dass sie sauber misst |
+| 34,1 % Unterlagen (gegen 1,6 % falscher Nenner) | eine der drei freigegebenen Zahlen ⚠ |
+| 80 Fälle mit ≥3 Fehljahren | USP-Kandidat 3 |
+| Vorlauf: 8.521 Paare, Median 232 Tage | eine Verbotszeile · ⚠ grosses n, Abfrage trotzdem nicht hinterlegt |
+| Zielkunden-Schichten (30 Firmen) | „Was tatsächlich trägt" |
+| **7.783 Vergabestellen mit Profil** | unsere **Hauptschwäche** — ⛔ s. unten |
+
+⛔ **Ein Versuch, sie nachzurechnen, ist am 2026-10-05 gescheitert**, und er zeigt genau, was
+„nicht hinterlegt" praktisch bedeutet. `buyer_stats` führt **22.350** Vergabestellen; nach
+Zuschlagszahl gefiltert ergeben sich 10.953 (≥3), **8.035 (≥5)**, 5.311 (≥10) — **keine
+Schwelle trifft 7.783.** Die Zahl ist damit nicht falsch, aber niemand kann sagen, was sie
+zählt. Sie steht an der Stelle, an der wir unsere eigene grösste Schwäche beziffern.
+
+### ○ Fremde Angaben
+
+2.000+ Unternehmen · ISO 27001 · „+82 % Win-Rate" · „100 % Abdeckung" · „über 200" / „300+" ·
+„3,1 Mio analysierte Vergaben" · 40.000 Auftraggeber — alle aus dem Material des Wettbewerbs,
+keine davon geprüft.
+
+---
+
+⭐ **Die drei Zahlen auf der Vertriebsseite (`vertrieb-eine-seite.md`) sind bewusst nur aus der
+ersten Stufe gewählt.** Das ist der Grund, warum dort drei stehen und nicht dreissig.
