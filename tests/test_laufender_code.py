@@ -87,13 +87,31 @@ def test_zweig_liest_arbeitsbaum_UND_hauptcheckout():
     """⚠ In einem Arbeitsbaum ist `.git` eine DATEI (`gitdir: …`), im Haupt-Checkout ein
     Verzeichnis. Wer nur `<baum>/.git/HEAD` liest, bekommt fuer JEDEN Arbeitsbaum `None` —
     und damit schwiege die Zweigpruefung genau dort, wo sie gebraucht wird."""
-    # Dieser Baum ist ein Arbeitsbaum (`.git` ist eine Datei).
-    assert (ROOT / ".git").is_file(), "Erwartung dieses Tests: hier laeuft ein Arbeitsbaum"
-    assert plc.zweig(ROOT) == "pipeline/entity-wachen"
-    # Und der Haupt-Checkout, wo `.git` ein Verzeichnis ist.
-    haupt = pathlib.Path("/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor")
-    if (haupt / ".git").is_dir():
-        assert plc.zweig(haupt), "Haupt-Checkout: kein Zweig gelesen"
+    # ⚠ KEIN fester Zweigname und kein fester Baum. Beides stand hier im ersten Anlauf und
+    # machte den Test davon abhaengig, WO er laeuft: im Nachtlauf-Baum fiel er sofort um.
+    # Das ist genau die Krankheit, gegen die diese Sonde gebaut ist.
+    import shutil
+    import subprocess
+    erwartet = subprocess.run(["git", "rev-parse", "--abbrev-ref", "HEAD"],
+                              cwd=ROOT, capture_output=True, text=True).stdout.strip()
+    assert plc.zweig(ROOT) == erwartet, f"{plc.zweig(ROOT)!r} statt {erwartet!r}"
+
+    # Beide Formen muessen abgedeckt sein. Welche hier vorliegt, haengt vom Baum ab — die
+    # jeweils ANDERE wird gebaut, damit der Test in beiden Faellen beide prueft.
+    gebaut = ROOT.parent / "_zweigprobe"
+    shutil.rmtree(gebaut, ignore_errors=True)
+    try:
+        if (ROOT / ".git").is_file():          # hier: Arbeitsbaum → Verzeichnisform bauen
+            (gebaut / ".git").mkdir(parents=True)
+            (gebaut / ".git" / "HEAD").write_text("ref: refs/heads/erfunden/zweig\n")
+        else:                                  # hier: Haupt-Checkout → Dateiform bauen
+            innen = gebaut / "gitdir"
+            innen.mkdir(parents=True)
+            (innen / "HEAD").write_text("ref: refs/heads/erfunden/zweig\n")
+            (gebaut / ".git").write_text(f"gitdir: {innen}\n")
+        assert plc.zweig(gebaut) == "erfunden/zweig", "die andere `.git`-Form wird nicht gelesen"
+    finally:
+        shutil.rmtree(gebaut, ignore_errors=True)
 
 
 def test_ein_arbeitszweig_im_nachtlauf_baum_ist_ein_befund(tmp_path, capsys):
