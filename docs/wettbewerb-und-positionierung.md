@@ -43,7 +43,7 @@ das Gespräch beim ersten Nachfragen — und zwar bei einem Kunden, der es prüf
 | „Unsere Dokumentenanalyse ist aktuell." | ⚠ **Sie steht seit dem 24.09.** 3.946 Dokumente warten, weil das LLM-Guthaben leer ist. Ausgerechnet unser einziger gemessener Vorsprung — und solange nicht aufgeladen ist, ist der Satz falsch. |
 | „govisor.eu ist live." | Bewusst noch nicht online. |
 | „Wir erkennen den Bedarf, bevor er ausgeschrieben wird." | ⛔ **Vier Quellen gemessen, vier gefallen.** Ratsdokumente (das BidFix-Modell): Median **29 Tage** Vorlauf, nicht Monate — die Papiere begleiten das Verfahren, sie gehen ihm nicht voraus. Vorinformation: **53 %** führen zu einer Ausschreibung, Grundrauschen **55 %** — sie sagt nichts voraus. Haushaltspläne: Jahre im Voraus, aber nur **~3 %** einer Bekanntmachung zuordenbar, weil der Haushalt intern schreibt und die Bekanntmachung öffentlich. EU-Fördervorhaben: **2 %** gegen 1 % Grundrauschen. |
-| „Das Feld sagt uns, dass sich eine Beschaffung wiederholt." | ⛔ `RecurringProcurementIndicator` steht zu **97,8 % auf „false"** — die Käufer kreuzen es praktisch nie an. Ausgerechnet unsere Produktthese wörtlich im Datenfeld, und als Beleg unbrauchbar. Wer es nennt, wird widerlegt. |
+| „Das Feld sagt uns, dass sich eine Beschaffung wiederholt." | ⛔ `RecurringProcurementIndicator` steht bei **97,3 % der deutschen Leads auf „nein"** *(Stand 2026-10-05; über alle DE-Vorgänge mit dem Feld: 94,9 %)* — die Käufer kreuzen es praktisch nie an. Ausgerechnet unsere Produktthese wörtlich im Datenfeld, und als Beleg unbrauchbar. Wer es nennt, wird widerlegt. |
 | „Die neuen Merkmale gelten DACH-weit." | ⛔ **Die Schweiz bekommt davon nichts.** 1 von 8.549 CH-Leads trägt EU-Kofinanzierung; Direktvergabe-Grund und Ausführungsbedingungen stehen bei **0**. Das ist richtig so — die Schweiz fällt nicht unter die EU-Richtlinien — aber „gilt EU-weit" darf im DACH-Gespräch nicht als „gilt auch in der Schweiz" gelesen werden. |
 | „Tausende zusätzliche Leads durch die neuen Merkmale." | ⚠ **Die absoluten Zahlen sind klein**: 921 EU-kofinanzierte und 1.601 mit Direktvergabe-Grund unter 43.027 Leads im Frontend. Als Merkmal, das sonst niemand hat, ist das stark; als Mengenaussage wäre es falsch. |
 | „Impressum, Datenschutz und AGB stehen." | ⚠ Impressum ja. Die Datenschutzerklärung hat **offene Stellen** (Auftragsverarbeitung bei zwei Dienstleistern, eine Serverregion ungeprüft), die AGB sind ein **Entwurf mit acht offenen Geschäftsentscheidungen**, und **eine Rechtsprüfung hat nicht stattgefunden.** |
@@ -353,7 +353,11 @@ Zahlen sind aus dem Bestand gemessen, keine aus einem Gespräch.
 
 ## Zu prüfende Zitate
 
-⚠ **Keines davon ist belegt.** Jede Zeile braucht: die Adresse, von der es stammt, und das
+⚠ **Keines davon ist belegt.** ⭐ **Nachtrag 2026-10-05:** die messende Sitzung hat
+geantwortet — gelesen wurden sie am **2026-10-05 vormittags**, auf den AGB- und
+Marketingseiten der vier Anbieter sowie auf `bidfix.ai`. **Welche Unterseite, ist nirgends
+festgehalten**, und das reicht für einen Beleg nicht. Sie bleiben deshalb ○: wer eines im
+Gespräch braucht, liest es vorher neu. Jede Zeile braucht: die Adresse, von der es stammt, und das
 Datum, an dem der **Rohtext** gesehen wurde. Wer es prüft, trägt beides hier ein und entfernt
 die Warnung oben — oder streicht das Zitat.
 
@@ -404,7 +408,11 @@ jemand sie nachvollziehen kann:
 EU-kofinanziert · 4.872 Direktvergabe-Gründe · 8.077 Ausführungsbedingungen · 11.512 von
 79.075 mit Nichtvergabe-Grund · `erfolglos` je Jahr (13,0 → 4,2 %) · KMU 53 Werte an 159
 Stellen · 15 von 15 DE-Quellen live · die Aufteilung der 125 Quellen · 173.623 Firmen und die
-Grössenverteilung · Los-IDs 97 / 80 / 23 % · 273.175 Käufer-Lieferanten-Beziehungen
+Grössenverteilung · Los-IDs 97 / 80 / 23 % · 273.175 Käufer-Lieferanten-Beziehungen ·
+⭐ **97,3 % „nein" beim Wiederholungs-Indikator** · ⭐ **Vorlauf 8.521 Paare, Median 232 Tage**
+(Abfrage als Code: `export_strategie.vorlauf_je_klasse()`) · ⭐ **1.394 Neuzugänge je Werktag
+über alle vier Länder** (DE allein 1.089) · ⭐ **18,0 % ausgewertete und 39,6 % vorliegende
+Unterlagen** — alle vier am 2026-10-05 aufgeklärt, s. u.
 *(das Papier nennt 273.425 — der Bestand wächst täglich)*
 
 ### ◐ Einmal gemessen, Weg nicht hinterlegt
@@ -419,16 +427,10 @@ auf die ein skeptischer Kunde zeigen würde.
 | OParl: 25 Endpunkte gegen „10.000 Kommunen" | dieselbe |
 | 30 von 35 Portalen haben wir | BidFix-Abschnitt · ⚠ die Liste der 35 steht nirgends im Repo |
 | Faktor 5,8 gegen aufträge.io | „Was für uns spricht" — die Überschriftzahl gegen den nächsten Wettbewerber |
-| 1.300–1.480 Neuzugänge je Werktag | dieselbe Tabelle |
 | 0,8 bis 8,6 % Positionskarte (7 Firmen) | eine Verbotszeile |
 | 11,0 % Fehlstellen Westfalen (91 Vergaben) | eine Verbotszeile und die Quellenfrage |
 | Vorinformation 53 % gegen 55 % Grundrauschen | eine Verbotszeile |
 | EU-Fördervorhaben 2 % gegen 1 % | eine Verbotszeile |
-| 97,8 % „nein" beim Wiederholungs-Indikator | eine Verbotszeile |
-| Single-Bid 26,2 % gegen deren 27,9 % | der Beleg, dass sie sauber misst |
-| 34,1 % Unterlagen (gegen 1,6 % falscher Nenner) | eine der drei freigegebenen Zahlen ⚠ |
-| 80 Fälle mit ≥3 Fehljahren | USP-Kandidat 3 |
-| Vorlauf: 8.521 Paare, Median 232 Tage | eine Verbotszeile · ⚠ grosses n, Abfrage trotzdem nicht hinterlegt |
 | Zielkunden-Schichten (30 Firmen) | „Was tatsächlich trägt" |
 | **7.783 Vergabestellen mit Profil** | unsere **Hauptschwäche** — ⛔ s. unten |
 
@@ -448,12 +450,35 @@ versucht, landet irgendwo zwischen 7 % und 80 % daneben.
 
 | Zahl | Papier | nachgerechnet | Abfrage |
 |---|---:|---:|---|
-| Wiederholungs-Indikator „nein" | 97,8 % | **89,1 %** | `attributes`, `path ILIKE '%RecurringProcurementIndicator'`, nach Wert gruppiert (190.518 / 23.322) |
-| chronische Fehlbedarfe ≥3 Fehljahre | 80 | **106** | `retender_signal`, `fail_years >= 3`; davon `still_open`: 42 |
-| Vorlauf der Nachfolge: Paare | 8.521 | **11.018** | `contract_succession` × `lead_duration` (`duration_source='echt'`) × `notices.publication_date` |
-| Vorlauf: Median | 232 Tage | **421 Tage** | dieselbe Abfrage, Quartile 33 bis 1.002 |
-| Single-Bid-Quote | 26,2 % | **24,9 %** | `awards`, `num_tenders = 1` gegen `num_tenders > 0`, ab 2023 (68.943 / 276.932) |
-| Neuzugang je Werktag | 1.300–1.480 | **1.089** | `notices`, letzte 28 Tage / 20 Werktage |
+
+### ⭐ Eine davon ist aufgeklärt — und die Aufklärung ist lehrreicher als die Zahl
+
+Beim Wiederholungs-Indikator kam ich auf **89,1 %**, das Papier nannte 97,8 %. Die Sitzung, die
+ihn gemessen hat, hat beide Wege nachgerechnet:
+
+| Abgrenzung | „nein" | „ja" | Anteil |
+|---|---:|---:|---:|
+| DE, alle Jahre, **Zeilen** | 190.518 | 23.322 | 89,1 % ← *meine Zahl* |
+| DE, alle Jahre, **Vorgänge** | 127.780 | 6.924 | **94,9 %** |
+| DE, **nur Leads**, Vorgänge | 8.947 | 245 | **97,3 %** |
+
+⚠ **Meine Zahl war exakt reproduzierbar und trotzdem falsch.** `silver/attributes` trägt keinen
+Index: ein Element, das je Vorgang mehrfach vorkommt, erzeugt mehrere Zeilen. Und es trifft die
+beiden Werte **ungleich stark** — `true` wächst von 6.924 Vorgängen auf 23.322 Zeilen (Faktor
+3,4), `false` nur von 127.780 auf 190.518 (Faktor 1,5). Der Grund ist inhaltlich: ein
+wiederkehrender Auftrag ist häufiger mehrlosig. Zeilen zu zählen übergewichtet also genau den
+Wert, auf den es ankommt.
+
+**Ins Papier gehört die Lead-Zahl (97,3 %)**, weil die Behauptung lautet „das Feld unterscheidet
+*im Produkt* nichts" — und die Leads sind die Menge, die das Produkt bedient.
+
+⚠ **Und die messende Sitzung hat sich selbst korrigiert:** gemeldet hatte sie 97,8 %, heute misst
+sie 97,3 %. Drift der Lead-Menge, kein Fehler — aber der Beleg dafür, dass diese Zahl **ohne
+Datum daneben nicht haltbar** ist.
+
+⭐ Damit ist sie die erste Zahl, die von ◐ nach ⭘ gewandert ist. Nicht weil jemand sie bestätigt
+hat, sondern weil der Weg jetzt aufgeschrieben ist — **und dabei hat sich herausgestellt, dass
+beide Ausgangswerte danebenlagen.**
 
 ⛔ **Und eine siebte, die auf der Vertriebsseite stand: 34,1 % der laufenden Ausschreibungen
 mit ausgewerteten Unterlagen. Nachgerechnet: 18,0 %** (2.657 von 14.775 offenen DE-Leads mit
@@ -472,6 +497,56 @@ diesem Vorbehalt.
 auf „nein", obwohl Dokumente vorliegen. Der Unterlagen-Block ist für die Schweiz gebaut und
 für DE/AT nie verdrahtet; das ist seit dem 2026-09-01 als offener Punkt geführt. Wer hier
 nachrechnet und `has_documents` nimmt, bekommt 0 %.
+
+### Was die Nachfrage ergeben hat — vier aufgeklärt, zwei verloren
+
+Beide messenden Sitzungen haben ihre Abfragen herausgesucht. Ergebnis:
+
+**⭐ Vorlauf der Nachfolge — der Unterschied war genau ein Filter.**
+Die Abfrage steht seit heute als Code (`export_strategie.vorlauf_je_klasse()`), und sie
+begrenzt das Fenster: `BETWEEN -730 AND 1095` Tage. Begründung im Code: zwei Jahre nach dem
+Ende ist keine Nachfolge mehr, drei Jahre davor eine andere Vergabe.
+
+| | n | Median | Q25 | Q75 |
+|---|---:|---:|---:|---:|
+| mit Fenster | 8.521 | 232 | −13 | 632 |
+| ohne Fenster *(meine Rekonstruktion)* | 11.018 | 421 | 33 | 1.002 |
+
+Beide richtig gerechnet, eine Abgrenzung besser begründet. **Nach ⭘.**
+
+**⭐ Neuzugang je Werktag — ich hatte DE gerechnet, sie alle vier Länder.**
+DE 1.089 · AT 127 · CH 166 · LU 12 → **1.394 über alle vier.** Nach ⭘, sofern „alle vier
+Länder" dabeisteht. ⚠ Die Spanne 1.300–1.480 bleibt unbegründet; ein Wert mit Datum ist besser.
+
+**⛔ 34,1 % „mit ausgewerteten Unterlagen" — die Zahl trug das falsche Etikett.**
+Nachgemessen, derselbe Nenner (14.775 offene DE-Leads), von zwei Sitzungen unabhängig auf die
+Stelle bestätigt:
+
+| | Leads | Anteil |
+|---|---:|---:|
+| **ausgewertet** (`doc_analysis`) | 2.657 | **18,0 %** |
+| Abruf versucht (Manifeste) | 8.282 | 56,1 % |
+| **Unterlagen liegen vor** | 5.857 | **39,6 %** |
+
+Die 34,1 % gehören in die Nähe von „liegen vor", nicht von „ausgewertet" — und sind damit
+**raus**. Im Papier stehen jetzt beide Zahlen mit ihrer Bedeutung. ⚠ Dass „ausgewertet" auf
+18,0 % steht und weiter fällt, liegt am Stillstand der Analyse, nicht an der Messung.
+
+⚠ **Falle beim Nachrechnen von „liegen vor":** neun der zehn Manifeste unter `data/docs/DE`
+nennen den Schlüssel `lead_id`, nur `_manifest.parquet` nennt ihn `notice_id`. Wer sie naiv
+vereinigt, liest ein einziges Manifest und bekommt 0,0 %. Der Status heisst `downloaded` oder
+`exists`, nicht `ok`.
+
+**○ Zwei sind verloren, und das steht so da.**
+
+| Zahl | was gemessen wurde | Urteil |
+|---|---|---|
+| 80 chronische Fehlbedarfe | `fail_years>=3` → 106 · davon `still_open` 42 · `>=4` → 16 · CLAUDE.md nennt für dieselbe Sache 282 | **keine Abgrenzung ergibt 80.** Momentaufnahme ohne Datum — die Tabelle wird jede Nacht neu gebaut |
+| Single-Bid 26,2 % | ab 2023 → 24,9 % · ab 2022 → 25,4 % · ab 2021 → 24,6 % · alle Jahre → 21,3 % | **kein Fenster trifft 26,2 %** |
+
+Beide bleiben als ◐ mit dem Vermerk stehen, dass der Weg verloren ist. ⚠ Die Single-Bid-Zahl
+trägt im Papier die Aussage „der Wettbewerber misst sauber" — die bleibt richtig, denn unsere
+24,9 % und seine 27,9 % liegen weiterhin nah beieinander.
 
 ### ○ Fremde Angaben
 

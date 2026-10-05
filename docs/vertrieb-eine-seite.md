@@ -54,7 +54,7 @@ Käufer gegenüber dem Feld.
 | Aussage | Zahl | woher |
 |---|---|---|
 | **„Rund 42 % der offenen deutschen Ausschreibungen stehen nicht in TED."** | 41,9–43,2 % | ⭐ am selben Tag **zweimal unabhängig** gemessen, identische Reihenfolge der Quellen |
-| **„Wir haben die Vergabeunterlagen vorab ausgewertet, nicht auf Zuruf."** | **18,0 %** der laufenden Ausschreibungen *(2.657 von 14.775, gemessen 05.10.)* | ⚠ **FÄLLT TÄGLICH**, s. Kasten unten. Immer mit dem Wort „laufend" — ohne Nenner wären es 1,6 % |
+| **„Wir haben die Vergabeunterlagen vorab ausgewertet, nicht auf Zuruf."** | **18,0 %** ausgewertet, **39,6 %** liegen vor *(2.657 bzw. 5.857 von 14.775, gemessen 05.10., zwei Sitzungen unabhängig)* | ⚠ **„ausgewertet" FÄLLT TÄGLICH**, s. Kasten. Immer mit dem Wort „laufend" — ohne Nenner wären es 1,6 % |
 | **„Wir sagen Ihnen, warum ein Verfahren gescheitert ist."** | 11.512 von 79.075 | im amtlichen Wortlaut: „keine Angebote eingegangen" ist eine Chance, „Bedarf geändert" nicht |
 
 > ⛔ **Die 18 % waren einmal 34 % — und der Unterschied ist kein Messfehler.**
