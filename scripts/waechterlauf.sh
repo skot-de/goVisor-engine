@@ -106,7 +106,7 @@ if [ -d "$ROOT/data/.daily_leads.lock" ]; then
   echo "   (Tageslauf laeuft gerade — die Sonden lesen nur, das stoert ihn nicht)" | tee -a "$LOG"
 fi
 
-# ── Die vierzehn Sonden, in der Reihenfolge des Tageslaufs ─────────────────────────────────
+# ── Die sechzehn Sonden, in der Reihenfolge des Tageslaufs ─────────────────────────────────
 # ⚠ ZUERST, und zwar aus dem Grund, der diese Sonde hervorgebracht hat: am 2026-10-05
 # meldeten zwei Pruefungen eine entartete Kennzahl, und die Ursache war, dass der Nachtlauf
 # einen anderen Baum faehrt als den, in dem geprueft wird. Schlaegt sie an, kann jeder
@@ -140,6 +140,12 @@ sonde werte "Details: python3 scripts/pruefe_werte.py" \
   -- $PY scripts/pruefe_werte.py
 sonde gold_integritaet "Details: python3 scripts/pruefe_gold_integritaet.py --land <L>" \
   -- $PY scripts/pruefe_gold_integritaet.py
+# ⚠ EINE SCHLANGE, DIE STEHT, WAEHREND ARBEIT ANLIEGT. Am 2026-10-05 lief der
+# Analyse-Arbeiter seit dem 11.09. ununterbrochen und hatte seit dem 24.09. nichts mehr
+# analysiert: 3.946 Dokumente lagen, das Guthaben war seit dem 21.09. leer. Elf Tage, zwoelf
+# Sonden, keine schlug an — der Dienst lief, die Daten waren vollstaendig, kein Feld NULL.
+sonde warteschlangen "Details: python3 scripts/pruefe_warteschlangen.py --alle" \
+  -- $PY scripts/pruefe_warteschlangen.py
 sonde bibel "Details: python3 scripts/pruefe_bibel.py --offen" \
   -- $PY scripts/pruefe_bibel.py
 sonde vollstaendigkeit "Details: python3 scripts/pruefe_vollstaendigkeit.py --offen" \
