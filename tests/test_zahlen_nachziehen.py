@@ -69,16 +69,57 @@ def test_eine_fehlende_markierung_bricht_ab(tmp_path):
         DOK.write_text(original, encoding="utf-8")
 
 
-def test_die_prosa_ueberlebt_den_lauf():
+def _wegwerfhaus(tmp_path: Path) -> tuple[Path, Path]:
+    """Ein Haus mit Erzeuger, Dokument und Datenebene — aber NICHT das Repo. (Wurzel, Dokument)
+
+    ⚠ WARUM. Bis zum 2026-10-05 fuhr `test_die_prosa_ueberlebt_den_lauf` den Erzeuger gegen
+    das ECHTE Dokument im Arbeitsbaum und stellte es nicht zurueck. Wer die Suite laufen
+    liess, hatte danach eine geaenderte, nachverfolgte Datei — ein Test mit Nebenwirkung auf
+    den Bestand. Aufgefallen ist es erst, als die Suite zum ersten Mal im NACHTLAUF-BAUM
+    lief: dort soll niemand arbeiten, und der Test tat es.
+
+    Das Muster steht schon in `test_eine_leere_messung_schreibt_nichts` — es war nur nicht
+    ueberall benutzt.
+    """
+    haus = tmp_path / "haus"
+    (haus / "docs" / "weiterentwicklung").mkdir(parents=True)
+    (haus / "scripts").mkdir()
+    shutil.copy(SKRIPT, haus / "scripts" / SKRIPT.name)
+    dok = haus / "docs" / "weiterentwicklung" / DOK.name
+    shutil.copy(DOK, dok)
+    # Die Datenebene wird VERLINKT, nicht kopiert: der Erzeuger misst echt, und kopieren
+    # waere ein Vielfaches des Bestands.
+    daten = WURZEL / "data"
+    if daten.exists():
+        (haus / "data").symlink_to(daten.resolve())
+    return haus, dok
+
+
+def test_die_prosa_ueberlebt_den_lauf(tmp_path):
     """Der eigentliche Grund für die Markierungen: Strategie ist Handarbeit."""
-    vorher = DOK.read_text(encoding="utf-8")
+    haus, dok = _wegwerfhaus(tmp_path)
+    vorher = dok.read_text(encoding="utf-8")
     probe = "Die Suche nach"          # ein Satz aus §5, weit weg vom Block
     assert probe in vorher, "der Probesatz steht nicht mehr im Dokument"
-    r = _fahre()
+    r = subprocess.run([sys.executable, str(haus / "scripts" / SKRIPT.name)],
+                       capture_output=True, text=True, cwd=haus)
     assert r.returncode in (0, 1), r.stdout + r.stderr
-    nachher = DOK.read_text(encoding="utf-8")
+    nachher = dok.read_text(encoding="utf-8")
     assert probe in nachher, "der Erzeuger hat die Prosa überschrieben"
     assert "Index-Bauplan" in nachher and "Was ich nicht empfehle" in nachher
+
+
+def test_die_suite_fasst_das_echte_dokument_nicht_an(tmp_path):
+    """⚠ SELBSTPROBE der Regel von oben: nach einem Lauf der schreibenden Pruefungen muss das
+    Dokument im Arbeitsbaum Byte fuer Byte dasselbe sein.
+
+    Ohne diese Probe waere die Reparatur eine Behauptung — und genau so ein Nebeneffekt
+    verschwindet beim naechsten Umbau lautlos wieder."""
+    import hashlib
+    vorher = hashlib.sha256(DOK.read_bytes()).hexdigest()
+    test_die_prosa_ueberlebt_den_lauf(tmp_path / "probe")
+    assert hashlib.sha256(DOK.read_bytes()).hexdigest() == vorher, (
+        "die Pruefung hat das echte Dokument veraendert — sie gehoert in ein Wegwerfhaus")
 
 
 def test_eine_leere_messung_schreibt_nichts(tmp_path):
