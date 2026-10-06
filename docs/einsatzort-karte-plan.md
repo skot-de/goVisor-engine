@@ -29,6 +29,14 @@ eine Aussage, keine leere Karte.
 
 ## 2. ⛔ Die zentrale Falle: zwei verschiedene Geografien
 
+⚠ **Grundmenge und Filter, weil die Zahl sonst nicht nachrechenbar ist.** Alles unten ist
+gemessen über **alle** Bekanntmachungen (nicht nur Zuschläge, denn eine Ausschreibung sagt
+schon, wo gearbeitet wird), und mit der Bedingung, dass **beide** Seiten auf NUTS-3-Länge
+vorliegen (`length(nuts) >= 5`). Ohne diesen Längenfilter sind es 1.164.716 Paare und
+73,9 %; goVisor-SECOND hat unabhängig 72,8 % gemessen, und die Abweichung ist exakt dieser
+Filter. Nur Zuschläge, mit Längenfilter: 432.765 Paare, 77,1 %. Wer eine dieser Zahlen
+zitiert, nennt die Grundmenge mit.
+
 Es gibt im Bestand **zwei** Orte je Vergabe, und sie bedeuten nicht dasselbe:
 
 * **Käufersitz** (`notice_parties.nuts` beim `buyer`) — wo die Vergabestelle sitzt
@@ -65,6 +73,12 @@ Ab 80 % darf der Sitz stehen, unter 20 % muss der Leistungsort verwendet werden,
 gehört beides gezeigt oder nichts. Die Schwelle ist aus der gemessenen Verteilung
 abgeleitet, nicht gesetzt.
 
+⚠ **Die Spalte braucht einen VIERTEN Zustand: „nicht bestimmbar".** Der Leistungsort ist
+nur bei 61,1 % der Zuschläge gefüllt (von SECOND gemessen, passt zu unseren 62,4 % auf
+Kreisebene). Für die übrigen rund 39 % gibt es gar keine zweite Geografie, dort ist die
+Örtlichkeit keine 0 und keine 1, sondern unbekannt. Drei Zustände würden diese Vergaben
+stillschweigend den Überregionalen oder den Örtlichen zuschlagen.
+
 ---
 
 ## 3. Was es schon gibt, und es wird nicht gelesen
@@ -81,13 +95,32 @@ bieter_median, bieter_belegt, einzelbieter, regelmaessig, fenster_von, fenster_b
 Geokodierung: 95 % über PLZ (78.695), 979 über den Ort, 3.700 ohne. Exportiert nach
 `web/data/nachfrage/` als rund 700 Dateien, aufgeteilt nach Land und Gewerk.
 
-⛔ **Kein Aufrufer.** Das ist die Sonde, die seit dem 2026-10-06 rot steht: „Nutzlast
-`nachfrage` (28,9 MB) wird ausgeliefert, aber von keinem Aufrufer geholt." Die
-Nachfrageschicht dieser Idee ist also gebaut und nicht verdrahtet.
+⛔ **Auf `main` kein Aufrufer.** Die Sonde steht dort rot: „Nutzlast `nachfrage` (27,5 MB)
+wird ausgeliefert, aber von keinem Aufrufer geholt." Die Nachfrageschicht ist also gebaut
+und auf dem Stand, den Produkt und Nachtlauf benutzen, nicht verdrahtet.
+
+ⓘ **In SECONDs Arbeitsbaum ist sie es.** Dort existiert `/api/nachfrage` und liest die
+Bündel; die Sonde hatte den Aufrufer nur nicht gesehen, weil der Dateiname über eine
+Variable statt direkt am `ladeMitGrund`-Aufruf stand. Beide Aussagen stimmen, für
+verschiedene Bäume — auf `main` gibt es die Route am 2026-10-06 nachgeprüft NICHT. Wer den
+Zustand wissen will, prüft den Baum mit, nicht nur die Sonde.
 
 ⚠ Sie ist aber auf den **Käufersitz** verortet (`ort`, `plz`, `nuts3` sind die des Käufers)
-und fällt damit genau in die Falle aus Abschnitt 2. Für die 6.094 örtlichen Käufer ist das
+und fällt damit in die Falle aus Abschnitt 2. Für die 6.094 örtlichen Käufer ist das
 richtig, für die 468 überregionalen falsch.
+
+⚠ **Präzise, weil es sonst jemand als Tabellenfehler sucht:** `nachfrage_karte` hat **keine
+Auftragnehmer-Dimension**. Die Zelle ist (Käufer-Entität × CPV-4); nach einer einzelnen
+Firma kann man sie gar nicht fragen. Der Befund gilt für die geplante **Verwendung**: wer
+eine Einsatzort-Karte darauf aufbaut und über den Käufer joint, bekommt für Klostermann
+Frankfurt, weil DB Netz dort sitzt. Die Tabelle ist in Ordnung, die Verwendung wäre es
+nicht. (Korrektur von goVisor-SECOND, 2026-10-06.)
+
+⚠ **Platzhalter-Entitäten verzerren Käufer-Standorte.** `id:keineAngabe` sammelt 213 Namen
+in 114 Orten, 266 Käufer-Entitäten tragen über 20 Namen, 415.867 Vergabezeilen hängen
+daran. Die Karte trägt seit dem 2026-10-06 eine Spalte `orte_je_kaeufer` und lässt alles ab
+6 Orten aus der Nutzlast. Wer Käufer-Standorte verwendet, nimmt diese Spalte mit, sonst
+verortet er den Deutschen Bundestag in Aachen. (Fund von goVisor-SECOND.)
 
 ---
 
