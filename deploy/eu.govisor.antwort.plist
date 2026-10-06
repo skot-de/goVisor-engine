@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Antwort-Arbeiter: Fragebogen + Bausteine → belegte Entwuerfe. Die Rechenseite des Knopfs in
+  `web/components/explorer/Antwortvorschlaege.tsx`.
+
+  ⛔ WARUM ES DIESEN DIENST ERST SEIT DEM 2026-10-06 GIBT. `scripts/antwort_arbeiter.py` war
+  vollstaendig gebaut und lief nie: kein Prozess, keine plist, kein Aufruf im Tageslauf — und
+  kein anderer Abnehmer der Tabelle `user_antwortauftrag` im ganzen Repository. Die Oberflaeche
+  legte Auftraege ab und fragte nach Ergebnissen, die nie entstanden. Alle Tests gruen, weil
+  jeder Baustein fuer sich korrekt war. Gefunden von `scripts/pruefe_leichen.py` (Spur 4).
+
+  ⚠ ThrottleInterval 60 statt 300 wie bei den anderen: dieser Arbeiter bedient eine
+  INTERAKTIVE Funktion. Ein Nutzer, der auf seine Entwuerfe wartet, soll nicht fuenf Minuten
+  warten, nur weil der Dienst gerade neu gestartet ist.
+
+  ⚠ Nice 5 statt 10: derselbe Grund. Er darf dem Nachtlauf weichen, aber nicht so weit wie die
+  Stapelarbeiter, die niemand live erwartet.
+
+  Installieren:  cp deploy/eu.govisor.antwort.plist ~/Library/LaunchAgents/
+                 launchctl load ~/Library/LaunchAgents/eu.govisor.antwort.plist
+  Pruefen:       EINMAL=1 scripts/antwort_arbeiter.sh      (ein Durchlauf, ohne Dauerbetrieb)
+-->
+<plist version="1.0">
+<dict>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>eu.govisor.antwort</string>
+	<key>Nice</key>
+	<integer>5</integer>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor-nachtlauf/scripts/antwort_arbeiter.sh</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/Users/svko_macmini/Library/Logs/govisor-antwort.err.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/svko_macmini/Library/Logs/govisor-antwort.out.log</string>
+	<key>ThrottleInterval</key>
+	<integer>60</integer>
+	<key>WorkingDirectory</key>
+	<string>/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor-nachtlauf</string>
+</dict>
+</plist>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>OPENROUTER_KEY_FILE</key>
+		<string>.secrets/openrouter.key</string>
+		<key>PATH</key>
+		<string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+	</dict>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>eu.govisor.dokumente</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/bin/bash</string>
+		<string>/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor-nachtlauf/scripts/dokumente_arbeiter.sh</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/Users/svko_macmini/Library/Logs/govisor-arbeiter.err.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/svko_macmini/Library/Logs/govisor-arbeiter.out.log</string>
+	<key>ThrottleInterval</key>
+	<integer>300</integer>
+	<key>WorkingDirectory</key>
+	<string>/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor-nachtlauf</string>
+</dict>
+</plist>

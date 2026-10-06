@@ -47,25 +47,62 @@ L = _laden()
 # Richtig ist eine Pruefung auf STIMMIGKEIT: solange die Ursache da ist, muss der Fund
 # erscheinen; ist die Ursache weg, ist Schweigen die richtige Antwort und der Fall wird
 # uebersprungen. Der Test haelt damit die Sonde ehrlich, ohne den Bestand einzufrieren.
-@pytest.mark.parametrize("spur,nadel,ursache", [
-    ("komponenten", "components/Band.tsx", ROOT / "web/components/Band.tsx"),
-    ("wege", "/authority", ROOT / "web/app/authority/page.tsx"),
-    ("symbole", "hatDichte", ROOT / "web/lib/docAnalysis.ts"),
-    ("dienste", "antwort_arbeiter.py", ROOT / "scripts/antwort_arbeiter.py"),
+# ⚠ **ZWEITER ANLAUF NOETIG, UND ER ZEIGT DEN FEHLER NOCH SCHAERFER.** Der erste Anlauf nagelte
+# den Stand fest („Spur 1 MUSS `Band.tsx` melden"). Der zweite prueefte, ob die Datei noch da ist
+# — richtig fuer Komponenten, Seiten und Symbole, aber FALSCH fuer Dienste: bei
+# `antwort_arbeiter.py` ist die Ursache nicht „die Datei existiert", sondern „der Dienst ist
+# nirgends eingetragen". Als der Dienst am 2026-10-06 eingerichtet wurde, blieb die Datei
+# natuerlich liegen, der Fund verschwand zu Recht — und der Test wurde rot.
+#
+# Die Ursache ist deshalb kein Pfad, sondern eine FRAGE je Spur. Nur so prueft der Test
+# Stimmigkeit statt Bestand.
+def _ursache_komponente() -> bool:
+    return (ROOT / "web/components/Band.tsx").exists()
+
+
+def _ursache_seite() -> bool:
+    return (ROOT / "web/app/authority/page.tsx").exists()
+
+
+def _ursache_symbol() -> bool:
+    return (ROOT / "web/lib/docAnalysis.ts").exists()
+
+
+def _ursache_dienst() -> bool:
+    """Ist `antwort_arbeiter` noch ohne Starter? Dieselbe Frage, die Spur 4 stellt."""
+    if not (ROOT / "scripts/antwort_arbeiter.py").exists():
+        return False
+    import pathlib as _pl
+    heu = ""
+    for p in list((ROOT / "scripts").glob("*.sh")) + list((ROOT / "deploy").glob("*.plist")):
+        heu += p.read_text(encoding="utf-8", errors="replace")
+    agenten = _pl.Path.home() / "Library" / "LaunchAgents"
+    for p in (sorted(agenten.glob("*govisor*.plist")) if agenten.is_dir() else []):
+        heu += p.read_text(encoding="utf-8", errors="replace")
+    return "antwort_arbeiter" not in heu
+
+
+@pytest.mark.parametrize("spur,nadel,ursache_da,was", [
+    ("komponenten", "components/Band.tsx", _ursache_komponente, "Band.tsx"),
+    ("wege", "/authority", _ursache_seite, "authority/page.tsx"),
+    ("symbole", "hatDichte", _ursache_symbol, "docAnalysis.ts"),
+    ("dienste", "antwort_arbeiter.py", _ursache_dienst, "ein Starter fuer antwort_arbeiter"),
 ])
-def test_belegter_fund_wird_gemeldet(spur, nadel, ursache):
+def test_belegter_fund_wird_gemeldet(spur, nadel, ursache_da, was):
     """Jeder dieser vier Funde ist am 2026-10-06 von Hand nachgemessen worden.
 
-    `antwort_arbeiter.py` zum Beispiel: kein Prozess (`pgrep`), kein Dienst (vier sind
+    `antwort_arbeiter.py` zum Beispiel: kein Prozess (`pgrep`), kein Dienst (vier waren
     eingetragen), und kein anderer Abnehmer der Tabelle `user_antwortauftrag` im Repo —
-    waehrend die Oberflaeche Auftraege ablegt und auf Ergebnisse wartet.
+    waehrend die Oberflaeche Auftraege ablegt und auf Ergebnisse wartet. Seit dem 2026-10-06
+    gibt es `deploy/eu.govisor.antwort.plist`, der Fund ist damit behoben und dieser Fall wird
+    uebersprungen.
     """
-    if not ursache.exists():
-        pytest.skip(f"{ursache.name} ist weg — Fund behoben, Schweigen ist richtig")
+    if not ursache_da():
+        pytest.skip(f"Ursache weg ({was}) — Fund behoben, Schweigen ist richtig")
     _, fn = L.SPUREN[spur]
     treffer = fn(False)
     assert any(nadel in z for z in treffer), \
-        f"Spur {spur} meldet {nadel} nicht mehr, obwohl {ursache.name} noch da ist:\n  " \
+        f"Spur {spur} meldet {nadel} nicht mehr, obwohl die Ursache ({was}) besteht:\n  " \
         + "\n  ".join(treffer)
 
 

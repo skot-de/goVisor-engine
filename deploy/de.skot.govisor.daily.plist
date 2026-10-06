@@ -1,53 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Tageslauf. ⛔ DIESE DATEI WAR BIS ZUM 2026-10-06 IN DREI PUNKTEN FALSCH, und wer sie
+  nachinstallierte, hat den Betrieb zurueckgedreht. Gefunden von `scripts/pruefe_leichen.py`
+  (Spur 4), Beleg in `docs/cleanup-bericht.md`.
+
+  1. BAUM. Sie zeigte auf `C09_govisor`. Der Dienst faehrt seit dem 2026-10-05 den EIGENEN
+     Nachtlauf-Baum `C09_govisor-nachtlauf`, fest auf `main` — damit „was nicht auf main liegt,
+     laeuft nicht" gilt und nicht zufaellig der Zweig eines Arbeitsbaums produktiv wird. Wer die
+     alte Fassung installierte, holte genau diese Zufaelligkeit zurueck.
+
+  2. ZEITPLAN. Sie nannte ZWEI Laeufe, 13:00 und 22:00, mit einer gemessenen Begruendung
+     (cbc:IssueTime der DÖE-eForms: bis 06:00 nur 1,7 %, bis 13:00 ~60 %, bis 22:00 ~100 %).
+     Produktiv laeuft EINER um 00:30 — belegt an den Protokollnamen (`daily-…-0030.log`).
+     ⚠ Hier stehen jetzt die 00:30 des echten Betriebs. Die Messung von damals ist damit NICHT
+     widerlegt, sie ist nur nicht umgesetzt: ein Lauf um 00:30 holt immer den Vortag vollstaendig,
+     fuehrt aber tagsueber zu bis zu 24 h Verzug bei neuen Ausschreibungen. Ob das gewollt ist,
+     ist eine offene Entscheidung und keine Panne — deshalb bleibt die Begruendung hier lesbar.
+
+  3. PROTOKOLLE. Sie schrieb nach `data/logs/` auf dem externen Volumen. ⛔ launchd-Bash darf das
+     nicht beschreiben (Plattenzugriff gilt je Programm, s. Auto-Memory `govisor-launchd-fallen`),
+     das Protokoll blieb also leer. Jetzt `~/Library/Logs`, wie bei allen anderen Diensten.
+
+  Installieren:  cp deploy/de.skot.govisor.daily.plist ~/Library/LaunchAgents/
+                 launchctl unload ~/Library/LaunchAgents/de.skot.govisor.daily.plist 2>/dev/null
+                 launchctl load   ~/Library/LaunchAgents/de.skot.govisor.daily.plist
+-->
 <plist version="1.0">
 <dict>
-    <key>Label</key>
-    <string>de.skot.govisor.daily</string>
-
-    <key>ProgramArguments</key>
-    <array>
-        <string>/bin/bash</string>
-        <string>/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor/scripts/daily_leads.sh</string>
-    </array>
-
-    <key>WorkingDirectory</key>
-    <string>/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor</string>
-
-    <!-- launchd startet mit minimalem PATH → Python-Framework + Standardpfade explizit setzen -->
-    <key>EnvironmentVariables</key>
-    <dict>
-        <key>PATH</key>
-        <string>/Library/Frameworks/Python.framework/Versions/3.14/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
-    </dict>
-
-    <!-- Zwei Läufe täglich: 13:00 (Vormittags-/Mittagswelle, ~60% des Tages veröffentlicht) und
-         22:00 (Tagesrest, ~100%). Gemessen an cbc:IssueTime der DÖE-eForms (Bürotag-Verteilung).
-         Verpasst der Mac einen Slot (aus/schlafend), holt launchd ihn beim nächsten Wachwerden nach.
-         Der mkdir-Lock im Script verhindert Überlappung; der Monats-Refetch fängt jede Verzögerung auf. -->
-    <key>StartCalendarInterval</key>
-    <array>
-        <dict>
-            <key>Hour</key>
-            <integer>13</integer>
-            <key>Minute</key>
-            <integer>0</integer>
-        </dict>
-        <dict>
-            <key>Hour</key>
-            <integer>22</integer>
-            <key>Minute</key>
-            <integer>0</integer>
-        </dict>
-    </array>
-
-    <key>RunAtLoad</key>
-    <false/>
-
-    <!-- Frühe launchd-Fehler (vor dem Script-eigenen Log) landen hier -->
-    <key>StandardOutPath</key>
-    <string>/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor/data/logs/launchd.out.log</string>
-    <key>StandardErrorPath</key>
-    <string>/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor/data/logs/launchd.err.log</string>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<!-- launchd startet mit minimalem PATH → Python-Framework explizit setzen, sonst ist
+		     `python3` das System-Python ohne duckdb. -->
+		<key>PATH</key>
+		<string>/Library/Frameworks/Python.framework/Versions/3.14/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+	</dict>
+	<key>Label</key>
+	<string>de.skot.govisor.daily</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/bin/bash</string>
+		<string>/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor-nachtlauf/scripts/daily_leads.sh</string>
+	</array>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>StandardErrorPath</key>
+	<string>/Users/svko_macmini/Library/Logs/govisor-launchd.err.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/svko_macmini/Library/Logs/govisor-launchd.out.log</string>
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Hour</key>
+		<integer>0</integer>
+		<key>Minute</key>
+		<integer>30</integer>
+	</dict>
+	<key>WorkingDirectory</key>
+	<string>/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor-nachtlauf</string>
 </dict>
 </plist>

@@ -69,7 +69,35 @@ die echten Funde wieder durchfallen lassen.
 
 ---
 
-## ⛔ Zwei Funde, die das Produkt betreffen
+## ✅ Erledigt am 2026-10-06: die zwei Produktfunde
+
+**Beide sind gebaut, einer wartet noch auf den Merge.** Spur 4 meldet seitdem **0 Befunde**
+(vorher 5).
+
+- **Antwort-Arbeiter:** neuer Mantel `scripts/antwort_arbeiter.sh` (Umgebung aus
+  `.secrets/supabase.txt` und `web/.env.local`, voller Python-Pfad, `EINMAL=1` fuer die Probe
+  von Hand) und neuer Dienst `deploy/eu.govisor.antwort.plist`. ⭘ **Abgenommen:** ein Durchlauf
+  gegen die echte Tabelle gelaufen, Antwort „Nichts zu tun" — Zugang, Schluessel und
+  Tabellenlesen belegt.
+  ⚠ **Vor dem Einrichten geprueft, ob das leere OpenRouter-Guthaben Auftraege verbrennt: nein.**
+  Bei `BudgetErschoepft` legt der Arbeiter den Auftrag zurueck und zaehlt `versuche` wieder
+  herunter, mit dieser Begruendung im Code. Ein wartender Auftrag ueberlebt die Geldsperre.
+- **Die vier plists** liegen jetzt alle in `deploy/`, drei davon verbatim aus dem laufenden
+  Betrieb kopiert. ⚠ Die Tages-plist war in **drei** Punkten falsch, nicht in einem: Baum,
+  Zeitplan (sie nannte 13:00 + 22:00 mit gemessener Begruendung, produktiv laeuft **einer um
+  00:30**) und Protokollpfad (sie schrieb nach `data/logs/` auf dem externen Volumen, das
+  launchd-Bash nicht beschreiben darf — das Protokoll blieb leer). Alle drei korrigiert, die
+  alte Messung bleibt als offene Entscheidung lesbar.
+
+⛔ **Ein Schritt fehlt, und er ist nicht meiner:** die plist zeigt auf den Nachtlauf-Baum
+(`C09_govisor-nachtlauf`, fest auf `main`) — richtig so, aber `antwort_arbeiter.sh` liegt dort
+noch nicht, weil es auf `pipeline/entity-wachen` liegt. **Laden wuerde in eine Fehlerschleife
+laufen.** Der Dienst ist deshalb bewusst noch NICHT eingetragen; das geht erst nach dem Merge
+nach `main`. Genau die Hausregel: *ein Fix ist erst fertig, wenn er auf `main` liegt.*
+
+---
+
+## ⛔ Die zwei Funde, die das Produkt betrafen (Befundlage, zur Nachvollziehbarkeit)
 
 ### 1. Ein Dauerdienst, den niemand startet — und die Oberflaeche wartet auf ihn
 
