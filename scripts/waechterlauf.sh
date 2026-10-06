@@ -140,6 +140,12 @@ sonde werte "Details: python3 scripts/pruefe_werte.py" \
   -- $PY scripts/pruefe_werte.py
 sonde gold_integritaet "Details: python3 scripts/pruefe_gold_integritaet.py --land <L>" \
   -- $PY scripts/pruefe_gold_integritaet.py
+# ⚠ EIN AUSGEFUELLTES FELD IST KEINE KENNUNG. `id:keineAngabe` verschmolz am 2026-10-06
+# 2.198 deutsche Kaeufer zu einem — kein Fremdschluessel brach, kein Feld war leer. Geprueft
+# wird die Eigenschaft (von wie vielen Namen geteilt, welcher Beleg), nicht eine Liste
+# verbotener Zeichenketten: NUTS-Codes und eForms-Referenzen sehen aus wie Registernummern.
+sonde kennungen "Details: python3 scripts/pruefe_kennungen.py --alle" \
+  -- $PY scripts/pruefe_kennungen.py
 # ⚠ EINE SCHLANGE, DIE STEHT, WAEHREND ARBEIT ANLIEGT. Am 2026-10-05 lief der
 # Analyse-Arbeiter seit dem 11.09. ununterbrochen und hatte seit dem 24.09. nichts mehr
 # analysiert: 3.946 Dokumente lagen, das Guthaben war seit dem 21.09. leer. Elf Tage, zwoelf

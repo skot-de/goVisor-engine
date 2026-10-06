@@ -1925,6 +1925,24 @@ $PY scripts/pruefe_werte.py \
 $PY scripts/pruefe_gold_integritaet.py \
   || echo "  → Gold-Waechter meldet Waisen. Details: python3 scripts/pruefe_gold_integritaet.py --land <L>"
 
+# ── KENNUNGSWACHE: identifiziert die `national_id` ueberhaupt? ────────────────────────────
+#
+# Am 2026-10-06 trug die Entitaet `id:keineAngabe` im deutschen Gold 2.198 verschiedene
+# Kaeufernamen in 1.128 Orten — Universitaetsklinikum Aachen, Deutscher Bundestag, Bremer
+# Baeder, Handelskammer Hamburg, alle als EIN Auftraggeber. Aufgefallen ist es an einer
+# Zeile der Nachfragekarte („Amt Siek · Aachen"), nicht an einer Pruefung: ein Platzhalter
+# im Kennungsfeld bricht keinen Fremdschluessel und laesst kein Feld leer.
+#
+# ⚠ WARUM DAS KEINE LISTE SEIN DARF. Gemessen tragen `8477` und `00002636` dieselbe Form
+# wie echte Registernummern, und im Feld stehen ausserdem NUTS-Codes (DE212, DEA2D) und
+# eForms-interne Organisations-Referenzen (ORG-0001). Morgen erfindet ein Portal den
+# naechsten Platzhalter. Geprueft wird deshalb die Eigenschaft: von wie vielen
+# verschiedenen Namen wird eine Kennung geteilt, und belegt irgendetwas, dass es dieselbe
+# Stelle ist? Die Sonde prueft zusaetzlich die Begruendung ihrer eigenen Schwellen.
+# ⚠ Sie liest nur Silber und darf neben einem Abrufer laufen.
+$PY scripts/pruefe_kennungen.py \
+  || echo "  → Kennung ohne Entscheidung oder Schwellen-Begruendung weg. Details: python3 scripts/pruefe_kennungen.py --alle"
+
 # ── Sonde 7: misst eine Kennzahl ueberhaupt noch etwas? ──────────────────────────────────
 # Am 2026-09-01 trugen in der SCHWEIZ alle 104 ausgewerteten Vergabestellen denselben
 # KMU-Anteil: 100 %. Rechnerisch korrekt, als Aussage leer — und im Produkt als Marktbefund

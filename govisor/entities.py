@@ -113,3 +113,24 @@ def blocking_key(name: str) -> str:
     normalized = normalize_company(name)
     tokens = [t for t in normalized.split() if len(t) > 2]
     return tokens[0] if tokens else normalized
+
+
+# Stoppwörter für „signifikante" Namens-Token. Zu generisch, um zwei Stellen als dieselbe zu
+# belegen: ohne diesen Satz belegte eine geteilte Verwaltungsgemeinschafts-USt-IdNr
+# (DE309506861 = Bous/Eurasburg/Langerringen) fremde Gemeinden als eine.
+#
+# ⚠ DIESE LISTE IST DEUTSCH. Sie stand bis 2026-10-06 als `gold._VAT_STOP` nur im USt-IdNr-
+# Anker; seit die Kennungs-Streuung (`kennungen.py`) denselben Beleg-Begriff braucht, liegt
+# sie hier — EINE Liste, nicht zwei, die getrennt veralten. Dass sie sprachgebunden ist,
+# bleibt ein offener Punkt: für LU/CH-französische Namen zählen „ministere"/„administration"
+# als signifikant. Der saubere Ort wäre ein Satz je Länderprofil (`locales.py`).
+STOPP_TOKEN = frozenset({
+    "stadt", "gemeinde", "markt", "landkreis", "kreis", "der", "die", "das", "und", "fuer",
+    "gmbh", "amt", "bundesrepublik", "deutschland", "landeshauptstadt", "vertreten", "durch",
+    "eigenbetrieb", "stadtverwaltung", "verbandsgemeinde", "samtgemeinde", "anstalt", "koerperschaft",
+})
+
+
+def signifikante_token(norm: str) -> set:
+    """Signifikante Namens-Token (≥4 Zeichen, ohne Stoppwörter) aus dem kanonisierten Namen."""
+    return {t for t in re.findall(r"[a-z0-9]{4,}", (norm or "")) if t not in STOPP_TOKEN}

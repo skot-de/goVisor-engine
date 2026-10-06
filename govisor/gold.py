@@ -1499,6 +1499,47 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
         WHERE name IS NOT NULL
     """).fetchall()
 
+    # ── KENNUNGS-STREUUNG: welche `national_id` identifiziert überhaupt? ──────────────────
+    #
+    # ⚠ DIESE MESSUNG MUSS VOR DER AUFLÖSUNG LAUFEN, nicht in ihr. `normalize_national_id`
+    # sieht einen Wert; dass „keine Angabe" 2.198 verschiedene Käufer zu einem verschmilzt,
+    # sieht nur, wer die ganze Quelle kennt. Begründung, Messung und Schwellen-Ableitung
+    # stehen in `kennungen.py` — hier wird sie nur angewandt und protokolliert.
+    #
+    # Eingabe ist derselbe `parties`-Satz wie unten, nicht eine zweite Abfrage: eine zweite
+    # Abfrage könnte anders filtern, und dann würde die Regel auf etwas anderes angewandt
+    # als gemessen.
+    from collections import Counter as _Counter
+    from . import kennungen as _kennungen
+    _paar = _Counter((p[4], p[3]) for p in parties if p[4] and str(p[4]).strip())
+    _streu = _kennungen.streuung(((nid, nm, n) for (nid, nm), n in _paar.items()),
+                                 schluessel=normalize_national_id)
+    # Kuratierte Urteile haben VORRANG — in beide Richtungen. Die Regel entscheidet nur, wo
+    # der Beleg eindeutig ist; `verdacht` ist absichtlich offen (s. `kennungen.py`). Wer eine
+    # Kennung von Hand als tragend belegt, soll sie nicht beim nächsten Lauf wieder verlieren.
+    _urteile = _kennungen.entscheidungen_lesen([
+        Path(__file__).resolve().parent.parent / "curated" / f"{country}_kennung_entscheidung.csv",
+        cfg.data_dir / "curated" / f"{country}_kennung_entscheidung.csv",
+    ], schluessel=normalize_national_id)
+    _platzhalter = set(_streu.platzhalter)
+    _hand_zu, _hand_weg = 0, 0
+    for _k, _u in _urteile.items():
+        if _u == "platzhalter" and _k not in _platzhalter:
+            _platzhalter.add(_k); _hand_zu += 1
+        elif _u == "traegt" and _k in _platzhalter:
+            _platzhalter.discard(_k); _hand_weg += 1
+    _platzhalter = frozenset(_platzhalter)
+    print(f"gold {country}: Kennungs-Streuung — Schwelle {_streu.schwelle} Namen "
+          f"(p{_streu.perzentil:.0%} der Quelle"
+          f"{', Entartungsschutz griff' if _streu.schwelle_gegriffen else ''}), "
+          f"{len(_streu.befunde)} Kennungen darüber")
+    print(f"  kennungen   : {len(_streu.platzhalter)} als Platzhalter verworfen "
+          f"({_streu.zeilen_von('platzhalter'):,} Zeilen fallen auf die Namens-Auflösung "
+          f"zurück, kein Verlust); {len(_streu.traegt)} als echte Dach-Kennung behalten; "
+          f"{len(_streu.verdacht)} umstritten und bewusst offen "
+          f"({_streu.zeilen_von('verdacht'):,} Zeilen)"
+          + (f"; von Hand +{_hand_zu}/-{_hand_weg}" if (_hand_zu or _hand_weg) else ""))
+
     entity_of: dict[str, ResolvedEntity] = {}
     plz_of: dict[str, set[str]] = {}
     leitweg_of: dict[str, set[str]] = {}     # entity_id → Leitweg-ID(s), für den Vergabestellen-Anker
@@ -1521,7 +1562,8 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
         resolved = memo.get(key)
         if resolved is None:
             resolved = resolve_supplier(name, national_id=national_id, postal_code=plz,
-                                        hr_lookup=hr_index.get if hr_index else None)
+                                        hr_lookup=hr_index.get if hr_index else None,
+                                        platzhalter=_platzhalter)
             memo[key] = resolved
         entity_of.setdefault(resolved.entity_id, resolved)
         if plz and plz.strip():
@@ -1629,6 +1671,20 @@ def build_entities(cfg: Config, country: str = "DE", hr_index: dict | None = Non
            "notice_id VARCHAR, role VARCHAR, seq SMALLINT, entity_id VARCHAR")
     _write(con, cfg.gold_dir / country / "entity_merge_candidates.parquet", flagged,
            "norm VARCHAR, name_only_entity VARCHAR, candidate_entity VARCHAR, reason VARCHAR")
+    # Die Streuungs-Messung kommt MIT in den Bestand, nicht nur ins Protokoll — samt der
+    # abgeleiteten Schwelle. Sonst steht die Zahl „Schwelle 5" nirgends, wo man sie
+    # nachrechnen kann, und der Wächter müsste sie neu erfinden. Die `verdacht`-Zeilen sind
+    # die Schuldenliste: sie kann nur schrumpfen, und jeder NEUE Fall fällt auf.
+    _write(con, cfg.gold_dir / country / "entity_kennung_verdacht.parquet",
+           [(b.kennung, b.roh, b.namen, b.zeilen, b.anteil_namen, b.anteil_zeilen, b.token,
+             _urteile.get(b.kennung, ""),
+             "platzhalter" if b.kennung in _platzhalter else b.urteil,
+             _streu.schwelle, _streu.rohe_schwelle, _streu.beleg_mindest, _streu.beleg_sicher)
+            for b in _streu.befunde],
+           "kennung VARCHAR, roh VARCHAR, namen INTEGER, zeilen INTEGER, "
+           "anteil_namen DOUBLE, anteil_zeilen DOUBLE, token VARCHAR, "
+           "urteil_hand VARCHAR, urteil VARCHAR, "
+           "schwelle INTEGER, rohe_schwelle INTEGER, beleg_mindest DOUBLE, beleg_sicher DOUBLE")
     con.close()
     return len(entity_of), len(links)
 
@@ -1797,19 +1853,13 @@ def _consolidate_by_leitweg(entity_of: dict, leitweg_of: dict, already: set):
     return merge_map, dropped_generic
 
 
-# Namens-Stopwörter für den USt-IdNr-Token-Guard: zu generisch, um zwei Vergabestellen als „dieselbe"
-# zu belegen. Ohne Guard verschmölze eine geteilte Verwaltungsgemeinschafts-VAT fremde Gemeinden
-# (DE309506861 = Bous/Eurasburg/Langerringen). Der geteilte SIGNIFIKANTE Token trägt den Beleg.
-_VAT_STOP = frozenset({
-    "stadt", "gemeinde", "markt", "landkreis", "kreis", "der", "die", "das", "und", "fuer",
-    "gmbh", "amt", "bundesrepublik", "deutschland", "landeshauptstadt", "vertreten", "durch",
-    "eigenbetrieb", "stadtverwaltung", "verbandsgemeinde", "samtgemeinde", "anstalt", "koerperschaft",
-})
-
-
-def _vat_tokens(norm: str) -> set:
-    """Signifikante Namens-Token (≥4 Zeichen, ohne Stopwörter) aus dem kanonisierten Namen."""
-    return {t for t in re.findall(r"[a-z0-9]{4,}", (norm or "")) if t not in _VAT_STOP}
+# Die Stopwort-Liste und die Token-Zerlegung liegen seit 2026-10-06 in `entities` — dieselbe
+# Begriffsbildung („welcher Token belegt, dass zwei Namen dieselbe Stelle meinen?") wird vom
+# USt-IdNr-Anker hier UND von der Kennungs-Streuung (`kennungen.py`) gebraucht. Zwei Listen
+# wären eine Kopie, und eine Kopie veraltet. Verhalten unverändert — `_consolidate_by_vat`
+# ruft weiter `_vat_tokens`; nur die Definition ist umgezogen.
+from .entities import STOPP_TOKEN as _VAT_STOP            # noqa: E402  (Altname, s. Test)
+from .entities import signifikante_token as _vat_tokens   # noqa: E402
 
 
 def _consolidate_by_vat(entity_of: dict, vat_of: dict, already: set):
@@ -2232,6 +2282,7 @@ def resolve_supplier(
     national_id: str | None = None,
     postal_code: str | None = None,
     hr_lookup=None,
+    platzhalter: frozenset[str] | None = None,
 ) -> ResolvedEntity:
     """Löse einen Lieferanten auf und sage, wie sicher.
 
@@ -2287,6 +2338,13 @@ def resolve_supplier(
     # national_id normalisieren: Leitweg-ID/VAT vereinheitlichen, Müll (UUID/TED-intern/Kurzzahl)
     # verwerfen. Roh spaltete „0204:991-…" und „991-…" dieselbe öffentliche Stelle in zwei Entitäten.
     nid = normalize_national_id(national_id)
+    # ⚠ `platzhalter` kommt aus der Streuungs-Messung über die GANZE Quelle (`kennungen.py`) und
+    # kann hier nicht lokal entschieden werden: dass „00002636" eine Kennung ist und „13754"
+    # keine, sieht man erst daran, wie viele verschiedene Namen sie teilen. Eine verworfene
+    # Kennung löscht nichts — der Satz fällt unten auf `name:<norm>` zurück, wo er vor eForms
+    # ohnehin lag, und die Leitweg-/USt-IdNr-Anker können ihn danach wieder zusammenführen.
+    if nid and platzhalter and nid in platzhalter:
+        nid = None
     if nid:
         return ResolvedEntity(
             entity_id=f"id:{nid}",

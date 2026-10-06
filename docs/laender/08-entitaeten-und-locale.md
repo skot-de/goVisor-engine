@@ -105,6 +105,46 @@ ORDER BY 2 DESC LIMIT 12
 Was oben steht, ist entweder Müll („0", „1", „AT") oder eine Dachkennung. Beides gehört
 behandelt, bevor die Kennung als Beleg dient.
 
+### Wie man die beiden auseinanderhält — und wie NICHT
+
+⚠ **Nicht an der Form.** Gemessen am 2026-10-06 über alle Länder: `00002636` ist die echte
+Kennung der Fraunhofer-Gesellschaft (92 Namen, 2 Orte), `13754` ist Müll (103 Namen in 102
+fremden Gemeinden) — beide unscheinbar vierstellig. Im Feld stehen zusätzlich NUTS-Codes
+(`DE212` = München, `DED21` = Dresden) und eForms-interne Organisations-Referenzen
+(`ORG-0001`, 106 fremde Namen), die aussehen wie Registernummern. Eine Liste verbotener
+Zeichenketten erwischt die eine Hälfte und altert gegen die andere.
+
+**Die Eigenschaft trägt, nicht die Form** (`govisor/kennungen.py`, Sonde
+`scripts/pruefe_kennungen.py`):
+
+1. **Streuung** — von wie vielen verschiedenen *kanonisierten* Namen wird die Kennung
+   geteilt? Die Grenze ist das 99. Perzentil der Quelle selbst, gemessen und mitgeschrieben,
+   nicht getippt: DE 5, AT 6, CH 4, LU 5 Namen (Median überall 1, p90 überall 2).
+2. **Beleg** — teilt ein signifikanter Namens-Token einen nennenswerten Teil der Namen?
+   `< 30 %` ⇒ Platzhalter, `>= 70 %` ⇒ echte Dachkennung, dazwischen ⇒ **nicht automatisch
+   entscheiden**, sondern nach `curated/<L>_kennung_entscheidung.csv`.
+
+⚠ **Der Beleg wird nach Namen UND nach Zeilen gezählt, das Maximum gilt.** Nur nach Namen
+gezählt fiel `9110002556748` (Land Niederösterreich mit zehn Straßenbauabteilungen, 7.189
+Zeilen) auf 48 % und `9110015233841` (Bundesimmobiliengesellschaft, 12.736 Zeilen) auf 28 %
+— hundert seltene Schreibvarianten wiegen dort so viel wie die dominanten Namen. Wer so
+verwirft, zerschlägt echte Auftraggeber.
+
+**Verwerfen heisst nicht löschen.** Der Satz fällt auf `name:<norm>` zurück, wo er vor
+eForms ohnehin lag; die Leitweg- und USt-IdNr-Anker können ihn danach mit ihrem eigenen
+Token-Guard wieder zusammenführen. `party_entity` behält genau so viele Zeilen wie vorher —
+das ist die Gegenprobe, die bei jeder Änderung an dieser Stelle zu fahren ist.
+
+**Die 30 % und die 70 % sind gegenprüfbar.** Die Beleg-Verteilung oberhalb der Streuungs-
+grenze ist zweigipfelig; die Senke lag gemessen bei 45 % (DE) und 55 % (PL). Die Sonde
+rechnet sie bei jedem Lauf zurück und meldet, wenn sie nicht mehr zwischen den beiden
+Grenzen liegt — dann fassen sie das Tal nicht mehr ein und ihre Begründung ist weg.
+
+⚠ **Offener Punkt: die Stoppwörter sind deutsch** (`entities.STOPP_TOKEN`). Für
+französische Namen zählen „ministere"/„administration"/„communale" als signifikant und heben
+den Beleg künstlich. Die Regel ist in LU dadurch zurückhaltender, nicht falscher. Der
+saubere Ort wäre ein Stoppwort-Satz je Länderprofil.
+
 ## Entity-Resolution: was geht und was nicht
 
 - **Stufe 1 (`_consolidate_by_national_id`)**: nur-Name-Entitäten in ihre belegte
