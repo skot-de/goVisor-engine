@@ -193,6 +193,9 @@
 | H12 | **Ein formatierter Text als Zahl gelesen** | TED schreibt den Vor-2014-Betrag zweimal: lesbar als `189 945 844,15` und maschinenlesbar in `@FMTVAL`. Wer den Text mit einer Regel liest, die Kommas wegwirft, bekommt das **Hundertfache**. ⚠ Und die beiden Lesarten sind GEGENLAEUFIG: im Text ist der Punkt Tausender-Trenner, in `@FMTVAL` Dezimal-Trenner — wer sie verwechselt, macht denselben Faktor 100 aus der anderen Richtung. Das Attribut ist der einzige Weg, der nicht vom Format abhaengt. | Rund 57 % der 86.177 Saetze aus H11. Ein Schweizer Tunnellos stand mit **19 Mrd CHF** statt 190 Mio da. ⚠ Der Code WUSSTE davon: `_ojs_amount` existiert seit Langem genau fuer diese Lesart und wurde an dieser einen Stelle nicht benutzt |
 | H13 | **Zwei Fehler in einer Zeile, und der zweite versteckt den ersten** | Ohne Waehrung fielen die Saetze aus `final_value_clean` heraus (die Pruefung verlangte EUR) — also rechnete sie nie jemand nach, und der Faktor 100 blieb unsichtbar. ⚠ Die Plausibilitaetsgrenze von 1 Mrd stand die ganze Zeit daneben und hat die 19 Mrd **nie gesehen**, weil die Waehrungssperre eine Stufe frueher aussortierte. Eine Pruefung hinter einem Filter prueft nur, was der Filter durchlaesst. | Sichtbar wurde beides erst, als die Waehrungsumrechnung (2026-09-15) die Saetze hereinholte — der eine Fix legte den anderen Fehler frei |
 | H14 | **Das Feld, das maschinenlesbar AUSSIEHT** | Wer zwei Schreibweisen derselben Zahl vorfindet, greift nach der technischen — `@FMTVAL` statt `189 945 844,15`. In den alten TED-Jahrgaengen ist das Attribut aber **nicht** normiert: gemessen am 2026-09-15 in EINER Datei (LU 226973_2011) vier Varianten nebeneinander — `3 636 304` → `3636304000000000000` (x10^12), `1 000 000` → `100000000` (Cent), `900 000` → `9000000000` (x10000) und `900 000` → `900000.00` (richtig). ⚠ Der lesbare Text ist die verlaesslichere Quelle, SOLANGE man ihn korrekt liest; das Problem war nie der Text, sondern die Lesart. | Der erste Reparaturversuch zu H12 bevorzugte `@FMTVAL` und machte aus einem Auftrag ueber 3,6 Mio EUR einen ueber **3,6 Trillionen** — schlimmer als der Fehler davor (7.272.608). Aufgefallen ist es nur, weil der am selben Tag gebaute `pruefe_werte.py` nach dem Neubau sofort wieder rot meldete. **Der Waechter fand den Fehler in seiner eigenen Reparatur** — das ist der Grund, warum ein Fix ohne Gegenprobe keiner ist |
+| H15 | **Stichprobenfilter einer NACHBAR-Kennzahl geerbt** | KMU-Anteil auf `v36` gemessen (nur registerbelegte Gewinner). In CH liess der Filter genau das Melder-Lager uebrig, das `sme` meldet und `large` nie → **alle 104 Stellen 100 %** (2026-09-01). Auf allen Zuschlaegen gemessen: 1 → 45 verschiedene Werte. DE 64 → 70, AT 31 → 30 — die Falle trifft nur das Land, in dem Aufloesungsquote und Vokabular korrelieren |
+| H16 | **Nur-positives Vokabular** | Ein kodiertes Feld, das nur die JA-Auspraegung kennt. `consortium_allowed` steht in CH 397-mal auf 1 und **kein einziges Mal auf 0**, in DE/AT nirgends (2026-09-01). Wer die Abwesenheit als „nicht erlaubt" liest, liegt falsch — und nichts in der Datei widerspricht ihm |
+| H17 | **Vokabel-Verschiebung je Land — OFFEN, nicht entschieden** | „Nur ueber den Preis entschieden" zaehlt Vergaben, deren Kriterien alle `kind = price` sind. Gemessen 2026-09-01 in `silver/<L>/award_criteria`: DE meldet ueberwiegend `price` (1.318.585) gegen `cost` (148.837) — **CH umgekehrt: `cost` 155.884 gegen `price` 14.434**. Da `cost` als Nicht-Preis zaehlt, steht die CH-Quote bei 358 von 401 Stellen auf 0 %. Beides sind Geldkriterien; ob `cost` (Lebenszykluskosten) als Preis gilt, ist eine **Produktentscheidung**, keine Datenfrage — und sie bewegt auch DE. Die Streuungs-Sonde faengt das NICHT: die Quote ist schief, nicht konstant |
 
 ## Die Meta-Regel
 
@@ -208,3 +211,23 @@ Ein leeres Feld sieht aus wie „gibt es nicht". „Zu wenig Daten" sieht aus wi
 Die Gegenfrage, die man sich zur Gewohnheit machen muss:
 
 > **Fehlt der Wert, oder fehlt die Leitung?**
+
+Seit dem 2026-09-01 steht eine **zweite** Gegenfrage daneben, weil die erste den KMU-Fall
+nicht gefangen haette: dort fehlte weder Wert noch Leitung. Die Zahl war da, frisch, aus
+belegten Daten gerechnet — und trotzdem leer.
+
+> **Unterscheidet die Kennzahl ueberhaupt etwas?**
+
+Eine Kennzahl ohne Streuung sieht exakt aus wie eine Kennzahl. Kein Feld ist NULL, kein
+Fremdschluessel bricht, keine Datei ist alt, keine Sonde wird rot. Auffallen kann sie nur
+im Laendervergleich — und den zieht im Tagesbetrieb niemand von selbst. Deshalb gibt es
+dafuer jetzt eine eigene Sonde:
+
+```
+python3 scripts/pruefe_streuung.py [--offen]
+```
+
+Zwei Spuren: die Strategie-Kennzahlen je Vergabestelle (`web/data/strategie.json`) und die
+Rohspalten je Land (`gold/<Land>/lead_export.parquet`). Sie laeuft als Sonde 6 am Ende von
+`daily_leads.sh`. Bekannte Befunde stehen als Code in `BEKANNT` — mit Grund und Datum,
+damit die Sonde den **naechsten** Fall meldet statt taeglich dieselben achtzehn.

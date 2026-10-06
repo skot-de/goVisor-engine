@@ -55,6 +55,13 @@ const nextConfig = {
   // in Production ohnehin nicht vorhanden; sie kostet hier aber die Bedienbarkeit einer
   // echten Schaltfläche und damit jede Prüfung von Hand.
   devIndicators: false,
+  /* ⚠ pdf.js NICHT bündeln. Es lädt seinen Worker zur Laufzeit per dynamischem Import
+   * (`pdf.worker.mjs`); im Server-Bundle landet diese Datei nicht, und das Lesen scheitert mit
+   * „Setting up fake worker failed: Cannot find module …/vendor-chunks/pdf.worker.mjs".
+   * Als externes Paket wird es wie in jedem Node-Prozess aus `node_modules` geladen, und der
+   * Worker liegt daneben. Gefunden beim Sichttest: der Test in `tests/test_fragebogen_lesen.py`
+   * lief grün, weil er pdf.js in reinem Node benutzt — also genau ohne dieses Bündeln. */
+  serverExternalPackages: ["pdfjs-dist"],
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

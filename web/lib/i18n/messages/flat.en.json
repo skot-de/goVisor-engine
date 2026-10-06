@@ -2579,5 +2579,7 @@
   "✓ Beobachtet": "✓ Watching",
   "✓ angesprochen": "✓ contacted",
   "🇦🇹 nur Österreich": "🇦🇹 Austria only",
-  "🇨🇭 nur Schweiz": "🇨🇭 Switzerland only"
+  "🇨🇭 nur Schweiz": "🇨🇭 Switzerland only",
+  "nicht unterscheidend": "not distinguishing",
+  "Nicht unterscheidend · alle ausgewerteten Vergabestellen dieses Landes tragen denselben Wert ({pct} % aus {n} Vergaben). Das Merkmal trennt hier nichts und ist als Marktaussage nicht belastbar.": "Not distinguishing · every evaluated contracting authority in this country carries the same value ({pct} % of {n} awards). The attribute separates nothing here — not sound as a statement about the market."
 }

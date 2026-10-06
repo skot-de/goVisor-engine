@@ -70,7 +70,15 @@ Stand: 2026-07-30, Abschnitte H und I am 2026-08-22 nachgemessen.
 | **Markt** | Nachfrage / Feld-Schwäche / Struktur des CPV-Segments (Pro-Feature). | 🟡 |
 | **Team** | Geteilte Notizen + automatischer Verlauf (Merken/Status/Analyse protokolliert). | 🟢 |
 
-## F. Vergabeunterlagen-Analyse — der Dokument-Layer *(neu, Alleinstellung)*
+## F. Vergabeunterlagen-Analyse — der Dokument-Layer
+
+⚠ **Hier stand „(neu, Alleinstellung)" bis zum 2026-10-04.** Am selben Tag an den
+Herstellerseiten gemessen: **DTAD** bewirbt den Assistenten „Frank", der Dokumente liest und
+Eignungs- wie Zuschlagskriterien zieht, **Patterno** nennt 100 Seiten in 30 Sekunden samt
+K.o.-Kriterien, **Vergabepilot** einen KI-Assistenten, der Fragen zu den Unterlagen
+beantwortet. Die Überschrift ist besetzt. Was bleibt, ist die Tiefe darunter:
+**Zitat-Verifikation** (jede Aussage an ihrer Belegstelle), LV- und Kriterienmatrix-Extraktion.
+Dieser Unterschied ist vorführbar, aber nicht behauptbar.
 
 | Feature | Erklärung | Reife |
 |---|---|---|
@@ -170,7 +178,7 @@ Nicht nur ein Bieter-Tab, sondern eine **eigene Rolle** (Route `/authority`, Ums
 ## Landingpage-Destillat (die stärksten Verkaufsargumente)
 1. **Unterschwellig + oberschwellig** — nicht nur TED, sondern die nationalen Portale, die die Konkurrenz nicht sieht.
 2. **Auslauf-Radar** — Verträge sehen, *bevor* sie ausgeschrieben werden.
-3. **Vergabeunterlagen-Analyse** — aus 80 Seiten PDF in Sekunden Ampel + abhakbare Bieter-Checkliste (Alleinstellung).
+3. **Vergabeunterlagen-Analyse** — aus 80 Seiten PDF in Sekunden Ampel + abhakbare Bieter-Checkliste, **jede Aussage mit Belegstelle**. ⚠ Nicht mehr als Alleinstellung bewerben: die Auswertung selbst bewerben seit spätestens 2026-10-04 auch DTAD, Patterno und Vergabepilot; die Zitat-Verifikation keiner von ihnen.
 4. **Ehrliche Daten** — jeder Wert mit Herkunft; nie geraten.
 5. **DACH-weit** — DE/AT/CH in einem Werkzeug.
 6. **Bid/No-Bid-Entscheidung** — nicht nur „hier ist ein Lead", sondern „solltest du bieten und wie".

@@ -19,7 +19,10 @@ type Posten = {
   id: string; titel: string; buyer: string; wert: string; wertSrc: string;
   ende: string; endeSrc: string; rahmen: boolean;
 };
-type Quote = { pct: number; n: number; treffer: number } | null;
+type Quote = { pct: number; n: number; treffer: number; konstant?: boolean } | null;
+// `konstant` setzt der Bauschritt (`scripts/export_strategie.py`, `streuung_markieren`),
+// wenn eine Kennzahl über ALLE Vergabestellen eines Landes denselben Wert trägt. Dann ist
+// sie kein Messwert, sondern geerbt — siehe `Q` und `ausQuote` unten.
 type Stelle = {
   id: string; name: string; vergaben36: number; vergabenFeld: number; vergabenJahr: number;
   volEcht: number | null; volN: number; bieterMedian: number | null; bieterN: number;
@@ -118,6 +121,21 @@ function ProGate({ titel, frage, was }: { titel: string; frage: string; was: str
 function Q({ q, suffix = "" }: { q: Quote; suffix?: string }) {
   const { t } = useSprache();
   if (!q || q.n === 0) return <span style={{ color: "var(--ink-300)" }}>—</span>;
+  // ⚠ EINE KENNZAHL OHNE UNTERSCHIED IST KEINE KENNZAHL. Trägt sie im ganzen Land bei
+  // JEDER Stelle denselben Wert, misst sie nichts — sie wurde geerbt (Vorgabewert,
+  // Vokabel-Konstante, entartete Stichprobe). Als Prozentzahl gelesen wird daraus eine
+  // Marktaussage, die niemand gemessen hat: „hier gehen alle Aufträge an KMU".
+  // Der Rohwert bleibt sichtbar — markieren statt wegwerfen, denn ein „—" hier sähe aus
+  // wie fehlende Datenlage und verwechselte ein ARTEFAKT mit einer LÜCKE.
+  if (q.konstant) {
+    return (
+      <span className="val" data-src="konstant"
+            title={t("Nicht unterscheidend · alle ausgewerteten Vergabestellen dieses Landes tragen denselben Wert ({pct} % aus {n} Vergaben). Das Merkmal trennt hier nichts und ist als Marktaussage nicht belastbar.", { pct: q.pct, n: q.n })}>
+        <span className="v-num">{t("nicht unterscheidend")}</span>
+        <span className="q-n">{q.pct} %</span>
+      </span>
+    );
+  }
   if (q.n <= 2) {
     return (
       <span className="val" data-src="duenn" title={t("Dünn · gemessen, aber nur {n} Fälle, für eine Quote zu wenig", { n: q.n })}>
@@ -387,6 +405,10 @@ function marktLage(alle: Stelle[], pick: (s: Stelle) => number | null | undefine
 /** Quoten-Feld als Zahl, aber nur wenn es belastbar ist. */
 const ausQuote = (feld: "kmu" | "preis" | "wechsel" | "neuAnteil") => (s: Stelle) => {
   const q = s[feld] as Quote | undefined;
+  // Eine als `konstant` markierte Quote traegt NICHTS zum Marktwert bei. Sonst entstuende
+  // aus lauter identischen Werten ein sauber aussehender Median — die teuerste Sorte Zahl:
+  // eine, die gemessen wirkt. Der `gleich`-Zweig in `Marktzeile` bleibt als zweite Reihe.
+  if (q?.konstant) return null;
   return q && q.n >= MIND_FAELLE ? q.pct : null;
 };
 

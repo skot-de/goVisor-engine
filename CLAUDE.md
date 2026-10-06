@@ -176,7 +176,7 @@ laesst eine undatierte Zahl dort gar nicht durch).
   starb der Tageslauf in Zeile 931, und **keine einzige Sonde lief** — im exakten Fall, für
   den sie gebaut sind. Die Aufsicht hing am Beaufsichtigten. Seitdem:
 
-      scripts/waechterlauf.sh [--still]     # alle zwölf Sonden, unabhängig vom Tageslauf
+      scripts/waechterlauf.sh [--still]     # alle sechzehn Sonden, unabhängig vom Tageslauf
 
   Er nimmt die Tageslauf-Sperre **nicht** (alle Sonden lesen nur) und läuft als eigener
   Dienst `eu.govisor.waechter`. Der Tageslauf ruft dieselben Sonden weiterhin selbst auf;
@@ -184,8 +184,57 @@ laesst eine undatierte Zahl dort gar nicht durch).
   gegeneinander. Sein Protokoll liegt in `~/Library/Logs/govisor-waechter-*.log` und **nicht**
   unter `data/logs/` — launchd-Bash darf das externe Volume nicht beschreiben.
 
+      python3 scripts/pruefe_warteschlangen.py [--alle]  # steht eine Schlange mit Arbeit?
+
+  ⚠ **Ein Arbeiter, der läuft und nichts bewegt, sieht in jeder Prozessliste gesund aus.**
+  Am 2026-10-05 lief der Analyse-Arbeiter seit dem 11.09. ununterbrochen, protokollierte alle
+  30 Minuten seinen Stand — und hatte seit dem **24.09. nichts mehr analysiert**: 3.946
+  Dokumente lagen, das OpenRouter-Guthaben war seit dem 21.09. leer. Elf Tage, vierzehn
+  Sonden, keine schlug an (der Dienst lief, die Daten waren vollständig, kein Feld NULL).
+  ⭐ Die Auskunft lag dabei schon in `data/.llm_stand.json` — der Arbeiter schreibt
+  `halt: "guthaben"` samt Satz im Klartext. Es las nur niemand.
+  **Ein Befund braucht BEIDES: Arbeit liegt an UND seit Tagen keine Bewegung.** Eine leere
+  Schlange, die stillsteht, ist fertig. Schwelle 7 Tage, gemessen (grösste Lücke im
+  Normalbetrieb 5, Ausfall 11).
+
       python3 scripts/verdrahtungskarte.py <tabelle>   # wer erzeugt es, wer liest es
       python3 scripts/pruefe_bibel.py [--stand]        # altert die Anleitung selbst?
+      python3 scripts/pruefe_streuung.py [--offen]     # misst die Kennzahl ueberhaupt etwas?
+
+  ⛔ **DER NACHTLAUF FÄHRT DEN HAUPT-BAUM, NICHT DEINEN ARBEITSBAUM.** Das ist die bisher
+  teuerste Form von „gebaut, aber nicht verdrahtet", gefunden am 2026-10-05: zwei Prüfungen
+  meldeten, der KMU-Anteil der Schweiz sei wieder zu einer Konstanten entartet. Er war es nie
+  wieder geworden — **der Fix vom 01.09. war nie dort angekommen, wo es läuft.** Er lag auf
+  zwei Zweigen, der launchd-Dienst `de.skot.govisor.daily` fährt
+  `/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor`, und dort stand ein dritter Zweig,
+  in dem das Wort `a36` nicht ein einziges Mal vorkam.
+
+  ⚠ **Warum es im Arbeitsbaum trotzdem grün aussieht:** `data` UND `web/data` sind in jedem
+  Arbeitsbaum **Symlinks in den Haupt-Baum**. Die Tests lesen also die Ausgabe von FREMDEM
+  Code und halten sie für die eigene. Gemessen an diesem Tag: 7 Pipeline-Dateien weichen ab,
+  7 gibt es dort gar nicht — darunter `scripts/pruefe_streuung.py`, also genau die Sonde, die
+  diesen Defekt melden sollte. Sie hat seit ihrem Bau **nie in Produktion gelaufen**; der
+  Wächterlauf dort kennt zwölf Sonden, dieser hier vierzehn.
+
+      python3 scripts/pruefe_laufender_code.py [--alle]
+
+  Sie steht VOR allen anderen Sonden: schlägt sie an, kann jeder Befund darunter ein Trugbild
+  sein.
+
+  **Seit dem 2026-10-05 hat der Lauf einen EIGENEN BAUM**, in dem niemand arbeitet:
+  `/Users/svko_macmini/PROJEKTE/claude_code/C09_govisor-nachtlauf`, fest auf **`main`**.
+  Damit ist „was läuft" keine Zufallsfrage mehr — und die Regel daraus: **ein Fix ist erst
+  fertig, wenn er auf `main` liegt.**
+
+      scripts/nachtlauf_baum.sh --pruefen      # ist er vollständig?
+      scripts/nachtlauf_baum.sh --einrichten   # Verknüpfungen anlegen/reparieren
+
+  ⚠ **Er wird aus git NICHT vollständig.** Sechs Dinge liegen ausserhalb der Versionierung,
+  und das gefährlichste ist `web/data`: fehlt der Link, schreibt der Lauf in ein eigenes
+  Verzeichnis, das niemand liest — und meldet Erfolg. Deshalb das Skript statt einer Liste
+  im Kopf; die Verknüpfungen waren beim Einrichten viermal von Hand zu setzen. Ein Befund ist nur, wo ein **Erzeuger einer geteilten Ausgabe** abweicht (Liste
+  `ERZEUGER` im Skript) — ein Arbeitsbaum weicht sonst naturgemäss ab, und eine dauerrote
+  Sonde ist keine.
 
   Dazu die **Verdrahtungskarte**: die Sonden melden, dass etwas nicht stimmt, die Karte
   sagt, woran es hängt. Sie wird aus dem Quelltext ERZEUGT, nicht getippt.
@@ -210,6 +259,37 @@ laesst eine undatierte Zahl dort gar nicht durch).
   Produktwege (Onboarding, Zuschläge, /firma) sind seit 2026-08-23 verdrahtet. Und:
   **Polen liegt mit 326.485 Bekanntmachungen in Silber ohne Gold** — angefangen und
   liegengeblieben, steht als Baustelle in `BEWUSST_OHNE_GOLD`.
+- **Eine zweite Fehlerklasse daneben, entdeckt am 2026-09-01: die Kennzahl, die nichts
+  unterscheidet.** Der KMU-Anteil stand in der SCHWEIZ bei allen ausgewerteten
+  Vergabestellen auf **100 %** — und war weder falsch gerechnet noch veraltet. Gemessen
+  wurde er auf `v36` (nur Vergaben mit registerbelegtem Gewinner); dieser Filter liess in
+  CH genau das Melder-Lager uebrig, das die eForms-Sammelstufe `sme` verwendet und `large`
+  in drei Jahren einmal. Das Ergebnis war eine Vokabel-Konstante, die sich als Marktaussage
+  las: „in der Schweiz gehen alle Auftraege an KMU". Auf allen Zuschlaegen gemessen:
+  1 → 45 verschiedene Werte (DE 64 → 70, AT 31 → 30 — die Falle trifft nur das Land, in dem
+  Aufloesungsquote und Vokabular korrelieren).
+
+  ⚠ **Warum keine bestehende Sonde das sah:** der Defekt macht kein Geraeusch. Kein Feld
+  ist NULL, kein Fremdschluessel bricht, keine Datei ist alt, die Suite ist gruen. Eine
+  Kennzahl ohne Streuung sieht exakt aus wie eine Kennzahl — auffallen kann sie nur im
+  LAENDERVERGLEICH, und den zieht im Tagesbetrieb niemand von selbst. Deshalb Sonde 6:
+
+      python3 scripts/pruefe_streuung.py [--offen]
+
+  Zwei Spuren: die Strategie-Kennzahlen je Vergabestelle und die Rohspalten je Land in
+  `gold/<Land>/lead_export.parquet`. Bekannte Befunde stehen als Code in `BEKANNT`, mit
+  Grund und Datum — `tests/test_marktwert.py` haelt sie ehrlich (ein Eintrag fuer eine
+  geschlossene Luecke macht die Suite rot). **Markieren statt wegwerfen:** eine entartete
+  Quote bleibt mit ihrem Rohwert in der Datei und traegt `konstant: true`; die Anzeige
+  schreibt „nicht unterscheidend" statt einer Prozentzahl.
+
+  **Offen aus demselben Scan (2026-09-01, nicht behoben):** der Unterlagen-Block
+  (`has_documents`, `documents_paid`, `documents_source`, `documents_languages`) ist fuer
+  die SCHWEIZ gebaut und fuer DE/AT nie verdrahtet — 90.969 DE-Leads stehen auf
+  `has_documents=False`, obwohl unter `data/docs/DE` ein grosser Bestand liegt. Dieselbe
+  Krankheit mit umgekehrtem Vorzeichen: statt „alles erfuellt" behauptet die Datei „nichts
+  vorhanden". Dazu `consortium_allowed`/`subcontracting_allowed` mit nur-positivem
+  Vokabular (CH 397 bzw. 536 mal `1`, nie `0`, DE/AT leer).
 - **Kein Datenverlust** — nichts nach eigener Relevanz filtern; Unbekanntes →
   „sonstiges"/`attributes`, Zweifelsfälle → `review`-Queue. Erschlossenes trägt Konfidenz.
 - Details + Warum: `docs/entscheidungen-und-kontext.md`.

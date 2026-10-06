@@ -136,9 +136,36 @@ const RECHTLICHES = ["/impressum", "/datenschutz"];
 /** Alles, was die Sperre passieren muss. */
 const DURCH_DIE_SPERRE = [...GROUNDING, ...RECHTLICHES];
 
+/**
+ * ⚠ `/api/ereignis` MUSS HIER STEHEN, sonst misst die Telemetrie (0035) nichts.
+ *
+ * Gemessen am 2026-10-02: ohne diesen Eintrag antwortet die Route mit 401 — und zwar auch im
+ * Entwicklungsmodus, die Anmeldepflicht greift unabhaengig von der Coming-Soon-Sperre. Das
+ * trifft genau den Fall, um den es geht: ANONYMER Verkehr auf den oeffentlichen Seiten. Wer
+ * nicht angemeldet ist, kann sonst kein einziges Ereignis senden, und die Trichterzahlen
+ * beginnen erst hinter der Anmeldung — also dort, wo niemand mehr abspringt.
+ *
+ * Der Ausfall waere LAUTLOS gewesen: der Browser verwirft die 401 stillschweigend
+ * (fail-open, s. lib/telemetrie.ts), die Oberflaeche funktioniert weiter, und die leere
+ * Tabelle ist von „niemand klickt" nicht zu unterscheiden.
+ *
+ * Die Route ist trotzdem kein offenes Tor: sie nimmt nur POST, kennt eine Liste erlaubter
+ * Ereignisnamen, traegt eine Ratenbremse, und `anon` hat auf die Tabelle selbst kein Recht
+ * (s. 0035). Die Nutzerkennung kommt aus der Sitzung, nie aus der Anfrage.
+ *
+ * ⚠ EINE BLACKOUT-AUSNAHME BRAUCHT SIE BEWUSST NICHT — anders als `robots.txt`, der
+ * Gesundheitsprobe und dem Kalender-Feed weiter unten. Waehrend der Coming-Soon-Sperre
+ * bekommt jeder Besucher die schwarze Seite; die erreicht weder die Ausschreibungs-Route
+ * (also keine serverseitige Erfassung) noch laedt sie das Wurzel-Layout (also keinen
+ * Telemetrie-Provider). Es entstehen dort gar keine Ereignisse, und eine Ausnahme wuerde
+ * nur ein Tor oeffnen, durch das nichts geht. Mit `LAUNCH_LIVE=1` faellt BLACKOUT ohnehin
+ * ganz weg. ⓘ Eine Ausnahme gilt: wer mit `?preview=` hereinkommt, sieht die echte App und
+ * erzeugt echte Ereignisse. Das sind wir selbst — beim Auswerten der ersten Wochen also
+ * daran denken, dass eigene Besuche mitzaehlen.
+ */
 const OFFEN = [...DURCH_DIE_SPERRE, "/login", "/auth", "/api/health", "/onboarding", "/start", "/t", "/api/wer", "/api/entity-verify", "/api/impressum", "/api/entity-search",
                      "/api/entity-group", "/api/outreach-firma", "/api/calendar",
-                     "/ausschreibung", "/api/ausschreibung",
+                     "/ausschreibung", "/api/ausschreibung", "/api/ereignis",
                      "/robots.txt", "/sitemap.xml", "/api/alerts/run"];
 
 function istOffen(pfad: string): boolean {

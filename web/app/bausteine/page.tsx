@@ -1,6 +1,7 @@
 "use client";
 
 import { BausteinLibrary } from "@/components/explorer/BausteinLibrary";
+import { Antwortvorschlaege } from "@/components/explorer/Antwortvorschlaege";
 import { useState } from "react";
 import { AppRail, AppTop } from "@/components/explorer/Rail";
 import { BausteineLeiste } from "@/components/explorer/BausteineLeiste";
@@ -30,6 +31,16 @@ export default function BausteinePage() {
         <div className="main seitenmain baust-page">
           <BausteinLibrary importOpen={importOpen} onImport={setImportOpen}
             theme={theme} onTheme={setTheme} onThemen={setThemen} />
+          {/* Die Bibliothek ist der Vorrat, dies ist seine Verwendung. Bewusst UNTER der
+              Bibliothek: die Themenleiste oben filtert sie, und ein Eingabefeld dazwischen
+              wuerde diesen Zusammenhang zerschneiden. */}
+          <hr className="antw-trenner" />
+          {/* Der Weg zur zweiten Verwendung der Bibliothek. Kein Eintrag in der Hauptnavigation,
+              solange `Rail.tsx` und die i18n-Dateien von drei Zweigen bearbeitet werden. */}
+          <p className="antw-hilfe">
+            <a className="dok-klein" href="/dokumente">Dokument aus Bausteinen bauen</a>
+          </p>
+          <Antwortvorschlaege />
         </div>
       </div>
     </div>

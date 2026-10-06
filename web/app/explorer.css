@@ -22,6 +22,10 @@ input:focus-visible,.tsearch:focus-within{outline:none}
 .val[data-src="unbekannt"]::before{display:none}
 .val[data-src="na"]{color:var(--ink-400);font-style:italic}
 .val[data-src="na"]::before{display:none}
+/* Kennzahl ohne Streuung ueber ein ganzes Land: sichtbar, aber nicht als Messwert lesbar. */
+.val[data-src="konstant"]{color:var(--ink-400);font-style:italic}
+.val[data-src="konstant"]::before{background:var(--flag)}
+.val[data-src="konstant"] .q-n{font-style:normal;opacity:.7}
 .num{font-family:var(--mono);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
 
 /* Band-Meter */
@@ -3169,3 +3173,113 @@ td.c-doks{width:84px;text-align:center}
    Zusatzklick sehen, worauf sie sich stützt. */
 .beob-beleg{margin-top:4px;font-size:var(--t-meta);color:var(--ink-400);line-height:1.45}
 .beob-offen-grund{margin-top:var(--s2);font-size:var(--t-sm);color:var(--ink-400);font-style:italic}
+
+/* ── Antwortvorschlaege (Funktion 1 Go-live) ─────────────────────────────────────────────────
+   ⚠ `unbelegt` MUSS anders aussehen als `fertig`. Ein Entwurf, dessen Beleg nicht haelt, ist
+   gefaehrlicher als keiner, weil er sich fertig anfuehlt. Deshalb Signalfarbe und keine
+   Uebernahme. Wer hier die Farben vereinheitlicht, nimmt der Ansicht ihren Zweck. */
+.antw{display:flex;flex-direction:column;gap:var(--s3,12px);max-width:860px}
+.antw-titel{font-size:var(--t-lg,16px);font-weight:600;color:var(--ink-900,#111827);margin:0}
+.antw-hilfe{font-size:var(--t-sm,13px);color:var(--ink-500,#6b7280);margin:0}
+.antw-eingabe{width:100%;padding:var(--s3,12px);border:1px solid var(--line,#e5e7eb);border-radius:var(--r,8px);font-family:inherit;font-size:var(--t-sm,13px);line-height:1.5;resize:vertical}
+.antw-eingabe:disabled{background:var(--surface,#f9fafb);color:var(--ink-400,#9ca3af)}
+.antw-leiste{display:flex;align-items:center;gap:var(--s3,12px);flex-wrap:wrap}
+.antw-knopf{padding:8px 16px;border:1px solid var(--ink-900,#111827);border-radius:var(--r,8px);background:var(--ink-900,#111827);color:#fff;font-size:var(--t-sm,13px);font-weight:600;cursor:pointer}
+.antw-knopf:disabled{background:var(--ink-400,#9ca3af);border-color:var(--ink-400,#9ca3af);cursor:default}
+.antw-lauf{font-size:var(--t-meta,12px);color:var(--ink-500,#6b7280)}
+.antw-fehler{font-size:var(--t-meta,12px);color:var(--signal-ink,#b45309)}
+.antw-ergebnis{display:flex;flex-direction:column;gap:var(--s3,12px);margin-top:var(--s3,12px)}
+.antw-summe{font-size:var(--t-sm,13px);color:var(--ink-700,#374151);margin:0}
+.antw-hinweis{font-size:var(--t-sm,13px);color:var(--ink-500,#6b7280);margin:0}
+
+/* Uebergang aus den Antwortvorschlaegen in ein Dokument (Phase 3). Abgesetzt, damit er nicht
+   wie eine weitere Antwortkarte aussieht: er ist eine Handlung, kein Inhalt. */
+.antw-uebernahme{display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+  padding:12px 14px;border:1px solid var(--line,#e5e7eb);border-radius:10px;
+  background:var(--bg-50,#f9fafb)}
+.antw-uebernahme .antw-knopf{text-decoration:none}
+.antw-uebernahme-ok{font-size:var(--t-sm,13px);font-weight:600;color:var(--ok-700,#15803d)}
+.antw-abschnitt{font-size:var(--t-sm,13px);font-weight:600;color:var(--ink-900,#111827);margin:var(--s3,12px) 0 0}
+.antw-karte{border:1px solid var(--line,#e5e7eb);border-radius:var(--r,8px);padding:var(--s3,12px);display:flex;flex-direction:column;gap:8px}
+.antw-unbelegt{border-color:var(--signal,#f59e0b);background:var(--signal-bg,#fffbeb)}
+.antw-kopf{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--s3,12px)}
+.antw-frage{font-size:var(--t-sm,13px);font-weight:600;color:var(--ink-900,#111827)}
+.antw-marke{font-size:11px;padding:2px 8px;border-radius:100px;white-space:nowrap;border:1px solid var(--line,#e5e7eb);color:var(--ink-500,#6b7280)}
+.antw-marke-fertig{border-color:var(--ink-400,#9ca3af);color:var(--ink-700,#374151)}
+.antw-marke-unbelegt{border-color:var(--signal,#f59e0b);color:var(--signal-ink,#b45309);background:#fff;font-weight:600}
+.antw-antwort{font-size:var(--t-sm,13px);line-height:1.6;color:var(--ink-700,#374151);margin:0;white-space:pre-wrap}
+.antw-belege{font-size:var(--t-meta,12px);color:var(--ink-500,#6b7280)}
+.antw-belege summary{cursor:pointer}
+.antw-belege ul{margin:6px 0 0;padding-left:18px}
+.antw-belege code{font-family:var(--mono,monospace);font-size:11px}
+.antw-maengel{margin:0;padding-left:18px;font-size:var(--t-meta,12px);color:var(--signal-ink,#b45309)}
+.antw-offen{margin:0;padding-left:18px;font-size:var(--t-sm,13px);color:var(--ink-500,#6b7280)}
+.antw-kopieren{align-self:flex-start;padding:4px 12px;border:1px solid var(--line,#e5e7eb);border-radius:var(--r,8px);background:#fff;font-size:var(--t-meta,12px);color:var(--ink-700,#374151);cursor:pointer}
+.antw-trenner{border:0;border-top:1px solid var(--line,#e5e7eb);margin:var(--s4,16px) 0}
+.antw-datei{display:flex;align-items:flex-start;gap:var(--s3,12px);flex-wrap:wrap}
+.antw-dateiknopf{padding:6px 14px;border:1px solid var(--ink-400,#9ca3af);border-radius:var(--r,8px);background:#fff;font-size:var(--t-sm,13px);color:var(--ink-900,#111827);cursor:pointer;white-space:nowrap}
+.antw-dateiknopf:hover{border-color:var(--ink-900,#111827)}
+.antw-dateiknopf.antw-aus{color:var(--ink-400,#9ca3af);border-color:var(--line,#e5e7eb);cursor:default}
+.antw-dateihilfe{font-size:var(--t-meta,12px);color:var(--ink-500,#6b7280);max-width:52ch;line-height:1.45}
+
+/* ── Dokument aus Bausteinen (Phase 1) ───────────────────────────────────────────────────────
+   ⚠ Ein Teil mit fehlender Quelle (`.dok-kaputt`) MUSS sich abheben. Ein stillschweigend
+   leerer Absatz liesse das Dokument vollstaendig aussehen, obwohl es das nicht ist. */
+.dok{display:flex;flex-direction:column;gap:var(--s3,12px)}
+.dok-kopf{display:flex;flex-direction:column;gap:8px}
+.dok-titel{font-size:var(--t-lg,16px);font-weight:600;color:var(--ink-900,#111827);margin:0}
+.dok-leiste{display:flex;align-items:center;gap:var(--s3,12px);flex-wrap:wrap}
+.dok-wahl{padding:6px 10px;border:1px solid var(--line,#e5e7eb);border-radius:var(--r,8px);font-size:var(--t-sm,13px);background:#fff;max-width:320px}
+.dok-knopf{padding:6px 14px;border:1px solid var(--ink-900,#111827);border-radius:var(--r,8px);background:var(--ink-900,#111827);color:#fff;font-size:var(--t-sm,13px);font-weight:600;cursor:pointer}
+.dok-knopf:disabled{background:var(--ink-400,#9ca3af);border-color:var(--ink-400,#9ca3af);cursor:default}
+.dok-klein{padding:5px 12px;border:1px solid var(--line,#e5e7eb);border-radius:var(--r,8px);background:#fff;font-size:var(--t-meta,12px);color:var(--ink-700,#374151);cursor:pointer}
+.dok-klein:hover{border-color:var(--ink-400,#9ca3af)}
+.dok-weg{color:var(--signal-ink,#b45309)}
+.dok-schmutzig{font-size:var(--t-meta,12px);color:var(--signal-ink,#b45309);font-weight:600}
+.dok-fehler{font-size:var(--t-meta,12px);color:var(--signal-ink,#b45309)}
+.dok-hinweis,.dok-hilfe,.dok-leer{font-size:var(--t-sm,13px);color:var(--ink-500,#6b7280);margin:0}
+.dok-leer{padding:var(--s3,12px);border:1px dashed var(--line,#e5e7eb);border-radius:var(--r,8px)}
+.dok-name{width:100%;max-width:640px;padding:8px 12px;border:1px solid var(--line,#e5e7eb);border-radius:var(--r,8px);font-size:var(--t-lg,16px);font-weight:600;color:var(--ink-900,#111827)}
+.dok-spalten{display:grid;grid-template-columns:minmax(260px,1fr) minmax(320px,1.4fr);gap:var(--s4,16px);align-items:start}
+@media (max-width:900px){.dok-spalten{grid-template-columns:1fr}}
+.dok-vorrat,.dok-ziel{display:flex;flex-direction:column;gap:8px;min-width:0}
+.dok-unter{font-size:var(--t-sm,13px);font-weight:600;color:var(--ink-900,#111827);margin:0}
+.dok-themen{display:flex;flex-wrap:wrap;gap:6px}
+.dok-thema{padding:3px 10px;border:1px solid var(--line,#e5e7eb);border-radius:100px;background:#fff;font-size:11px;color:var(--ink-500,#6b7280);cursor:pointer}
+.dok-thema.dok-an{border-color:var(--ink-900,#111827);color:var(--ink-900,#111827);font-weight:600}
+.dok-baustein{border:1px solid var(--line,#e5e7eb);border-radius:var(--r,8px);padding:10px;display:flex;flex-direction:column;gap:6px}
+.dok-marke{font-size:11px;color:var(--ink-500,#6b7280)}
+.dok-auszug{font-size:var(--t-meta,12px);line-height:1.5;color:var(--ink-700,#374151);margin:0}
+.dok-uebernehmen{align-self:flex-start;padding:3px 10px;border:1px solid var(--ink-400,#9ca3af);border-radius:var(--r,8px);background:#fff;font-size:11px;cursor:pointer}
+.dok-werkzeuge{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.dok-teil{border:1px solid var(--line,#e5e7eb);border-radius:var(--r,8px);padding:10px;display:flex;flex-direction:column;gap:6px}
+.dok-ueberschrift{background:var(--surface,#f9fafb)}
+.dok-kaputt{border-color:var(--signal,#f59e0b);background:var(--signal-bg,#fffbeb)}
+.dok-teilkopf{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.dok-art{font-size:11px;color:var(--ink-500,#6b7280);font-weight:600}
+.dok-knoepfe{display:flex;gap:4px}
+.dok-knoepfe button{padding:2px 8px;border:1px solid var(--line,#e5e7eb);border-radius:6px;background:#fff;font-size:11px;color:var(--ink-700,#374151);cursor:pointer}
+.dok-knoepfe button:disabled{color:var(--ink-400,#9ca3af);cursor:default}
+.dok-inhalt{font-size:var(--t-sm,13px);line-height:1.6;color:var(--ink-700,#374151);margin:0;white-space:pre-wrap}
+.dok-warnung{font-size:var(--t-meta,12px);color:var(--signal-ink,#b45309);margin:0;font-weight:600}
+.dok-eingabe{width:100%;padding:8px;border:1px solid var(--line,#e5e7eb);border-radius:var(--r,8px);font-family:inherit;font-size:var(--t-sm,13px);line-height:1.5;resize:vertical}
+.dok-sperre{font-size:var(--t-meta,12px);color:var(--signal-ink,#b45309);background:var(--signal-bg,#fffbeb);border:1px solid var(--signal,#f59e0b);border-radius:var(--r,8px);padding:8px 10px;margin:0}
+.dok-nurdruck{display:none}
+
+/* ── Druck: nur das Dokument, ohne Bedienung ─────────────────────────────────────────────────
+   Die Umkehr ueber `visibility` statt ueber `display` haengt NICHT an den Klassennamen der
+   uebrigen App: die Leiste, die Kopfzeile und die Bibliothek koennen umbenannt werden, ohne
+   dass der Ausdruck kaputtgeht. Mit einer Liste zu versteckender Klassen waere das anders. */
+@media print {
+  body * { visibility: hidden; }
+  .dok-ziel, .dok-ziel * { visibility: visible; }
+  .dok-ziel { position: absolute; left: 0; top: 0; width: 100%; }
+  .dok-unter, .dok-werkzeuge, .dok-knoepfe, .dok-teilkopf, .dok-sperre,
+  .dok-eingabe, .dok-leer { display: none !important; }
+  .dok-nurdruck { display: block; }
+  .dok-teil { border: 0; padding: 0; margin: 0 0 10pt; break-inside: avoid; }
+  .dok-inhalt, .dok-nurdruck { font-size: 11pt; line-height: 1.5; color: #000; margin: 0 0 8pt; }
+  .dok-drucktitel { font-size: 20pt; font-weight: 700; margin: 0 0 16pt; color: #000; }
+  .dok-druckueber { font-size: 14pt; font-weight: 700; margin: 14pt 0 6pt; color: #000;
+                    break-after: avoid; }
+}

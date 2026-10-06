@@ -2579,5 +2579,7 @@
   "✓ Beobachtet": "✓ Suivie",
   "✓ angesprochen": "✓ contactée",
   "🇦🇹 nur Österreich": "🇦🇹 Autriche uniquement",
-  "🇨🇭 nur Schweiz": "🇨🇭 Suisse uniquement"
+  "🇨🇭 nur Schweiz": "🇨🇭 Suisse uniquement",
+  "nicht unterscheidend": "non discriminant",
+  "Nicht unterscheidend · alle ausgewerteten Vergabestellen dieses Landes tragen denselben Wert ({pct} % aus {n} Vergaben). Das Merkmal trennt hier nichts und ist als Marktaussage nicht belastbar.": "Non discriminant · tous les pouvoirs adjudicateurs évalués de ce pays portent la même valeur ({pct} % sur {n} attributions). Le critère ne distingue rien ici — non fiable en tant qu'indication de marché."
 }

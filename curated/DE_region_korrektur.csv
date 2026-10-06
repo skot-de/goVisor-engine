@@ -1,7 +1,6 @@
 buyer_name,plz,region_alt,region_neu,beleg,stand
 AOK PLUS - Die Gesundheitskasse für Sachsen und Thüringen,99084,DED,DEG,Anschrift Erfurt; die Kasse selbst nennt in 899 Saetzen DEG und nur in 145 DED,2026-09-02
 ProVitako Marketing- und Dienstleistungsgesellschaft der Kommunalen IT-Dienstleister eG,10117,DE2,DE3,Anschrift Berlin-Mitte; eigene Angabe 164x DE3 gegen 54x DE2,2026-09-02
-Knappschaftsklinikum Saar GmbH / Klinik Sulzbach,66280,DE2,DEC,66280 Sulzbach/Saar; eigene Angabe 15x DEC gegen 7x DE2,2026-09-02
 BäderBetriebe Frankfurt GmbH,60329,DE4,DE7,60329 Frankfurt am Main; eigene Angabe 166x DE7 gegen 19x DE4,2026-09-02
 Retzow Immobilien GmbH & Co. KG,17248,DE4,DE8,"17248 Rechlin/Laerz, Mecklenburgische Seenplatte; eigene Angabe 46x DE8 gegen 10x DE4",2026-09-02
 Pleißental-Klinik Werdau,08412,DEG,DED,"Werdau liegt im Landkreis Zwickau; Name und PLZ sagen DED, das NUTS-Feld steht durchgaengig falsch",2026-09-02
