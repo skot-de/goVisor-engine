@@ -322,10 +322,17 @@ def spur_symbole(zeige_offen: bool = False) -> list[str]:
                 name = teil.split(" as ")[-1].strip()
                 if name and name.isidentifier():
                     namen.add(name)
+        # ⚠ **DER `export {…}`-BLOCK DARF NICHT ALS BENUTZUNG ZAEHLEN.** Gemessener
+        # Fehlschlag am 2026-10-06, beim kritischen Nachgehen gefunden: `NETZ_FREI_MAX` steht
+        # in `explorerCore.js` genau zweimal — Definition (:1176) und Ausfuhrliste (:3869) —
+        # und galt damit als „intern gerufen". So fielen SECHS tote Prototyp-Reste des
+        # groessten Moduls (3.899 Z) stillschweigend aus dem Bericht. Ein Fund, der nicht
+        # erscheint, ist schlimmer als einer, der falsch ist: niemand sucht nach ihm.
+        ohne_ausfuhr = _EXPORT_BLOCK.sub("", q)
         for name in sorted(namen):
             if name in benutzt:
                 continue
-            if len(re.findall(rf"\b{re.escape(name)}\b", q)) > 1:
+            if len(re.findall(rf"\b{re.escape(name)}\b", ohne_ausfuhr)) > 1:
                 continue                      # intern gerufen — kein Loeschkandidat
             if re.search(rf"\b{re.escape(name)}\b", fremd):
                 if zeige_offen:

@@ -38,30 +38,60 @@ L = _laden()
 
 
 # ── vorwaerts: die belegten Funde muessen auftauchen ──────────────────────────────────
-@pytest.mark.parametrize("spur,nadel", [
-    ("komponenten", "components/Band.tsx"),
-    ("wege", "/authority"),
-    ("symbole", "hatDichte"),
-    ("dienste", "antwort_arbeiter.py"),
+# ⚠ **ERSTER ENTWURF NAGELTE DEN STAND VON HEUTE FEST — und bestrafte damit das Beheben.**
+# Er verlangte, dass Spur 1 `Band.tsx` meldet. Loescht jemand `Band.tsx`, also GENAU das, was
+# der Bericht empfiehlt, wird der Test rot und sagt „Spur meldet Band.tsx nicht mehr" — das
+# liest sich wie ein Defekt der Sonde. Derselbe Fehler ist in dieser Sitzung schon zweimal
+# passiert (ein festgenagelter Zweigname, ein festgenagelter Pfad).
+#
+# Richtig ist eine Pruefung auf STIMMIGKEIT: solange die Ursache da ist, muss der Fund
+# erscheinen; ist die Ursache weg, ist Schweigen die richtige Antwort und der Fall wird
+# uebersprungen. Der Test haelt damit die Sonde ehrlich, ohne den Bestand einzufrieren.
+@pytest.mark.parametrize("spur,nadel,ursache", [
+    ("komponenten", "components/Band.tsx", ROOT / "web/components/Band.tsx"),
+    ("wege", "/authority", ROOT / "web/app/authority/page.tsx"),
+    ("symbole", "hatDichte", ROOT / "web/lib/docAnalysis.ts"),
+    ("dienste", "antwort_arbeiter.py", ROOT / "scripts/antwort_arbeiter.py"),
 ])
-def test_belegter_fund_wird_gemeldet(spur, nadel):
+def test_belegter_fund_wird_gemeldet(spur, nadel, ursache):
     """Jeder dieser vier Funde ist am 2026-10-06 von Hand nachgemessen worden.
 
     `antwort_arbeiter.py` zum Beispiel: kein Prozess (`pgrep`), kein Dienst (vier sind
     eingetragen), und kein anderer Abnehmer der Tabelle `user_antwortauftrag` im Repo —
     waehrend die Oberflaeche Auftraege ablegt und auf Ergebnisse wartet.
     """
+    if not ursache.exists():
+        pytest.skip(f"{ursache.name} ist weg — Fund behoben, Schweigen ist richtig")
     _, fn = L.SPUREN[spur]
     treffer = fn(False)
     assert any(nadel in z for z in treffer), \
-        f"Spur {spur} meldet {nadel} nicht mehr:\n  " + "\n  ".join(treffer)
+        f"Spur {spur} meldet {nadel} nicht mehr, obwohl {ursache.name} noch da ist:\n  " \
+        + "\n  ".join(treffer)
 
 
 def test_geparkte_ausnahme_wird_gemeldet():
-    """Zwei Ausnahmen stehen seit dem 2026-08-25 — die Spur muss ihr Alter nennen."""
+    """Steht eine Ausnahme ueber der Grenze, muss die Spur ihr Alter nennen.
+
+    ⚠ Nicht „die zwei vom 2026-08-25" festnageln: werden sie behoben, soll der Test
+    schweigen und nicht rot werden. Geprueft wird die Mechanik — gibt es im Quelltext einen
+    `offen seit`-Vermerk, der aelter als die Grenze ist, muss er auftauchen.
+    """
+    import datetime as dt
+    import re as _re
+    heute = dt.date.today()
+    alt = []
+    for p in (ROOT / "scripts").glob("pruefe_*.py"):
+        roh = L._ohne_prosa(p, p.read_text(encoding="utf-8", errors="replace"))
+        for m in _re.finditer(r"offen seit (\d{4})-(\d{2})-(\d{2})", roh):
+            tage = (heute - dt.date(*map(int, m.groups()))).days
+            if tage > L.AUSNAHME_TAGE:
+                alt.append(p.name)
+    if not alt:
+        pytest.skip("keine Ausnahme ueber der Grenze — nichts zu melden")
     treffer = L.spur_ausnahmen()
-    assert any("pruefe_verdrahtung.py" in z and "parkt seit" in z for z in treffer), \
-        "Die 42-Tage-Ausnahmen werden nicht mehr gemeldet:\n  " + "\n  ".join(treffer)
+    for name in set(alt):
+        assert any(name in z and "parkt seit" in z for z in treffer), \
+            f"{name} parkt zu lange, wird aber nicht gemeldet:\n  " + "\n  ".join(treffer)
 
 
 # ── rueckwaerts: ist die Ursache weg, muss die Spur schweigen ─────────────────────────

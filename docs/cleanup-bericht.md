@@ -10,7 +10,36 @@ Jede Zeile unten ist eine Vorlage zur Entscheidung, keine ausgefuehrte Aenderung
 **Warum es diesen Bericht gibt:** „gebaut, aber nicht verdrahtet" ist laut `CLAUDE.md` die
 haeufigste Fehlerklasse des Projekts. Dagegen stehen 15 Sonden — die aber Komponenten, Seiten,
 Routen, einzelne Symbole, `app/` und nicht eingetragene Dauerdienste **nicht** sehen. Genau
-diese Luecke messt `pruefe_leichen.py` mit fuenf neuen Spuren: **22 Befunde.**
+diese Luecke messt `pruefe_leichen.py` mit fuenf neuen Spuren: **28 Befunde.**
+
+---
+
+## ⚠ Wie belegt ist welche Aussage? Drei Stufen
+
+Dieses Papier mischt sonst dreierlei, und das ist der Fehler, den die Vertriebsunterlagen am
+2026-10-05 teuer gelehrt haben: eine Zahl, die man nachrechnen kann, liest sich genauso wie
+eine, die jemand behauptet hat. Deshalb hier ausdruecklich:
+
+| Stufe | heisst | gilt fuer |
+|---|---|---|
+| **⭘ nachrechenbar** | `python3 scripts/pruefe_leichen.py` erzeugt es jedes Mal neu | alle **28 Befunde** der fuenf Spuren, dazu die Zweiglage, die Ausnahme-Alter und die Groessen unter `web/data` |
+| **◐ von Hand nachgemessen** | ich habe es selbst gegen das laufende System geprueft | die Arbeiter-Kette (`pgrep`, launchd, kein Abnehmer der Tabelle), der plist-Unterschied, `web/data` = 5,2 GB, die 51 Dateien Unterschied zu `web/grounding-page` |
+| **○ aus einer Erkundung, von mir NICHT nachgeprueft** | eine Hilfs-Sitzung hat es gemeldet; es steht hier, weil es wichtig ist, aber es ist kein Beleg | **alles im Abschnitt „`govisor/` + `scripts/`" ausser den Spur-Befunden**, also: „alle 50 `build_*` verdrahtet", die 8 vergessenen Daueraufrufe, die 4 Sonden in keiner Liste, die 5 CLI-Unterbefehle, die 24 Skripte mit festem `gold/DE`, dass die Spalten der drei Streamlit-Apps stimmen. Dazu im Frontend-Teil: die 8 Merkmalsschalter, die fehlende Blackout-Ausnahme, die sieben nicht dokumentierten Schalter, die Aussage von `feature-inventory-vergabestelle.md`. |
+
+⚠ **Warum das keine Formsache ist:** von 11 Symbol-Funden derselben Erkundung waren beim
+Nachpruefen **zwei falsch** (`betragCents` laeuft als Namensraum-Import, `loadClaim` wird
+dynamisch geholt) — 18 %. Wer die ○-Zeilen als Arbeitsauftrag nimmt, prueft sie vorher nach.
+
+### Was die Spuren NICHT finden (bekannte Blindstellen)
+
+- **CSS-Module ohne Komponente** — Spur 1 liest nur `.ts/.tsx/.js/.mjs`. Die zwei unten
+  genannten Dateien stehen hier aus der Erkundung (○), nicht aus dem Generator.
+- **Aufrufer, die nur Test- oder Pruefskripte sind** — `api/org/zuordnung` wird von
+  `web/scripts/test_zuordnung.mjs` gerufen und gilt der Spur deshalb als lebendig. Fuer ein
+  Produktmerkmal ist das kein Aufrufer. Noch nicht getrennt.
+- **7 von 84 Modulen in `web/lib` sind auf Symbolebene unterdrueckt**, weil sie irgendwo als
+  Namensraum geholt werden. Dort kann ein toter Export unentdeckt bleiben — bewusste
+  Entscheidung gegen Fehlalarme, aber eine Luecke.
 
 ---
 
@@ -83,7 +112,7 @@ Dazu zwei **CSS-Module ohne jede Komponente**: `SiteHeader.module.css` und
 absichtlich, im Dateikopf begruendet (Datenschutzseite fehlt), `tests/test_telemetrie.py:241`
 haelt die Bedingung. So sieht ein richtig gekennzeichneter ruhender Baustein aus.
 
-### Exporte ohne Benutzer (9, Symbolebene)
+### Exporte ohne Benutzer (15, Symbolebene)
 
 `docAnalysis.ts → analyseIndex` (duenner Mantel um `analyseIndexMitGrund()`, das die Route
 direkt nimmt) · `docAnalysis.ts → hatDichte` · `frageSuche.ts → BEISPIELFRAGEN` ·
@@ -91,6 +120,17 @@ direkt nimmt) · `docAnalysis.ts → hatDichte` · `frageSuche.ts → BEISPIELFR
 ruft) · `supabase/buyerWatch.ts → loadBuyerWatch` · `supabase/declarations.ts →
 removeDeclaration` · `supabase/leadStatus.ts → WfStatus` · `supabase/unternehmen.ts →
 loadStammdaten`.
+
+Dazu **sechs Prototyp-Reste im groessten Modul**, `explorerCore.js` (3.899 Z): `hasToken`,
+`toggleToken`, `NETZ_FREI_MAX`, `REGIONS`, `getState`, `getProfile`.
+
+⛔ **Diese sechs fehlten in der ersten Fassung dieses Berichts, und der Grund ist ein Fehler
+der Spur gewesen:** sie zaehlte die Ausfuhrliste `export {…}` als interne Benutzung. Ein Name,
+der genau zweimal vorkommt — Definition und Ausfuhr — galt damit als „intern gerufen".
+`NETZ_FREI_MAX` steht in Zeile 1176 und 3869, und das war die ganze Begruendung fuer sein
+Verschwinden. **Ein Fund, der nicht erscheint, ist schlimmer als einer, der falsch ist:
+niemand sucht nach ihm.** Gefunden beim kritischen Durchgehen am selben Tag, nicht durch eine
+Pruefung — auch das gehoert dazu.
 
 Bei `buyerWatch` und `claims` ist das Muster auffaellig: die **schreibende** Haelfte wird
 dynamisch geladen, die **lesende** nie. **Empfehlung:** einzeln pruefen, ob die Lesefunktion
@@ -186,6 +226,8 @@ haette:
 | `.next` mitgelesen | das Build-Erzeugnis listet JEDE Route → Spur 2 fand **nie** etwas. Der teuerste Fehler ist der, der nie anschlaegt. |
 | Anfuehrungszeichen davor verlangt | `/auth/passwort` galt als tot, wird aber per `?next=/auth/passwort` erreicht — **loeschen haette das Passwort-Zuruecksetzen getoetet** |
 | Namensraum-Import | `preise.ts → betragCents` galt als tot, laeuft als `P.betragCents` aus `await import(…)` |
+| Ausfuhrliste als Benutzung | `export {…}` liess **sechs** tote Exporte von `explorerCore.js` verschwinden — gefunden erst beim kritischen Nachgehen |
+| Test nagelte den Stand fest | der Selbsttest verlangte, dass `Band.tsx` gemeldet wird — wer dem Bericht folgt und es loescht, haette einen roten Test geerbt, der nach einem Sondendefekt aussieht. Jetzt prueft er auf **Stimmigkeit**: ist die Ursache weg, wird uebersprungen. |
 
 ⚠ Und eine Verschaerfung, die FALSCH gewesen waere: „Schleife + `sleep` = Dienst". Gemessen hat
 `miss_eu_groesse.py` fuenf `sleep`-Aufrufe (Ratenbremse einer Blaetterschleife), der echte
