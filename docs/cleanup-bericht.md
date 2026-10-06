@@ -24,11 +24,31 @@ eine, die jemand behauptet hat. Deshalb hier ausdruecklich:
 |---|---|---|
 | **⭘ nachrechenbar** | `python3 scripts/pruefe_leichen.py` erzeugt es jedes Mal neu | alle **32 Befunde** der fuenf Spuren, dazu die Zweiglage, die Ausnahme-Alter und die Groessen unter `web/data` |
 | **◐ von Hand nachgemessen** | ich habe es selbst gegen das laufende System geprueft | die Arbeiter-Kette (`pgrep`, launchd, kein Abnehmer der Tabelle), der plist-Unterschied, `web/data` = 5,2 GB, die 51 Dateien Unterschied zu `web/grounding-page` |
-| **○ aus einer Erkundung, von mir NICHT nachgeprueft** | eine Hilfs-Sitzung hat es gemeldet; es steht hier, weil es wichtig ist, aber es ist kein Beleg | **alles im Abschnitt „`govisor/` + `scripts/`" ausser den Spur-Befunden**, also: „alle 50 `build_*` verdrahtet", die 8 vergessenen Daueraufrufe, die 4 Sonden in keiner Liste, die 5 CLI-Unterbefehle, die 24 Skripte mit festem `gold/DE`, dass die Spalten der drei Streamlit-Apps stimmen. Dazu im Frontend-Teil: die 8 Merkmalsschalter, die fehlende Blackout-Ausnahme, die sieben nicht dokumentierten Schalter, die Aussage von `feature-inventory-vergabestelle.md`. |
+| **○ aus einer Erkundung, von mir NICHT nachgeprueft** | eine Hilfs-Sitzung hat es gemeldet; es steht hier, weil es wichtig ist, aber es ist kein Beleg | **leer — am 2026-10-06 alle nachgeprueft, s. u.** |
 
-⚠ **Warum das keine Formsache ist:** von 11 Symbol-Funden derselben Erkundung waren beim
-Nachpruefen **zwei falsch** (`betragCents` laeuft als Namensraum-Import, `loadClaim` wird
-dynamisch geholt) — 18 %. Wer die ○-Zeilen als Arbeitsauftrag nimmt, prueft sie vorher nach.
+### ✅ Die ○-Zeilen sind nachgeprueft (2026-10-06) — ein Drittel musste korrigiert werden
+
+Jede Aussage einzeln gegen den Bestand gemessen. **Sieben bestaetigt, zwei mit falscher Zahl,
+eine widerlegt, eine falsch eingeordnet.**
+
+| Aussage | Urteil |
+|---|---|
+| 4 Sonden stehen in keiner der zwei Aufruflisten | ◐ **bestaetigt**, beide Listen zaehlen 0 fuer alle vier. Dazu zwei weitere ausserhalb, die ihre Abwesenheit begruenden (`pruefe_waechter`, `pruefe_leichen`). |
+| 5 CLI-Unterbefehle ruft niemand automatisch | ◐ **bestaetigt** — und zwar strenger als gedacht: die Vorkommen von `cli ingest`, `cli silver` und `cli verify` stehen **ausschliesslich in Kommentaren und Empfehlungstexten**, kein einziger ist ein Aufruf. |
+| „24 Skripte mit festem `gold/DE`, die Sonde 3 nie sieht" | ✗ **Zahl falsch.** Gemessen am Sondenmass `_de_feste_pfade`: **37 DE-feste Skripte, davon 30 fuer Sonde 3 unsichtbar** (sie baut ihre Pruefmenge nur aus den 93 Namen, die Tageslauf und die zwei Arbeiter nennen). Und `app/dashboard.py` ist entgegen der Angabe ebenfalls DE-fest. ⚠ „Unsichtbar" heisst nicht „defekt": `fetch_destatis*` und `impressum_guete` sind zu Recht deutsch. |
+| „alle 50 `build_*` verdrahtet" | ◐ **bestaetigt, Zahl falsch: es sind 49.** Null unverdrahtet, null nur im Test. Die drei nur in `cli.py` (`build_bronze_inventory`, `build_doe_buyer_profile`, `build_doe_demand`) stimmen genau. |
+| 8 Skripte ohne Starter | ◐ **bestaetigt** (kein Shell-Skript, keine plist, kein launchd-Agent) — ⚠ **aber `zielliste.py` ist falsch eingeordnet.** Es ist eine **lebende Bibliothek** in `firmen_suche.py` UND `export_outreach.py`, und letzteres startet produktiv per `spawn` aus einer Web-Route. Tot ist nicht der Code, sondern sein **Lauf**: `data/zielliste.csv` ist **58 Tage alt**. |
+| Spalten der drei Streamlit-Apps stimmen | ◐ **bestaetigt** — ✗ **aber die Unterbehauptung ist widerlegt.** Die Erkundung meldete, `dashboard.py` lese die Spalte `lvl` nicht und „mische Fallback-Ebenen ohne Kennzeichnung". Gemessen: `app/dashboard.py:66` filtert ausdruecklich `WHERE lvl='art_branche_bieter'`. Es wird nichts gemischt. |
+| 8 Merkmalsschalter nirgends auf `1` | ◐ **bestaetigt**: gesetzt sind nur `OEFFENTLICHE_SEITEN`, `PAYWALL_ENFORCED`, `BLOCKS_KEK` (plus Supabase/Admin/Preview). Ungesetzt bleiben `LAUNCH_LIVE`, `CRON_SECRET`, `EMAIL_API_KEY`, `INTERN_ENABLED`, `OEFFENTLICH_NAMEN`, `ZUGANG_PFAD`, `FREE_VORGAENGE`, `STRIPE_SECRET_KEY`. |
+| `/ausschreibung/*` ohne Blackout-Ausnahme | ◐ **bestaetigt.** Die Ausnahmeliste ist genau `/auth/*`, `/api/health`, `/api/calendar/*`, `/robots.txt`, `/sitemap.xml`, `/api/alerts/run`. `/ausschreibung` steht in der OFFEN-Liste (`middleware.ts:130`), aber nicht dort. |
+| 7 Schalter fehlen in `docs/laender/11-betrieb.md` | ◐ **bestaetigt, auf den Punkt genau sieben**: `INTERN_ENABLED` (in 13 Dateien benutzt), `OEFFENTLICHE_SEITEN`, `OEFFENTLICH_NAMEN`, `EMAIL_API_KEY`, `STRIPE_SECRET_KEY`, `FREE_VORGAENGE`, `BLOCKS_KEK`. |
+| `feature-inventory-vergabestelle.md` behauptet einen Rollen-Umschalter | ◐ **bestaetigt, die Angabe ist falsch.** Zeile 104 fuehrt „Rollen-Umschalter Anbieter↔Vergabestelle ✅ (`/leads` ↔ `/authority`)", und `/authority` kommt in `web/` an **keiner** Stelle vor. |
+
+⚠ **Warum das keine Formsache war:** von 11 Symbol-Funden derselben Erkundung waren **zwei
+falsch** (`betragCents`, `loadClaim`), und von diesen 10 Aussagen mussten **vier** korrigiert
+werden — zwei Zahlen, eine Widerlegung, eine Fehleinordnung. Das ist kein Vorwurf an die
+Erkundung; es ist der Grund, warum eine Belegstufe `○` existiert und warum sie nicht in einem
+Papier stehenbleiben darf, aus dem jemand Arbeitsauftraege ableitet.
 
 ### ✅ Die drei Blindstellen sind geschlossen (2026-10-06, nach dem kritischen Durchgang)
 
@@ -161,20 +181,27 @@ fehlt oder ueberfluessig ist — das ist kein Loeschlauf, sondern je Fall eine F
 
 ## `govisor/` + `scripts/`
 
-**Gute Nachricht zuerst:** alle **50** `build_*`-Erzeuger in `gold.py` sind verdrahtet, ueber
-`cli.py:411-519` (DE) und die `KETTE` in `build_dach_gold.py:43-120` (AT/CH/LU). Die
-historische Fehlerklasse ist dort geschlossen.
+**Gute Nachricht zuerst:** alle **49** `build_*`-Erzeuger in `gold.py` sind verdrahtet, ueber
+`cli.py:411-519` (DE) und die `KETTE` in `build_dach_gold.py:43-120` (AT/CH/LU) — nachgerechnet
+am 2026-10-06: null unverdrahtet, null nur im Test. Die historische Fehlerklasse ist dort
+geschlossen.
 
 - **`scripts/succession_kpis.py`** (95 Z) schreibt dieselben vier Dateien wie
   `gold.build_succession_kpis` (`head_to_head`, `market_switch_rate`, `buyer_loyalty`,
   `contractor_loss`) — **mit anderer Definition und ohne Aufrufer.** Ein Handlauf
   ueberschreibt den Nachtstand. **Empfehlung: loeschen**, der Erzeuger in `gold.py` ist der
   verdrahtete.
-- **8 Skripte sehen nach vergessenem Daueraufruf aus**, u. a. `refresh.py` (279 Z, eigene
-  nicht installierte plist, einziger geplanter Weg zu `ingest_month`), `monatslauf.py` (102 Z,
-  nennt eine Kadenz, null Referenzen), `zielliste.py` (412 Z, Erzeuger von
-  `data/zielliste.csv`, das `/api/intern/zielliste` liest — die Datei ist **59 Tage alt**),
-  `analyse_batch.py` (112 Z, halber LLM-Preis, ungenutzt waehrend das Guthaben leer war).
+- **8 Skripte haben keinen Starter** (nachgeprueft: kein Shell-Skript, keine plist in `deploy/`,
+  kein installierter launchd-Agent), u. a. `refresh.py` (279 Z, eigene nicht installierte plist,
+  einziger geplanter Weg zu `ingest_month`), `monatslauf.py` (102 Z, nennt eine Kadenz, null
+  Referenzen), `analyse_batch.py` (112 Z, halber LLM-Preis, ungenutzt waehrend das Guthaben
+  leer war).
+  ⚠ **`zielliste.py` (412 Z) gehoert NICHT in diese Liste** — die Erkundung hatte es
+  dort, die Nachpruefung widerspricht: es ist eine **lebende Bibliothek**, importiert von
+  `firmen_suche.py` *und* `export_outreach.py`, und letzteres startet produktiv per `spawn`
+  aus `web/app/api/intern/landing/route.ts`. Tot ist nicht der Code, sondern sein **Lauf**:
+  `data/zielliste.csv` ist **58 Tage alt**, und `/api/intern/zielliste` liest sie. Der
+  Unterschied entscheidet die Massnahme — nicht loeschen, sondern den Lauf einrichten.
 - **4 Sonden stehen in KEINER der zwei Aufruflisten** (`pruefe_ueberblick` 276 Z,
   `pruefe_unterlagen` 288 Z, `pruefe_marken_optik` 215 Z, `pruefe_entity_dubletten` 462 Z).
   ⚠ Der Waechter dafuer bildet die **Differenz** von Tageslauf und Waechterlauf — eine Sonde,
@@ -192,10 +219,15 @@ historische Fehlerklasse ist dort geschlossen.
   `verify`). `verify` ist begruendet abgeloest (`pruefe_gold_integritaet.py:6`), die anderen
   vier nicht.
 - **`app/` (3 Streamlit-Apps, 883 Z) kommt in keiner Pruefung vor.** Die Spalten stimmen
-  (statisch gegen das Parquet-Schema geprueft), aber Sonde 3 kann sie nicht sehen: sie baut
-  ihre Pruefmenge nur aus den Namen, die `daily_leads.sh` und die zwei Arbeiter nennen.
-  **Dieselbe Blindstelle trifft 24 weitere Skripte mit festem `gold/DE`** — darunter
-  `export_outreach.py` (1031 Z), das **produktiv** per `spawn` aus einer Web-Route startet.
+  (statisch gegen das Parquet-Schema geprueft; die gemeldete Ausnahme um `dim_displaceability.lvl`
+  ist **widerlegt** — `app/dashboard.py:66` filtert ausdruecklich darauf). Sonde 3 kann sie
+  nicht sehen: sie baut ihre Pruefmenge nur aus den 93 Namen, die `daily_leads.sh` und die zwei
+  Arbeiter nennen.
+  **Dieselbe Blindstelle trifft insgesamt 30 Skripte mit festem DE-Pfad** (von 37, nachgerechnet
+  mit dem Sondenmass `_de_feste_pfade`) — darunter `export_outreach.py` (1031 Z), das
+  **produktiv** per `spawn` aus einer Web-Route startet, und `firmen_suche.py` (728 Z).
+  ⚠ Unsichtbar heisst nicht defekt: `fetch_destatis`, `fetch_destatis_kontext` und
+  `impressum_guete` sind zu Recht deutsch.
 
 ---
 
