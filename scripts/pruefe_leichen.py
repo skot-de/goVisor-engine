@@ -62,6 +62,21 @@ RUHEND: dict[str, str] = {
         "von Stripe eingefordert (tests/test_golive_riegel.py)",
 }
 
+# ── Wege, die von AUSSEN gerufen werden — kein interner Aufrufer ist hier normal. ─────
+# ⚠ Ohne diese Liste meldet Spur 2 jeden Webhook und jeden Cron-Endpunkt. Beides hat
+# konstruktionsbedingt keinen Aufrufer im eigenen Code; der Aufrufer sitzt bei Stripe bzw.
+# im Vercel-Zeitplan. Markieren mit Grund ist hier richtig, die Regel zu schwaechen waere
+# falsch — sonst fallen auch die echten Funde (`/api/org/zuordnung`) wieder durch.
+RUHENDE_WEGE: dict[str, str] = {
+    "/api/kauf/webhook":
+        "Stripe ruft ihn von aussen; derzeit harter 503-Stub, weil `stripeEnabled === false` "
+        "(`lib/stripe.ts:32`, Code-Konstante UMGESETZT=false)",
+    "/api/alerts/run":
+        "Vercel-Cron laut `web/vercel.json:3`, zweifach in `middleware.ts` freigeschaltet",
+    "/api/health":
+        "Betriebspruefung von aussen; Aufrufe nur aus Middleware und Tests sind der Zweck",
+}
+
 RUHENDE_DIENSTE: dict[str, str] = {
     "succession_llm.py":
         "kostenpflichtiger Handlauf, als Ausnahme in pruefe_verdrahtung.py hinterlegt",
@@ -84,6 +99,22 @@ ERZEUGT = {"node_modules", ".next", ".vercel", "dist", "build", "out", "coverage
 def _dateien(basis: pathlib.Path, muster: str = "**/*") -> list[pathlib.Path]:
     return [p for p in basis.glob(muster)
             if p.is_file() and p.suffix in ENDUNGEN and not (ERZEUGT & set(p.parts))]
+
+
+def ist_pruefwerk(p: pathlib.Path) -> bool:
+    """Ist diese Datei Pruef- oder Hilfswerkzeug statt Produktcode?
+
+    ⚠ **BLINDSTELLE, GESCHLOSSEN AM 2026-10-06.** `api/org/zuordnung/route.ts` (119 Z) wird
+    ausschliesslich von `web/scripts/test_zuordnung.mjs` gerufen — und galt der Spur damit als
+    lebendig. Fuer ein PRODUKTMERKMAL ist ein Pruefskript aber kein Aufrufer: die Oberflaeche,
+    mit der owner/admin Profile zuweist (Preismodell §7.1), existiert nicht, und genau das
+    sollte der Bericht sagen. Seitdem zaehlen Produktaufrufer und Pruefwerk getrennt.
+    """
+    teile = set(p.parts)
+    return ("tests" in teile
+            or (p.parent.name == "scripts" and "web" in teile)
+            or any(x in p.name for x in (".test.", ".spec.", "test_"))
+            or p.name.startswith("pruefe-"))
 
 
 def _git(*args: str) -> str:
@@ -123,12 +154,21 @@ def _fremde_sicht(zweige: list[str], pfade: tuple[str, ...]) -> str:
     und einigen hundert Symbolen tausende Aufrufe. Stattdessen wird je Zweig EINMAL alles
     geholt, was wie ein Import oder ein Pfad aussieht; darin wird dann gesucht. Zu viel Text
     ist hier die sichere Richtung: ein Zeichen zu viel heisst „lebt" und damit kein Fund.
+
+    ⚠ **UND DAS PRUEFWERK MUSS AUCH HIER DRAUSSEN BLEIBEN.** Erst beim Schliessen der
+    Blindstellen aufgefallen: `/api/org/zuordnung` wurde als „auf einem fremden Zweig
+    verdrahtet" durchgelassen — der Treffer kam aus `web/scripts/test_zuordnung.mjs`, das auf
+    `main` genauso liegt. Die lokale Pruefung trennt Produktcode von Pruefwerk, der
+    Kreuzvergleich tat es nicht, und damit hat er die Trennung wieder eingerissen. Eine
+    Ausnahme ist nur so scharf wie ihre unscharfste Haelfte.
     """
     teile = []
     for z in zweige:
         teile.append(_git("grep", "-h", "-E",
                           r'from +["\x27]|import\(|require\(|["\x27]/[a-zA-Z]', z,
-                          "--", *pfade))
+                          "--", *pfade,
+                          ":(exclude)web/scripts", ":(exclude)tests",
+                          ":(exclude)*.test.*", ":(exclude)*.spec.*"))
     return "\n".join(teile)
 
 
@@ -173,6 +213,32 @@ def spur_komponenten(zeige_offen: bool = False,
             continue
         n = len(modul.read_text(encoding="utf-8", errors="replace").splitlines())
         befunde.append(f"Komponente: {rel} ({n} Z) importiert niemand")
+
+    # ⚠ **BLINDSTELLE, GESCHLOSSEN AM 2026-10-06: STILBLAETTER.** Die Spur las nur
+    # `.ts/.tsx/.js/.mjs` und sah deshalb `SiteHeader.module.css` und `SiteFooter.module.css`
+    # nicht — 16 Zeilen je Datei aus dem Initialcommit, deren Komponenten es nie gab oder
+    # nicht mehr gibt. Ein Stilblatt ohne Komponente ist leise: es bricht nichts, es wird nur
+    # mitgeschleppt und sieht im Verzeichnis wie ein lebender Teil aus.
+    # ⚠ Hier zaehlt der DATEINAME als Verweis, nicht der Modulpfad: ein CSS wird per
+    # `import s from "./X.module.css"` geholt oder in einer Seite als globales Blatt
+    # eingebunden. Gegengeprueft am Bestand: `marktpuls.css` und `trefferguete.css` haben je
+    # einen Verweis und werden korrekt NICHT gemeldet.
+    alle_text = "\n".join(text.values())
+    for seite in (web / "app").rglob("*.tsx") if (web / "app").is_dir() else []:
+        if not (ERZEUGT & set(seite.parts)):
+            alle_text += "\n" + seite.read_text(encoding="utf-8", errors="replace")
+    for blatt in sorted((web / "components").rglob("*.css")):
+        if ERZEUGT & set(blatt.parts):
+            continue
+        rel = blatt.relative_to(web).as_posix()
+        if blatt.name in alle_text or blatt.name in fremd:
+            continue
+        if rel in RUHEND:
+            if zeige_offen:
+                print(f"    (ruhend) {rel}: {RUHEND[rel]}")
+            continue
+        n = len(blatt.read_text(encoding="utf-8", errors="replace").splitlines())
+        befunde.append(f"Stilblatt: {rel} ({n} Z) bindet niemand ein")
     return befunde
 
 
@@ -211,6 +277,10 @@ def spur_wege(zeige_offen: bool = False,
             continue
         weg = "/" + "/".join(teile)
         art = "Seite" if datei.name == "page.tsx" else "Route"
+        if weg in RUHENDE_WEGE:
+            if zeige_offen:
+                print(f"    (von aussen) {weg}: {RUHENDE_WEGE[weg]}")
+            continue
         # ⚠ **NICHT „Anfuehrungszeichen davor" VERLANGEN — das war ein gefaehrlicher
         # Fehlalarm.** Der erste Entwurf verlangte `["'`]` unmittelbar vor dem Pfad, um
         # `"/api/vorgang"` nicht als Verweis auf `/vorgang` zu zaehlen. Damit meldete er
@@ -223,13 +293,23 @@ def spur_wege(zeige_offen: bool = False,
         # stehen. `/api/vorgang` → vor `/vorgang` steht `i`, also kein Verweis. `next=/auth/…`
         # → vor dem Pfad steht `=`, also ein Verweis. Beide Faelle gehen auf.
         muster = re.compile(rf'(?<![\w/]){re.escape(weg)}(?=["\x27`?#/])')
-        if any(muster.search(q) for d, q in text.items() if d != datei):
+        # Getrennt zaehlen: ein Pruefskript ist kein Produktaufrufer (s. `ist_pruefwerk`).
+        produkt = [d for d, q in text.items()
+                   if d != datei and not ist_pruefwerk(d) and muster.search(q)]
+        pruefwerk = [d for d, q in text.items()
+                     if d != datei and ist_pruefwerk(d) and muster.search(q)]
+        if produkt:
             continue
         if muster.search(fremd):
             if zeige_offen:
                 print(f"    (fremder Zweig) {weg}: dort verwiesen, hier nicht")
             continue
         n = len(datei.read_text(encoding="utf-8", errors="replace").splitlines())
+        if pruefwerk:
+            wer = ", ".join(sorted(d.name for d in pruefwerk)[:2])
+            befunde.append(f"{art}: {weg} ({n} Z) nur von Pruefwerk gerufen ({wer}) — "
+                           "kein Produktaufrufer")
+            continue
         wort = "verlinkt niemand" if art == "Seite" else "ruft niemand auf"
         befunde.append(f"{art}: {weg} ({n} Z) {wort}")
     return befunde
@@ -286,31 +366,42 @@ def spur_symbole(zeige_offen: bool = False) -> list[str]:
                 if name:
                     benutzt.add(name)
 
-    # ⛔ **MODULE, DIE ALS NAMENSRAUM IMPORTIERT WERDEN, SIND AUF SYMBOLEBENE NICHT
-    # ENTSCHEIDBAR.** Gemessener Fehlalarm am 2026-10-06: `preise.ts → betragCents` galt als
-    # tot, wird aber in `web/scripts/pruefe-preis.mjs:55` als `P.betragCents(...)` gerufen —
-    # geholt per `const P = await import(join(verz, "preise.ts"))`. Jeder Export eines so
-    # geholten Moduls ist ueber `P.<name>` erreichbar, ohne je in einer `{…}`-Klammer zu
-    # stehen. Wer das nicht ausnimmt, meldet reihenweise lebende Funktionen.
-    # Entschieden: solche Module ganz ueberspringen. Lieber ein Fund zu wenig als ein
-    # Loeschvorschlag fuer eine benutzte Funktion.
-    namensraum: set[str] = set()
+    # ⛔ **MODULE, DIE ALS NAMENSRAUM GEHOLT WERDEN.** Gemessener Fehlalarm am 2026-10-06:
+    # `preise.ts → betragCents` galt als tot, wird aber in `web/scripts/pruefe-preis.mjs:55`
+    # als `P.betragCents(...)` gerufen — geholt per
+    # `const P = await import(join(verz, "preise.ts"))`. Jeder Export eines so geholten Moduls
+    # ist ueber `P.<name>` erreichbar, ohne je in einer `{…}`-Klammer zu stehen.
+    #
+    # ⚠ **ERSTE ABHILFE WAR ZU GROB und ist eine Blindstelle geworden:** sie uebersprang
+    # solche Module GANZ — 7 von 84 in `web/lib`, in denen ein toter Export unentdeckt bleiben
+    # konnte. Jetzt genau: der Aliasname wird an das Modul gebunden, und nur die wirklich
+    # abgerufenen Glieder (`P.betragCents`) gelten als benutzt. Damit bleibt `betragCents`
+    # draussen und jeder NICHT abgerufene Export desselben Moduls wird sichtbar.
+    je_modul: dict[str, set[str]] = {}
     for p in quellen:
         q = p.read_text(encoding="utf-8", errors="replace")
+        aliase: dict[str, str] = {}
         for zeile in q.splitlines():
-            if "import * as" in zeile or "await import(" in zeile or "require(" in zeile:
+            m = re.search(r"import\s+\*\s+as\s+([A-Za-z_$][\w$]*)\s+from\s+[\"\x27]"
+                          r"([^\"\x27]+)", zeile)
+            if m:
+                aliase[m.group(1)] = pathlib.PurePath(m.group(2)).stem
+                continue
+            m = re.search(r"(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*=\s*"
+                          r"(?:await\s+)?(?:import|require)\s*\(", zeile)
+            if m:
                 for s in re.findall(r"[\"\x27]([^\"\x27]+)[\"\x27]", zeile):
-                    namensraum.add(pathlib.PurePath(s).stem)
+                    stem = pathlib.PurePath(s).stem
+                    if stem:
+                        aliase[m.group(1)] = stem
+        for alias, stem in aliase.items():
+            glieder = set(re.findall(rf"\b{re.escape(alias)}\.([A-Za-z_$][\w$]*)", q))
+            je_modul.setdefault(stem, set()).update(glieder)
 
     fremd = _fremde_sicht(lebende_zweige(), ("web",))
     befunde: list[str] = []
     for modul in sorted(_dateien(WEB / "lib")):
         rel = modul.relative_to(WEB).as_posix()
-        if modul.stem in namensraum:
-            if zeige_offen:
-                print(f"    (Namensraum) {rel}: wird als Ganzes geholt, "
-                      "Symbolebene nicht entscheidbar")
-            continue
         if rel in RUHEND:
             if zeige_offen:
                 print(f"    (ruhend) {rel}: {RUHEND[rel]}")
@@ -329,8 +420,13 @@ def spur_symbole(zeige_offen: bool = False) -> list[str]:
         # groessten Moduls (3.899 Z) stillschweigend aus dem Bericht. Ein Fund, der nicht
         # erscheint, ist schlimmer als einer, der falsch ist: niemand sucht nach ihm.
         ohne_ausfuhr = _EXPORT_BLOCK.sub("", q)
+        ueber_alias = je_modul.get(modul.stem, set())
         for name in sorted(namen):
             if name in benutzt:
+                continue
+            if name in ueber_alias:
+                if zeige_offen:
+                    print(f"    (Namensraum) {rel} → {name}: als Glied abgerufen")
                 continue
             if len(re.findall(rf"\b{re.escape(name)}\b", ohne_ausfuhr)) > 1:
                 continue                      # intern gerufen — kein Loeschkandidat

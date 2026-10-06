@@ -10,7 +10,7 @@ Jede Zeile unten ist eine Vorlage zur Entscheidung, keine ausgefuehrte Aenderung
 **Warum es diesen Bericht gibt:** „gebaut, aber nicht verdrahtet" ist laut `CLAUDE.md` die
 haeufigste Fehlerklasse des Projekts. Dagegen stehen 15 Sonden — die aber Komponenten, Seiten,
 Routen, einzelne Symbole, `app/` und nicht eingetragene Dauerdienste **nicht** sehen. Genau
-diese Luecke messt `pruefe_leichen.py` mit fuenf neuen Spuren: **28 Befunde.**
+diese Luecke messt `pruefe_leichen.py` mit fuenf neuen Spuren: **32 Befunde.**
 
 ---
 
@@ -22,7 +22,7 @@ eine, die jemand behauptet hat. Deshalb hier ausdruecklich:
 
 | Stufe | heisst | gilt fuer |
 |---|---|---|
-| **⭘ nachrechenbar** | `python3 scripts/pruefe_leichen.py` erzeugt es jedes Mal neu | alle **28 Befunde** der fuenf Spuren, dazu die Zweiglage, die Ausnahme-Alter und die Groessen unter `web/data` |
+| **⭘ nachrechenbar** | `python3 scripts/pruefe_leichen.py` erzeugt es jedes Mal neu | alle **32 Befunde** der fuenf Spuren, dazu die Zweiglage, die Ausnahme-Alter und die Groessen unter `web/data` |
 | **◐ von Hand nachgemessen** | ich habe es selbst gegen das laufende System geprueft | die Arbeiter-Kette (`pgrep`, launchd, kein Abnehmer der Tabelle), der plist-Unterschied, `web/data` = 5,2 GB, die 51 Dateien Unterschied zu `web/grounding-page` |
 | **○ aus einer Erkundung, von mir NICHT nachgeprueft** | eine Hilfs-Sitzung hat es gemeldet; es steht hier, weil es wichtig ist, aber es ist kein Beleg | **alles im Abschnitt „`govisor/` + `scripts/`" ausser den Spur-Befunden**, also: „alle 50 `build_*` verdrahtet", die 8 vergessenen Daueraufrufe, die 4 Sonden in keiner Liste, die 5 CLI-Unterbefehle, die 24 Skripte mit festem `gold/DE`, dass die Spalten der drei Streamlit-Apps stimmen. Dazu im Frontend-Teil: die 8 Merkmalsschalter, die fehlende Blackout-Ausnahme, die sieben nicht dokumentierten Schalter, die Aussage von `feature-inventory-vergabestelle.md`. |
 
@@ -30,16 +30,22 @@ eine, die jemand behauptet hat. Deshalb hier ausdruecklich:
 Nachpruefen **zwei falsch** (`betragCents` laeuft als Namensraum-Import, `loadClaim` wird
 dynamisch geholt) — 18 %. Wer die ○-Zeilen als Arbeitsauftrag nimmt, prueft sie vorher nach.
 
-### Was die Spuren NICHT finden (bekannte Blindstellen)
+### ✅ Die drei Blindstellen sind geschlossen (2026-10-06, nach dem kritischen Durchgang)
 
-- **CSS-Module ohne Komponente** — Spur 1 liest nur `.ts/.tsx/.js/.mjs`. Die zwei unten
-  genannten Dateien stehen hier aus der Erkundung (○), nicht aus dem Generator.
-- **Aufrufer, die nur Test- oder Pruefskripte sind** — `api/org/zuordnung` wird von
-  `web/scripts/test_zuordnung.mjs` gerufen und gilt der Spur deshalb als lebendig. Fuer ein
-  Produktmerkmal ist das kein Aufrufer. Noch nicht getrennt.
-- **7 von 84 Modulen in `web/lib` sind auf Symbolebene unterdrueckt**, weil sie irgendwo als
-  Namensraum geholt werden. Dort kann ein toter Export unentdeckt bleiben — bewusste
-  Entscheidung gegen Fehlalarme, aber eine Luecke.
+Sie standen hier als offene Luecken und sind es nicht mehr. **22 → 32 Befunde**, und zwei der
+drei Schliessungen haben echte Funde zurueckgeholt, die vorher stillschweigend ausfielen.
+
+| war blind | jetzt | Ertrag |
+|---|---|---|
+| **Stilblaetter** — Spur 1 las nur `.ts/.tsx/.js/.mjs` | liest auch `.css` unter `web/components`, Verweis ueber den Dateinamen | **+2**: `SiteHeader.module.css`, `SiteFooter.module.css` (je 16 Z, Initialcommit). Gegenprobe: `marktpuls.css` und `trefferguete.css` haben je einen Verweis und werden korrekt **nicht** gemeldet. |
+| **Pruefskript galt als Aufrufer** | Produktaufrufer und Pruefwerk zaehlen getrennt (`ist_pruefwerk`) | **+1**: `api/org/zuordnung` (119 Z) wird **nur** von `web/scripts/test_zuordnung.mjs` gerufen. ⚠ Der Fund fiel zuerst trotzdem durch, weil der **Zweigvergleich** dasselbe Pruefskript auf `main` mitlas — die lokale Pruefung trennte, der Zweigvergleich nicht. *Eine Ausnahme ist nur so scharf wie ihre unscharfste Haelfte.* |
+| **7 von 84 Modulen pauschal uebersprungen** (Namensraum-Import) | Aliasname wird an das Modul gebunden, nur das wirklich abgerufene Glied gilt als benutzt | **+1 und genauer**: `betragCents` bleibt draussen (laeuft als `P.betragCents`), `loadClaim` aus demselben Modul erscheint. Keine 84 Module mehr im Blindflug. |
+
+**Neu ausgenommen, mit Grund statt durch eine schwaechere Regel:** `/api/kauf/webhook`
+(Stripe ruft von aussen; derzeit 503-Stub, weil `lib/stripe.ts:32` die Konstante
+`UMGESETZT=false` traegt), `/api/alerts/run` (Vercel-Cron) und `/api/health`. Ein Webhook ohne
+internen Aufrufer ist kein Defekt, sondern die Bauart — die Regel aufzuweichen haette dagegen
+die echten Funde wieder durchfallen lassen.
 
 ---
 
@@ -84,7 +90,7 @@ Loeschkandidat, ein Dokumentationsfehler mit Rueckfallrisiko.
 
 ## `web/` — Frontend
 
-### Seiten, auf die nichts verlinkt (3)
+### Seiten, auf die nichts verlinkt (3) und eine Route ohne Produktaufrufer
 
 | Seite | dahinter | Befund |
 |---|---|---|
@@ -97,7 +103,7 @@ und `/marktpuls` **nicht** loeschen — das sind 1.680 Zeilen gebaute Funktion, 
 Einstieg hat. Entweder verlinken oder bewusst als ruhend kennzeichnen; und die Feature-Liste
 korrigieren, die ein nicht existierendes Merkmal als fertig fuehrt.
 
-### Komponenten ohne Importeur (3)
+### Komponenten ohne Importeur (3) und zwei Stilblaetter ohne Komponente
 
 `components/Band.tsx` (23 Z, redundanter Zwilling von `bandMeter()` in `explorerCore.js:3867`;
 das CSS `.band` ist live, aber ueber den HTML-String, nicht ueber diese Komponente) ·
@@ -105,14 +111,15 @@ das CSS `.band` ist live, aber ueber den HTML-String, nicht ueber diese Komponen
 `components/unternehmen/UnternehmenTabs.tsx` (23 Z — ihr Dateikopf behauptet, sie stehe „in der
 Bereichsleiste des Rahmens"; sie steht nirgends).
 
-Dazu zwei **CSS-Module ohne jede Komponente**: `SiteHeader.module.css` und
-`SiteFooter.module.css` (16 Z, aus dem Initialcommit `cc29725`; die Namen kommen im Repo nicht vor).
+Dazu zwei **Stilblaetter ohne jede Komponente** — jetzt ⭘ nachrechenbar, nicht mehr nur aus der
+Erkundung: `SiteHeader.module.css` und `SiteFooter.module.css` (je 16 Z, aus dem Initialcommit
+`cc29725`; die Namen `SiteHeader`/`SiteFooter` kommen im Repo nicht vor).
 
 ⚠ **Nicht gemeldet und nicht anzufassen:** `components/MessHinweis.tsx` (66 Z) ruht
 absichtlich, im Dateikopf begruendet (Datenschutzseite fehlt), `tests/test_telemetrie.py:241`
 haelt die Bedingung. So sieht ein richtig gekennzeichneter ruhender Baustein aus.
 
-### Exporte ohne Benutzer (15, Symbolebene)
+### Exporte ohne Benutzer (16, Symbolebene)
 
 `docAnalysis.ts → analyseIndex` (duenner Mantel um `analyseIndexMitGrund()`, das die Route
 direkt nimmt) · `docAnalysis.ts → hatDichte` · `frageSuche.ts → BEISPIELFRAGEN` ·
@@ -138,9 +145,10 @@ fehlt oder ueberfluessig ist — das ist kein Loeschlauf, sondern je Fall eine F
 
 ### Nicht aus dieser Spur, aber beim Messen gefunden
 
-- **`api/org/zuordnung/route.ts`** (119 Z, GET/POST/DELETE) hat **keinen Aufrufer im
+- ⭘ **`api/org/zuordnung/route.ts`** (119 Z, GET/POST/DELETE) hat **keinen Aufrufer im
   Produktcode**, nur `web/scripts/test_zuordnung.mjs`. Die Oberflaeche, mit der owner/admin
-  Profile zuweist (Preismodell §7.1), existiert nicht.
+  Profile zuweist (Preismodell §7.1), existiert nicht. *(Steht jetzt in Spur 2, nicht mehr nur
+  in dieser Aufzaehlung.)*
 - **Acht Merkmalsschalter stehen nirgends auf `1`.** Zwei mit Folgen: `EMAIL_API_KEY` fehlt,
   deshalb bricht `/api/alerts/run` ab — **der Vercel-Cron laeuft taeglich 06:00 ins Leere**.
   Und `/ausschreibung/*` ist per `OEFFENTLICHE_SEITEN=1` offen, hat aber **keine

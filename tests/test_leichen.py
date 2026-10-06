@@ -180,8 +180,76 @@ def test_ruhend_eintraege_sind_begruendet():
     ⚠ Dieselbe Disziplin, die `tests/test_verdrahtung.py` fuer die Sonden-Ausnahmen haelt —
     ohne sie wird aus einer Ausnahmeliste eine Mullhalde.
     """
-    for name, grund in {**L.RUHEND, **L.RUHENDE_DIENSTE}.items():
+    for name, grund in {**L.RUHEND, **L.RUHENDE_DIENSTE, **L.RUHENDE_WEGE}.items():
         assert len(grund) > 30, f"{name} hat keine tragfaehige Begruendung: {grund!r}"
+
+
+# ── Die drei geschlossenen Blindstellen ───────────────────────────────────────────────
+def test_blindstelle1_stilblatt_ohne_komponente():
+    """Spur 1 las nur `.ts/.tsx/.js/.mjs` und sah kein Stilblatt.
+
+    Beide Richtungen am Bestand: die zwei unverwiesenen Blaetter MUESSEN erscheinen, die zwei
+    eingebundenen (`marktpuls.css`, `trefferguete.css`) duerfen NICHT erscheinen. Ohne die
+    zweite Haelfte waere die Spur eine, die einfach alles meldet.
+    """
+    treffer = L.spur_komponenten()
+    for tot in ("SiteHeader.module.css", "SiteFooter.module.css"):
+        if (ROOT / "web" / "components" / tot).exists():
+            assert any(tot in z for z in treffer), f"{tot} wird nicht gemeldet"
+    for lebt in ("marktpuls.css", "trefferguete.css"):
+        assert not any(lebt in z for z in treffer), \
+            f"{lebt} ist eingebunden und wird trotzdem gemeldet"
+
+
+def test_blindstelle2_pruefwerk_ist_kein_produktaufrufer():
+    """`api/org/zuordnung` wird NUR von `web/scripts/test_zuordnung.mjs` gerufen.
+
+    Fuer ein Produktmerkmal ist das kein Aufrufer — die Oberflaeche zur Profilzuweisung
+    (Preismodell §7.1) existiert nicht. ⚠ Der Fund fiel zuerst durch, weil der
+    Kreuzvergleich ueber die Zweige dasselbe Pruefskript mitlas: die lokale Pruefung trennte
+    Produkt und Pruefwerk, der Zweigvergleich nicht.
+    """
+    if not (ROOT / "web/app/api/org/zuordnung/route.ts").exists():
+        pytest.skip("Route ist weg — Fund behoben")
+    treffer = L.spur_wege()
+    assert any("/api/org/zuordnung" in z and "Pruefwerk" in z for z in treffer), \
+        "Route mit nur-Pruefwerk-Aufrufer wird nicht als solche gemeldet:\n  " \
+        + "\n  ".join(treffer)
+    assert L.ist_pruefwerk(ROOT / "web/scripts/test_zuordnung.mjs")
+    assert not L.ist_pruefwerk(ROOT / "web/components/Landing.tsx")
+
+
+def test_blindstelle2_webhook_bleibt_verschont():
+    """Ein Webhook hat konstruktionsbedingt keinen internen Aufrufer — Stripe ruft ihn."""
+    assert "/api/kauf/webhook" in L.RUHENDE_WEGE
+    assert not any("/api/kauf/webhook" in z for z in L.spur_wege()), \
+        "Webhook wird als Leiche gemeldet, obwohl er von aussen gerufen wird"
+
+
+def test_blindstelle3_namensraum_genau_statt_pauschal():
+    """Erst wurde das ganze Modul uebersprungen — 7 von 84, jedes eine Blindstelle.
+
+    Jetzt wird der Aliasname an das Modul gebunden und nur das wirklich abgerufene Glied
+    gilt als benutzt. Der Nachweis, dass es genauer ist: `betragCents` (als `P.betragCents`
+    gerufen) bleibt draussen, `loadClaim` aus demselben Namensraum-Modul erscheint.
+    """
+    treffer = L.spur_symbole()
+    assert not any("betragCents" in z for z in treffer), \
+        "abgerufenes Glied wird als tot gemeldet"
+    if (ROOT / "web/lib/supabase/claims.ts").exists():
+        assert any("loadClaim" in z for z in treffer), \
+            "pauschale Unterdrueckung ist zurueck — toter Export im Namensraum-Modul fehlt"
+
+
+def test_kreuzvergleich_laesst_pruefwerk_aus():
+    """⚠ Eine Ausnahme ist nur so scharf wie ihre unscharfste Haelfte.
+
+    Der Zweigvergleich muss dieselben Pfade auslassen wie die lokale Pruefung, sonst reisst
+    er die Trennung wieder ein (genau so fiel `/api/org/zuordnung` zuerst durch).
+    """
+    blob = L._fremde_sicht(L.lebende_zweige(), ("web",))
+    assert "test_zuordnung" not in blob, \
+        "Pruefwerk steckt wieder im Zweigvergleich — Produkttrennung ausgehebelt"
 
 
 def test_fremde_zweige_werden_mitgelesen():
