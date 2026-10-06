@@ -18,21 +18,29 @@ from __future__ import annotations
 
 import re
 
-# Generische Hoheits-Träger: hier ist die VERTRETENE Stelle die echte Vergabestelle.
-_SOVEREIGN = re.compile(
-    r"^\s*(?:die\s+)?"
-    r"(?:bundesrepublik\s+deutschland"
-    r"|(?:das\s+|der\s+|die\s+)?(?:land|freistaat|bundesland)\s+[a-zäöüß][a-zäöüß.\-]+"
-    r"|freie(?:\s+und)?\s+hansestadt\s+[a-zäöüß\-]+"
-    r"|freie\s+hansestadt\s+[a-zäöüß\-]+)"
-    r"\s*(?:,|$)", re.I)
+from . import locales
+
+# ⚠ DAS HOHEITSMUSTER LIEGT IM LÄNDERPROFIL, NICHT HIER. Es stand bis 2026-10-06 als
+# modulfeste deutsche Regex an dieser Stelle — angewandt auf ALLE Länder. Folge, gemessen:
+# „Republik Österreich vertreten durch die Bundesministerin für Landesverteidigung" (5.251
+# AT-Zeilen) wurde nie aufgelöst, weil „Republik Österreich" in einem deutschen Muster nicht
+# vorkommt. Jetzt: `locales.active().re_sovereign` (s. EU-weit-Grundsatz in CLAUDE.md).
 
 # Trenner der Vertretungskette: „, vertreten durch[:] ", „ diese(s) vertreten durch ",
-# auch „handelnd durch" (gleichbedeutend). Doppelpunkt/Komma/Whitespace toleriert.
+# „endvertreten durch", auch „handelnd durch" (gleichbedeutend).
+# ⚠ `(?:end)?` MUSS HIER STEHEN, und `\b` davor. Ohne beides matchte „vertreten" innerhalb
+# von „endvertreten", das „end" blieb stehen und wurde Teil des Schlüssels:
+# `'land schleswig holstein end'` (1.679 Zeilen), `'bundesrepublik deutschland end'` (567).
 _VERTRETEN = re.compile(
-    r"\s*[,;]?\s*(?:diese[rs]?\s+)?(?:vertreten|handelnd)\s+durch\s*:?\s*", re.I)
+    r"\s*[,;]?\s*(?:diese[rs]?\s+)?\b(?:end)?(?:vertreten|handelnd)\s+durch\s*:?\s*", re.I)
 # führender Artikel der vertretenen Stelle („das Bundesministerium …" → „Bundesministerium …")
-_LEAD_ART = re.compile(r"^(?:der|die|das|den|dem|des)\s+", re.I)
+# ⚠ `\b\s*` statt `\s+`: bei einem abgeschnittenen Namen („… vertreten durch den") blieb der
+# Artikel sonst als ganzer Name stehen — gemessen 7 Anzeigenamen, die wörtlich „Den"/„Das"
+# hiessen, und im Schlüssel eine Entität `den`.
+_LEAD_ART = re.compile(r"^(?:der|die|das|den|dem|des)\b\s*", re.I)
+# Was nach dem Abschneiden übrig bleiben MUSS, damit es eine Stelle benennt. Ein Rest ohne
+# Buchstaben (oder leer) ist keine Vergabestelle → Rückfall auf den Präfix.
+_HAT_WORT = re.compile(r"[^\W\d_]{2,}", re.U)
 # nachgestellter Vertretungs-Zusatz ohne „durch" („BRD, Bundesministerium für …") am Präfix
 _TRAIL = re.compile(r"\s*[,–-]\s*$")
 
@@ -93,22 +101,36 @@ def normalize_case(name: str) -> str:
 
 def resolve_representation(name: str) -> str:
     """„Bundesrepublik Deutschland, vertreten durch <X>" → <X> (nur bei generischem Hoheits-Präfix).
+
     Bei spezifischem Präfix (DB Netz AG, Stadt München …) wird die Vertretungsklausel entfernt und
     der Präfix behalten. Kette: die ERSTE vertretene Stelle nach dem Hoheits-Träger (Ministerium/
-    Behörde) — stabil + wiedererkennbar; tiefere „dieses vertreten durch"-Ebenen fallen weg."""
-    if not _VERTRETEN.search(name):
+    Behörde) — stabil + wiedererkennbar; tiefere „dieses vertreten durch"-Ebenen fallen weg.
+
+    ⚠ DIESE FUNKTION ENTSCHEIDET SEIT 2026-10-06 AUCH DEN MERGE-SCHLÜSSEL, nicht nur den
+    Anzeigenamen. Vorher lief sie allein auf der Anzeige, während `normalize_company` die
+    Klausel stumpf abschnitt und den GENERISCHEN Präfix behielt — die Entität hiess dann
+    `freistaat bayern` und sammelte 297 fremde Stellen, während die Anzeige daneben
+    „Staatliches Hochbauamt Würzburg" zeigte. Ein Name, 297 Auftraggeber dahinter. Das ist
+    Fallenkatalog C9 in seiner teuersten Form (s. `entities.normalize_company`).
+
+    Welcher Präfix generisch ist, sagt das aktive Länderprofil (``re_sovereign``) — nicht
+    diese Datei.
+    """
+    if not _VERTRETEN.search(name or ""):
         return name
-    # (Hier stand eine Dreifachzuweisung, die denselben `split` zweimal ausfuehrte und
-    # zwei der drei Namen nie benutzte.)
     tail = _VERTRETEN.split(name, maxsplit=1)
     prefix = tail[0]
     rest = tail[1] if len(tail) > 1 else ""
-    if _SOVEREIGN.match(prefix):
+    if locales.active().re_sovereign.match(prefix):
         # vertretene Stelle nehmen; weitere Vertretungsebenen abschneiden, führenden Artikel weg
         body = _VERTRETEN.split(rest, maxsplit=1)[0]
         body = re.sub(r"\s*[,–-]\s*$", "", body).strip()
         body = _LEAD_ART.sub("", body).strip()
-        return body or prefix
+        # Ein Rest, der kein Wort mehr enthält, benennt keine Stelle (abgeschnittene Namen:
+        # „… vertreten durch den"). Dann ist der Hoheitsträger die beste verfügbare Auskunft.
+        if _HAT_WORT.search(body):
+            return body
+        return _TRAIL.sub("", prefix).strip()
     # spezifischer Präfix → Vertretung droppen, Präfix behalten
     return _TRAIL.sub("", prefix).strip()
 

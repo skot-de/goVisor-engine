@@ -68,9 +68,25 @@ def normalize_company(name: str) -> str:
     false positives live.
     """
     loc = locales.active()
+    # ⚠ ERST DIE VERTRETUNG AUFLÖSEN, DANN NORMALISIEREN — und zwar auf dem ROHnamen, weil das
+    # Hoheitsmuster Umlaute trägt.
+    #
+    # Hier stand bis 2026-10-06 nur das Abschneiden zwei Zeilen tiefer. Das behielt bei
+    # „Freistaat Bayern vertreten durch die Julius-Maximilians-Universität Würzburg" den
+    # GENERISCHEN Teil und warf den einzigen informativen weg. Gemessen im DE-Silber waren das:
+    # `unresolved:bundesrepublik deutschland` 472 Namen in 65 Orten, `name:freistaat bayern`
+    # 297 in 71, `name:land baden wuerttemberg` 250 in 42 — der Anzeigename zeigte längst die
+    # vertretene Stelle (`names.clean_display_name`), nur der Schlüssel folgte ihm nicht.
+    #
+    # Dass das ganz überwiegend ZUSAMMENFÜHRT und nicht spaltet, ist gemessen: von 74.356
+    # Schlüsseln treffen 72.989 auf einen, der schon existiert (2.202.367 Zeilen) — etwa
+    # `db projektbau` (403 Zeilen, 10 Namen) oder `regierungspraesidium karlsruhe` (792, 36).
+    # Nur 1.367 Schlüssel sind neu (16.699 Zeilen), davon 14 reine Abkürzungen.
+    from . import names as _names
+    name = _names.resolve_representation(name or "")
     text = strip_accents((name or "").lower())
     text = re.sub(r"\([^)]*\)", " ", text)          # Klammer-Zusätze (Buying-Unit, Rang-Annotation)
-    text = loc.re_representation.sub(" ", text)      # Vertretungsklausel
+    text = loc.re_representation.sub(" ", text)      # Restliche/fremdsprachige Klauselformen
     text = loc.re_subdivision.sub(" ", text)         # Abteilungs-Anhängsel
     text = loc.re_lead_article.sub("", text)         # führender Artikel
     text = re.sub(r"\s*[&+]\s*", " und ", text)

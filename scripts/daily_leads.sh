@@ -1943,6 +1943,23 @@ $PY scripts/pruefe_gold_integritaet.py \
 $PY scripts/pruefe_kennungen.py \
   || echo "  → Kennung ohne Entscheidung oder Schwellen-Begruendung weg. Details: python3 scripts/pruefe_kennungen.py --alle"
 
+# ── HOHEITSWACHE: hat jedes Land ein Muster fuer „<X> vertreten durch <Y>"? ───────────────
+#
+# Das Muster stand bis zum 2026-10-06 als DEUTSCHE Regex in `govisor/names.py` und wurde auf
+# ALLE Laender angewandt. „REPUBLIK OESTERREICH vertreten durch die Bundesministerin fuer
+# Landesverteidigung" wurde daher nie aufgeloest: 5.251 oesterreichische Zeilen unter 724
+# Namen landeten als EINE Entitaet. Fuer DE war alles in Ordnung — der Fehler wartete auf das
+# erste Land mit einem anderen Hoheitstraeger (dieselbe Form wie Fallenkatalog C16).
+#
+# ⚠ SIE MELDET NICHT JEDEN UNERKANNTEN PRAEFIX. „Stadt Hanau vertreten durch das Hochbauamt"
+# ist richtig so — dort IST der Praefix die Stelle, und diese Liste ist offen. Geprueft und
+# verworfen wurde die Hypothese, man koenne beides an den Daten unterscheiden (Hoheitstraeger
+# 30–41 %, Stellen 11–78 % eigenstaendige Vertretene: ueberlappend). Rot wird sie nur, wenn
+# ein Land mit nennenswerter Vertretungsform GAR KEIN Muster hat.
+# ⚠ Sie liest nur Silber und darf neben einem Abrufer laufen.
+$PY scripts/pruefe_namensregeln.py \
+  || echo "  → Land ohne Hoheitsmuster. Details: python3 scripts/pruefe_namensregeln.py --land <L> --alle"
+
 # ── Sonde 7: misst eine Kennzahl ueberhaupt noch etwas? ──────────────────────────────────
 # Am 2026-09-01 trugen in der SCHWEIZ alle 104 ausgewerteten Vergabestellen denselben
 # KMU-Anteil: 100 %. Rechnerisch korrekt, als Aussage leer — und im Produkt als Marktbefund

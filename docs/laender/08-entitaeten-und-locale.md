@@ -145,6 +145,55 @@ französische Namen zählen „ministere"/„administration"/„communale" als s
 den Beleg künstlich. Die Regel ist in LU dadurch zurückhaltender, nicht falscher. Der
 saubere Ort wäre ein Stoppwort-Satz je Länderprofil.
 
+## „X vertreten durch Y" — wer von beiden ist der Auftraggeber?
+
+Die Antwort hängt davon ab, was X ist, und sie ist **gegenläufig**:
+
+| X ist … | Beispiel | Schlüssel |
+|---|---|---|
+| ein **Hoheitsträger** | „Freistaat Bayern vertreten durch die Universität Würzburg" | **Y** (`universitaet wuerzburg`) |
+| eine **Stelle** | „Stadt Nürnberg, vertreten durch das Hochbauamt" | **X** (`stadt nuernberg`) |
+| ein **Agent** („im Namen und auf Rechnung") | „DB ProjektBau GmbH im Namen und auf Rechnung der DB Netz AG" | **X** (`db projektbau`) |
+
+Welche Präfixe Hoheitsträger sind, steht als Regex-Familie in `locales.<LAND>.sovereign` —
+**nicht** als Liste von Einzelfällen, denn es ist eine Familie („Land <X>", „Kanton <X>").
+Entschieden wird es in `names.resolve_representation`, und zwar für den Anzeigenamen UND den
+Merge-Schlüssel aus EINER Funktion. Dass die beiden auseinanderliefen, war der teuerste
+Einzelfehler in dieser Kette (Fallenkatalog C18).
+
+**Die Prüfung für ein neues Land**, bevor das Profil ausgefüllt wird:
+
+```sql
+-- Welche Präfixe stehen vor der Klausel, und wie viele Stellen vertreten sie?
+SELECT regexp_extract(name, '^(.*?)[,;]?\s*(vertreten|handelnd) durch', 1) AS praefix,
+       count(DISTINCT name) AS namen, count(*) AS zeilen
+FROM read_parquet('data/silver/XX/notice_parties/**/*.parquet')
+WHERE role = 'buyer' AND regexp_matches(name, '(vertreten|handelnd) durch')
+GROUP BY 1 ORDER BY zeilen DESC LIMIT 20
+```
+
+`scripts/pruefe_namensregeln.py` fährt genau das und wird rot, wenn ein Land mit
+nennenswerter Vertretungsform (> 1 % der Käufer-Zeilen) kein Muster hat.
+
+⚠ **Was NICHT geht: beides an den Daten unterscheiden.** Geprüft und verworfen am
+2026-10-06: die Hypothese „ein Hoheitsträger vertritt eigenständige Organisationen, eine
+Stadt ihre Ämter", gemessen am Anteil der Vertretenen, die auch allein als Käufer vorkommen.
+Hoheitsträger liegen bei 30–41 % (Bundesrepublik 39 %, Freistaat Bayern 36 %, Saarland 30 %),
+Stellen bei 11–78 % (Landeshauptstadt Potsdam 78 %, Landkreis Freising 11 %). Vollständig
+überlappend. Ob ein Präfix eine Gebietskörperschaft ist, ist **Fachwissen**, keine
+Eigenschaft der Daten — deshalb eine geschlossene Regex-Familie im Profil und keine Heuristik.
+
+⚠ **Zwei Regex-Griffe, die hier schon Geld gekostet haben** (Fallenkatalog C20): `re.S` beim
+`.*$` (sonst hält `.` am Zeilenumbruch — 10.038 DE-Käufernamen tragen einen) und `\b` vor
+`vertreten` (sonst trifft es „vertreten" in „**end**vertreten" und lässt das `end` im
+Schlüssel stehen).
+
+⚠ **Was diese Kette NICHT löst**, gemessen und bewusst offen gelassen:
+`Land Berlin (Sondervermögen Immobilien des Landes Berlin)` ohne Vertretungsklausel bleibt
+`name:land berlin` (1.918 Zeilen), weil `normalize_company` Klammerzusätze VOR allem anderen
+entfernt. Und Abkürzungen bleiben eigene Entitäten: `bmvg` (740 Zeilen) steht neben
+`bundesministerium der verteidigung`. Dafür ist `curated/<L>_entity_aliases.csv` gedacht.
+
 ## Entity-Resolution: was geht und was nicht
 
 - **Stufe 1 (`_consolidate_by_national_id`)**: nur-Name-Entitäten in ihre belegte

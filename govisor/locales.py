@@ -32,13 +32,31 @@ class Locale:
                  trade_word, person, text_winner_marker, text_skip, text_not_awarded,
                  freemail, public_domain_slds, public_name,
                  kind_framework_kw, kind_recurring_kw, kind_oneoff_kw,
-                 register_path, cpi, nuts_region, succ_stopwords):
+                 register_path, cpi, nuts_region, succ_stopwords,
+                 sovereign=None):
         self.code = code
         self.name = name
         # -- Entity-Normalisierung / -Klassifikation (Text bereits klein + akzentfrei) --
         self.legal_forms = tuple(legal_forms)
         self.re_legal = re.compile("|".join(legal_forms) if legal_forms else _NEVER)
-        self.re_representation = re.compile(representation or _NEVER)
+        # ⚠ re.S IST PFLICHT, NICHT KOSMETIK. Das Muster endet auf `.*$`; ohne DOTALL hält `.`
+        # am Zeilenumbruch, `$` passt davor, und der Rest des Namens überlebt im Schlüssel.
+        # Gemessen 2026-10-06: 10.038 deutsche und 2.022 österreichische Käufernamen tragen
+        # einen Umbruch, davon 8.108 bzw. 3.814 Zeilen zusammen mit „vertreten durch" —
+        # `'rhein main donau vertreten durch die rmd wasserstrassen muenchen'` war ein
+        # Schlüssel. re.I, weil das Muster auch auf Rohtext angewandt werden können soll.
+        self.re_representation = re.compile(representation or _NEVER, re.S | re.I)
+        # Generische HOHEITSTRÄGER: Präfixe, bei denen die VERTRETENE Stelle die echte
+        # Vergabestelle ist („Freistaat Bayern vertreten durch die Universität Würzburg" →
+        # Universität Würzburg). Bei SPEZIFISCHEN Präfixen („DB Netz AG vertreten durch …",
+        # „Stadt Nürnberg vertreten durch …") ist der Präfix die Stelle — die stehen hier
+        # bewusst NICHT drin. Gilt auf ROHtext (Umlaute!), s. `names.resolve_representation`.
+        #
+        # ⚠ Wer ein Land aufnimmt und dieses Feld leer lässt, bekommt das alte Verhalten:
+        # die Klausel wird abgeschnitten und der Präfix behalten. Das ist konservativ, aber
+        # bei einem Land mit Hoheitsträgern falsch — gemessen stand in AT „Republik
+        # Österreich vertreten durch …" auf 5.251 Zeilen und wurde zu EINER Entität.
+        self.re_sovereign = re.compile(sovereign or _NEVER, re.I)
         self.re_subdivision = re.compile(subdivision or _NEVER)
         self.re_unit = re.compile(unit_numbers or _NEVER)
         self.re_lead_article = re.compile(lead_articles or _NEVER)
@@ -83,10 +101,49 @@ _DE_LEGAL = (
 )
 _NAME_PART = r"[A-ZÄÖÜ][a-zäöüß']+(?:-[A-ZÄÖÜ][a-zäöüß']+)*"
 
+# Vertretungs-/Auftragsklauseln. Eine Alternation, vier gemessene Formen:
+#   „vertreten durch"      der Normalfall
+#   „endvertreten durch"   ⚠ 3.706 DE-Zeilen. Ohne das `(?:end)?` traf das alte Muster
+#                          „vertreten" INNERHALB von „endvertreten" (vor dem Wort stand kein
+#                          `\b`) und liess das „end" stehen: `'land schleswig holstein end'`
+#                          war ein echter Schlüssel, 1.679 Zeilen.
+#   „dieses vertreten …"   ⚠ dieselbe Falle, Rest „dieses": `'land hessen dieses'`.
+#                          Zusammen 118 DE-Schlüssel / 3.206 Zeilen, 17 AT / 39.
+#   „im Namen und auf Rechnung" / „namens und im Auftrag"
+#                          AGENT-Form, umgekehrte Richtung: hier ist der PRÄFIX die
+#                          handelnde Stelle. Klausel weg, Präfix behalten — sonst bleibt
+#                          `'db projektbau im namen und auf rechnung der db netz'` stehen
+#                          (26 Orte, 232 Namen / 2.183 Zeilen).
+_DE_REPRESENTATION = (
+    r"\s*[,/;–-]?\s*(?:diese[rs]?\s+)?"
+    r"(?:\b(?:end)?vertreten\s+durch|\bhandelnd\s+durch"
+    r"|\bim\s+namen\s+und\s+auf\s+rechnung|\bnamens\s+und\s+im\s+auftrag)\b.*$"
+)
+
+# Gemessen 2026-10-06 an den Präfixen VOR der Klausel (DE, Käufer-Rolle): dieses Muster
+# trifft 49.895 Zeilen, und die 42.609, die es NICHT trifft, sind durchweg spezifische
+# Stellen, die es auch nicht treffen soll — „Bundesagentur für Arbeit (BA)" 4.399,
+# „Stadt Nürnberg" 949, „Stadt Essen" 902. Der Tippfehler „Land Niedersachen" (1.359 Zeilen)
+# wird vom offenen `[a-zäöüß.\-]+` mitgenommen.
+#
+# ⚠ `saarland` steht EINZELN da, weil es das einzige Bundesland ist, dessen Name nicht mit
+# „Land"/„Freistaat" anfängt — das Muster oben greift bei ihm nicht. Gefunden hat das nicht
+# ich, sondern `scripts/pruefe_namensregeln.py` beim ersten Lauf: 28 verschiedene Stellen
+# unter einem Schlüssel, 86 Zeilen. Genau dafür gibt es die Sonde.
+_DE_SOVEREIGN = (
+    r"^\s*(?:die\s+|das\s+)?"
+    r"(?:bundesrepublik\s+deutschland"
+    r"|(?:das\s+|der\s+|die\s+)?(?:land|freistaat|bundesland)\s+[a-zäöüß][a-zäöüß.\-]+"
+    r"|saarland"
+    r"|freie(?:\s+und)?\s+hansestadt\s+[a-zäöüß\-]+)"
+    r"\s*(?:,|$)"
+)
+
 DE = Locale(
     "DE", name="Deutschland",
     legal_forms=_DE_LEGAL,
-    representation=r"\s*[,/;–-]?\s*vertreten durch\b.*$",
+    representation=_DE_REPRESENTATION,
+    sovereign=_DE_SOVEREIGN,
     subdivision=(r"\s*[,/|;–-]\s*(geschaeftsbereich|geschaeftsstelle|referat|dezernat|"
                  r"fachbereich|sachgebiet|der magistrat|der oberbuergermeister|der landrat|"
                  r"zentrale vergabestelle|zentraler einkauf|abteilung|sachbearbeitung)\b.*$"),
@@ -215,7 +272,18 @@ CH = Locale(
                  r"\bcooperative\b", r"\bcooperativa\b", r"\bverein\b",
                  r"\bassociation\b", r"\bassociazione\b", r"\bstiftung\b",
                  r"\bfondation\b", r"\bfondazione\b"),
-    representation=r"\s*[,/;–-]?\s*(vertreten durch|represente(e)? par|rappresentat[oa] da)\b.*$",
+    # Dieselbe `end`/`dieses`-Falle wie in DE, nur kleiner: gemessen 2 CH-Schlüssel / 3 Zeilen
+    # (darunter einer, der nur `'end'` hiess).
+    representation=(r"\s*[,/;–-]?\s*(?:diese[rs]?\s+)?"
+                    r"(?:\b(?:end)?vertreten\s+durch|\bhandelnd\s+durch"
+                    r"|\brepresente(?:e)?\s+par|\brappresentat[oa]\s+da)\b.*$"),
+    # Gemessen (CH, Käufer, 505 Zeilen mit Klausel): davor steht „Kanton Solothurn/Luzern/
+    # Aargau" und die Eidgenossenschaft. ⚠ „Einwohnergemeinde Schaffhausen", „Gemeinde Teufen",
+    # „Stadt Luzern" stehen bewusst NICHT hier — eine Gemeinde ist die Stelle, kein Hoheits-
+    # Dach, genau wie „Stadt Nürnberg" in DE.
+    sovereign=(r"^\s*(?:der\s+|die\s+|das\s+)?"
+               r"(?:schweizerische\s+eidgenossenschaft|eidgenossenschaft"
+               r"|kantone?\s+[a-zäöü][a-zäöü.\-]+)\s*(?:,|$)"),
     subdivision=(r"\s*[,/|;–-]\s*(abteilung|amt für|direktion|dienststelle|fachstelle|"
                  r"direction|service|office|ufficio|servizio|divisione)\b.*$"),
     unit_numbers=_NEVER,
@@ -295,7 +363,30 @@ AT = Locale(
                  r"ges\.?\s?m\.?\s?b\.?\s?h\.?", r"\bm\.?\s?b\.?\s?h\.?\b", r"gmbh",
                  r"\bag\b", r"\bog\b", r"\bkg\b", r"\bohg\b", r"\bkeg\b", r"\boeg\b",
                  r"\bse\b", r"\begen\b", r"\bgesbr\b", r"\be\.? ?u\b", r"\be\.? ?v\b"),
-    representation=r"\s*[,/;–-]?\s*vertreten durch\b.*$",
+    representation=_DE_REPRESENTATION,     # dieselben Klauselformen, dieselbe `end`-Falle
+    # Gemessen 2026-10-06 (AT, Käufer): „Republik Österreich [+ (Bund)] vertreten durch …"
+    # steht auf 5.251 Zeilen unter 724 Namen, „Bund vertreten durch …" auf 1.541, und die Form
+    # „Auftraggeber ist/sind die Republik Österreich (Bund) … vertreten durch …" auf 3.987
+    # Zeilen unter 397 Namen. Das alte DE-Muster traf davon NICHTS (1.011 von 26.456 Zeilen) —
+    # deshalb trug `name:republik oesterreich` 428 Namen in 16 Orten.
+    #
+    # ⚠ NICHT hier drin, und das ist gemessen so gewollt: „Bundesimmobiliengesellschaft
+    # m.b.H." (2.128 Zeilen), „ARE Austrian Real Estate GmbH" (1.832), „TIWAG" (630),
+    # „ASFINAG" (486). Das sind die Stellen selbst, nicht ihr Hoheitsdach.
+    #
+    # ⚠ OFFEN, bewusst nicht mitgemacht: „Auftraggeber sind die Republik Österreich (Bund),
+    # die Bundesbeschaffung GmbH sowie alle weiteren …" OHNE Vertretungsklausel (103 Namen /
+    # 1.179 Zeilen). Das ist eine Aufzählung gemeinsamer Auftraggeber, keine Vertretung —
+    # eigener Befund, eigene Messung.
+    # ⚠ `österreich` UND `oesterreich`: die Quelle schreibt beides, und das Muster läuft auf
+    # dem ROHnamen (vor der ue-Faltung in `entities.strip_accents`). Mit nur der Umlautform
+    # blieben 67 Stellen unter `republik oesterreich` und 39 unter `republik oesterreich
+    # (bund)` — gefunden von `scripts/pruefe_namensregeln.py`, nicht von mir.
+    sovereign=(r"^\s*(?:auftraggeber\s+(?:ist|sind)\s+)?(?:die\s+|der\s+|das\s+)?"
+               r"(?:republik\s+(?:österreich|oesterreich)(?:\s*\(\s*bund\s*\))?"
+               r"|bund"
+               r"|(?:das\s+|der\s+|die\s+)?land\s+[a-zäöüß][a-zäöüß.\-]+)"
+               r"\s*(?:,|\(|$)"),
     # „Magistrat der Stadt Wien - Magistratsabteilung 34" → der Käufer ist der Magistrat.
     subdivision=(r"\s*[,/|;–-]\s*(magistratsabteilung|abteilung|referat|fachbereich|"
                  r"gruppe|dienststelle|geschaeftsbereich|geschaeftsstelle|"
@@ -433,7 +524,16 @@ LU = Locale(
                  r"\bsprl\b", r"\bsrl\b", r"\bspa\b", r"\bsnc\b", r"\bsas\b",
                  r"\bb\.?\s?v\.?\b", r"\bn\.?\s?v\.?\b", r"\bltd\b", r"\bplc\b",
                  r"\bgbr\b", r"\bug\b"),
-    representation=r"\s*[,/;–-]?\s*(represente(e)? par|vertreten durch|represented by)\b.*$",
+    # Dieselbe `end`/`dieses`-Absicherung wie DE/AT/CH, auch wenn hier (gemessen) nichts
+    # daran hängt — eine Sprache, die dieselbe Klausel kennt, bekommt dieselbe Behandlung.
+    representation=(r"\s*[,/;–-]?\s*(?:diese[rs]?\s+)?"
+                    r"(?:\brepresente(?:e)?\s+par|\b(?:end)?vertreten\s+durch"
+                    r"|\brepresented\s+by|\bagissant\s+par)\b.*$"),
+    # ⚠ KEIN Hoheitsmuster, und das ist eine Messung, keine Lücke: über das ganze LU-Silber
+    # tragen 8 Käufernamen eine Vertretungsklausel (10 Zeilen), davor steht „Europäische
+    # Gemeinschaft(en)", „Europäischer Rechnungshof", „Gemeinde Mersch in Partnerschaft mit
+    # dem Staat" — kein wiederkehrender Hoheitsträger, aus dem sich ein Muster ableiten
+    # liesse. Bleibt leer, bis die Quelle etwas anderes zeigt (`pruefe_namensregeln.py`).
     # „Ministère de l'Éducation nationale, de l'Enfance et de la Jeunesse" bleibt
     # ganz — getrennt wird nur an echten Organisationseinheiten.
     subdivision=(r"\s*[,/|;–-]\s*(direction generale|direction|division|departement|"

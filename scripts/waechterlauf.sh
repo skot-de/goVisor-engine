@@ -146,6 +146,12 @@ sonde gold_integritaet "Details: python3 scripts/pruefe_gold_integritaet.py --la
 # verbotener Zeichenketten: NUTS-Codes und eForms-Referenzen sehen aus wie Registernummern.
 sonde kennungen "Details: python3 scripts/pruefe_kennungen.py --alle" \
   -- $PY scripts/pruefe_kennungen.py
+# ⚠ EIN LAND OHNE HOHEITSMUSTER. Das Muster fuer „Bundesrepublik Deutschland vertreten durch
+# <X>" stand als DEUTSCHE Regex im Modul und lief auf alle Laender; „Republik Oesterreich
+# vertreten durch <X>" wurde deshalb nie aufgeloest — 5.251 AT-Zeilen als EINE Entitaet. In DE
+# richtete der Fehler nichts an, er wartete auf das naechste Land. Diese Sonde wartet nicht.
+sonde namensregeln "Details: python3 scripts/pruefe_namensregeln.py --land <L> --alle" \
+  -- $PY scripts/pruefe_namensregeln.py
 # ⚠ EINE SCHLANGE, DIE STEHT, WAEHREND ARBEIT ANLIEGT. Am 2026-10-05 lief der
 # Analyse-Arbeiter seit dem 11.09. ununterbrochen und hatte seit dem 24.09. nichts mehr
 # analysiert: 3.946 Dokumente lagen, das Guthaben war seit dem 21.09. leer. Elf Tage, zwoelf
